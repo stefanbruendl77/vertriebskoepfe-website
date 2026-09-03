@@ -54,3 +54,25 @@ veröffentlicht die neue Fassung; nach ein bis zwei Minuten ist sie online.
 
 Jede Stelle wird ein eigener Ordner mit `index.html`, zum Beispiel
 `stellen/gebietsverkaufsleitung-nord/`. Vorlage folgt.
+
+## Arbeitsweise
+
+Zwei Orte, klare Rollen.
+
+Cowork-Chat in der Claude App: Positionierung, Texte, Preise, Struktur,
+Wettbewerbsrecherche. Aendert keine Dateien.
+
+Dieses Repository, Claude Code im Terminal: alle Dateiaenderungen, Git,
+Deploy, Pruefungen mit Playwright.
+
+Regeln:
+
+1. Marketingtexte und Positionierung kommen aus dem Cowork-Chat und werden
+   nicht eigenmaechtig umformuliert.
+2. Design-Skills nur als Handwerks-Checkliste. Farben, Schriften und
+   Bewegungsdosierung stehen in DESIGN.md und bleiben.
+3. Vor jeder groesseren Aenderungsrunde committen.
+4. Keine ZIP-Downloads, keine Uploads. Das Repository ist die einzige Wahrheit.
+5. Nach dem Push im Cowork-Chat "gepusht" melden.
+6. Das Repository ist oeffentlich: keine Kundennamen, keine
+   Honorarkalkulationen, keine Bewerberunterlagen.
