@@ -6,17 +6,20 @@
 <title>Vertriebsköpfe · Personalberatung für den Vertrieb</title>
 <meta name="description" content="Wir besetzen Ihre Vertriebsstelle — und sagen Ihnen vorher, warum der Letzte gegangen ist. Vakanzdiagnose, Besetzung, Recruiting-Kapazität mit offenen Preisen.">
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://vertriebskoepfe.de/">
 <!-- ENTWURF. Offen: Telefonnummer (tel:+49XXXXXXXXX und Anzeigetext), Kalenderlink,
      Portraetfoto, Impressum, Datenschutz. Danach robots-Meta entfernen.
      index.html und besetzungscheck.html gehoeren in dasselbe Verzeichnis. -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/favicon.svg">
+<meta name="theme-color" content="#0D1A2E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vertriebsköpfe">
 <meta property="og:title" content="Vertriebsköpfe · Personalberatung für den Vertrieb">
 <meta property="og:description" content="Wir besetzen Ihre Vertriebsstelle — und sagen Ihnen vorher, warum der Letzte gegangen ist.">
 <meta property="og:image" content="https://vertriebskoepfe.de/og-image.png">
 <meta property="og:url" content="https://vertriebskoepfe.de/">
+<meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <noscript><style>.rev{opacity:1;transform:none}</style></noscript>
@@ -842,6 +845,60 @@
     io2.observe(document.getElementById('calc'));
   } else { started = true; run(); }
 })();
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"ProfessionalService",
+   "@id":"https://vertriebskoepfe.de/#organisation",
+   "name":"Vertriebsköpfe",
+   "legalName":"Vario Büroservice GmbH",
+   "url":"https://vertriebskoepfe.de/",
+   "image":"https://vertriebskoepfe.de/og-image.png",
+   "email":"stefan@vertriebskoepfe.de",
+   "description":"Personalberatung für Vertriebsrollen im Mittelstand. Vakanzdiagnose vor der Suche, Besetzung mit offenen Preisen.",
+   "address":{"@type":"PostalAddress","streetAddress":"Neckarstraße 2","postalCode":"71263","addressLocality":"Weil der Stadt","addressCountry":"DE"},
+   "areaServed":{"@type":"Country","name":"Deutschland"},
+   "founder":{"@id":"https://vertriebskoepfe.de/#stefan"},
+   "sameAs":["https://leadsimply.de/"],
+   "hasOfferCatalog":{
+    "@type":"OfferCatalog","name":"Leistungen",
+    "itemListElement":[
+     {"@type":"Offer","name":"Vakanzdiagnose","price":"2500","priceCurrency":"EUR","description":"Zwei Wochen. Warum die Stelle offen bleibt, bevor gesucht wird."},
+     {"@type":"Offer","name":"Besetzung","price":"5600","priceCurrency":"EUR","description":"Retainer, dazu 25 Prozent des Zieljahresgehalts bei Vertragsunterschrift. Drei Monate Nachbesetzung, 90 Tage Begleitung der Einarbeitung."},
+     {"@type":"Offer","name":"Recruiting-Kapazität","priceCurrency":"EUR","description":"Tagessatz, monatlich abgerechnet, ab zwei Monaten."}
+    ]}
+  },
+  {
+   "@type":"Person",
+   "@id":"https://vertriebskoepfe.de/#stefan",
+   "name":"Stefan Bründl",
+   "jobTitle":"Geschäftsführer",
+   "worksFor":{"@id":"https://vertriebskoepfe.de/#organisation"},
+   "description":"17 Jahre Personaldienstleistung, zuletzt Vertriebsdirektor. Seit 2024 Beratung zu Fluktuation und Mitarbeiterbindung im Mittelstand.",
+   "sameAs":["https://leadsimply.de/"]
+  },
+  {
+   "@type":"WebSite",
+   "@id":"https://vertriebskoepfe.de/#website",
+   "url":"https://vertriebskoepfe.de/",
+   "name":"Vertriebsköpfe",
+   "inLanguage":"de-DE",
+   "publisher":{"@id":"https://vertriebskoepfe.de/#organisation"}
+  },
+  {
+   "@type":"FAQPage",
+   "@id":"https://vertriebskoepfe.de/#faq",
+   "mainEntity":[
+    {"@type":"Question","name":"Warum ein Retainer und nicht reines Erfolgshonorar?","acceptedAnswer":{"@type":"Answer","text":"Reines Erfolgshonorar zwingt den Berater, viele Mandate gleichzeitig zu bearbeiten und das schnellste zuerst. Der Retainer kauft Zuwendung: wenige Mandate, jedes vollständig bearbeitet. Er ist nur ein Drittel des Gesamthonorars, der größere Teil hängt am Ergebnis."}},
+    {"@type":"Question","name":"Wir suchen ohnehin selbst weiter. Stört das?","acceptedAnswer":{"@type":"Answer","text":"Nein. Wenn der Kunde den Richtigen selbst findet, während das Mandat läuft, wird das Erfolgshonorar nicht fällig. Der Retainer bleibt beim Berater."}},
+    {"@type":"Question","name":"Was passiert, wenn der Kandidat wieder geht?","acceptedAnswer":{"@type":"Answer","text":"In den ersten drei Monaten wird ohne weiteres Honorar nachbesetzt, es fallen nur Auslagen an. Das Gewicht liegt allerdings vorne auf der Diagnose und in den 90 Tagen Begleitung der Einarbeitung."}},
+    {"@type":"Question","name":"Kennen Sie unsere Branche?","acceptedAnswer":{"@type":"Answer","text":"Der Ausschnitt ist schmal: erklärungsbedürftige Produkte, lange Verkaufszyklen, Mittelstand. Für Software-Vertrieb oder Konzernstrukturen werden andere Adressen genannt."}}
+   ]}
+ ]}
 </script>
 
 </body>
