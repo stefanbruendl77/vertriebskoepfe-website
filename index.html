@@ -125,12 +125,16 @@
   .nav-links a{color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:500}
   .nav-links a:hover{color:var(--petrol)}
   .tel{font-variant-numeric:tabular-nums;white-space:nowrap}
-  /* Mobil: nur Wortmarke, Telefonlink und Knopf; nichts wird abgeschnitten. */
+  /* Reicht der Platz nicht fuer eine Zeile, bricht die Leiste um statt zu quetschen.
+     Einzeilig passt sie ab 1020 px. */
   .brand{min-width:0}
-  @media (max-width:820px){
+  @media (max-width:1019px){
     .nav-in{flex-wrap:wrap;row-gap:10px;padding:10px 0}
+    .nav-links{margin-left:auto;min-width:0}
+  }
+  /* Mobil: nur Wortmarke, Telefonlink und Knopf; nichts wird abgeschnitten. */
+  @media (max-width:820px){
     .nav-links a:not(.btn):not(.tel){display:none}
-    .nav-links{margin-left:auto;min-width:0;gap:16px}
     .nav-links .btn{min-width:0;padding:12px 18px}
   }
 
