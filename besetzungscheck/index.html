@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Besetzungscheck · Vertriebsköpfe</title>
+<meta name="description" content="Neun Fragen, unter drei Minuten: Punktzahl, Urteil und die drei Punkte, die bei Ihrer Vakanz am schwersten wiegen.">
+<meta name="robots" content="noindex">
+<!-- ENTWURF. Offen: Telefonnummer (tel:+49XXXXXXXXX und Anzeigetext), Kalenderlink,
+     Portraetfoto, Impressum, Datenschutz. Danach robots-Meta entfernen.
+     index.html und besetzungscheck.html gehoeren in dasselbe Verzeichnis. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vertriebsköpfe">
+<meta property="og:title" content="Besetzungscheck · Vertriebsköpfe">
+<meta property="og:description" content="Neun Fragen, unter drei Minuten: Wie besetzbar ist Ihre Vertriebsstelle heute?">
+<meta property="og:image" content="https://vertriebskoepfe.de/og-image.png">
+<meta property="og:url" content="https://vertriebskoepfe.de/besetzungscheck/">
+<meta name="twitter:card" content="summary_large_image">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Libre+Franklin:wght@400;500;600&display=swap">
+</head>
+<body>
+<style>
+  :root{
+    --navy:#0D1A2E;
+    --navy-2:#16263D;
+    --paper:#F6F8FB;
+    --card:#FFFFFF;
+    --ink:#14202F;
+    --muted:#5C6B7E;
+    --hair:#DDE4EC;
+    --petrol:#0E6F68;
+    --petrol-dark:#0B5A54;
+    --petrol-lite:#5FD3C4;
+    --petrol-wash:#E8F2F0;
+    --on-navy:#E7EDF3;
+    --on-navy-mute:#9FB2C4;
+    --shadow:0 1px 2px rgba(13,26,46,.06),0 8px 24px -12px rgba(13,26,46,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0B1420;
+      --card:#111E2C;
+      --ink:#E7EDF3;
+      --muted:#93A3B4;
+      --hair:#22344A;
+      --navy:#060E18;
+      --navy-2:#0F1E30;
+      --petrol:#5FD3C4;
+      --petrol-dark:#7FE0D3;
+      --petrol-wash:#12312F;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0B1420;
+    --card:#111E2C;
+    --ink:#E7EDF3;
+    --muted:#93A3B4;
+    --hair:#22344A;
+    --navy:#060E18;
+    --navy-2:#0F1E30;
+    --petrol:#5FD3C4;
+    --petrol-dark:#7FE0D3;
+    --petrol-wash:#12312F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+    scroll-behavior:smooth;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+  .narrow{max-width:660px}
+  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;letter-spacing:-.012em}
+  h1{font-size:clamp(2.05rem,4.6vw,3.15rem);line-height:1.1;margin:0 0 20px}
+  h2{font-size:clamp(1.6rem,3.2vw,2.15rem);line-height:1.16;margin:0 0 14px}
+  h3{font-size:1.16rem;line-height:1.3;margin:0 0 8px}
+  p{margin:0 0 18px}
+  a{color:var(--petrol)}
+  .eyebrow{
+    font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+    color:var(--petrol);margin:0 0 16px;
+  }
+  .band-navy .eyebrow{color:var(--petrol-lite)}
+  section{padding:84px 0;border-bottom:1px solid var(--hair)}
+  .band-navy{background:var(--navy);color:var(--on-navy);border-bottom:0}
+  .band-navy h2{color:#fff}
+  .band-navy p{color:var(--on-navy-mute)}
+  .lead{font-size:1.12rem;color:var(--muted);max-width:60ch}
+  .band-navy .lead{color:var(--on-navy-mute)}
+
+  /* Navigation */
+  header.nav{
+    position:sticky;top:0;z-index:50;background:var(--paper);
+    background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+  .logo{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:1.12rem;line-height:1.15;letter-spacing:-.01em}
+  .logo span{display:block;font-family:"Libre Franklin",sans-serif;font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:.94rem;font-weight:500}
+  .nav-links a:hover{color:var(--petrol)}
+  .tel{font-variant-numeric:tabular-nums;white-space:nowrap}
+  @media (max-width:820px){.nav-links a:not(.btn){display:none}}
+
+
+  /* Wortmarke Vertriebsköpfe */
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+  .mark{
+    width:34px;height:34px;flex:none;border-radius:3px;background:var(--navy);color:#fff;
+    font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:14px;letter-spacing:.03em;
+    display:grid;place-items:center;
+  }
+  :root[data-theme="dark"] .mark,:root:not([data-theme="light"]) .mark{background:#0E6F68;color:#fff}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .mark{background:#0D1A2E;color:#fff}}
+  .mark.invert{background:#fff;color:#0D1A2E}
+  .wordmark{
+    font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.1rem;line-height:1.1;
+    letter-spacing:.075em;text-transform:uppercase;
+  }
+  .wordmark small{
+    display:block;font-family:"Libre Franklin",sans-serif;font-size:9.5px;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px;
+  }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--petrol);color:#fff;text-decoration:none;
+    font-family:"Libre Franklin",sans-serif;font-size:.97rem;font-weight:600;
+    padding:13px 22px;border:0;border-radius:4px;cursor:pointer;
+    transition:background .18s ease,transform .18s ease;
+  }
+  .btn:hover{background:var(--petrol-dark)}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid var(--petrol);outline-offset:3px}
+  .btn-ghost{
+    background:transparent;color:var(--ink);border:1px solid var(--hair);
+  }
+  .btn-ghost:hover{background:var(--card);border-color:var(--petrol);color:var(--petrol)}
+  .band-navy .btn-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+  .band-navy .btn-ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.5)}
+  :root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{color:#06201D}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .btn{color:#fff}}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:6px}
+  .cta-note{font-size:.86rem;color:var(--muted);margin:14px 0 0}
+  .band-navy .cta-note{color:var(--on-navy-mute)}
+
+  /* Hero */
+  .hero{padding:86px 0 74px;border-bottom:1px solid var(--hair)}
+  .hero h1{max-width:19ch}
+  .hero .lead{font-size:1.16rem;max-width:56ch;margin-bottom:26px}
+  .segment{
+    display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 0;padding:0;list-style:none;
+  }
+  .segment li{
+    font-size:.83rem;color:var(--muted);border:1px solid var(--hair);
+    border-radius:100px;padding:5px 13px;background:var(--card);
+  }
+
+  /* Zahlen / Rechner */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin:0 0 44px}
+  .stat .num{
+    font-family:"Source Serif 4",Georgia,serif;font-size:2.9rem;font-weight:600;line-height:1;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;display:block;margin-bottom:8px;
+  }
+  .stat p{font-size:.94rem;margin:0;max-width:30ch}
+  .calc{
+    background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:8px;
+    padding:26px 26px 22px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:end;
+  }
+  .calc label{display:block;font-size:.83rem;letter-spacing:.06em;text-transform:uppercase;color:var(--on-navy-mute);margin-bottom:8px}
+  .calc input{
+    width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
+    color:#fff;font-family:"Libre Franklin",sans-serif;font-size:1.05rem;font-variant-numeric:tabular-nums;
+    padding:11px 13px;border-radius:4px;
+  }
+  .calc input:focus{outline:2px solid var(--petrol-lite);outline-offset:1px}
+  .calc-out{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;margin-top:2px}
+  .calc-out .big{
+    font-family:"Source Serif 4",Georgia,serif;font-size:clamp(2.2rem,5vw,3.1rem);font-weight:600;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;line-height:1;display:block;margin-bottom:10px;
+  }
+  .calc-out p{margin:0;font-size:.9rem}
+  @media (max-width:600px){.calc{grid-template-columns:1fr}}
+
+  /* Besetzungscheck-Teaser */
+  .teaser{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
+  @media (max-width:760px){.teaser{grid-template-columns:1fr;gap:24px}}
+  .teaser-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
+  .teaser-list li{
+    padding:11px 0;border-bottom:1px solid var(--hair);font-size:.94rem;color:var(--muted);
+    display:flex;gap:12px;align-items:baseline;
+  }
+  .teaser-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--petrol);flex:none}
+  .teaser-list li.more{color:var(--ink);font-weight:600}
+  .teaser-list li.more::before{background:transparent}
+
+  /* Besetzungscheck */
+  .check{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:8px 26px 26px;box-shadow:var(--shadow);
+  }
+  .q{border:0;border-bottom:1px solid var(--hair);margin:0;padding:22px 0}
+  .q:last-of-type{border-bottom:0}
+  .q legend{
+    font-family:"Source Serif 4",Georgia,serif;font-size:1.05rem;font-weight:600;
+    padding:0;margin-bottom:12px;color:var(--ink);
+  }
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{position:relative;cursor:pointer}
+  .opt input{position:absolute;opacity:0;width:0;height:0}
+  .opt span{
+    display:inline-block;border:1px solid var(--hair);background:var(--paper);
+    border-radius:100px;padding:8px 16px;font-size:.92rem;color:var(--muted);
+    transition:border-color .15s ease,color .15s ease,background .15s ease;
+  }
+  .opt:hover span{border-color:var(--petrol);color:var(--ink)}
+  .opt input:checked + span{
+    border-color:var(--petrol);background:var(--petrol-wash);color:var(--petrol);font-weight:600;
+  }
+  .opt input:focus-visible + span{outline:2px solid var(--petrol);outline-offset:2px}
+  .q legend .multi{
+    font-family:"Libre Franklin",sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--petrol);border:1px solid var(--petrol);
+    border-radius:100px;padding:2px 9px;margin-left:8px;vertical-align:middle;
+  }
+  .opt input[type=checkbox] + span{border-radius:5px}
+  .check-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding-top:24px;border-top:1px solid var(--hair)}
+
+  .result{
+    margin-top:20px;border:1px solid var(--petrol);border-radius:8px;
+    background:var(--card);overflow:hidden;box-shadow:var(--shadow);
+  }
+  .result-top{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 26px}
+  @media (max-width:620px){.result-top{grid-template-columns:1fr;gap:18px}}
+  .score-num{
+    font-family:"Source Serif 4",Georgia,serif;font-size:3.6rem;font-weight:600;line-height:1;
+    font-variant-numeric:tabular-nums;color:var(--petrol);
+  }
+  .score-of{color:var(--muted);font-size:.85rem;margin-left:6px}
+  .bar{height:6px;background:var(--paper);border:1px solid var(--hair);border-radius:100px;margin-top:14px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--petrol);transition:width .6s cubic-bezier(.22,1,.36,1)}
+  .verdict-label{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0 0 8px;
+  }
+  .verdict p:last-child{margin:0;font-size:1.02rem}
+  .v-gruen{color:#1B7F4B}
+  .v-gelb{color:#9A6B12}
+  .v-rot{color:#A8331F}
+  :root[data-theme="dark"] .v-gruen,:root:not([data-theme="light"]) .v-gruen{color:#63C48D}
+  :root[data-theme="dark"] .v-gelb,:root:not([data-theme="light"]) .v-gelb{color:#E0B15C}
+  :root[data-theme="dark"] .v-rot,:root:not([data-theme="light"]) .v-rot{color:#E8836C}
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .v-gruen{color:#1B7F4B}
+    :root:not([data-theme="dark"]) .v-gelb{color:#9A6B12}
+    :root:not([data-theme="dark"]) .v-rot{color:#A8331F}
+  }
+  .flags{border-top:1px solid var(--hair);padding:4px 26px 8px}
+  .flag{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--hair)}
+  .flag:last-child{border-bottom:0}
+  .flag .dot{width:11px;height:11px;border-radius:50%;margin-top:7px}
+  .flag h3{margin:0 0 4px;font-size:1rem}
+  .flag p{margin:0;font-size:.94rem;color:var(--muted)}
+  .result-cta{background:var(--petrol-wash);padding:24px 26px;border-top:1px solid var(--hair)}
+  .result-cta p{font-size:.96rem;max-width:64ch}
+
+  /* Gegenüberstellung */
+  .compare{border-top:1px solid var(--hair)}
+  .compare-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:28px;
+    padding:24px 0;border-bottom:1px solid var(--hair);
+  }
+  .compare-row .side-label{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    margin:0 0 8px;font-weight:600;
+  }
+  .compare-row .mine .side-label{color:var(--petrol)}
+  .compare-row p{margin:0;font-size:1rem}
+  .compare-row .usual p{color:var(--muted)}
+  @media (max-width:620px){.compare-row{grid-template-columns:1fr;gap:16px}}
+
+  /* Leistungen */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px}
+  .card{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow);
+    transition:border-color .2s ease,transform .2s ease;
+  }
+  .card:hover{border-color:var(--petrol);transform:translateY(-2px)}
+  .card .step{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+  .card .price{
+    font-family:"Source Serif 4",Georgia,serif;font-size:1.55rem;font-weight:600;
+    color:var(--ink);margin:4px 0 14px;font-variant-numeric:tabular-nums;
+  }
+  .card .price small{display:block;font-family:"Libre Franklin",sans-serif;font-size:.8rem;font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0}
+  .card ul{margin:0 0 20px;padding-left:18px;font-size:.95rem;color:var(--muted)}
+  .card li{margin-bottom:7px}
+  .card li::marker{color:var(--petrol)}
+  .card .btn{margin-top:auto;align-self:flex-start}
+
+  /* Ablauf */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid var(--hair)}
+  .step-item{padding:24px 22px 24px 0;border-right:1px solid var(--hair)}
+  .step-item:last-child{border-right:0}
+  .step-item .wk{
+    font-family:"Source Serif 4",Georgia,serif;font-size:.95rem;font-weight:700;color:var(--petrol);
+    margin:0 0 10px;letter-spacing:.02em;
+  }
+  .step-item h3{font-size:1.02rem;margin-bottom:6px}
+  .step-item p{font-size:.93rem;color:var(--muted);margin:0}
+  @media (max-width:760px){.step-item{border-right:0;border-bottom:1px solid var(--hair);padding-right:0}.step-item:last-child{border-bottom:0}}
+
+  /* Zusage */
+  .promise{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+  @media (max-width:760px){.promise{grid-template-columns:1fr;gap:24px}}
+  .promise-list{list-style:none;margin:0;padding:0}
+  .promise-list li{
+    padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);
+    display:flex;gap:14px;align-items:baseline;font-size:.97rem;color:var(--on-navy);
+  }
+  .promise-list li:last-child{border-bottom:0}
+  .promise-list b{
+    font-family:"Source Serif 4",Georgia,serif;color:var(--petrol-lite);font-size:1.15rem;
+    flex:none;min-width:88px;font-variant-numeric:tabular-nums;
+  }
+
+  /* Über mich */
+  .about{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+  @media (max-width:720px){.about{grid-template-columns:1fr;gap:24px}}
+  .portrait{
+    aspect-ratio:4/5;background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--muted);font-size:.84rem;padding:20px;
+  }
+  .roles{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--hair)}
+  .roles li{padding:14px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:112px 1fr;gap:18px;font-size:.97rem}
+  .roles span{color:var(--petrol);font-weight:600;font-size:.87rem;letter-spacing:.02em}
+  @media (max-width:520px){.roles li{grid-template-columns:1fr;gap:2px}}
+
+  /* FAQ */
+  .faq{border-top:1px solid var(--hair);max-width:760px}
+  details{border-bottom:1px solid var(--hair)}
+  summary{
+    cursor:pointer;padding:20px 40px 20px 0;position:relative;list-style:none;
+    font-family:"Source Serif 4",Georgia,serif;font-size:1.1rem;font-weight:600;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{
+    content:"+";position:absolute;right:6px;top:18px;font-size:1.4rem;color:var(--petrol);
+    font-family:"Libre Franklin",sans-serif;font-weight:400;transition:transform .2s ease;
+  }
+  details[open] summary::after{content:"–"}
+  summary:hover{color:var(--petrol)}
+  summary:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+  details p{padding:0 0 20px;margin:0;color:var(--muted);max-width:64ch}
+
+  /* Abschluss + Fuß */
+  .close-cta{text-align:left}
+  footer.site{background:var(--navy);color:var(--on-navy-mute);padding:48px 0 96px;font-size:.9rem}
+  footer.site a{color:var(--on-navy-mute);text-decoration:none;margin-right:22px}
+  footer.site a:hover{color:#fff}
+  .foot-in{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:baseline}
+
+  /* Mobile Anrufleiste */
+  .callbar{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--petrol);padding:12px 16px;text-align:center;
+  }
+  .callbar a{color:#fff;text-decoration:none;font-weight:600;font-size:1rem;letter-spacing:.01em}
+  @media (max-width:820px){.callbar{display:block}footer.site{padding-bottom:110px}}
+
+  /* Platzhalter */
+  .ph{border-bottom:1px dotted var(--petrol);color:inherit}
+  .ph-box{
+    background:var(--petrol-wash);border:1px dashed var(--petrol);border-radius:8px;
+    padding:22px 24px;color:var(--ink);
+  }
+  .ph-box p:last-child{margin-bottom:0}
+  .ph-box .eyebrow{margin-bottom:10px}
+
+  /* Bewegung: 350 ms, 14 px, einmal */
+  .rev{opacity:0;transform:translateY(14px);transition:opacity .35s ease-out,transform .35s ease-out}
+  .rev.in{opacity:1;transform:none}
+  .rev-d1{transition-delay:.08s}
+  .rev-d2{transition-delay:.16s}
+  @media (prefers-reduced-motion: reduce){
+    .rev{opacity:1;transform:none;transition:none}
+    body{scroll-behavior:auto}
+    .btn,.card{transition:none}
+  }
+</style>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Vertriebsköpfe, zur Startseite">
+      <span class="mark" aria-hidden="true">VK</span>
+      <span class="wordmark">Vertriebsköpfe<small>Personalberatung für den Vertrieb</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/">Startseite</a>
+      <a href="/#leistungen">Leistungen</a>
+      <a class="tel" href="tel:+49XXXXXXXXX"><span class="ph">040 XXX XX XX</span></a>
+      <a class="btn" href="/#kontakt">Vakanzdiagnose anfordern</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding-bottom:0;border-bottom:0">
+  <div class="wrap">
+    <p class="eyebrow rev">Besetzungscheck · 9 Fragen · unter drei Minuten</p>
+    <h1 class="rev rev-d1" style="max-width:22ch">Wie besetzbar ist Ihre Stelle — so, wie sie heute ausgeschrieben ist?</h1>
+    <p class="lead rev rev-d2" style="max-width:62ch">Die meisten Vertriebsstellen scheitern nicht am Markt, sondern an drei, vier Punkten, die man von innen nicht sieht. Der Check prüft dieselben Punkte, mit denen auch jedes Mandat beginnt — inklusive Vergütungsmodell und dem, was Sie bereits versucht haben. Sie bekommen sofort eine Zahl, ein Urteil und die drei Punkte, die bei Ihnen am schwersten wiegen — ohne Formular, ohne E-Mail.</p>
+  </div>
+</section>
+
+<section style="padding-top:36px">
+  <div class="wrap">
+<form class="check rev" id="checkForm" novalidate>
+      <fieldset class="q">
+        <legend>1 · Um welche Rolle geht es?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="rolle" value="innen"><span>Vertriebsinnendienst</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="aussen"><span>Außendienst / Area Sales</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="technik"><span>Technischer Vertrieb / Sales Engineer</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="gebiet"><span>Gebietsverkaufsleitung</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="kam" checked><span>Key Account Management</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="skam"><span>Senior / Strategic KAM</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="bizdev"><span>Business Development</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="export"><span>Export / International Sales</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="leitung"><span>Vertriebsleitung</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="head"><span>Head of Sales / Vertriebsdirektor</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>2 · Wie lange ist die Stelle offen?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="dauer" value="0"><span>Unter 6 Wochen</span></label>
+          <label class="opt"><input type="radio" name="dauer" value="1" checked><span>6 bis 12 Wochen</span></label>
+          <label class="opt"><input type="radio" name="dauer" value="2"><span>3 bis 6 Monate</span></label>
+          <label class="opt"><input type="radio" name="dauer" value="3"><span>Über 6 Monate</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>3 · Wie ist die Vergütung aufgebaut?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="modell" value="ote" checked><span>Zielgehalt: Fix plus variabel</span></label>
+          <label class="opt"><input type="radio" name="modell" value="provision"><span>Fix plus Provision, ungedeckelt</span></label>
+          <label class="opt"><input type="radio" name="modell" value="bonus"><span>Fix plus Jahresbonus auf Zielerreichung</span></label>
+          <label class="opt"><input type="radio" name="modell" value="fix"><span>Reines Fixgehalt</span></label>
+          <label class="opt"><input type="radio" name="modell" value="prolastig"><span>Überwiegend Provision, geringes Fix</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>4 · Zieljahresgehalt inklusive variablem Anteil</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="gehalt" value="0"><span>unter 45.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="1"><span>45–55.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="2"><span>55–65.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="3"><span>65–75.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="4" checked><span>75–90.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="5"><span>90–110.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="6"><span>110–130.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="7"><span>130–160.000 €</span></label>
+          <label class="opt"><input type="radio" name="gehalt" value="8"><span>über 160.000 €</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>5 · Wie viele passende Bewerbungen kamen in den letzten acht Wochen?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="bewerbungen" value="3"><span>Keine</span></label>
+          <label class="opt"><input type="radio" name="bewerbungen" value="2" checked><span>1 bis 2</span></label>
+          <label class="opt"><input type="radio" name="bewerbungen" value="1"><span>3 bis 5</span></label>
+          <label class="opt"><input type="radio" name="bewerbungen" value="0"><span>Mehr als 5</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>6 · Warum ist die Stelle offen?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="grund" value="wachstum" checked><span>Wachstum, zusätzliche Stelle</span></label>
+          <label class="opt"><input type="radio" name="grund" value="ruhestand"><span>Ruhestand oder Nachfolge</span></label>
+          <label class="opt"><input type="radio" name="grund" value="trennung"><span>Trennung von unserer Seite</span></label>
+          <label class="opt"><input type="radio" name="grund" value="kuendigung"><span>Der Mitarbeiter hat gekündigt</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>7 · Wie lange war der Vorgänger im Unternehmen?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="vorgaenger" value="neu" checked><span>Erstbesetzung</span></label>
+          <label class="opt"><input type="radio" name="vorgaenger" value="kurz"><span>Unter 12 Monate</span></label>
+          <label class="opt"><input type="radio" name="vorgaenger" value="mittel"><span>1 bis 3 Jahre</span></label>
+          <label class="opt"><input type="radio" name="vorgaenger" value="lang"><span>Länger als 3 Jahre</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>8 · Was haben Sie bisher unternommen? <span class="multi">Mehrfachauswahl</span></legend>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="massnahme" value="anzeige" checked><span>Stellenanzeige geschaltet</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="anzeige_wdh"><span>Anzeige mehrfach wiederholt</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="netzwerk"><span>Eigenes Netzwerk gefragt</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="empfehlung"><span>Mitarbeiter um Empfehlungen gebeten</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="direkt"><span>Selbst direkt angesprochen</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="beratung"><span>Personalberatung beauftragt</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="gehalt_hoch"><span>Gehalt oder Paket nachgebessert</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="rolle_neu"><span>Rollenzuschnitt geändert</span></label>
+          <label class="opt"><input type="checkbox" name="massnahme" value="nichts"><span>Bisher nichts davon</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="q">
+        <legend>9 · Wie steht Ihr Unternehmen bei den Arbeitgeberbewertungen?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="bewertung" value="gut"><span>Über 4,0</span></label>
+          <label class="opt"><input type="radio" name="bewertung" value="mittel" checked><span>3,5 bis 4,0</span></label>
+          <label class="opt"><input type="radio" name="bewertung" value="schlecht"><span>Unter 3,5</span></label>
+          <label class="opt"><input type="radio" name="bewertung" value="unbekannt"><span>Weiß ich nicht</span></label>
+        </div>
+      </fieldset>
+
+      <div class="check-actions">
+        <button class="btn" type="submit">Ergebnis anzeigen</button>
+        <span class="cta-note" style="margin:0">Kein Formular, keine E-Mail. Das Ergebnis erscheint sofort.</span>
+      </div>
+    </form>
+
+    <div class="result" id="result" hidden>
+      <div class="result-top">
+        <div class="score">
+          <span class="score-num" id="scoreNum">0</span>
+          <span class="score-of">von 100</span>
+          <div class="bar"><i id="scoreBar"></i></div>
+        </div>
+        <div class="verdict">
+          <p class="verdict-label" id="verdictLabel">—</p>
+          <p id="verdictText">—</p>
+        </div>
+      </div>
+      <div class="flags" id="flags"></div>
+      <div class="result-cta">
+        <p><b>Was der Check nicht kann:</b> Er sagt Ihnen, wo es klemmt, nicht warum. Das steht in den Gesprächen mit dem Vorgänger, im Marktvergleich Ihres Gebiets und in dem, was Kandidaten über Sie sagen, wenn der Anruf nicht von Ihnen kommt. Genau das leistet die Vakanzdiagnose.</p>
+        <div class="cta-row">
+          <a class="btn" href="/#kontakt">Vakanzdiagnose anfordern</a>
+          <a class="btn btn-ghost" href="tel:+49XXXXXXXXX">Kurz durchsprechen: <span class="ph">040 XXX XX XX</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-navy">
+  <div class="wrap">
+    <p class="eyebrow rev">Was der Check nicht leistet</p>
+    <h2 class="rev">Er zeigt, wo es klemmt. Nicht, warum.</h2>
+    <p class="lead rev">Neun Fragen erkennen ein Muster. Sie ersetzen keine Gespräche mit dem Vorgänger, keinen Marktvergleich für Ihr Gebiet und nicht das, was Kandidaten über Sie sagen, wenn der Anruf nicht von Ihnen kommt. Genau das leistet die Vakanzdiagnose — in zwei Wochen, mit schriftlichem Befund, für 2.500 €.</p>
+    <div class="cta-row rev rev-d1">
+      <a class="btn" href="/#kontakt">Vakanzdiagnose anfordern</a>
+      <a class="btn btn-ghost" href="tel:+49XXXXXXXXX">Ergebnis kurz durchsprechen: <span class="ph">040 XXX XX XX</span></a>
+    </div>
+    <p class="cta-note">Der Check läuft vollständig in Ihrem Browser. Es wird nichts gespeichert und nichts gesendet.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-in">
+    <div><a class="brand" href="/" style="color:#fff">
+        <span class="mark invert" aria-hidden="true">VK</span>
+        <span class="wordmark">Vertriebsköpfe<small style="color:var(--on-navy-mute)">Personalberatung für den Vertrieb</small></span>
+      </a></div>
+    <div>
+      <a href="/">Startseite</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+49XXXXXXXXX">Jetzt anrufen · <span class="ph">040 XXX XX XX</span></a></div>
+
+<script>
+(function(){
+  // Einblendungen: 350 ms, 14 px, einmal
+  var els = document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<els.length;i++) els[i].classList.add('in');
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+(function(){
+  // Besetzungscheck: transparentes Punktesystem, Symptome statt Rezepte
+  var form = document.getElementById('checkForm');
+  if(!form) return;
+  var result = document.getElementById('result');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Gehaltsbaender: 0 <45 | 1 45-55 | 2 55-65 | 3 65-75 | 4 75-90 | 5 90-110 | 6 110-130 | 7 130-160 | 8 >160 (Tsd. EUR OTE)
+  var ROLLE = {
+    innen:   {min:1, name:'den Vertriebsinnendienst', variabel:false},
+    aussen:  {min:3, name:'den Außendienst',          variabel:true},
+    technik: {min:3, name:'den technischen Vertrieb', variabel:true},
+    gebiet:  {min:4, name:'eine Gebietsverkaufsleitung', variabel:true},
+    kam:     {min:4, name:'das Key Account Management', variabel:true},
+    skam:    {min:5, name:'ein Senior Key Account Management', variabel:true},
+    bizdev:  {min:4, name:'Business Development',      variabel:true},
+    export:  {min:4, name:'den Export-/Auslandsvertrieb', variabel:true},
+    leitung: {min:5, name:'eine Vertriebsleitung',     variabel:true},
+    head:    {min:6, name:'eine Vertriebsdirektion',   variabel:true}
+  };
+
+  function val(name){
+    var el = form.querySelector('input[name="'+name+'"]:checked');
+    return el ? el.value : null;
+  }
+  function alle(name){
+    return Array.prototype.map.call(
+      form.querySelectorAll('input[name="'+name+'"]:checked'),
+      function(el){ return el.value; });
+  }
+
+  function auswerten(){
+    var flags = [], abzug = 0;
+    function add(p, titel, text){ abzug += p; if(titel) flags.push({p:p, t:titel, x:text}); }
+
+    var rolle = ROLLE[val('rolle')] || ROLLE.kam;
+    var dauer = parseInt(val('dauer'),10);
+    var gehalt = parseInt(val('gehalt'),10);
+    var bew = parseInt(val('bewerbungen'),10);
+    var modell = val('modell');
+    var grund = val('grund');
+    var vor = val('vorgaenger');
+    var bewertung = val('bewertung');
+    var m = alle('massnahme');
+    function hat(x){ return m.indexOf(x) !== -1; }
+
+    if(dauer===3) add(30,'Vakanzdauer','Über sechs Monate offen. Der Bundesdurchschnitt liegt bei 157 Tagen. Ab dieser Dauer ist die Ursache fast nie der Markt, sondern etwas an der Stelle selbst.');
+    else if(dauer===2) add(16,'Vakanzdauer','Drei bis sechs Monate offen. Der Punkt, an dem mehr Suche nichts mehr bringt, ist meist schon überschritten.');
+    else if(dauer===1) add(10,'Vakanzdauer','Sechs bis zwölf Wochen offen — noch im normalen Rahmen, aber der Moment, in dem man nachsehen sollte.');
+
+    if(bew===3) add(22,'Keine passenden Bewerbungen','In acht Wochen keine einzige. Das ist kein Marktsignal, sondern ein Sichtbarkeits- oder Attraktivitätssignal: Ihre Ausschreibung erreicht die Richtigen nicht, oder sie überzeugt sie nicht.');
+    else if(bew===2) add(12,'Zu dünner Zulauf','Ein bis zwei passende Bewerbungen in acht Wochen. Zu wenig zum Auswählen — am Ende entscheiden Sie zwischen Kompromissen statt zwischen Kandidaten.');
+    else if(bew===1) add(5,null,null);
+
+    var diff = gehalt - rolle.min;
+    if(diff <= -2) add(20,'Gehalt unter Marktband','Für '+rolle.name+' liegt das Zieljahresgehalt deutlich unter dem, was üblich ist. Wer gut ist, sitzt bereits über diesem Band — und wechselt nicht nach unten.');
+    else if(diff === -1) add(10,'Gehalt am unteren Rand','Das Zieljahresgehalt liegt am unteren Rand des Bands für '+rolle.name+'. Das kostet Sie nicht jeden Kandidaten, aber die besten.');
+    else if(diff > 1) abzug -= 4;
+
+    if(modell==='prolastig') add(14,'Provisionslastiges Modell','Bei geringem Fix trägt der Kandidat Ihr Marktrisiko. Wer heute in einem bestellten Gebiet sitzt, rechnet das gegen — und bleibt, wo er ist. Bei einer Nachbesetzung ist das der häufigste stille Absagegrund.');
+    else if(modell==='fix' && rolle.variabel) add(10,'Kein variabler Anteil','Für '+rolle.name+' ungewöhnlich. Wer im Vertrieb etwas kann, will an seinem Ergebnis verdienen — ein reines Fixgehalt liest sich für ihn wie eine Rolle ohne Hebel.');
+    else if(modell==='bonus') add(6,'Bonus nur einmal im Jahr','Ein Jahresbonus wirkt weit weg. Vertriebler steuern über sichtbare, kurze Zyklen — was erst im März des Folgejahres kommt, zählt bei der Entscheidung kaum.');
+    else if(modell==='provision') abzug -= 4;
+
+    if(grund==='kuendigung') add(12,'Der Vorgänger hat gekündigt','Der wichtigste Befund in diesem Check. Wer geht, hinterlässt einen Grund — und dieser Grund wirkt auf den Nachfolger genauso, wenn ihn niemand ausräumt.');
+    else if(grund==='trennung') add(8,'Trennung von Ihrer Seite','Dahinter steckt häufig ein Rollenzuschnitt, der auch den Nächsten überfordert. Vor der Nachbesetzung gehört die Rolle auf den Tisch, nicht der Lebenslauf.');
+    else if(grund==='ruhestand') add(3,null,null);
+
+    if(vor==='kurz') add(20,'Vorgänger unter zwölf Monaten','Ein einzelner Fall kann Zufall sein. Zusammen mit einer Kündigung ist es ein Muster — und Muster wiederholen sich, bis jemand die Ursache benennt.');
+    else if(vor==='mittel') add(3,null,null);
+    else if(vor==='neu') add(5,'Erstbesetzung','Es gibt keine Erfahrungswerte, wie die Rolle im Alltag trägt. Das ist kein Fehler, aber es erhöht das Risiko, dass die Stelle nach neun Monaten wieder offen ist.');
+
+    // Massnahmen (Mehrfachauswahl)
+    if(hat('nichts')) add(8,'Bisher keine Maßnahme','Die Stelle bleibt offen, die Kosten laufen weiter. Das ist eine Entscheidung, auch wenn sie sich nicht wie eine anfühlt.');
+    if(hat('anzeige_wdh')) add(8,'Anzeige mehrfach wiederholt','Dieselbe Anzeige ein zweites und drittes Mal zu schalten, erreicht denselben Personenkreis noch einmal. Wenn die Antwort beim ersten Mal ausblieb, liegt es nicht an der Häufigkeit.');
+    else if(hat('anzeige')) add(4,null,null);
+    if(hat('anzeige') && !hat('direkt') && !hat('beratung')) add(8,'Nur Anzeige, keine Ansprache','52 % der Anzeigen führen zu keiner Einstellung. Gute Vertriebler lesen keine Stellenanzeigen — sie haben einen Job, ihre Provision und keinen Anlass zu suchen. Erreichbar sind sie nur über einen Anruf.');
+    if(hat('gehalt_hoch')) add(10,'Nachgebessert, ohne Wirkung','Sie haben am Paket gedreht und die Stelle ist weiterhin offen. Das ist der stärkste Hinweis darauf, dass es nicht am Geld liegt — sondern an Zuschnitt, Sichtbarkeit oder Ruf.');
+    if(hat('netzwerk') && !hat('direkt') && !hat('beratung')) add(6,'Nur das eigene Netzwerk','Bringt schnelle Treffer, aber immer aus demselben Umfeld. Für ein neues Gebiet oder eine neue Kundengruppe ist das selten die richtige Auswahl.');
+    if(hat('empfehlung')) abzug -= 3;
+    if(hat('direkt')) abzug -= 3;
+    if(hat('rolle_neu')) abzug -= 3;
+
+    if(bewertung==='schlecht') add(16,'Arbeitgeberbewertung unter 3,5','Kandidaten im Vertrieb schauen nach, bevor sie antworten. Was dort steht, ist oft genau das, was auch den Vorgänger gestört hat.');
+    else if(bewertung==='unbekannt') add(8,'Bewertungen unbekannt','Ihre Kandidaten kennen sie. Das ist der einzige Punkt in diesem Check, den Sie heute Abend in zehn Minuten selbst nachsehen können.');
+    else if(bewertung==='mittel') add(3,null,null);
+
+    var score = Math.max(0, Math.min(100, 100 - abzug));
+    flags.sort(function(a,b){ return b.p - a.p; });
+    return {score:score, flags:flags.slice(0,3)};
+  }
+
+  function render(r){
+    var num = document.getElementById('scoreNum');
+    var bar = document.getElementById('scoreBar');
+    var lab = document.getElementById('verdictLabel');
+    var txt = document.getElementById('verdictText');
+    var box = document.getElementById('flags');
+
+    var stufe;
+    if(r.score >= 72) stufe = {k:'v-gruen', l:'Unauffällig', t:'Ihre Stelle sieht nach einem normalen Suchfall aus. Wenn in den nächsten vier Wochen nichts passiert, liegt es an der Reichweite — nicht an der Stelle.'};
+    else if(r.score >= 42) stufe = {k:'v-gelb', l:'Angeschlagen', t:'Besetzbar, aber nicht so, wie die Stelle gerade steht. Zwei bis drei Punkte müssten sich ändern, bevor mehr Suche mehr bringt.'};
+    else stufe = {k:'v-rot', l:'So nicht besetzbar', t:'Mehr Suche ändert hier nichts. Solange diese Punkte stehen, bewerben sich die Falschen — oder es bewirbt sich niemand.'};
+
+    lab.className = 'verdict-label ' + stufe.k;
+    lab.textContent = stufe.l;
+    txt.textContent = stufe.t;
+
+    box.innerHTML = '';
+    if(!r.flags.length){
+      box.innerHTML = '<div class="flag"><span class="dot" style="background:#0E6F68"></span><div><h3>Kein auffälliger Punkt</h3><p>Selten, aber es kommt vor. Dann ist die Frage nicht, was an der Stelle falsch ist, sondern wer sie kennt — und das ist eine Frage der Ansprache, nicht der Diagnose.</p></div></div>';
+    } else {
+      r.flags.forEach(function(f){
+        var farbe = f.p >= 14 ? '#C0432C' : (f.p >= 10 ? '#C99A2E' : '#8A99AA');
+        var el = document.createElement('div');
+        el.className = 'flag';
+        el.innerHTML = '<span class="dot" style="background:'+farbe+'"></span><div><h3></h3><p></p></div>';
+        el.querySelector('h3').textContent = f.t;
+        el.querySelector('p').textContent = f.x;
+        box.appendChild(el);
+      });
+    }
+
+    result.hidden = false;
+    bar.style.width = r.score + '%';
+
+    if(reduce){ num.textContent = r.score; }
+    else {
+      var t0 = performance.now(), dur = 700;
+      (function step(now){
+        var p = Math.min(1,(now-t0)/dur);
+        num.textContent = Math.round(r.score * (1-Math.pow(1-p,3)));
+        if(p<1) requestAnimationFrame(step);
+      })(t0);
+    }
+    result.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'nearest'});
+  }
+
+  // "Bisher nichts davon" schliesst die anderen Maßnahmen aus
+  form.addEventListener('change', function(e){
+    if(e.target.name !== 'massnahme') return;
+    var nichts = form.querySelector('input[value="nichts"]');
+    if(e.target.value === 'nichts' && e.target.checked){
+      Array.prototype.forEach.call(form.querySelectorAll('input[name="massnahme"]'), function(el){
+        if(el !== nichts) el.checked = false;
+      });
+    } else if(e.target.checked && nichts){
+      nichts.checked = false;
+    }
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    render(auswerten());
+  });
+})();
+</script>
+
+</body>
+</html>

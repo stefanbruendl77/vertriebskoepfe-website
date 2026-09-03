@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vertriebsköpfe · Personalberatung für den Vertrieb</title>
+<meta name="description" content="Wir besetzen Ihre Vertriebsstelle — und sagen Ihnen vorher, warum der Letzte gegangen ist. Vakanzdiagnose, Besetzung, Recruiting-Kapazität mit offenen Preisen.">
+<meta name="robots" content="noindex">
+<!-- ENTWURF. Offen: Telefonnummer (tel:+49XXXXXXXXX und Anzeigetext), Kalenderlink,
+     Portraetfoto, Impressum, Datenschutz. Danach robots-Meta entfernen.
+     index.html und besetzungscheck.html gehoeren in dasselbe Verzeichnis. -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vertriebsköpfe">
+<meta property="og:title" content="Vertriebsköpfe · Personalberatung für den Vertrieb">
+<meta property="og:description" content="Wir besetzen Ihre Vertriebsstelle — und sagen Ihnen vorher, warum der Letzte gegangen ist.">
+<meta property="og:image" content="https://vertriebskoepfe.de/og-image.png">
+<meta property="og:url" content="https://vertriebskoepfe.de/">
+<meta name="twitter:card" content="summary_large_image">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Libre+Franklin:wght@400;500;600&display=swap">
+</head>
+<body>
+<style>
+  :root{
+    --navy:#0D1A2E;
+    --navy-2:#16263D;
+    --paper:#F6F8FB;
+    --card:#FFFFFF;
+    --ink:#14202F;
+    --muted:#5C6B7E;
+    --hair:#DDE4EC;
+    --petrol:#0E6F68;
+    --petrol-dark:#0B5A54;
+    --petrol-lite:#5FD3C4;
+    --petrol-wash:#E8F2F0;
+    --on-navy:#E7EDF3;
+    --on-navy-mute:#9FB2C4;
+    --shadow:0 1px 2px rgba(13,26,46,.06),0 8px 24px -12px rgba(13,26,46,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0B1420;
+      --card:#111E2C;
+      --ink:#E7EDF3;
+      --muted:#93A3B4;
+      --hair:#22344A;
+      --navy:#060E18;
+      --navy-2:#0F1E30;
+      --petrol:#5FD3C4;
+      --petrol-dark:#7FE0D3;
+      --petrol-wash:#12312F;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0B1420;
+    --card:#111E2C;
+    --ink:#E7EDF3;
+    --muted:#93A3B4;
+    --hair:#22344A;
+    --navy:#060E18;
+    --navy-2:#0F1E30;
+    --petrol:#5FD3C4;
+    --petrol-dark:#7FE0D3;
+    --petrol-wash:#12312F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+    scroll-behavior:smooth;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+  .narrow{max-width:660px}
+  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;letter-spacing:-.012em}
+  h1{font-size:clamp(2.05rem,4.6vw,3.15rem);line-height:1.1;margin:0 0 20px}
+  h2{font-size:clamp(1.6rem,3.2vw,2.15rem);line-height:1.16;margin:0 0 14px}
+  h3{font-size:1.16rem;line-height:1.3;margin:0 0 8px}
+  p{margin:0 0 18px}
+  a{color:var(--petrol)}
+  .eyebrow{
+    font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+    color:var(--petrol);margin:0 0 16px;
+  }
+  .band-navy .eyebrow{color:var(--petrol-lite)}
+  section{padding:84px 0;border-bottom:1px solid var(--hair)}
+  .band-navy{background:var(--navy);color:var(--on-navy);border-bottom:0}
+  .band-navy h2{color:#fff}
+  .band-navy p{color:var(--on-navy-mute)}
+  .lead{font-size:1.12rem;color:var(--muted);max-width:60ch}
+  .band-navy .lead{color:var(--on-navy-mute)}
+
+  /* Navigation */
+  header.nav{
+    position:sticky;top:0;z-index:50;background:var(--paper);
+    background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+  .logo{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:1.12rem;line-height:1.15;letter-spacing:-.01em}
+  .logo span{display:block;font-family:"Libre Franklin",sans-serif;font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:.94rem;font-weight:500}
+  .nav-links a:hover{color:var(--petrol)}
+  .tel{font-variant-numeric:tabular-nums;white-space:nowrap}
+  @media (max-width:820px){.nav-links a:not(.btn){display:none}}
+
+
+  /* Wortmarke Vertriebsköpfe */
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+  .mark{
+    width:34px;height:34px;flex:none;border-radius:3px;background:var(--navy);color:#fff;
+    font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:14px;letter-spacing:.03em;
+    display:grid;place-items:center;
+  }
+  :root[data-theme="dark"] .mark,:root:not([data-theme="light"]) .mark{background:#0E6F68;color:#fff}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .mark{background:#0D1A2E;color:#fff}}
+  .mark.invert{background:#fff;color:#0D1A2E}
+  .wordmark{
+    font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.1rem;line-height:1.1;
+    letter-spacing:.075em;text-transform:uppercase;
+  }
+  .wordmark small{
+    display:block;font-family:"Libre Franklin",sans-serif;font-size:9.5px;font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px;
+  }
+
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--petrol);color:#fff;text-decoration:none;
+    font-family:"Libre Franklin",sans-serif;font-size:.97rem;font-weight:600;
+    padding:13px 22px;border:0;border-radius:4px;cursor:pointer;
+    transition:background .18s ease,transform .18s ease;
+  }
+  .btn:hover{background:var(--petrol-dark)}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid var(--petrol);outline-offset:3px}
+  .btn-ghost{
+    background:transparent;color:var(--ink);border:1px solid var(--hair);
+  }
+  .btn-ghost:hover{background:var(--card);border-color:var(--petrol);color:var(--petrol)}
+  .band-navy .btn-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+  .band-navy .btn-ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.5)}
+  :root[data-theme="dark"] .btn,:root:not([data-theme="light"]) .btn{color:#06201D}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .btn{color:#fff}}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:6px}
+  .cta-note{font-size:.86rem;color:var(--muted);margin:14px 0 0}
+  .band-navy .cta-note{color:var(--on-navy-mute)}
+
+  /* Hero */
+  .hero{padding:86px 0 74px;border-bottom:1px solid var(--hair)}
+  .hero h1{max-width:19ch}
+  .hero .lead{font-size:1.16rem;max-width:56ch;margin-bottom:26px}
+  .segment{
+    display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 0;padding:0;list-style:none;
+  }
+  .segment li{
+    font-size:.83rem;color:var(--muted);border:1px solid var(--hair);
+    border-radius:100px;padding:5px 13px;background:var(--card);
+  }
+
+  /* Zahlen / Rechner */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin:0 0 44px}
+  .stat .num{
+    font-family:"Source Serif 4",Georgia,serif;font-size:2.9rem;font-weight:600;line-height:1;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;display:block;margin-bottom:8px;
+  }
+  .stat p{font-size:.94rem;margin:0;max-width:30ch}
+  .calc{
+    background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:8px;
+    padding:26px 26px 22px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:end;
+  }
+  .calc label{display:block;font-size:.83rem;letter-spacing:.06em;text-transform:uppercase;color:var(--on-navy-mute);margin-bottom:8px}
+  .calc input{
+    width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
+    color:#fff;font-family:"Libre Franklin",sans-serif;font-size:1.05rem;font-variant-numeric:tabular-nums;
+    padding:11px 13px;border-radius:4px;
+  }
+  .calc input:focus{outline:2px solid var(--petrol-lite);outline-offset:1px}
+  .calc-out{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;margin-top:2px}
+  .calc-out .big{
+    font-family:"Source Serif 4",Georgia,serif;font-size:clamp(2.2rem,5vw,3.1rem);font-weight:600;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;line-height:1;display:block;margin-bottom:10px;
+  }
+  .calc-out p{margin:0;font-size:.9rem}
+  @media (max-width:600px){.calc{grid-template-columns:1fr}}
+
+  /* Besetzungscheck-Teaser */
+  .teaser{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
+  @media (max-width:760px){.teaser{grid-template-columns:1fr;gap:24px}}
+  .teaser-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
+  .teaser-list li{
+    padding:11px 0;border-bottom:1px solid var(--hair);font-size:.94rem;color:var(--muted);
+    display:flex;gap:12px;align-items:baseline;
+  }
+  .teaser-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--petrol);flex:none}
+  .teaser-list li.more{color:var(--ink);font-weight:600}
+  .teaser-list li.more::before{background:transparent}
+
+  /* Besetzungscheck */
+  .check{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:8px 26px 26px;box-shadow:var(--shadow);
+  }
+  .q{border:0;border-bottom:1px solid var(--hair);margin:0;padding:22px 0}
+  .q:last-of-type{border-bottom:0}
+  .q legend{
+    font-family:"Source Serif 4",Georgia,serif;font-size:1.05rem;font-weight:600;
+    padding:0;margin-bottom:12px;color:var(--ink);
+  }
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{position:relative;cursor:pointer}
+  .opt input{position:absolute;opacity:0;width:0;height:0}
+  .opt span{
+    display:inline-block;border:1px solid var(--hair);background:var(--paper);
+    border-radius:100px;padding:8px 16px;font-size:.92rem;color:var(--muted);
+    transition:border-color .15s ease,color .15s ease,background .15s ease;
+  }
+  .opt:hover span{border-color:var(--petrol);color:var(--ink)}
+  .opt input:checked + span{
+    border-color:var(--petrol);background:var(--petrol-wash);color:var(--petrol);font-weight:600;
+  }
+  .opt input:focus-visible + span{outline:2px solid var(--petrol);outline-offset:2px}
+  .check-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding-top:24px;border-top:1px solid var(--hair)}
+
+  .result{
+    margin-top:20px;border:1px solid var(--petrol);border-radius:8px;
+    background:var(--card);overflow:hidden;box-shadow:var(--shadow);
+  }
+  .result-top{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 26px}
+  @media (max-width:620px){.result-top{grid-template-columns:1fr;gap:18px}}
+  .score-num{
+    font-family:"Source Serif 4",Georgia,serif;font-size:3.6rem;font-weight:600;line-height:1;
+    font-variant-numeric:tabular-nums;color:var(--petrol);
+  }
+  .score-of{color:var(--muted);font-size:.85rem;margin-left:6px}
+  .bar{height:6px;background:var(--paper);border:1px solid var(--hair);border-radius:100px;margin-top:14px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--petrol);transition:width .6s cubic-bezier(.22,1,.36,1)}
+  .verdict-label{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0 0 8px;
+  }
+  .verdict p:last-child{margin:0;font-size:1.02rem}
+  .v-gruen{color:#1B7F4B}
+  .v-gelb{color:#9A6B12}
+  .v-rot{color:#A8331F}
+  :root[data-theme="dark"] .v-gruen,:root:not([data-theme="light"]) .v-gruen{color:#63C48D}
+  :root[data-theme="dark"] .v-gelb,:root:not([data-theme="light"]) .v-gelb{color:#E0B15C}
+  :root[data-theme="dark"] .v-rot,:root:not([data-theme="light"]) .v-rot{color:#E8836C}
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .v-gruen{color:#1B7F4B}
+    :root:not([data-theme="dark"]) .v-gelb{color:#9A6B12}
+    :root:not([data-theme="dark"]) .v-rot{color:#A8331F}
+  }
+  .flags{border-top:1px solid var(--hair);padding:4px 26px 8px}
+  .flag{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--hair)}
+  .flag:last-child{border-bottom:0}
+  .flag .dot{width:11px;height:11px;border-radius:50%;margin-top:7px}
+  .flag h3{margin:0 0 4px;font-size:1rem}
+  .flag p{margin:0;font-size:.94rem;color:var(--muted)}
+  .result-cta{background:var(--petrol-wash);padding:24px 26px;border-top:1px solid var(--hair)}
+  .result-cta p{font-size:.96rem;max-width:64ch}
+
+  /* Gegenüberstellung */
+  .compare{border-top:1px solid var(--hair)}
+  .compare-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:28px;
+    padding:24px 0;border-bottom:1px solid var(--hair);
+  }
+  .compare-row .side-label{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    margin:0 0 8px;font-weight:600;
+  }
+  .compare-row .mine .side-label{color:var(--petrol)}
+  .compare-row p{margin:0;font-size:1rem}
+  .compare-row .usual p{color:var(--muted)}
+  @media (max-width:620px){.compare-row{grid-template-columns:1fr;gap:16px}}
+
+  /* Leistungen */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px}
+  .card{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow);
+    transition:border-color .2s ease,transform .2s ease;
+  }
+  .card:hover{border-color:var(--petrol);transform:translateY(-2px)}
+  .card .step{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+  .card .price{
+    font-family:"Source Serif 4",Georgia,serif;font-size:1.55rem;font-weight:600;
+    color:var(--ink);margin:4px 0 14px;font-variant-numeric:tabular-nums;
+  }
+  .card .price small{display:block;font-family:"Libre Franklin",sans-serif;font-size:.8rem;font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0}
+  .card ul{margin:0 0 20px;padding-left:18px;font-size:.95rem;color:var(--muted)}
+  .card li{margin-bottom:7px}
+  .card li::marker{color:var(--petrol)}
+  .card .btn{margin-top:auto;align-self:flex-start}
+
+  /* Ablauf */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid var(--hair)}
+  .step-item{padding:24px 22px 24px 0;border-right:1px solid var(--hair)}
+  .step-item:last-child{border-right:0}
+  .step-item .wk{
+    font-family:"Source Serif 4",Georgia,serif;font-size:.95rem;font-weight:700;color:var(--petrol);
+    margin:0 0 10px;letter-spacing:.02em;
+  }
+  .step-item h3{font-size:1.02rem;margin-bottom:6px}
+  .step-item p{font-size:.93rem;color:var(--muted);margin:0}
+  @media (max-width:760px){.step-item{border-right:0;border-bottom:1px solid var(--hair);padding-right:0}.step-item:last-child{border-bottom:0}}
+
+  /* Zusage */
+  .promise{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+  @media (max-width:760px){.promise{grid-template-columns:1fr;gap:24px}}
+  .promise-list{list-style:none;margin:0;padding:0}
+  .promise-list li{
+    padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);
+    display:flex;gap:14px;align-items:baseline;font-size:.97rem;color:var(--on-navy);
+  }
+  .promise-list li:last-child{border-bottom:0}
+  .promise-list b{
+    font-family:"Source Serif 4",Georgia,serif;color:var(--petrol-lite);font-size:1.15rem;
+    flex:none;min-width:88px;font-variant-numeric:tabular-nums;
+  }
+
+  /* Über mich */
+  .about{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+  @media (max-width:720px){.about{grid-template-columns:1fr;gap:24px}}
+  .portrait{
+    aspect-ratio:4/5;background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--muted);font-size:.84rem;padding:20px;
+  }
+  .roles{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--hair)}
+  .roles li{padding:14px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:112px 1fr;gap:18px;font-size:.97rem}
+  .roles span{color:var(--petrol);font-weight:600;font-size:.87rem;letter-spacing:.02em}
+  @media (max-width:520px){.roles li{grid-template-columns:1fr;gap:2px}}
+
+  /* FAQ */
+  .faq{border-top:1px solid var(--hair);max-width:760px}
+  details{border-bottom:1px solid var(--hair)}
+  summary{
+    cursor:pointer;padding:20px 40px 20px 0;position:relative;list-style:none;
+    font-family:"Source Serif 4",Georgia,serif;font-size:1.1rem;font-weight:600;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{
+    content:"+";position:absolute;right:6px;top:18px;font-size:1.4rem;color:var(--petrol);
+    font-family:"Libre Franklin",sans-serif;font-weight:400;transition:transform .2s ease;
+  }
+  details[open] summary::after{content:"–"}
+  summary:hover{color:var(--petrol)}
+  summary:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+  details p{padding:0 0 20px;margin:0;color:var(--muted);max-width:64ch}
+
+  /* Abschluss + Fuß */
+  .close-cta{text-align:left}
+  footer.site{background:var(--navy);color:var(--on-navy-mute);padding:48px 0 96px;font-size:.9rem}
+  footer.site a{color:var(--on-navy-mute);text-decoration:none;margin-right:22px}
+  footer.site a:hover{color:#fff}
+  .foot-in{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:baseline}
+
+  /* Mobile Anrufleiste */
+  .callbar{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    background:var(--petrol);padding:12px 16px;text-align:center;
+  }
+  .callbar a{color:#fff;text-decoration:none;font-weight:600;font-size:1rem;letter-spacing:.01em}
+  @media (max-width:820px){.callbar{display:block}footer.site{padding-bottom:110px}}
+
+  /* Platzhalter */
+  .ph{border-bottom:1px dotted var(--petrol);color:inherit}
+  .ph-box{
+    background:var(--petrol-wash);border:1px dashed var(--petrol);border-radius:8px;
+    padding:22px 24px;color:var(--ink);
+  }
+  .ph-box p:last-child{margin-bottom:0}
+  .ph-box .eyebrow{margin-bottom:10px}
+
+  /* Bewegung: 350 ms, 14 px, einmal */
+  .rev{opacity:0;transform:translateY(14px);transition:opacity .35s ease-out,transform .35s ease-out}
+  .rev.in{opacity:1;transform:none}
+  .rev-d1{transition-delay:.08s}
+  .rev-d2{transition-delay:.16s}
+  @media (prefers-reduced-motion: reduce){
+    .rev{opacity:1;transform:none;transition:none}
+    body{scroll-behavior:auto}
+    .btn,.card{transition:none}
+  }
+</style>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Vertriebsköpfe, zur Startseite">
+      <span class="mark" aria-hidden="true">VK</span>
+      <span class="wordmark">Vertriebsköpfe<small>Personalberatung für den Vertrieb</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#person">Wer das macht</a>
+      <a class="tel" href="tel:+49XXXXXXXXX"><span class="ph">040 XXX XX XX</span></a>
+      <a class="btn" href="#kontakt">Vakanzdiagnose anfordern</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 · Kopf -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow rev">Vertrieb · Mittelstand · 50 bis 500 Mitarbeitende</p>
+    <h1 class="rev rev-d1">Wir besetzen Ihre Vertriebsstelle. Und sagen Ihnen vorher, warum der Letzte gegangen ist.</h1>
+    <p class="lead rev rev-d2">Die meisten Vertriebsstellen bleiben nicht offen, weil der Markt leer ist. Sie bleiben offen, weil das Angebot nicht trägt, die Außendarstellung nicht überzeugt oder die Rolle bei näherem Hinsehen niemanden hält. Das klären wir, bevor wir suchen.</p>
+    <div class="cta-row rev rev-d2">
+      <a class="btn" href="#kontakt">Vakanzdiagnose anfordern</a>
+      <a class="btn btn-ghost" href="tel:+49XXXXXXXXX">Anrufen: <span class="ph">040 XXX XX XX</span></a>
+    </div>
+    <p class="cta-note">Antwort am selben Werktag. Erstgespräch 20 Minuten, ohne Unterlagen.</p>
+    <ul class="segment rev">
+      <li>Logistik &amp; Spedition</li>
+      <li>Technischer Großhandel</li>
+      <li>Bauzulieferer</li>
+      <li>Verpackung</li>
+      <li>Industriedienstleistung</li>
+      <li>50–500 Mitarbeitende</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2 · Was die offene Stelle kostet -->
+<section class="band-navy">
+  <div class="wrap">
+    <p class="eyebrow rev">Die Rechnung, die selten jemand aufmacht</p>
+    <h2 class="rev">Eine unbesetzte Vertriebsstelle ist teurer als jede Personalberatung.</h2>
+    <p class="lead rev" style="margin-bottom:44px">Nur fällt die Rechnung nicht auf, weil sie in keiner Kostenstelle steht. Sie steht im Umsatz, der nicht kommt.</p>
+
+    <div class="stats rev">
+      <div class="stat">
+        <span class="num">157</span>
+        <p>Tage dauert es im Schnitt, bis eine gemeldete Stelle wieder besetzt ist.</p>
+      </div>
+      <div class="stat">
+        <span class="num">52 %</span>
+        <p>der Stellenanzeigen führen zu keiner Einstellung — das Geld ist trotzdem ausgegeben.</p>
+      </div>
+      <div class="stat">
+        <span class="num">6–9</span>
+        <p>Monate braucht ein neuer Außendienstler, bis er sein Gebiet trägt. Auch das läuft weiter.</p>
+      </div>
+    </div>
+
+    <div class="calc rev" id="calc">
+      <div>
+        <label for="umsatz">Umsatz je Vertriebler im Jahr</label>
+        <input id="umsatz" type="number" inputmode="numeric" min="0" step="50000" value="1200000">
+      </div>
+      <div>
+        <label for="monate">Monate unbesetzt</label>
+        <input id="monate" type="number" inputmode="numeric" min="0" max="36" step="1" value="5">
+      </div>
+      <div class="calc-out">
+        <span class="big" id="ergebnis">500.000 €</span>
+        <p>Umsatz, der in dieser Zeit nicht bearbeitet wird. Bei 20 % Deckungsbeitrag entspricht das <b id="db" style="color:#fff">100.000 €</b> — dem Sechsfachen eines vollständigen Suchmandats.</p>
+      </div>
+    </div>
+    <p class="cta-note">Grobe Näherung, kein Gutachten. Die genaue Zahl für Ihr Gebiet rechnen wir im Erstgespräch.</p>
+  </div>
+</section>
+
+<!-- 3 · Besetzungscheck (Teaser) -->
+<section id="check">
+  <div class="wrap">
+    <div class="teaser rev">
+      <div>
+        <p class="eyebrow">Kostenlos · 9 Fragen · unter drei Minuten</p>
+        <h2>Wie besetzbar ist Ihre Stelle — so, wie sie heute ausgeschrieben ist?</h2>
+        <p class="lead">Der Besetzungscheck prüft dieselben Punkte, mit denen auch jedes Mandat beginnt: Vakanzdauer, Zulauf, Vergütungsmodell und Gehaltsband, Abgangsgrund, Vorgänger, bisherige Maßnahmen, Außenwirkung. Sie bekommen eine Zahl, ein Urteil und die drei Punkte, die bei Ihnen am schwersten wiegen — sofort, ohne Formular.</p>
+        <div class="cta-row">
+          <a class="btn" href="/besetzungscheck/">Besetzungscheck starten</a>
+        </div>
+      </div>
+      <ul class="teaser-list">
+        <li>Wie lange ist die Stelle offen?</li>
+        <li>Wie ist die Vergütung aufgebaut?</li>
+        <li>Liegt das Gehalt im Marktband der Rolle?</li>
+        <li>Warum ist die Stelle offen?</li>
+        <li>Wie lange blieb der Vorgänger?</li>
+        <li>Was haben Sie bereits versucht?</li>
+        <li class="more">… und drei weitere</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · Der Unterschied -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow rev">Drei Unterschiede</p>
+    <h2 class="rev">Warum das hier anders läuft als bei den meisten.</h2>
+    <p class="lead rev" style="margin-bottom:40px">Nicht schneller. Haltbarer.</p>
+
+    <div class="compare rev">
+      <div class="compare-row">
+        <div class="usual">
+          <p class="side-label">Üblich</p>
+          <p>Sie melden eine Vakanz, die Suche startet am nächsten Tag.</p>
+        </div>
+        <div class="mine">
+          <p class="side-label">Bei uns</p>
+          <p>Zuerst die Diagnose: Gehaltspaket, Rollenzuschnitt, Außendarstellung, Bewertungen, Abgangsgründe des Vorgängers. Erst danach wird gesucht — sonst suchen wir jemanden für eine Stelle, die ihn wieder verliert.</p>
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="usual">
+          <p class="side-label">Üblich</p>
+          <p>„Personalberatung für Vertriebspositionen" — von Startup bis Konzern, quer durch alle Branchen.</p>
+        </div>
+        <div class="mine">
+          <p class="side-label">Bei uns</p>
+          <p>Ein Ausschnitt: erklärungsbedürftige Produkte, lange Verkaufszyklen, gewachsene Vertriebsgebiete. Wer diese Gebiete kennt, weiß, welcher Kandidat sie fährt — und welcher nur so klingt.</p>
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="usual">
+          <p class="side-label">Üblich</p>
+          <p>Erfolg wird an der Besetzungsgeschwindigkeit gemessen. Nach der Unterschrift endet die Zuständigkeit.</p>
+        </div>
+        <div class="mine">
+          <p class="side-label">Bei uns</p>
+          <p>Gemessen wird an der Verweildauer. Drei Monate Nachbesetzung — und, was mehr bringt: 90 Tage Begleitung der Einarbeitung. Das ist die Zeit, in der die meisten Vertriebler innerlich wieder aussteigen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Leistungen -->
+<section id="leistungen">
+  <div class="wrap">
+    <p class="eyebrow rev">Drei Stufen, offene Preise</p>
+    <h2 class="rev">Sie müssen nicht mit dem großen Mandat anfangen.</h2>
+    <p class="lead rev" style="margin-bottom:40px">Die meisten Beratungen nennen ihr Honorar erst im Gespräch. Hier steht es, damit Sie vorher wissen, worüber wir reden.</p>
+
+    <div class="cards">
+      <div class="card rev">
+        <p class="step">Stufe 1</p>
+        <h3>Vakanzdiagnose</h3>
+        <p class="price">2.500 €<small>einmalig, zwei Wochen</small></p>
+        <ul>
+          <li>Gehaltspaket im Marktvergleich</li>
+          <li>Rollenzuschnitt und Gebietslogik</li>
+          <li>Außendarstellung und Arbeitgeberbewertungen</li>
+          <li>Gespräche zu den Abgangsgründen</li>
+          <li>Schriftlicher Befund mit Empfehlungen</li>
+        </ul>
+        <a class="btn btn-ghost" href="#kontakt">Diagnose anfragen</a>
+      </div>
+      <div class="card rev rev-d1">
+        <p class="step">Stufe 2</p>
+        <h3>Besetzung</h3>
+        <p class="price">5.600 € + Erfolg<small>25 % des Zieljahresgehalts gesamt, in drei Raten</small></p>
+        <ul>
+          <li>Direktansprache statt Anzeige</li>
+          <li>Rund 100 gezielte Kontakte je Mandat</li>
+          <li>Shortlist mit Einschätzung, nicht mit Lebensläufen</li>
+          <li>Begleitung bis zur Unterschrift</li>
+          <li>3 Monate Nachbesetzung, 90 Tage Begleitung</li>
+        </ul>
+        <a class="btn" href="#kontakt">Mandat besprechen</a>
+      </div>
+      <div class="card rev rev-d2">
+        <p class="step">Stufe 3</p>
+        <h3>Recruiting-Kapazität</h3>
+        <p class="price">Tagessatz<small>monatlich abgerechnet, ab zwei Monaten</small></p>
+        <ul>
+          <li>Zwei Tage pro Woche im Haus</li>
+          <li>Sinnvoll ab drei offenen Vertriebsstellen</li>
+          <li>Ansprache, Vorauswahl, Prozesssteuerung</li>
+          <li>Ihr Team bleibt beteiligt</li>
+          <li>Vier Wochen Kündigungsfrist</li>
+        </ul>
+        <a class="btn btn-ghost" href="#kontakt">Bedarf schildern</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Ablauf -->
+<section id="ablauf">
+  <div class="wrap">
+    <p class="eyebrow rev">Ablauf einer Besetzung</p>
+    <h2 class="rev">Acht Wochen, vier Schritte, keine Überraschungen.</h2>
+    <p class="lead rev" style="margin-bottom:36px">Sie wissen jede Woche, wo das Mandat steht — auch dann, wenn es nicht vorangeht.</p>
+
+    <div class="steps rev">
+      <div class="step-item">
+        <p class="wk">Woche 1</p>
+        <h3>Diagnose</h3>
+        <p>Rolle, Gehalt, Gebiet, Abgangsgründe. Am Ende steht, ob die Stelle so besetzbar ist — oder was sich vorher ändern muss.</p>
+      </div>
+      <div class="step-item">
+        <p class="wk">Woche 2–3</p>
+        <h3>Ansprache</h3>
+        <p>Rund 100 gezielte Kontakte, überwiegend am Telefon. Menschen, die nicht suchen, bewerben sich nicht — sie werden angerufen.</p>
+      </div>
+      <div class="step-item">
+        <p class="wk">Woche 4–5</p>
+        <h3>Shortlist</h3>
+        <p>Drei bis fünf Profile mit Einschätzung: was der Kandidat kann, was ihn hält, wo das Risiko liegt.</p>
+      </div>
+      <div class="step-item">
+        <p class="wk">Woche 6–8</p>
+        <h3>Entscheidung</h3>
+        <p>Gespräche, Verhandlung, Unterschrift. Danach beginnt die Begleitung der Einarbeitung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Zusage -->
+<section class="band-navy">
+  <div class="wrap promise">
+    <div>
+      <p class="eyebrow rev">Die Zusage</p>
+      <h2 class="rev">Der Tag der Unterschrift ist nicht das Ende des Mandats.</h2>
+      <p class="rev">Eine Nachbesetzungsgarantie ist Risikoabsicherung: Wenn es schiefgeht, wird noch einmal gesucht. Das ändert nichts daran, <i>dass</i> es schiefgeht. Deshalb steht hier beides — die Absicherung für den Fall der Fälle, und die Arbeit, die dafür sorgt, dass der Fall nicht eintritt.</p>
+    </div>
+    <ul class="promise-list rev rev-d1">
+      <li><b>3 Monate</b><span>Nachbesetzung ohne weiteres Honorar, wenn der Kandidat in der Probezeit wieder geht.</span></li>
+      <li><b>90 Tage</b><span>Begleitung der Einarbeitung: strukturierte Gespräche mit Ihnen und mit dem Neuen — getrennt, damit beide offen reden.</span></li>
+      <li><b>Schriftlich</b><span>Beides steht im Vertrag, mit Bedingungen, vor der ersten Rechnung.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 · Wer das macht -->
+<section id="person">
+  <div class="wrap about">
+    <div class="portrait rev">Platzhalter: Porträtfoto,<br>hochkant, echtes Foto,<br>kein Stockbild</div>
+    <div>
+      <p class="eyebrow rev">Wer das macht</p>
+      <h2 class="rev">Stefan Bründl</h2>
+      <p class="rev">Ich habe siebzehn Jahre in der Personaldienstleistung gearbeitet, zuletzt als Vertriebsdirektor, und dabei beides von innen gesehen: wie Vertriebsorganisationen Leute verlieren, und wie schwer sie danach welche finden. Seit 2024 berate ich Geschäftsführer im Mittelstand zu Fluktuation und Mitarbeiterbindung.</p>
+      <p class="rev">Deshalb die Diagnose vor der Suche. Sie ist kein Zusatzprodukt, sondern das, womit ich seit Jahren mein Geld verdiene — nur diesmal, bevor die Stelle nachbesetzt wird statt danach.</p>
+      <ul class="roles rev">
+        <li><span>17 Jahre</span><div>Personaldienstleistung, zuletzt Vertriebsdirektor bei einem der großen Anbieter</div></li>
+        <li><span>Eigene Führung</span><div>Vertriebsleitung mit Umsatzverantwortung — ich weiß, wen Sie suchen, weil ich diese Leute geführt habe</div></li>
+        <li><span>Seit 2024</span><div>Beratung zu Fluktuation und Bindung im Mittelstand — <a href="https://leadsimply.de">LeadSimply</a></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · Belege -->
+<section>
+  <div class="wrap narrow">
+    <p class="eyebrow rev">Belege</p>
+    <h2 class="rev">Hier stehen bald echte Zahlen. Bis dahin keine erfundenen.</h2>
+    <div class="ph-box rev">
+      <p class="eyebrow">Platzhalter — vor dem Livegang ersetzen</p>
+      <p><b>Bis zum dritten Mandat:</b> zwei bis drei Stimmen aus Ihrem Netzwerk zur Arbeitsweise — Geschäftsführer, ehemalige Kollegen, Kandidaten. Mit Namen, Funktion und Unternehmen; ohne diese drei Angaben wirkt ein Zitat wie erfunden.</p>
+      <p><b>Ab dem dritten Mandat:</b> die echten Trichter — Ansprachen, geführte Gespräche, Shortlist, Einstellung, Dauer. Inklusive der Mandate, die nicht funktioniert haben. Vier ehrliche Zahlen aus einem echten Mandat wirken stärker als jede Prozentangabe, und außer einem einzigen Wettbewerber macht das niemand.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · FAQ -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow rev">Was Geschäftsführer vorher wissen wollen</p>
+    <h2 class="rev" style="margin-bottom:36px">Vier Fragen, die in fast jedem Erstgespräch kommen.</h2>
+    <div class="faq rev">
+      <details>
+        <summary>Warum ein Retainer und nicht reines Erfolgshonorar?</summary>
+        <p>Weil reines Erfolgshonorar den Berater zwingt, viele Mandate gleichzeitig zu bearbeiten und das schnellste zuerst. Ihre Stelle ist dann eine unter zwölf. Der Retainer kauft Ihnen Zuwendung: Ich nehme wenige Mandate an und arbeite jedes vollständig, auch wenn es schwierig wird. Er ist außerdem nur ein Drittel des Gesamthonorars — der größere Teil hängt weiterhin am Ergebnis.</p>
+      </details>
+      <details>
+        <summary>Wir suchen ohnehin selbst weiter. Stört das?</summary>
+        <p>Nein. Wenn Sie den Richtigen selbst finden, während das Mandat läuft, ist das der beste Ausgang für Sie. Dann wird das Erfolgshonorar nicht fällig, der Retainer bleibt beim Berater. Das ist der Preis dafür, dass jemand acht Wochen an Ihrer Stelle gearbeitet hat.</p>
+      </details>
+      <details>
+        <summary>Was passiert, wenn der Kandidat wieder geht?</summary>
+        <p>In den ersten drei Monaten wird ohne weiteres Honorar nachbesetzt — Sie tragen nur die Auslagen. Ehrlicher Hinweis dazu: Eine Garantie ist Risikoabsicherung, keine Lösung. Sie hilft Ihnen erst, wenn der Schaden schon da ist. Deshalb liegt das Gewicht bei uns vorne — auf der Diagnose, die klärt, warum der Vorgänger ging — und in den 90 Tagen danach, in denen sich entscheidet, ob der Neue bleibt.</p>
+      </details>
+      <details>
+        <summary>Kennen Sie unsere Branche?</summary>
+        <p>Wenn nicht, sage ich das im ersten Gespräch. Ich arbeite in einem schmalen Ausschnitt — erklärungsbedürftige Produkte, lange Verkaufszyklen, Mittelstand. Für Software-Vertrieb oder Konzernstrukturen gibt es bessere Adressen, und ich nenne sie Ihnen.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · Abschluss -->
+<section id="kontakt" class="band-navy">
+  <div class="wrap close-cta">
+    <p class="eyebrow rev">Der nächste Schritt</p>
+    <h2 class="rev">Sagen Sie mir, welche Stelle offen ist. Den Rest klären wir in zwanzig Minuten.</h2>
+    <p class="lead rev" style="margin-bottom:28px">Kein Formular mit zwölf Feldern, keine Unterlagen. Ein Anruf, in dem Sie schildern, welche Rolle wie lange offen ist und wer zuletzt darauf saß.</p>
+    <div class="cta-row rev rev-d1">
+      <a class="btn" href="tel:+49XXXXXXXXX">Anrufen: <span class="ph">040 XXX XX XX</span></a>
+      <a class="btn btn-ghost" href="#"><span class="ph">Termin im Kalender wählen</span></a>
+    </div>
+    <p class="cta-note">Oder schreiben Sie an <a href="mailto:" style="color:var(--petrol-lite)"><span class="ph">stefan@vertriebskoepfe.de</span></a> — Antwort am selben Werktag.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="index.html" style="color:#fff">
+        <span class="mark invert" aria-hidden="true">VK</span>
+        <span class="wordmark">Vertriebsköpfe<small style="color:var(--on-navy-mute)">Personalberatung für den Vertrieb</small></span>
+      </a>
+    </div>
+    <div>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="https://leadsimply.de">LeadSimply</a>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+49XXXXXXXXX">Jetzt anrufen · <span class="ph">040 XXX XX XX</span></a></div>
+
+<script>
+(function(){
+  // Einblendungen: 350 ms, 14 px, einmal
+  var els = document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<els.length;i++) els[i].classList.add('in');
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+})();
+
+(function(){
+  // Die eine hochzählende Zahl: die Kostenrechnung
+  var u = document.getElementById('umsatz');
+  var m = document.getElementById('monate');
+  var out = document.getElementById('ergebnis');
+  var db = document.getElementById('db');
+  if(!u||!m||!out) return;
+
+  var fmt = new Intl.NumberFormat('de-DE',{maximumFractionDigits:0});
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var shown = 0, raf = null;
+
+  function target(){
+    var umsatz = Math.max(0, Number(u.value)||0);
+    var monate = Math.min(36, Math.max(0, Number(m.value)||0));
+    return Math.round(umsatz/12*monate);
+  }
+  function paint(v){
+    out.textContent = fmt.format(Math.round(v)) + ' €';
+    db.textContent = fmt.format(Math.round(v*0.2)) + ' €';
+  }
+  function run(){
+    var to = target();
+    if(reduce){ shown = to; paint(to); return; }
+    var from = shown, t0 = performance.now(), dur = 600;
+    if(raf) cancelAnimationFrame(raf);
+    (function step(now){
+      var p = Math.min(1,(now-t0)/dur);
+      var e = 1-Math.pow(1-p,3);
+      shown = from+(to-from)*e;
+      paint(shown);
+      if(p<1) raf = requestAnimationFrame(step);
+    })(t0);
+  }
+  u.addEventListener('input', run);
+  m.addEventListener('input', run);
+
+  var started = false;
+  if('IntersectionObserver' in window){
+    var io2 = new IntersectionObserver(function(en){
+      en.forEach(function(e){ if(e.isIntersecting && !started){ started = true; run(); io2.disconnect(); } });
+    }, {threshold:0.4});
+    io2.observe(document.getElementById('calc'));
+  } else { run(); }
+})();
+</script>
+
+</body>
+</html>

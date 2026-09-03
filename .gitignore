@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+__MACOSX/
+
+# Archive und lokale Notizen gehören nicht ins öffentliche Repository
+*.zip
+*.rar
+*.7z
+entwuerfe/
+intern/
