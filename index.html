@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vertriebsköpfe · Personalberatung für den Vertrieb</title>
-<meta name="description" content="Wir besetzen Ihre Vertriebsstelle — und sagen Ihnen vorher, warum der Letzte gegangen ist. Vakanzdiagnose, Besetzung, Recruiting-Kapazität mit offenen Preisen.">
+<meta name="description" content="Wir besetzen Vertriebsstellen im Mittelstand — so, dass der Nächste bleibt. Vakanzdiagnose vor der Suche, offene Preise, drei Monate Nachbesetzung.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://vertriebskoepfe.de/">
 <!-- ENTWURF. Offen: Telefonnummer (tel:+49XXXXXXXXX und Anzeigetext), Kalenderlink,
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vertriebsköpfe">
 <meta property="og:title" content="Vertriebsköpfe · Personalberatung für den Vertrieb">
-<meta property="og:description" content="Wir besetzen Ihre Vertriebsstelle — und sagen Ihnen vorher, warum der Letzte gegangen ist.">
+<meta property="og:description" content="Vakanzdiagnose vor der Suche, offene Preise, drei Monate Nachbesetzung. Vertriebsleitung, Key Account, technischer Vertrieb und Außendienst im Mittelstand.">
 <meta property="og:image" content="https://vertriebskoepfe.de/og-image.png">
 <meta property="og:url" content="https://vertriebskoepfe.de/">
 <meta property="og:locale" content="de_DE">
@@ -116,10 +116,13 @@
   p{margin:0 0 18px}
   a{color:var(--petrol)}
   .eyebrow{
-    font-size:var(--fs-1);letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+    font-size:var(--fs-1);letter-spacing:.08em;text-transform:uppercase;font-weight:600;
     color:var(--petrol);margin:0 0 16px;
   }
   .band-navy .eyebrow{color:var(--petrol-lite)}
+  /* Unter 620 px nur drei Begriffe, sonst laeuft die Zeile ueber vier Zeilen. */
+  .ab-620{display:none}
+  @media (min-width:620px){.ab-620{display:inline}}
   section{padding:var(--raum-normal) 0;border-bottom:1px solid var(--hair)}
   .raum-gross{padding-top:var(--raum-gross)}
   .raum-eng{padding-top:var(--raum-eng)}
@@ -471,7 +474,7 @@
 <!-- 1 · Kopf -->
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow rev">Vertriebsleitung · Gebietsverkaufsleitung · Key Account · Technischer Vertrieb · Außendienst</p>
+    <p class="eyebrow rev">Vertriebsleitung<span class="ab-620"> · Gebietsverkaufsleitung</span> · Key Account<span class="ab-620"> · Technischer Vertrieb</span> · Außendienst</p>
     <h1 class="rev rev-d1">Wir besetzen Ihre Vertriebsstelle. Und zwar so, dass der Nächste bleibt.</h1>
     <p class="lead rev rev-d2">Eine Vertriebsstelle bleibt selten offen, weil niemand da ist. Sie bleibt offen, weil das Gebiet zu groß geschnitten ist, weil die Provision gedeckelt wurde oder weil die Einarbeitung aus einem Produktkatalog und einer Preisliste bestand. Im Vorstellungsgespräch sagt das niemand, und im Zeugnis des Vorgängers erst recht nicht. Wir finden heraus, was bei Ihnen zutrifft — und suchen erst danach.</p>
     <div class="cta-row rev rev-d2">
