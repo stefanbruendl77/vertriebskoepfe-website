@@ -38,6 +38,13 @@
   @font-face{font-family:"Libre Franklin";font-style:normal;font-weight:400 600;font-display:swap;
     src:url(/fonts/libre-franklin-latin-ext.woff2) format("woff2");
     unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  /* Metrisch angeglichene Ersatzschriften. Sie ueberbruecken die Zeit bis die
+     echte Schrift da ist, ohne dass sich beim Wechsel etwas verschiebt.
+     Werte gegen die echten woff2 eingemessen, ueber die Texte dieser Seite. */
+  @font-face{font-family:"Libre Franklin Fallback";src:local("Helvetica Neue"),local("Arial");
+    size-adjust:103%;ascent-override:93.79%;descent-override:23.88%;line-gap-override:0%}
+  @font-face{font-family:"Source Serif Fallback";src:local("Times New Roman"),local("Georgia");
+    size-adjust:108.5%;ascent-override:95.48%;descent-override:30.88%;line-gap-override:0%}
 </style>
 </head>
 <body>
@@ -103,13 +110,13 @@
   html{scroll-padding-top:120px}
   body{
     margin:0;background:var(--paper);color:var(--ink);
-    font-family:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+    font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;
     font-size:var(--fs-3);line-height:1.65;-webkit-font-smoothing:antialiased;
     scroll-behavior:smooth;
   }
   .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
   .narrow{max-width:660px}
-  h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;letter-spacing:-.012em}
+  h1,h2,h3{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;text-wrap:balance;letter-spacing:-.012em}
   h1{font-size:clamp(var(--fs-6),4.6vw,var(--fs-7));line-height:1.1;margin:0 0 20px}
   h2{font-size:clamp(var(--fs-5),3.2vw,var(--fs-6));line-height:1.16;margin:0 0 14px}
   h3{font-size:var(--fs-4);line-height:1.3;margin:0 0 8px}
@@ -130,7 +137,10 @@
   .band-navy{background:var(--navy);color:var(--on-navy);border-bottom:0}
   .band-navy h2{color:#fff}
   .band-navy p{color:var(--on-navy-mute)}
-  .lead{font-size:var(--fs-3);color:var(--muted);max-width:60ch}
+  /* Zeilenbreiten in em statt ch: die ch-Einheit haengt an der Schrift, damit
+     aendert sich beim Schriftwechsel die Spaltenbreite und der Absatz bricht um.
+     1ch = 0.688em bei Libre Franklin, 0.499em bei Source Serif 4. */
+  .lead{font-size:var(--fs-3);color:var(--muted);max-width:41.28em}
   .band-navy .lead{color:var(--on-navy-mute)}
 
   /* Navigation */
@@ -140,8 +150,8 @@
     backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);
   }
   .nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
-  .logo{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:var(--fs-3);line-height:1.15;letter-spacing:-.01em}
-  .logo span{display:block;font-family:"Libre Franklin",sans-serif;font-size:var(--fs-1);font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .logo{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;font-size:var(--fs-3);line-height:1.15;letter-spacing:-.01em}
+  .logo span{display:block;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-1);font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:3px}
   .nav-links{display:flex;align-items:center;gap:16px}
   .nav-links a{color:var(--ink);text-decoration:none;font-size:var(--fs-2);font-weight:500}
   .nav-links a:hover{color:var(--petrol)}
@@ -164,18 +174,18 @@
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
   .mark{
     width:34px;height:34px;flex:none;border-radius:3px;background:var(--navy);color:#fff;
-    font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:var(--fs-2);letter-spacing:.03em;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;font-size:var(--fs-2);letter-spacing:.03em;
     display:grid;place-items:center;
   }
   :root[data-theme="dark"] .mark,:root:not([data-theme="light"]) .mark{background:#0E6F68;color:#fff}
   @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .mark{background:#0D1A2E;color:#fff}}
   .mark.invert{background:#fff;color:#0D1A2E}
   .wordmark{
-    font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:var(--fs-3);line-height:1.1;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;font-size:var(--fs-3);line-height:1.1;
     letter-spacing:.075em;text-transform:uppercase;
   }
   .wordmark small{
-    display:block;font-family:"Libre Franklin",sans-serif;font-size:var(--fs-1);font-weight:500;
+    display:block;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-1);font-weight:500;
     letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px;
   }
   @media (max-width:520px){.wordmark small{display:none}}
@@ -184,7 +194,7 @@
   .btn{
     display:inline-flex;align-items:center;gap:9px;
     background:var(--petrol);color:#fff;text-decoration:none;
-    font-family:"Libre Franklin",sans-serif;font-size:var(--fs-2);font-weight:600;
+    font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-2);font-weight:600;
     padding:13px 22px;border:0;border-radius:4px;cursor:pointer;
     transition:background .18s ease,transform .18s ease;
   }
@@ -209,7 +219,7 @@
   /* Hero */
   .hero{padding:var(--raum-normal) 0 74px;border-bottom:1px solid var(--hair)}
   .hero h1{max-width:19ch}
-  .hero .lead{font-size:var(--fs-4);max-width:56ch;margin-bottom:26px}
+  .hero .lead{font-size:var(--fs-4);max-width:38.52em;margin-bottom:26px}
   .segment{
     display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 0;padding:0;list-style:none;
   }
@@ -221,10 +231,10 @@
   /* Zahlen / Rechner */
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin:0 0 44px}
   .stat .num{
-    font-family:"Source Serif 4",Georgia,serif;font-size:var(--fs-7);font-weight:600;line-height:1;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-7);font-weight:600;line-height:1;
     color:var(--petrol-lite);font-variant-numeric:tabular-nums;display:block;margin-bottom:8px;
   }
-  .stat p{font-size:var(--fs-2);margin:0;max-width:30ch}
+  .stat p{font-size:var(--fs-2);margin:0;max-width:20.64em}
   .calc{
     background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:8px;
     padding:26px 26px 22px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:end;
@@ -232,15 +242,22 @@
   .calc label{display:block;font-size:var(--fs-1);letter-spacing:.06em;text-transform:uppercase;color:var(--on-navy-mute);margin-bottom:8px}
   .calc input{
     width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
-    color:#fff;font-family:"Libre Franklin",sans-serif;font-size:var(--fs-3);font-variant-numeric:tabular-nums;
+    color:#fff;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-3);font-variant-numeric:tabular-nums;
     padding:11px 13px;border-radius:4px;
   }
   .calc input:focus{outline:2px solid var(--petrol-lite);outline-offset:1px}
   .calc-out{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;margin-top:2px}
   .calc-out .big{
-    font-family:"Source Serif 4",Georgia,serif;font-size:clamp(var(--fs-6),5vw,var(--fs-7));font-weight:600;
-    color:var(--petrol-lite);font-variant-numeric:tabular-nums;line-height:1;display:block;margin-bottom:10px;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:clamp(var(--fs-6),5vw,var(--fs-7));font-weight:600;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;line-height:1;margin-bottom:10px;
+    /* Platz fuer den groesstmoeglichen Betrag reservieren, sonst waechst
+       die Zahl beim Hochzaehlen und schiebt den Rest nach unten.
+       Bewusst block und nicht inline-block: als Inline-Box haengt die
+       Zeilenhoehe am Schrift-Strut des Elternabsatzes und aendert sich
+       beim Schriftwechsel — das waere eine neue Verschiebung. */
+    display:block;min-width:12ch;
   }
+  .calc-out #db{display:inline-block;min-width:10ch;font-variant-numeric:tabular-nums}
   .calc-out p{margin:0;font-size:var(--fs-2)}
   @media (max-width:600px){.calc{grid-template-columns:1fr}}
 
@@ -264,7 +281,7 @@
   .q{border:0;border-bottom:1px solid var(--hair);margin:0;padding:22px 0}
   .q:last-of-type{border-bottom:0}
   .q legend{
-    font-family:"Source Serif 4",Georgia,serif;font-size:var(--fs-3);font-weight:600;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);font-weight:600;
     padding:0;margin-bottom:12px;color:var(--ink);
   }
   .opts{display:flex;flex-wrap:wrap;gap:8px}
@@ -282,7 +299,7 @@
   }
   .opt input:focus-visible + span{outline:2px solid var(--petrol);outline-offset:2px}
   .q legend .multi,.q legend .erledigt{
-    font-family:"Libre Franklin",sans-serif;font-size:var(--fs-1);font-weight:600;letter-spacing:.1em;
+    font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-1);font-weight:600;letter-spacing:.1em;
     text-transform:uppercase;color:var(--petrol);border:1px solid var(--petrol);
     border-radius:100px;padding:2px 9px;margin-left:8px;vertical-align:middle;
   }
@@ -296,7 +313,7 @@
   .result-top{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 26px}
   @media (max-width:620px){.result-top{grid-template-columns:1fr;gap:18px}}
   .score-num{
-    font-family:"Source Serif 4",Georgia,serif;font-size:var(--fs-7);font-weight:600;line-height:1;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-7);font-weight:600;line-height:1;
     font-variant-numeric:tabular-nums;color:var(--petrol);
   }
   .score-of{color:var(--muted);font-size:var(--fs-1);margin-left:6px}
@@ -324,7 +341,7 @@
   .flag h3{margin:0 0 4px;font-size:var(--fs-3)}
   .flag p{margin:0;font-size:var(--fs-2);color:var(--muted)}
   .result-cta{background:var(--petrol-wash);padding:24px 26px;border-top:1px solid var(--hair)}
-  .result-cta p{font-size:var(--fs-2);max-width:64ch}
+  .result-cta p{font-size:var(--fs-2);max-width:44.03em}
 
   /* Gegenüberstellung */
   .compare{border-top:1px solid var(--hair)}
@@ -351,10 +368,10 @@
   .card:hover{border-color:var(--petrol);transform:translateY(-2px)}
   .card .step{font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
   .card .price{
-    font-family:"Source Serif 4",Georgia,serif;font-size:var(--fs-5);font-weight:600;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-5);font-weight:600;
     color:var(--ink);margin:4px 0 14px;font-variant-numeric:tabular-nums;
   }
-  .card .price small{display:block;font-family:"Libre Franklin",sans-serif;font-size:var(--fs-1);font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0}
+  .card .price small{display:block;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-1);font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0}
   .card ul{margin:0 0 20px;padding-left:18px;font-size:var(--fs-2);color:var(--muted)}
   .card li{margin-bottom:7px}
   .card li::marker{color:var(--petrol)}
@@ -365,7 +382,7 @@
   .step-item{padding:24px 22px 24px 0;border-right:1px solid var(--hair)}
   .step-item:last-child{border-right:0}
   .step-item .wk{
-    font-family:"Source Serif 4",Georgia,serif;font-size:var(--fs-2);font-weight:700;color:var(--petrol);
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-2);font-weight:700;color:var(--petrol);
     margin:0 0 10px;letter-spacing:.02em;
   }
   .step-item h3{font-size:var(--fs-3);margin-bottom:6px}
@@ -382,7 +399,7 @@
   }
   .promise-list li:last-child{border-bottom:0}
   .promise-list b{
-    font-family:"Source Serif 4",Georgia,serif;color:var(--petrol-lite);font-size:var(--fs-4);
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;color:var(--petrol-lite);font-size:var(--fs-4);
     flex:none;min-width:88px;font-variant-numeric:tabular-nums;
   }
 
@@ -404,17 +421,17 @@
   details{border-bottom:1px solid var(--hair)}
   summary{
     cursor:pointer;padding:20px 40px 20px 0;position:relative;list-style:none;
-    font-family:"Source Serif 4",Georgia,serif;font-size:var(--fs-3);font-weight:600;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);font-weight:600;
   }
   summary::-webkit-details-marker{display:none}
   summary::after{
     content:"+";position:absolute;right:6px;top:18px;font-size:var(--fs-4);color:var(--petrol);
-    font-family:"Libre Franklin",sans-serif;font-weight:400;transition:transform .2s ease;
+    font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-weight:400;transition:transform .2s ease;
   }
   details[open] summary::after{content:"–"}
   summary:hover{color:var(--petrol)}
   summary:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
-  details p{padding:0 0 20px;margin:0;color:var(--muted);max-width:64ch}
+  details p{padding:0 0 20px;margin:0;color:var(--muted);max-width:44.03em}
 
   /* Abschluss + Fuß */
   .close-cta{text-align:left}
