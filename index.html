@@ -247,6 +247,25 @@
   .calc-out p{margin:0;font-size:var(--fs-2)}
   @media (max-width:600px){.calc{grid-template-columns:1fr}}
 
+  /* Check-Anriss im Kopfbereich: erste Frage direkt unter der Ueberschrift */
+  .check-teaser{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:24px 26px;margin:0 0 26px;box-shadow:var(--shadow);
+  }
+  .ct-titel{
+    font-family:"Source Serif 4",Georgia,serif;font-size:var(--fs-4);font-weight:600;
+    line-height:1.3;letter-spacing:-.012em;margin:0 0 6px;
+  }
+  .ct-hinweis{font-size:var(--fs-1);color:var(--muted);margin:0 0 18px}
+  .ct-frage{font-size:var(--fs-2);font-weight:600;margin:0 0 10px;color:var(--ink)}
+  .ct-opts{display:flex;flex-wrap:wrap;gap:8px}
+  .ct-opt{text-decoration:none}
+  .ct-opt:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+  @media (max-width:620px){
+    .ct-opts{flex-direction:column;align-items:stretch}
+    .ct-opt{justify-content:center}
+  }
+
   /* Besetzungscheck-Teaser */
   .teaser{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
   @media (max-width:760px){.teaser{grid-template-columns:1fr;gap:24px}}
@@ -273,13 +292,13 @@
   .opts{display:flex;flex-wrap:wrap;gap:8px}
   .opt{position:relative;cursor:pointer}
   .opt input{position:absolute;opacity:0;width:0;height:0}
-  .opt span{
+  .opt span,.ct-opt{
     display:inline-flex;align-items:center;min-height:44px;
     border:1px solid var(--hair);background:var(--paper);
     border-radius:100px;padding:8px 16px;font-size:var(--fs-2);color:var(--muted);
     transition:border-color .15s ease,color .15s ease,background .15s ease;
   }
-  .opt:hover span{border-color:var(--petrol);color:var(--ink)}
+  .opt:hover span,.ct-opt:hover{border-color:var(--petrol);color:var(--ink)}
   .opt input:checked + span{
     border-color:var(--petrol);background:var(--petrol-wash);color:var(--petrol);font-weight:600;
   }
@@ -477,6 +496,17 @@
     <p class="eyebrow rev">Vertriebsleitung<span class="ab-620"> · Gebietsverkaufsleitung</span> · Key Account<span class="ab-620"> · Technischer Vertrieb</span> · Außendienst</p>
     <h1 class="rev rev-d1">Wir besetzen Ihre Vertriebsstelle. Und zwar so, dass der Nächste bleibt.</h1>
     <p class="lead rev rev-d2">Eine Vertriebsstelle bleibt selten offen, weil niemand da ist. Sie bleibt offen, weil das Gebiet zu groß geschnitten ist, weil die Provision gedeckelt wurde oder weil die Einarbeitung aus einem Produktkatalog und einer Preisliste bestand. Im Vorstellungsgespräch sagt das niemand, und im Zeugnis des Vorgängers erst recht nicht. Wir finden heraus, was bei Ihnen zutrifft — und suchen erst danach.</p>
+    <div class="check-teaser rev rev-d2">
+      <h2 class="ct-titel">Wie besetzbar ist Ihre Stelle?</h2>
+      <p class="ct-hinweis">Neun Fragen, unter drei Minuten. Läuft im Browser, es wird nichts gesendet.</p>
+      <p class="ct-frage">Wie lange ist die Stelle offen?</p>
+      <div class="ct-opts">
+        <a class="ct-opt" href="/besetzungscheck/?q1=0">Unter 6 Wochen</a>
+        <a class="ct-opt" href="/besetzungscheck/?q1=1">6 bis 12 Wochen</a>
+        <a class="ct-opt" href="/besetzungscheck/?q1=2">3 bis 6 Monate</a>
+        <a class="ct-opt" href="/besetzungscheck/?q1=3">Über 6 Monate</a>
+      </div>
+    </div>
     <div class="cta-row rev rev-d2">
       <a class="btn" href="#kontakt">Vakanzdiagnose anfordern</a>
       <a class="btn btn-ghost" href="tel:+49XXXXXXXXX">Anrufen: <span class="ph">040 XXX XX XX</span></a>

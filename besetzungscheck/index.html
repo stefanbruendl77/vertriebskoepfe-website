@@ -281,7 +281,7 @@
     border-color:var(--petrol);background:var(--petrol-wash);color:var(--petrol);font-weight:600;
   }
   .opt input:focus-visible + span{outline:2px solid var(--petrol);outline-offset:2px}
-  .q legend .multi{
+  .q legend .multi,.q legend .erledigt{
     font-family:"Libre Franklin",sans-serif;font-size:var(--fs-1);font-weight:600;letter-spacing:.1em;
     text-transform:uppercase;color:var(--petrol);border:1px solid var(--petrol);
     border-radius:100px;padding:2px 9px;margin-left:8px;vertical-align:middle;
@@ -834,6 +834,33 @@
     e.preventDefault();
     render(auswerten());
   });
+})();
+(function(){
+  // Antwort aus dem Kopfbereich der Startseite uebernehmen: /besetzungscheck/?q1=<0 bis 3>
+  // Das ist die Frage "Wie lange ist die Stelle offen?" — im Bogen Frage 2.
+  var t = /[?&]q1=([0-3])(?:&|$)/.exec(location.search);
+  if(!t) return;
+  var form = document.getElementById('checkForm');
+  if(!form) return;
+  var feld = form.querySelector('input[name="dauer"][value="' + t[1] + '"]');
+  if(!feld) return;
+  feld.checked = true;
+
+  var legende = feld.closest('fieldset').querySelector('legend');
+  if(legende && !legende.querySelector('.erledigt')){
+    var pille = document.createElement('span');
+    pille.className = 'erledigt';
+    pille.textContent = 'beantwortet';
+    legende.appendChild(document.createTextNode(' '));
+    legende.appendChild(pille);
+  }
+
+  // Weiter bei der ersten Frage, die noch offen ist.
+  var erste = form.querySelector('fieldset.q');
+  if(erste){
+    var sanft = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    erste.scrollIntoView({behavior: sanft ? 'smooth' : 'auto', block: 'start'});
+  }
 })();
 </script>
 
