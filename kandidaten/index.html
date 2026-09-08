@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Für Kandidaten · Vertriebsköpfe</title>
-<meta name="robots" content="noindex">
 <link rel="canonical" href="https://vertriebskoepfe.de/kandidaten/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0D1A2E">
@@ -103,20 +102,12 @@
   summary{cursor:pointer;font-weight:600;font-size:var(--fs-3)}
   details p{margin:10px 0 0;color:var(--muted)}
   .klein{font-size:var(--fs-2);color:var(--muted)}
+  .formular{margin:0 0 10px}
 </style>
 </head>
 <body>
 <header><div class="wrap"><a class="brand" href="/"><span class="mark">VK</span><span class="wm">Vertriebsköpfe</span></a></div></header>
 <main class="wrap">
-
-<div class="todo">
-  <p><b>Vor dem Livegang zu erledigen:</b></p>
-  <p>1. Formular an Brevo anbinden (Endpunkt in <code>action</code> eintragen, Double Opt-in aktivieren).<br>
-     2. Datenschutzerklärung um Brevo, den Kandidatenpool und die Löschfristen ergänzen.<br>
-     3. Rufnummer im Abschlussabsatz eintragen.<br>
-     4. Kalenderlink eintragen.<br>
-     5. Danach <code>&lt;meta name="robots" content="noindex"&gt;</code> entfernen.</p>
-</div>
 
 <h1>Wir melden uns, wenn die Stelle wirklich passt.</h1>
 <p class="lead">Kein Verteiler, der Ihnen jede Woche drei Stellen schickt, die nichts mit Ihnen zu tun haben. Sie sagen uns, was Sie machen und was sich ändern müsste. Wir melden uns, wenn wir ein Mandat haben, bei dem das zusammenkommt. Das kann in zwei Wochen sein oder in einem Jahr.</p>
@@ -136,91 +127,17 @@
   </div>
 </div>
 
-<h2>Sechs Angaben, vierzig Sekunden.</h2>
+<h2>Eine Minute, dann sind Sie im Pool.</h2>
 <p>Wir brauchen keinen Lebenslauf. Ein Link auf Ihr LinkedIn-Profil reicht — und der gehört Ihnen, nicht unserem Ordner.</p>
 
-<form action="#" method="post" novalidate>
-  <div class="feld">
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" autocomplete="name" required>
-  </div>
-  <div class="feld">
-    <label for="email">E-Mail</label>
-    <input id="email" name="email" type="email" autocomplete="email" required>
-  </div>
-  <div class="zwei">
-    <div class="feld">
-      <label for="rolle">Ihre Rolle</label>
-      <select id="rolle" name="rolle" required>
-        <option value="">Bitte wählen</option>
-        <option>Vertriebsleitung</option>
-        <option>Key Account Management</option>
-        <option>Außendienst</option>
-        <option>Innendienst</option>
-        <option>Business Development</option>
-        <option>Technischer Vertrieb</option>
-        <option>Sonstiges</option>
-      </select>
-    </div>
-    <div class="feld">
-      <label for="region">Region</label>
-      <select id="region" name="region" required>
-        <option value="">Bitte wählen</option>
-        <option>Hamburg</option>
-        <option>Schleswig-Holstein</option>
-        <option>Niedersachsen und Bremen</option>
-        <option>Mecklenburg-Vorpommern</option>
-        <option>Nordrhein-Westfalen</option>
-        <option>Berlin und Brandenburg</option>
-        <option>Übriges Bundesgebiet</option>
-      </select>
-    </div>
-  </div>
-  <div class="zwei">
-    <div class="feld">
-      <label for="zeitpunkt">Wechselzeitpunkt</label>
-      <select id="zeitpunkt" name="zeitpunkt" required>
-        <option value="">Bitte wählen</option>
-        <option>Ich suche aktiv</option>
-        <option>In drei bis sechs Monaten</option>
-        <option>Ich sehe mich nur um</option>
-      </select>
-    </div>
-    <div class="feld">
-      <label for="gehalt">Zielgehalt <span class="klein">(freiwillig)</span></label>
-      <select id="gehalt" name="gehalt">
-        <option value="">Keine Angabe</option>
-        <option>bis 60.000 €</option>
-        <option>60.000 bis 70.000 €</option>
-        <option>70.000 bis 80.000 €</option>
-        <option>80.000 bis 90.000 €</option>
-        <option>90.000 bis 110.000 €</option>
-        <option>über 110.000 €</option>
-      </select>
-    </div>
-  </div>
-  <div class="feld">
-    <label for="linkedin">LinkedIn-Profil</label>
-    <input id="linkedin" name="linkedin" type="url" inputmode="url" placeholder="https://www.linkedin.com/in/…">
-    <span class="hilfe">Kein Profil? Dann schreiben Sie uns unten in zwei Sätzen, was Sie verkaufen und an wen.</span>
-  </div>
-  <div class="feld">
-    <label for="notiz">Kurz zu Ihnen <span class="klein">(freiwillig)</span></label>
-    <textarea id="notiz" name="notiz" rows="3"></textarea>
-  </div>
-
-  <div class="einwilligung">
-    <input id="ok" name="einwilligung" type="checkbox" required>
-    <label for="ok">Ich möchte in den Kandidatenpool von Vertriebsköpfe aufgenommen werden. Die Vario Büroservice GmbH darf meine Angaben speichern, um mich bei passenden Vertriebspositionen anzusprechen und mir den Gehaltsband-Brief zu senden. Meine Daten werden nicht an Dritte weitergegeben; ein Unternehmen erfährt meinen Namen nur, wenn ich im Einzelfall ausdrücklich zustimme. Ich kann diese Einwilligung jederzeit widerrufen — über den Abmeldelink in jeder Mail oder formlos an <a href="mailto:info@vertriebskoepfe.de">info@vertriebskoepfe.de</a>. Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</label>
-  </div>
-
-  <button class="knopf" type="submit">In den Pool eintragen</button>
-  <p class="klein" style="margin-top:14px">Sie bekommen eine Bestätigungsmail. Erst wenn Sie darin auf den Link klicken, sind Sie eingetragen.</p>
-</form>
-
-<h2>Was verdient man in Ihrer Rolle wirklich?</h2>
-<p>Wir sprechen jede Woche mit Vertrieblern und mit Unternehmen über Geld. Alle vier bis sechs Wochen fassen wir zusammen, was wir gesehen haben: Bandbreiten nach Rolle, Region und Größe des Unternehmens, Fixum und variabler Anteil getrennt, dazu was sich gerade verschiebt. Anonymisiert, ohne Namen, ohne Firmen.</p>
-<p>Kein Newsletter mit Karrieretipps. Zahlen, die Sie im nächsten Gehaltsgespräch verwenden können.</p>
+<div class="formular">
+<iframe width="540" height="1250"
+  src="https://7b774ade.sibforms.com/v2/serve/MUIFAE_vLuuQFTMS-BN2PLIndFj5wg8AXVZSBej9VENSppC_3bWRcFLeD4xxNbF1e_ReZgi_T_O8JMFUlzJwwOKVydOOb3-Lh13dzLlktjWSdJr41mfaYhwHKN_Gd0uRn0qtbc3cvUwmpCuWLixkzlgFA5H8r5SvxZhPNpP25d9idSqzwij_DteOXh8lCgVR4lv_KlnB-UpxmjhWxw=="
+  frameborder="0" scrolling="auto" allowfullscreen
+  title="Eintrag in den Kandidatenpool"
+  style="display:block;margin:0 auto;width:100%;max-width:100%;border:0"></iframe>
+</div>
+<p class="klein">Sie bekommen eine Bestätigungsmail. Erst wenn Sie darin auf den Link klicken, sind Sie eingetragen.</p>
 
 <h2>So läuft es, wenn wir uns melden</h2>
 <ol class="schritte">
@@ -245,7 +162,7 @@
 </details>
 <details>
   <summary>Was passiert, wenn gerade nichts passt?</summary>
-  <p>Dann melden wir uns nicht. Das ist der Punkt. Sie bekommen den Gehaltsband-Brief und ansonsten Ruhe.</p>
+  <p>Dann melden wir uns nicht. Das ist der Punkt. Kein Newsletter, keine Massenmails — Ruhe, bis etwas passt.</p>
 </details>
 <details>
   <summary>Erfährt mein Arbeitgeber davon?</summary>
@@ -262,7 +179,7 @@
 
 <h2>Aktuell keine offenen Mandate</h2>
 <p>Das ändert sich alle paar Wochen. Wer im Pool ist, erfährt es zuerst.</p>
-<p class="klein">Lieber direkt reden? Rufen Sie an: <span class="ph">040 XXX XX XX</span></p>
+<p class="klein">Lieber direkt schreiben? <a href="mailto:info@vertriebskoepfe.de">info@vertriebskoepfe.de</a></p>
 
 </main>
 <footer class="wrap">
