@@ -441,6 +441,16 @@
     .about{grid-template-columns:1fr;gap:24px}
     .portrait{max-width:420px}
   }
+  .namenszeile{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 14px}
+  .namenszeile h2{margin:0}
+  .kontakt-icons{display:flex;gap:8px}
+  .kontakt-icons a{
+    display:grid;place-items:center;width:38px;height:38px;border-radius:8px;
+    background:var(--petrol-wash);color:var(--petrol);
+    transition:background .18s ease,color .18s ease;
+  }
+  .kontakt-icons a:hover,.kontakt-icons a:focus-visible{background:var(--petrol);color:#fff}
+  .kontakt-icons svg{width:19px;height:19px;fill:currentColor;display:block}
   .roles{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--hair)}
   .roles li{padding:14px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:112px 1fr;gap:18px;font-size:var(--fs-2)}
   .roles span{color:var(--petrol);font-weight:600;font-size:var(--fs-1);letter-spacing:.02em}
@@ -775,7 +785,19 @@
     </div>
     <div>
       <p class="eyebrow rev">Wer das macht</p>
-      <h2 class="rev">Stefan Bründl</h2>
+      <div class="namenszeile rev">
+        <h2>Stefan Bründl</h2>
+        <div class="kontakt-icons">
+          <a href="https://www.linkedin.com/in/stefan-bruendl" target="_blank" rel="noopener"
+             aria-label="Stefan Bründl auf LinkedIn (öffnet in neuem Tab)" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C21.4 8.75 22 11.1 22 14.16V21h-4v-6.06c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21h-4V9z"/></svg>
+          </a>
+          <a href="mailto:stefan.bruendl@vertriebskoepfe.de"
+             aria-label="E-Mail an Stefan Bründl" title="E-Mail schreiben">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 8.1L4.4 7H19.6L12 13.1zM4 9.02V17h16V9.02l-7.38 5.9a1 1 0 0 1-1.24 0L4 9.02z"/></svg>
+          </a>
+        </div>
+      </div>
       <p class="rev">Ich habe siebzehn Jahre in der Personaldienstleistung gearbeitet, zuletzt als Vertriebsdirektor, und dabei beides von innen gesehen: wie Vertriebsorganisationen Leute verlieren, und wie schwer sie danach welche finden. Seit 2024 berate ich Geschäftsführer im Mittelstand zu Fluktuation und Mitarbeiterbindung.</p>
       <p class="rev">Deshalb die Diagnose vor der Suche. Sie ist kein Zusatzprodukt, sondern das, womit ich seit Jahren mein Geld verdiene — nur diesmal, bevor die Stelle nachbesetzt wird statt danach.</p>
       <ul class="roles rev">
