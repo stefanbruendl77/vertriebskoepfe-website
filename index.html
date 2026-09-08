@@ -372,6 +372,16 @@
   .compare-row .mine .side-label{color:var(--petrol)}
   .compare-row p{margin:0;font-size:var(--fs-3)}
   .compare-row .usual p{color:var(--muted)}
+  .fragen{list-style:none;counter-reset:f;margin:0;padding:0;border-top:1px solid var(--hair)}
+  .fragen li{
+    counter-increment:f;position:relative;padding:18px 0 18px 46px;
+    border-bottom:1px solid var(--hair);font-size:var(--fs-3);
+  }
+  .fragen li::before{
+    content:counter(f);position:absolute;left:0;top:18px;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;
+    font-weight:700;font-size:var(--fs-3);color:var(--petrol);
+  }
   @media (max-width:620px){.compare-row{grid-template-columns:1fr;gap:16px}}
 
   /* Leistungen */
@@ -512,7 +522,7 @@
 <!-- 1 · Kopf -->
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow rev">Vertriebsleitung<span class="ab-620"> · Gebietsverkaufsleitung</span> · Key Account<span class="ab-620"> · Technischer Vertrieb</span> · Außendienst</p>
+    <p class="eyebrow rev">Personalberatung für Vertriebspositionen<span class="ab-620"> · vom Innendienst bis zur Vertriebsleitung</span></p>
     <h1 class="rev rev-d1">Wir besetzen Ihre Vertriebsstelle. Und zwar so, dass der Nächste bleibt.</h1>
     <p class="lead rev rev-d2">Eine Vertriebsstelle bleibt selten offen, weil niemand da ist. Sie bleibt offen, weil das Gebiet zu groß geschnitten ist, weil die Provision gedeckelt wurde oder weil die Einarbeitung aus einem Produktkatalog und einer Preisliste bestand. Im Vorstellungsgespräch sagt das niemand, und im Zeugnis des Vorgängers erst recht nicht. Wir finden heraus, was bei Ihnen zutrifft — und suchen erst danach.</p>
     <div class="check-teaser rev rev-d2">
@@ -532,12 +542,12 @@
     </div>
     <p class="cta-note">Antwort am selben Werktag. Erstgespräch 20 Minuten, ohne Unterlagen.</p>
     <ul class="segment rev">
-      <li>Logistik &amp; Spedition</li>
-      <li>Technischer Großhandel</li>
-      <li>Bauzulieferer</li>
-      <li>Verpackung</li>
-      <li>Industriedienstleistung</li>
-      <li>Mittelstand</li>
+      <li>Neukundengewinnung</li>
+      <li>Bestandskundenausbau</li>
+      <li>Key-Account-Betreuung</li>
+      <li>Technischer Vertrieb</li>
+      <li>Innendienst</li>
+      <li>Vertriebsführung</li>
     </ul>
   </div>
 </section>
@@ -597,14 +607,33 @@
   </div>
 </section>
 
-<!-- 4 · Der Unterschied -->
+<!-- 4 · Die Diagnose -->
 <section>
   <div class="wrap">
-    <p class="eyebrow rev">Drei Unterschiede</p>
+    <p class="eyebrow rev">Vor der Suche</p>
     <h2 class="rev">Warum der Letzte gegangen ist, sagen wir Ihnen vorher.</h2>
-    <p class="lead rev" style="margin-bottom:40px">Nicht schneller. Haltbarer.</p>
+    <p class="lead rev" style="margin-bottom:40px">Die Vakanzdiagnose besteht aus sieben Fragen. Sie klingen einfach. Beantwortet werden sie selten — und genau daran entscheidet sich, ob der Nächste bleibt.</p>
 
-    <div class="compare rev">
+    <ol class="fragen rev">
+      <li>Ist die Stelle neu geschaffen oder eine Nachbesetzung?</li>
+      <li>Wie lange war Ihr Vorgänger da?</li>
+      <li>Wer hat gekündigt — er oder Sie?</li>
+      <li>Was war der genannte Grund, und was war Ihrer Einschätzung nach der echte?</li>
+      <li>Wie oft war diese Stelle in den letzten fünf Jahren besetzt?</li>
+      <li>Was hat der Vorgänger nicht geschafft, und woran lag das?</li>
+      <li>Was müsste sich ändern, damit der Nächste bleibt?</li>
+    </ol>
+    <p class="cta-note">Die Antworten bekommen Sie schriftlich, mit unserer Einschätzung — auch dann, wenn daraus kein Mandat wird.</p>
+  </div>
+</section>
+
+<!-- 4b · Zwei Unterschiede -->
+<section class="raum-eng">
+  <div class="wrap">
+    <p class="eyebrow rev">Zwei Unterschiede</p>
+    <h2 class="rev">Nicht schneller. Haltbarer.</h2>
+
+    <div class="compare rev" style="margin-top:32px">
       <div class="compare-row">
         <div class="usual">
           <p class="side-label">Üblich</p>
@@ -613,16 +642,6 @@
         <div class="mine">
           <p class="side-label">Bei uns</p>
           <p>Zuerst die Diagnose: Gehaltspaket, Rollenzuschnitt, Außendarstellung, Bewertungen, Abgangsgründe des Vorgängers. Erst danach wird gesucht — sonst suchen wir jemanden für eine Stelle, die ihn wieder verliert.</p>
-        </div>
-      </div>
-      <div class="compare-row">
-        <div class="usual">
-          <p class="side-label">Üblich</p>
-          <p>„Personalberatung für Vertriebspositionen" — von Startup bis Konzern, quer durch alle Branchen.</p>
-        </div>
-        <div class="mine">
-          <p class="side-label">Bei uns</p>
-          <p>Ein Ausschnitt: erklärungsbedürftige Produkte, lange Verkaufszyklen, gewachsene Vertriebsgebiete. Wer diese Gebiete kennt, weiß, welcher Kandidat sie fährt — und welcher nur so klingt.</p>
         </div>
       </div>
       <div class="compare-row">
@@ -711,7 +730,7 @@
       <div class="step-item">
         <p class="wk">Woche 4–5</p>
         <h3>Shortlist</h3>
-        <p>Drei bis fünf Profile mit Einschätzung: was der Kandidat kann, was ihn hält, wo das Risiko liegt.</p>
+        <p>Drei bis fünf Profile mit Einschätzung: was der Kandidat kann, was ihn hält, wo das Risiko liegt. Jeder davon hat vorher ein echtes Verkaufsgespräch geführt — mit Einwänden, nicht mit Fragebogen.</p>
       </div>
       <div class="step-item">
         <p class="wk">Woche 6–8</p>
@@ -800,7 +819,7 @@
       </details>
       <details>
         <summary>Kennen Sie unsere Branche?</summary>
-        <p>Wenn nicht, sage ich das im ersten Gespräch. Ich arbeite in einem schmalen Ausschnitt — erklärungsbedürftige Produkte, lange Verkaufszyklen, Mittelstand. Für Software-Vertrieb oder Konzernstrukturen gibt es bessere Adressen, und ich nenne sie Ihnen.</p>
+        <p>Vermutlich nicht so gut wie Sie — und das ist auch nicht der Punkt. Warum eine Vertriebsstelle offen bleibt, hat in fast jeder Branche dieselben Ursachen: Gebietszuschnitt, Provisionsmodell, Einarbeitung, Führung. Was an Ihrem Markt besonders ist, erarbeiten wir in der Diagnose, bevor die Suche beginnt — dafür sind die neunzig Minuten da. Und wenn ich danach den Eindruck habe, dass ich Ihnen nicht helfen kann, sage ich Ihnen das.</p>
       </details>
     </div>
   </div>
@@ -994,7 +1013,7 @@
     {"@type":"Question","name":"Warum ein Retainer und nicht reines Erfolgshonorar?","acceptedAnswer":{"@type":"Answer","text":"Reines Erfolgshonorar zwingt den Berater, viele Mandate gleichzeitig zu bearbeiten und das schnellste zuerst. Der Retainer kauft Zuwendung: wenige Mandate, jedes vollständig bearbeitet. Er ist nur ein Drittel des Gesamthonorars, der größere Teil hängt am Ergebnis."}},
     {"@type":"Question","name":"Wir suchen ohnehin selbst weiter. Stört das?","acceptedAnswer":{"@type":"Answer","text":"Nein. Wenn der Kunde den Richtigen selbst findet, während das Mandat läuft, wird das Erfolgshonorar nicht fällig. Der Retainer bleibt beim Berater."}},
     {"@type":"Question","name":"Was passiert, wenn der Kandidat wieder geht?","acceptedAnswer":{"@type":"Answer","text":"In den ersten drei Monaten wird ohne weiteres Honorar nachbesetzt, es fallen nur Auslagen an. Das Gewicht liegt allerdings vorne auf der Diagnose und in den 90 Tagen Begleitung der Einarbeitung."}},
-    {"@type":"Question","name":"Kennen Sie unsere Branche?","acceptedAnswer":{"@type":"Answer","text":"Der Ausschnitt ist schmal: erklärungsbedürftige Produkte, lange Verkaufszyklen, Mittelstand. Für Software-Vertrieb oder Konzernstrukturen werden andere Adressen genannt."}}
+    {"@type":"Question","name":"Kennen Sie unsere Branche?","acceptedAnswer":{"@type":"Answer","text":"Warum eine Vertriebsstelle offen bleibt, hat in fast jeder Branche dieselben Ursachen: Gebietszuschnitt, Provisionsmodell, Einarbeitung, Führung. Was am jeweiligen Markt besonders ist, wird in der Vakanzdiagnose erarbeitet, bevor die Suche beginnt."}}
    ]}
  ]}
 </script>
