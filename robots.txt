@@ -1,5 +1,3 @@
-# Vor dem Livegang: noindex-Meta in den HTML-Dateien entfernen,
-# danach gilt das hier.
 User-agent: *
 Allow: /
 
