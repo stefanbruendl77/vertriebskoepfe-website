@@ -6,6 +6,8 @@
 <title>Für Kandidaten · Vertriebsköpfe</title>
 <link rel="canonical" href="https://vertriebskoepfe.de/kandidaten/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0D1A2E">
 <meta property="og:title" content="Für Kandidaten · Vertriebsköpfe">
 <meta property="og:description" content="Wir melden uns, wenn die Stelle wirklich passt. Sechs Angaben, kein Lebenslauf.">
@@ -51,8 +53,11 @@
   .wrap{max-width:720px;margin:0 auto;padding:0 26px}
   header{background:var(--navy);padding:28px 0;margin-bottom:44px}
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .mark{width:34px;height:34px;border-radius:3px;background:#fff;color:#0D1A2E;display:grid;place-items:center;
-        font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;font-size:var(--fs-2)}
+  /* Die weisse Fassung hat keine Flaeche, nur Buchstaben. Ein paar Pixel
+     mehr, damit sie neben der Wortmarke nicht untergeht. Unter 48 px
+     bleibt es die kleine Fassung, so will es das Logopaket. */
+  .mark{width:40px;height:40px;flex:none;
+        background:url("/img/signet-weiss.svg") center/contain no-repeat}
   .wm{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;font-size:var(--fs-3);letter-spacing:.075em;text-transform:uppercase;color:#fff}
   h1{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;font-size:var(--fs-6);line-height:1.15;margin:0 0 24px}
   h2{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;font-size:var(--fs-4);margin:34px 0 8px}
@@ -106,7 +111,7 @@
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="/"><span class="mark">VK</span><span class="wm">Vertriebsköpfe</span></a></div></header>
+<header><div class="wrap"><a class="brand" href="/"><span class="mark" aria-hidden="true"></span><span class="wm">Vertriebsköpfe</span></a></div></header>
 <main class="wrap">
 
 <h1>Wir melden uns, wenn die Stelle wirklich passt.</h1>

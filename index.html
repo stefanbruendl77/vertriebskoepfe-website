@@ -8,7 +8,8 @@
 <link rel="canonical" href="https://vertriebskoepfe.de/">
 <!-- Offen: Kalenderlink, Belege-Abschnitt. -->
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0D1A2E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vertriebsköpfe">
@@ -177,14 +178,17 @@
 
   /* Wortmarke Vertriebsköpfe */
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+  /* Echtes Signet aus dem Logopaket. :not(.invert) haelt die Fusszeile
+     aus dem Farbwechsel heraus, sie steht immer auf Navy. */
   .mark{
-    width:34px;height:34px;flex:none;border-radius:3px;background:var(--navy);color:#fff;
-    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;font-size:var(--fs-2);letter-spacing:.03em;
-    display:grid;place-items:center;
+    width:34px;height:34px;flex:none;
+    background:url("/img/signet-navy.svg") center/contain no-repeat;
   }
-  :root[data-theme="dark"] .mark,:root:not([data-theme="light"]) .mark{background:#0E6F68;color:#fff}
-  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .mark{background:#0D1A2E;color:#fff}}
-  .mark.invert{background:#fff;color:#0D1A2E}
+  :root[data-theme="dark"] .mark:not(.invert),:root:not([data-theme="light"]) .mark:not(.invert){background-image:url("/img/signet-petrol.svg")}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .mark:not(.invert){background-image:url("/img/signet-navy.svg")}}
+  /* Fusszeile: weisse Fassung ohne Flaeche, deshalb etwas groesser.
+     Bleibt unter 48 px und damit die kleine Fassung. */
+  .mark.invert{width:40px;height:40px;background-image:url("/img/signet-weiss.svg")}
   .wordmark{
     font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;font-size:var(--fs-3);line-height:1.1;
     letter-spacing:.075em;text-transform:uppercase;
@@ -522,7 +526,7 @@
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="index.html" aria-label="Vertriebsköpfe, zur Startseite">
-      <span class="mark" aria-hidden="true">VK</span>
+      <span class="mark" aria-hidden="true"></span>
       <span class="wordmark">Vertriebsköpfe<small>Personalberatung für den Vertrieb</small></span>
     </a>
     <nav class="nav-links">
@@ -881,7 +885,7 @@
   <div class="wrap foot-in">
     <div>
       <a class="brand" href="index.html" style="color:#fff">
-        <span class="mark invert" aria-hidden="true">VK</span>
+        <span class="mark invert" aria-hidden="true"></span>
         <span class="wordmark">Vertriebsköpfe<small style="color:var(--on-navy-mute)">Personalberatung für den Vertrieb</small></span>
       </a>
     </div>
