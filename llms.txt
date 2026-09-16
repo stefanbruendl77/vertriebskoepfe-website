@@ -1,20 +1,47 @@
 # Vertriebsköpfe
-> Personalberatung für Vertriebsrollen im Mittelstand. Betrieben von der
-> Vario Büroservice GmbH, Weil der Stadt. Ansprechpartner: Stefan Bründl.
 
-Besonderheit: Preise stehen offen auf der Seite. Vor der Suche steht eine
-Vakanzdiagnose, die klärt, warum die Stelle offen ist.
+> Personalberatung für den Vertrieb im Mittelstand. Vertriebsköpfe besetzt
+> Stellen in Key Account Management, Vertriebsleitung und Gebietsverkaufsleitung
+> in inhabergeführten Unternehmen und misst sich daran, ob die Stelle zwölf
+> Monate nach Arbeitsbeginn noch besetzt ist.
+
+Betreiber: Vario Büroservice GmbH, Neckarstraße 2, 71263 Weil der Stadt
+(Amtsgericht Stuttgart, HRB 252538). Ansprechpartner: Stefan Bründl,
+Geschäftsführer.
+Kontakt: Telefon +49 40 64532446, E-Mail stefan.bruendl@vertriebskoepfe.de
+
+## Rollen
+- Key Account Manager
+- Vertriebsleitung
+- Gebietsverkaufsleitung
 
 ## Preise
-- Vakanzdiagnose: 2.500 € einmalig, zwei Wochen
-- Besetzung: 25 % des Zieljahresgehalts, in drei Raten — 5.600 € bei Auftragserteilung, der Rest je zur Hälfte bei Shortlist und bei Vertragsunterschrift
-- Recruiting-Kapazität: Tagessatz, ab zwei Monaten
-- Zusage: 12 Monate Nachbesetzung ab Arbeitsbeginn (Monat 1-6 ohne weiteres Honorar,
-  Monat 7-12 gegen ein Drittel), keine Rueckerstattung, 90 Tage Begleitung der Einarbeitung
+- Vakanzdiagnose: 2.500 € einmalig. Klärt vor der Suche, warum die Stelle offen bleibt.
+- Besetzung: 25 % des Zieljahresgehalts, fällig in drei Raten: bei
+  Auftragserteilung, bei Vorlage der Shortlist und bei Vertragsunterschrift.
+- Recruiting-Kapazität: Tagessatz, monatlich abgerechnet, ab zwei Monaten.
+
+## Zusage
+- 12 Monate Nachbesetzung ab dem ersten Arbeitstag, unabhängig davon, wer
+  gekündigt hat: Monat 1 bis 6 ohne weiteres Honorar, Monat 7 bis 12 gegen
+  ein Drittel des Honorars.
+- Keine Rückerstattung.
+- 90 Tage Begleitung der Einarbeitung.
+
+## Ablauf
+Acht Wochen, vier Schritte: Diagnose, Ansprache, Shortlist, Entscheidung.
+
+## Person
+Stefan Bründl: 17 Jahre Personaldienstleistung, zuletzt Vertriebsdirektor
+bei einem der größten Personaldienstleister weltweit. Seit 2024 Beratung zu
+Fluktuation und Mitarbeiterbindung im Mittelstand (https://leadsimply.de/).
+LinkedIn: https://www.linkedin.com/in/stefan-bruendl
 
 ## Seiten
-- https://vertriebskoepfe.de/ — Leistungen, Preise, Ablauf, FAQ
-- https://vertriebskoepfe.de/besetzungscheck/ — kostenloser Selbsttest,
-  neun Fragen, Punktzahl und Befunde ohne Datenübertragung
+- https://vertriebskoepfe.de/ — Leistungen, Preise, Ablauf, Zusage, FAQ
+- https://vertriebskoepfe.de/besetzungscheck/ — kostenloser Selbsttest mit
+  neun Fragen; Punktzahl und Befunde, ohne Datenübertragung
+- https://vertriebskoepfe.de/kandidaten/ — Kandidatenpool für Vertriebsrollen
 - https://vertriebskoepfe.de/impressum/
 - https://vertriebskoepfe.de/datenschutz/
+- https://vertriebskoepfe.de/datenschutz/kandidaten/ — Datenschutzhinweise für Kandidaten
