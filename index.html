@@ -52,7 +52,7 @@
     --paper:#F6F8FB;
     --card:#FFFFFF;
     --ink:#14202F;
-    --muted:#5C6B7E;
+    --muted:#4A596B;
     --hair:#DDE4EC;
     --petrol:#0E6F68;
     --petrol-dark:#0B5A54;
@@ -114,8 +114,8 @@
   .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
   .narrow{max-width:660px}
   h1,h2,h3{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;text-wrap:balance;letter-spacing:-.012em}
-  h1{font-size:clamp(var(--fs-6),4.6vw,var(--fs-7));line-height:1.1;margin:0 0 20px}
-  h2{font-size:clamp(var(--fs-5),3.2vw,var(--fs-6));line-height:1.16;margin:0 0 14px}
+  h1{font-size:clamp(var(--fs-6),5.2vw,3.5rem);line-height:1.06;margin:0 0 20px}
+  h2{font-size:clamp(var(--fs-5),3.6vw,2.5rem);line-height:1.12;margin:0 0 14px}
   h3{font-size:var(--fs-4);line-height:1.3;margin:0 0 8px}
   p{margin:0 0 18px}
   a{color:var(--petrol)}
@@ -262,8 +262,8 @@
   .calc input:focus{outline:2px solid var(--petrol-lite);outline-offset:1px}
   .calc-out{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;margin-top:2px}
   .calc-out .big{
-    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:clamp(var(--fs-6),5vw,var(--fs-7));font-weight:600;
-    color:var(--petrol-lite);font-variant-numeric:tabular-nums;line-height:1;margin-bottom:10px;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:clamp(2.5rem,6.5vw,4.25rem);font-weight:600;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;line-height:1;margin-bottom:12px;
     /* Platz fuer den groesstmoeglichen Betrag reservieren, sonst waechst
        die Zahl beim Hochzaehlen und schiebt den Rest nach unten.
        Bewusst block und nicht inline-block: als Inline-Box haengt die
@@ -513,6 +513,8 @@
   /* Bewegung: 350 ms, 14 px, einmal */
   .rev{opacity:0;transform:translateY(14px);transition:opacity .35s ease-out,transform .35s ease-out}
   .rev.in{opacity:1;transform:none}
+  /* Der erste Bildschirm blendet nicht ein: er steht sofort. */
+  .hero .rev{opacity:1;transform:none;transition:none}
   .rev-d1{transition-delay:.08s}
   .rev-d2{transition-delay:.16s}
   @media (prefers-reduced-motion: reduce){
@@ -578,7 +580,7 @@
   <div class="wrap">
     <p class="eyebrow rev">Die Rechnung, die selten jemand aufmacht</p>
     <h2 class="rev">Eine unbesetzte Vertriebsstelle ist teurer als jede Personalberatung.</h2>
-    <p class="lead rev" style="margin-bottom:44px">Nur fällt die Rechnung nicht auf, weil sie in keiner Kostenstelle steht. Sie steht im Umsatz, der nicht kommt — und den bucht niemand. Rechnen Sie es einmal mit Ihren eigenen Zahlen.</p>
+    <p class="lead rev" style="margin-bottom:26px">Nur fällt die Rechnung nicht auf, weil sie in keiner Kostenstelle steht. Sie steht im Umsatz, der nicht kommt — und den bucht niemand. Rechnen Sie es einmal mit Ihren eigenen Zahlen.</p>
 
 
     <div class="calc rev" id="calc">
