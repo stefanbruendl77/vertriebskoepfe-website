@@ -11,3 +11,7 @@ __MACOSX/
 *.7z
 entwuerfe/
 intern/
+
+# Sicherungskopien bleiben lokal
+*.bak-*
+*.bak
