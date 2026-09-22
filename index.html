@@ -542,6 +542,21 @@
     font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
     color:rgba(255,255,255,.7);line-height:1;white-space:nowrap;
   }
+  /* Helle Fassung des Signets fuer den Kopfbereich */
+  .signet-jahr.hell{border-color:rgba(14,111,104,.8)}
+  .signet-jahr.hell .sj-linie{background:var(--hair)}
+  .signet-jahr.hell .sj-jahr{color:var(--muted)}
+  header.nav .brand{align-items:center;gap:14px}
+  header.nav .signet-jahr{width:86px;padding:9px 8px 8px;gap:8px}
+  header.nav .signet-jahr .mark{width:36px;height:36px}
+  header.nav .sj-jahr{font-size:9px;letter-spacing:.18em}
+  /* Unter 700 px reicht die Breite nicht mehr, damit die Jahreszeile
+     lesbar bleibt. Dort steht wieder die schlichte Platte. */
+  .nur-klein{display:none}
+  @media (max-width:700px){
+    .nur-gross{display:none}
+    .nur-klein{display:block}
+  }
   footer.site .brand{align-items:flex-start;gap:18px}
   footer.site .wordmark{padding-top:6px}
 
@@ -582,7 +597,12 @@
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="Vertriebsköpfe, zur Startseite">
-      <span class="mark" aria-hidden="true"></span>
+      <span class="signet-jahr hell nur-gross" aria-hidden="true">
+        <span class="mark"></span>
+        <span class="sj-linie"></span>
+        <span class="sj-jahr">Seit 2026</span>
+      </span>
+      <span class="mark nur-klein" aria-hidden="true"></span>
       <span class="wordmark">Vertriebsköpfe<small>Personalberatung für den Vertrieb</small></span>
     </a>
     <nav class="nav-links">
@@ -747,7 +767,7 @@
         <h3>Besetzung</h3>
         <p class="price">30 %<small>des Zieljahresgehalts, in drei gleichen Raten</small></p>
         <ul>
-          <li>Briefing vor Ort, neunzig Minuten</li>
+          <li>Briefing per Video, neunzig Minuten</li>
           <li>Vakanzdiagnose vor der ersten Ansprache</li>
           <li>Rund 100 gezielte Direktansprachen</li>
           <li>Drei Profile mit benannten Risiken</li>
@@ -792,7 +812,7 @@
       <li>
         <span class="zs-wo">Woche 1</span>
         <h3>Briefing</h3>
-        <p>Neunzig Minuten mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle.</p>
+        <p>Neunzig Minuten per Video mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle.</p>
         <p class="zs-liefer"><b>Sie bekommen</b>Mindestanforderungen und Zieljahresgehalt in Textform, von beiden Seiten bestätigt.</p>
       </li>
       <li>
@@ -821,7 +841,9 @@
       </li>
     </ol>
 
-    <p class="cta-note" style="margin-top:34px">Ergibt die Recherche weniger als drei passende Profile, bekommen Sie statt der Shortlist einen schriftlichen Marktbefund mit den gefundenen Profilen und einer Empfehlung, wie das Anforderungsprofil anzupassen wäre. Das ist kein Ausweichen. Es sagt Ihnen, dass die Stelle so nicht besetzbar ist, bevor Sie ein halbes Jahr darauf warten.</p>
+    <p class="cta-note" style="margin-top:30px"><b style="color:var(--ink)">Alles läuft per Video und Telefon.</b> Kein Anfahrtstag, keine Reisekosten im Honorar, und Termine lassen sich innerhalb von Tagen ansetzen statt innerhalb von Wochen. Wenn Sie mich trotzdem im Haus haben wollen, sagen Sie es, dann kommen wir zusammen.</p>
+
+    <p class="cta-note" style="margin-top:14px">Ergibt die Recherche weniger als drei passende Profile, bekommen Sie statt der Shortlist einen schriftlichen Marktbefund mit den gefundenen Profilen und einer Empfehlung, wie das Anforderungsprofil anzupassen wäre. Das ist kein Ausweichen. Es sagt Ihnen, dass die Stelle so nicht besetzbar ist, bevor Sie ein halbes Jahr darauf warten.</p>
   </div>
 </section>
 
