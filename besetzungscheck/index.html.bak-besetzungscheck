@@ -341,19 +341,6 @@
   .flag h3{margin:0 0 4px;font-size:var(--fs-3)}
   .flag p{margin:0;font-size:var(--fs-2);color:var(--muted)}
   .result-cta{background:var(--petrol-wash);padding:24px 26px;border-top:1px solid var(--hair)}
-  .linkbtn{
-    background:none;border:0;padding:0;margin:0;font:inherit;color:var(--petrol);
-    text-decoration:underline;cursor:pointer;
-  }
-  .linkbtn:hover{color:var(--ink)}
-  .print-only{display:none}
-  @media print{
-    header.nav,footer.site,#checkForm,.band-navy,.check-actions,.cta-row,.linkbtn,.lead,.eyebrow{display:none !important}
-    body{background:#fff}
-    .result{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
-    .print-only{display:block !important;font-size:12px;color:#555;margin:0 0 10px}
-    a[href]:after{content:""}
-  }
   .result-cta p{font-size:var(--fs-2);max-width:44.03em}
 
   /* Gegenüberstellung */
@@ -627,7 +614,6 @@
     </form>
 
     <div class="result" id="result" hidden>
-      <p class="print-only">Besetzungscheck · vertriebskoepfe.de · <span id="printDatum"></span></p>
       <div class="result-top">
         <div class="score">
           <span class="score-num" id="scoreNum">0</span>
@@ -641,12 +627,11 @@
       </div>
       <div class="flags" id="flags"></div>
       <div class="result-cta">
-        <p id="ctaText">—</p>
+        <p><b>Was der Check nicht kann:</b> Er sagt Ihnen, wo es klemmt, nicht warum. Das steht in den Gesprächen mit dem Vorgänger, im Marktvergleich Ihres Gebiets und in dem, was Kandidaten über Sie sagen, wenn der Anruf nicht von Ihnen kommt. Genau das leistet die Vakanzdiagnose.</p>
         <div class="cta-row">
-          <a class="btn" id="ctaMail" href="mailto:stefan.bruendl@vertriebskoepfe.de">Ergebnis senden</a>
+          <a class="btn" href="/#kontakt">Vakanzdiagnose anfordern</a>
           <a class="btn btn-ghost" href="tel:+494064532446">Kurz durchsprechen: 040 64532446</a>
         </div>
-        <p class="cta-note" style="margin:16px 0 0">Die Mail öffnet sich in Ihrem Mailprogramm und enthält dieses Ergebnis und Ihre Antworten. Abgeschickt wird sie erst von Ihnen. · <button type="button" class="linkbtn" id="ctaPrint">Ergebnis drucken oder als PDF sichern</button></p>
       </div>
     </div>
   </div>
@@ -803,72 +788,6 @@
     return {score:score, flags:flags.slice(0,3)};
   }
 
-  // Der naechste Schritt haengt am Ergebnis, nicht am Produkt.
-  // Gruen braucht keine Diagnose, sondern Ansprache. Rot braucht keine Suche, sondern die Ursache.
-  var CTA = {
-    'v-rot': {
-      label: 'Vakanzdiagnose anfordern',
-      betreff: 'Vakanzdiagnose',
-      text: 'Bei diesem Ergebnis bringt mehr Suche nichts. Was fehlt, ist die Antwort auf das Warum: was der Vorg\u00e4nger wirklich gesagt hat, warum Kandidaten in Ihrem Markt nicht antworten und wie Ihr Paket gegen das steht, was gerade verlangt wird. Genau das leistet die Vakanzdiagnose \u2014 in zwei Wochen, mit schriftlichem Befund.'
-    },
-    'v-gelb': {
-      label: 'Zwanzig Minuten besprechen',
-      betreff: 'Erstgespr\u00e4ch',
-      text: 'Zwei oder drei Punkte stehen der Besetzung im Weg. Welche davon sich \u00e4ndern lassen und welche nicht, l\u00e4sst sich in zwanzig Minuten kl\u00e4ren. Danach wissen Sie, ob eine Diagnose n\u00f6tig ist oder ob direkt gesucht werden kann.'
-    },
-    'v-gruen': {
-      label: 'Besetzung besprechen',
-      betreff: 'Besetzung',
-      text: 'An der Stelle selbst liegt es nicht. Dann ist die Frage nicht, was sich \u00e4ndern muss, sondern wer sie \u00fcberhaupt kennt. Gute Vertriebler lesen keine Anzeigen, sie haben einen Job und keinen Anlass zu suchen \u2014 erreichbar sind sie \u00fcber einen Anruf.'
-    }
-  };
-
-  // Die Antworten in Klartext, direkt aus dem Formular gelesen
-  function zusammenfassung(){
-    var zeilen = [];
-    Array.prototype.forEach.call(form.querySelectorAll('fieldset'), function(fs){
-      var leg = fs.querySelector('legend');
-      if(!leg) return;
-      var kopie = leg.cloneNode(true);
-      Array.prototype.forEach.call(kopie.querySelectorAll('.multi,.erledigt'), function(el){
-        el.parentNode.removeChild(el);
-      });
-      var frage = kopie.textContent.replace(/\s+/g, ' ').trim();
-      var gewaehlt = Array.prototype.map.call(fs.querySelectorAll('input:checked'), function(el){
-        var sp = el.parentNode ? el.parentNode.querySelector('span') : null;
-        return sp ? sp.textContent.replace(/\s+/g, ' ').trim() : el.value;
-      });
-      if(gewaehlt.length) zeilen.push(frage + ': ' + gewaehlt.join(', '));
-    });
-    return zeilen;
-  }
-
-  // Mailentwurf: nichts wird gesendet, nur vorbereitet
-  function mailEntwurf(r, stufe, cta){
-    var z = [];
-    z.push('Ergebnis meines Besetzungschecks auf vertriebskoepfe.de');
-    z.push('');
-    z.push('Punktzahl: ' + r.score + ' von 100');
-    z.push('Urteil: ' + stufe.l);
-    z.push('');
-    if(r.flags.length){
-      z.push('Was laut Check am schwersten wiegt:');
-      r.flags.forEach(function(f, i){ z.push((i + 1) + '. ' + f.t); });
-      z.push('');
-    }
-    z.push('Meine Angaben:');
-    zusammenfassung().forEach(function(t){ z.push('- ' + t); });
-    z.push('');
-    z.push('Firma:');
-    z.push('Ansprechpartner:');
-    z.push('Telefon:');
-    z.push('');
-    z.push('Anmerkung:');
-    return 'mailto:stefan.bruendl@vertriebskoepfe.de'
-      + '?subject=' + encodeURIComponent(cta.betreff + ' \u2014 Besetzungscheck ' + r.score + '/100')
-      + '&body=' + encodeURIComponent(z.join('\r\n'));
-  }
-
   function render(r){
     var num = document.getElementById('scoreNum');
     var bar = document.getElementById('scoreBar');
@@ -884,17 +803,6 @@
     lab.className = 'verdict-label ' + stufe.k;
     lab.textContent = stufe.l;
     txt.textContent = stufe.t;
-
-    var cta = CTA[stufe.k] || CTA['v-gelb'];
-    var ctaText = document.getElementById('ctaText');
-    var ctaMail = document.getElementById('ctaMail');
-    var datum = document.getElementById('printDatum');
-    if(ctaText) ctaText.textContent = cta.text;
-    if(ctaMail){
-      ctaMail.textContent = cta.label;
-      ctaMail.href = mailEntwurf(r, stufe, cta);
-    }
-    if(datum) datum.textContent = new Date().toLocaleDateString('de-DE');
 
     box.innerHTML = '';
     if(!r.flags.length){
@@ -925,9 +833,6 @@
     }
     result.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'nearest'});
   }
-
-  var druck = document.getElementById('ctaPrint');
-  if(druck) druck.addEventListener('click', function(){ window.print(); });
 
   // "Bisher nichts davon" schliesst die anderen Maßnahmen aus
   form.addEventListener('change', function(e){
