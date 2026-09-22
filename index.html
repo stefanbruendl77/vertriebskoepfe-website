@@ -294,6 +294,44 @@
     .ct-opt{justify-content:center}
   }
 
+  /* Zeitstrahl: Ablauf und Lieferungen in einer Grafik */
+  .zeitstrahl{
+    list-style:none;margin:40px 0 0;padding:0;position:relative;
+    display:grid;grid-template-columns:repeat(5,1fr);
+  }
+  .zeitstrahl::before{
+    content:"";position:absolute;left:9px;width:80%;top:9px;height:2px;
+    background:var(--petrol);opacity:.28;
+  }
+  .zeitstrahl li{position:relative;padding:36px 20px 0 0;display:flex;flex-direction:column}
+  .zeitstrahl li > p:not(.zs-liefer){flex:1}
+  .zeitstrahl li::before{
+    content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;
+    background:var(--paper);border:3px solid var(--petrol);box-sizing:border-box;
+  }
+  .zeitstrahl li:last-child::before{background:var(--petrol)}
+  .zs-wo{
+    display:block;font-size:var(--fs-1);font-weight:600;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--petrol);margin-bottom:6px;
+  }
+  .zeitstrahl h3{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;
+    font-size:var(--fs-3);font-weight:600;margin:0 0 6px;color:var(--ink);
+  }
+  .zeitstrahl p{margin:0;font-size:var(--fs-2);color:var(--muted);line-height:1.5}
+  .zs-liefer{
+    margin-top:12px !important;padding-top:10px;border-top:1px solid var(--hair);
+    color:var(--ink) !important;
+  }
+  .zs-liefer b{display:block;font-size:var(--fs-1);font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+  @media (max-width:860px){
+    .zeitstrahl{grid-template-columns:1fr}
+    .zeitstrahl::before{left:9px;top:10px;bottom:24px;width:2px;height:auto}
+    .zeitstrahl li{padding:0 0 26px 34px}
+    .zeitstrahl li::before{top:2px}
+  }
+
   /* Besetzungscheck-Teaser */
   .teaser{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
   @media (max-width:760px){.teaser{grid-template-columns:1fr;gap:24px}}
@@ -488,7 +526,24 @@
   footer.site a{color:var(--on-navy-mute);text-decoration:none;margin-right:22px}
   footer.site a:not(.brand){display:inline-block;padding:13px 0}
   footer.site a:hover{color:#fff}
-  .foot-in{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:baseline}
+  .foot-in{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  /* Signet mit Jahreszeile, wie auf dem LinkedIn-Banner:
+     Navy-Flaeche, duenner Petrol-Rahmen, Haarlinie, SEIT 2026.
+     Nur hier, weil die Zeile unter 60 px Breite nicht mehr lesbar ist. */
+  .signet-jahr{
+    flex:none;width:96px;padding:15px 10px 12px;
+    border:1px solid rgba(14,111,104,.85);
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+  }
+  .signet-jahr .mark.invert{width:40px;height:40px;margin:0}
+  .sj-linie{width:36px;height:1px;background:rgba(255,255,255,.3)}
+  .sj-jahr{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;
+    font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(255,255,255,.7);line-height:1;white-space:nowrap;
+  }
+  footer.site .brand{align-items:flex-start;gap:18px}
+  footer.site .wordmark{padding-top:6px}
 
   /* Mobile Anrufleiste */
   .callbar{
@@ -726,69 +781,47 @@
   </div>
 </section>
 
-<!-- 6 · Ablauf -->
-<section id="ablauf">
+<!-- 6 · Ablauf und Lieferungen -->
+<section id="ablauf" class="raum-gross">
   <div class="wrap">
-    <p class="eyebrow rev">Ablauf einer Besetzung</p>
-    <h2 class="rev">Acht Wochen, vier Schritte, keine Überraschungen.</h2>
-    <p class="lead rev" style="margin-bottom:36px">Sie wissen jede Woche, wo das Mandat steht — auch dann, wenn es nicht vorangeht.</p>
+    <p class="eyebrow rev">Vom Auftrag bis zur Unterschrift</p>
+    <h2 class="rev">Acht Wochen, fünf Stationen, jede mit einer Lieferung.</h2>
+    <p class="lead rev">Das Honorar bezahlt eine Suchleistung, nicht nur ein Ergebnis. Hier steht, was in welcher Woche passiert und was davon bei Ihnen ankommt.</p>
 
-    <div class="steps rev">
-      <div class="step-item">
-        <p class="wk">Woche 1</p>
-        <h3>Diagnose</h3>
-        <p>Rolle, Gehalt, Gebiet, Abgangsgründe. Am Ende steht, ob die Stelle so besetzbar ist — oder was sich vorher ändern muss.</p>
-      </div>
-      <div class="step-item">
-        <p class="wk">Woche 2–3</p>
-        <h3>Ansprache</h3>
-        <p>Rund 100 gezielte Kontakte, überwiegend am Telefon. Menschen, die nicht suchen, bewerben sich nicht — sie werden angerufen.</p>
-      </div>
-      <div class="step-item">
-        <p class="wk">Woche 4–5</p>
+    <ol class="zeitstrahl rev">
+      <li>
+        <span class="zs-wo">Woche 1</span>
+        <h3>Briefing</h3>
+        <p>Neunzig Minuten mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle.</p>
+        <p class="zs-liefer"><b>Sie bekommen</b>Mindestanforderungen und Zieljahresgehalt in Textform, von beiden Seiten bestätigt.</p>
+      </li>
+      <li>
+        <span class="zs-wo">Woche 1–2</span>
+        <h3>Vakanzdiagnose</h3>
+        <p>Rollenzuschnitt, Vergütungspaket, Außenwirkung, Abgangsgründe des Vorgängers. Danach steht fest, ob die Stelle so besetzbar ist.</p>
+        <p class="zs-liefer"><b>Sie bekommen</b>Einen schriftlichen Befund. Auch dann, wenn Sie danach nicht weitermachen.</p>
+      </li>
+      <li>
+        <span class="zs-wo">Woche 2–5</span>
+        <h3>Direktansprache</h3>
+        <p>Rund 100 gezielte Kontakte, überwiegend am Telefon. Gute Vertriebler suchen nicht aktiv, sie werden angesprochen.</p>
+        <p class="zs-liefer"><b>Sie bekommen</b>Jede Woche eine Statusmeldung. Auch in den Wochen, in denen nichts Zählbares passiert ist.</p>
+      </li>
+      <li>
+        <span class="zs-wo">Woche 4–6</span>
         <h3>Shortlist</h3>
-        <p>Drei bis fünf Profile mit Einschätzung: was der Kandidat kann, was ihn hält, wo das Risiko liegt. Jeder davon hat vorher ein echtes Verkaufsgespräch geführt — mit Einwänden, nicht mit Fragebogen.</p>
-      </div>
-      <div class="step-item">
-        <p class="wk">Woche 6–8</p>
+        <p>Jeder Kandidat hat vorher ein echtes Gespräch geführt, mit Einwänden statt Fragebogen.</p>
+        <p class="zs-liefer"><b>Sie bekommen</b>Drei Profile mit Einschätzung und benanntem Risiko, nicht nur mit Werdegang.</p>
+      </li>
+      <li>
+        <span class="zs-wo">Woche 6–8</span>
         <h3>Entscheidung</h3>
-        <p>Gespräche, Verhandlung, Unterschrift. Danach melde ich mich in Woche 2, 6, 12 und 20 und frage, ob es läuft.</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <p>Gespräche, Verhandlung, Unterschrift. Jeder Kandidat bekommt binnen 24 Stunden eine Rückmeldung.</p>
+        <p class="zs-liefer"><b>Sie bekommen</b>Begleitung bis zur Unterschrift, danach Rückfrage in Woche 2, 6, 12 und 20.</p>
+      </li>
+    </ol>
 
-<!-- 6b · Was Sie bekommen -->
-<section class="raum-eng">
-  <div class="wrap">
-    <p class="eyebrow rev">Was Sie bekommen</p>
-    <h2 class="rev">Vier Lieferungen mit Datum, nicht vier Versprechen.</h2>
-    <p class="lead rev" style="margin-bottom:36px">Das Honorar bezahlt eine Suchleistung, nicht nur ein Ergebnis. Deshalb steht hier, was davon bei Ihnen ankommt und wann.</p>
-
-    <div class="steps rev">
-      <div class="step-item">
-        <p class="wk">2 Arbeitstage nach Auftrag</p>
-        <h3>Bestätigtes Briefing</h3>
-        <p>Mindestanforderungen und Zieljahresgehalt in Textform, von beiden Seiten bestätigt. Damit später niemand über etwas anderes redet als am Anfang.</p>
-      </div>
-      <div class="step-item">
-        <p class="wk">10 Arbeitstage</p>
-        <h3>Schriftlicher Befund</h3>
-        <p>Rollenzuschnitt, Vergütungspaket, Marktfähigkeit der Position, Abgangsgründe des Vorgängers. Den bekommen Sie auch dann, wenn Sie danach nicht weitermachen.</p>
-      </div>
-      <div class="step-item">
-        <p class="wk">jede Woche</p>
-        <h3>Statusmeldung</h3>
-        <p>Wie viele angesprochen, wer abgesagt hat und warum. Auch in den Wochen, in denen nichts Zählbares passiert ist. Gerade in denen.</p>
-      </div>
-      <div class="step-item">
-        <p class="wk">sobald erreicht</p>
-        <h3>Drei Profile</h3>
-        <p>Jedes mit Einschätzung und benanntem Risiko, nicht nur mit Werdegang. Jeder davon hat vorher ein echtes Gespräch geführt, mit Einwänden statt Fragebogen.</p>
-      </div>
-    </div>
-
-    <p class="cta-note" style="margin-top:30px">Ergibt die Recherche weniger als drei passende Profile, bekommen Sie statt der Shortlist einen schriftlichen Marktbefund mit den gefundenen Profilen und einer Empfehlung, wie das Anforderungsprofil anzupassen wäre. Das ist kein Ausweichen. Es sagt Ihnen, dass die Stelle so nicht besetzbar ist, bevor Sie ein halbes Jahr darauf warten.</p>
+    <p class="cta-note" style="margin-top:34px">Ergibt die Recherche weniger als drei passende Profile, bekommen Sie statt der Shortlist einen schriftlichen Marktbefund mit den gefundenen Profilen und einer Empfehlung, wie das Anforderungsprofil anzupassen wäre. Das ist kein Ausweichen. Es sagt Ihnen, dass die Stelle so nicht besetzbar ist, bevor Sie ein halbes Jahr darauf warten.</p>
   </div>
 </section>
 
@@ -910,7 +943,11 @@
   <div class="wrap foot-in">
     <div>
       <a class="brand" href="/" style="color:#fff">
-        <span class="mark invert" aria-hidden="true"></span>
+        <span class="signet-jahr" aria-hidden="true">
+          <span class="mark invert"></span>
+          <span class="sj-linie"></span>
+          <span class="sj-jahr">Seit 2026</span>
+        </span>
         <span class="wordmark">Vertriebsköpfe<small style="color:var(--on-navy-mute)">Personalberatung für den Vertrieb</small></span>
       </a>
     </div>
