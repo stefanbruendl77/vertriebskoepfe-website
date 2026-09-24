@@ -56,14 +56,30 @@
         padding:12px 20px;border-radius:4px}
   @media (prefers-color-scheme:dark){a.btn{color:#06201D}}
   a.plain{color:var(--petrol)}
+  /* Signet mit Jahreszeile, gleiche Fassung wie auf der Startseite */
+  .signet-jahr{width:86px;margin:0 auto 26px;padding:9px 8px 8px;
+    border:1px solid rgba(14,111,104,.8);
+    display:flex;flex-direction:column;align-items:center;gap:8px}
+  .signet-jahr .mark{width:36px;height:36px;margin:0}
+  .sj-linie{width:34px;height:1px;background:rgba(128,140,155,.4)}
+  .sj-jahr{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:9px;
+    font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted,#5C6B7E);line-height:1;white-space:nowrap}
+  .recht{margin-top:40px;font-size:var(--fs-1)}
+  .recht a{color:var(--muted);margin-right:16px}
 </style>
 </head>
 <body>
   <div class="box">
-    <div class="mark" aria-hidden="true"></div>
+    <div class="signet-jahr" aria-hidden="true">
+      <span class="mark"></span>
+      <span class="sj-linie"></span>
+      <span class="sj-jahr">Seit 2026</span>
+    </div>
     <h1>Diese Seite gibt es nicht.</h1>
     <p>Wahrscheinlich ein alter Link. Zurück zur Startseite — oder direkt zum Besetzungscheck, wenn Sie den gesucht haben.</p>
     <p><a class="btn" href="/">Zur Startseite</a> &nbsp; <a class="plain" href="/besetzungscheck/">Besetzungscheck</a></p>
+    <p class="recht"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></p>
   </div>
 </body>
 </html>

@@ -452,7 +452,34 @@
   footer.site a{color:var(--on-navy-mute);text-decoration:none;margin-right:22px}
   footer.site a:not(.brand){display:inline-block;padding:13px 0}
   footer.site a:hover{color:#fff}
-  .foot-in{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:baseline}
+  .foot-in{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  /* Signet mit Jahreszeile, gleiche Fassung wie auf der Startseite */
+  .signet-jahr{
+    flex:none;width:96px;padding:15px 10px 12px;
+    border:1px solid rgba(14,111,104,.85);
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+  }
+  .signet-jahr .mark.invert{width:40px;height:40px;margin:0}
+  .sj-linie{width:36px;height:1px;background:rgba(255,255,255,.3)}
+  .sj-jahr{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;
+    font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(255,255,255,.7);line-height:1;white-space:nowrap;
+  }
+  .signet-jahr.hell{border-color:rgba(14,111,104,.8)}
+  .signet-jahr.hell .sj-linie{background:var(--hair)}
+  .signet-jahr.hell .sj-jahr{color:var(--muted)}
+  header.nav .brand{align-items:center;gap:14px}
+  header.nav .signet-jahr{width:86px;padding:9px 8px 8px;gap:8px}
+  header.nav .signet-jahr .mark{width:36px;height:36px}
+  header.nav .sj-jahr{font-size:9px;letter-spacing:.18em}
+  .nur-klein{display:none}
+  @media (max-width:700px){
+    .nur-gross{display:none}
+    .nur-klein{display:block}
+  }
+  footer.site .brand{align-items:flex-start;gap:18px}
+  footer.site .wordmark{padding-top:6px}
 
   /* Mobile Anrufleiste */
   .callbar{
@@ -489,7 +516,12 @@
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="Vertriebsköpfe, zur Startseite">
-      <span class="mark" aria-hidden="true"></span>
+      <span class="signet-jahr hell nur-gross" aria-hidden="true">
+        <span class="mark"></span>
+        <span class="sj-linie"></span>
+        <span class="sj-jahr">Seit 2026</span>
+      </span>
+      <span class="mark nur-klein" aria-hidden="true"></span>
       <span class="wordmark">Vertriebsköpfe<small>Personalberatung für den Vertrieb</small></span>
     </a>
     <nav class="nav-links">
@@ -669,7 +701,11 @@
 <footer class="site">
   <div class="wrap foot-in">
     <div><a class="brand" href="/" style="color:#fff">
-        <span class="mark invert" aria-hidden="true"></span>
+        <span class="signet-jahr" aria-hidden="true">
+          <span class="mark invert"></span>
+          <span class="sj-linie"></span>
+          <span class="sj-jahr">Seit 2026</span>
+        </span>
         <span class="wordmark">Vertriebsköpfe<small style="color:var(--on-navy-mute)">Personalberatung für den Vertrieb</small></span>
       </a></div>
     <div>
