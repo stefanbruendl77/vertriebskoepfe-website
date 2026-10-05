@@ -201,6 +201,9 @@
      Navigation. Ab hier verschwindet sie — die Hero-Zeile sagt dasselbe. */
   @media (max-width:1299px){.wordmark small{display:none}}
 
+  /* Buchungskalender: wird erst nach Klick geladen (Zwei-Klick-Loesung, kein Drittanbieter beim Seitenaufruf) */
+  .kal-slot{margin-top:24px;background:#fff;border-radius:6px;overflow:hidden;min-height:620px;max-width:960px}
+  .kal-slot .tidycal-embed{min-height:620px}
   /* Buttons */
   .btn{
     display:inline-flex;align-items:center;gap:9px;
@@ -952,10 +955,11 @@
     <h2 class="rev">Sagen Sie mir, welche Stelle offen ist. Den Rest klären wir in zwanzig Minuten.</h2>
     <p class="lead rev" style="margin-bottom:28px">Kein Formular mit zwölf Feldern, keine Unterlagen. Ein Anruf, in dem Sie schildern, welche Rolle wie lange offen ist und wer zuletzt darauf saß.</p>
     <div class="cta-row rev rev-d1">
-      <a class="btn" href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Erstgespräch vereinbaren</a>
+      <a class="btn" id="kalOeffnen" href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Kalender hier öffnen</a>
       <a class="btn btn-ghost" href="tel:+494064532446">Anrufen: 040 64532446</a>
     </div>
-    <p class="cta-note">Erstgespräch 20 Minuten, telefonisch. Den Termin wählen Sie selbst, gebucht wird über TidyCal. Oder schreiben Sie an <a href="mailto:stefan.bruendl@vertriebskoepfe.de" style="color:var(--petrol-lite)">stefan.bruendl@vertriebskoepfe.de</a> — Antwort am selben Werktag.</p>
+    <div class="kal-slot" id="kalSlot" hidden></div>
+    <p class="cta-note">Erstgespräch 20 Minuten, telefonisch. Den Termin wählen Sie selbst. Beim Öffnen wird der Buchungskalender von TidyCal auf dieser Seite geladen, vorher nicht (<a href="/datenschutz/" style="color:var(--petrol-lite)">Datenschutz</a>). Oder schreiben Sie an <a href="mailto:stefan.bruendl@vertriebskoepfe.de" style="color:var(--petrol-lite)">stefan.bruendl@vertriebskoepfe.de</a> — Antwort am selben Werktag.</p>
   </div>
 </section>
 
@@ -1250,5 +1254,27 @@
 }
 </script>
 
+<script>
+// Zwei-Klick-Loesung fuer TidyCal: Erst nach dem Klick wird der Kalender geladen.
+// Ohne JavaScript oeffnet der Link TidyCal wie bisher in einem neuen Fenster.
+(function(){
+  var a = document.getElementById('kalOeffnen');
+  var slot = document.getElementById('kalSlot');
+  if(!a || !slot) return;
+  a.addEventListener('click', function(ev){
+    ev.preventDefault();
+    if(slot.getAttribute('data-geladen') !== '1'){
+      slot.setAttribute('data-geladen','1');
+      slot.innerHTML = '<div class="tidycal-embed" data-path="stefanbruendl77/erstgespraech"></div>';
+      var sc = document.createElement('script');
+      sc.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
+      sc.async = true;
+      document.body.appendChild(sc);
+    }
+    slot.hidden = false;
+    slot.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+</script>
 </body>
 </html>
