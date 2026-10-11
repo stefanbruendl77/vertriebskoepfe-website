@@ -116,6 +116,13 @@
   details p{margin:10px 0 0;color:var(--muted)}
   .klein{font-size:var(--fs-2);color:var(--muted)}
   .formular{margin:0 0 10px}
+  /* Kandidatengespraech: Kalender wird erst nach Klick geladen (Zwei-Klick-Loesung) */
+  .gespraech{margin:40px 0 0}
+  .gespraech .knopf{text-decoration:none}
+  .gespraech-daten{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0}
+  .gespraech-daten li{margin:0;border:1px solid var(--hair);border-radius:4px;padding:3px 10px;font-size:var(--fs-2);color:var(--muted);background:var(--card)}
+  .kal-slot{margin-top:20px;background:#fff;border-radius:6px;overflow:hidden;min-height:620px}
+  .kal-slot .tidycal-embed{min-height:620px}
 </style>
 </head>
 <body>
@@ -151,6 +158,17 @@
   style="display:block;margin:0 auto;width:100%;max-width:100%;border:0"></iframe>
 </div>
 <p class="klein">Sie bekommen eine Bestätigungsmail. Erst wenn Sie darin auf den Link klicken, sind Sie eingetragen.</p>
+
+<section class="gespraech" id="gespraech">
+<h2>Lieber gleich sprechen?</h2>
+<p>Wenn Sie gerade aktiv suchen, buchen Sie 20 Minuten mit Stefan Bründl. Wir wollen verstehen, was Sie suchen und was auf keinen Fall. Danach wissen wir, wann wir an Sie denken müssen. Und wenn wir gerade nichts Passendes haben, sagen wir Ihnen das offen.</p>
+<ul class="gespraech-daten"><li>20 Minuten</li><li>Telefon oder Video</li><li>Kostenlos</li><li>Vertraulich</li></ul>
+<div id="kalStart">
+  <a class="knopf" id="kalOeffnen" href="https://tidycal.com/stefanbruendl77/kandidatengespraech" target="_blank" rel="noopener">Termin wählen</a>
+  <p class="klein" style="margin-top:12px">Beim Klick wird der Buchungskalender von TidyCal auf dieser Seite geladen, vorher nicht. Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
+</div>
+<div class="kal-slot" id="kalSlot" hidden></div>
+</section>
 
 <h2>So läuft es, wenn wir uns melden</h2>
 <ol class="schritte">
@@ -198,5 +216,29 @@
 <footer class="wrap">
   <a href="/">Startseite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a>
 </footer>
+<script>
+// Zwei-Klick-Loesung fuer TidyCal: Erst nach dem Klick wird der Kalender geladen.
+// Ohne JavaScript oeffnet der Link TidyCal in einem neuen Fenster.
+(function(){
+  var a = document.getElementById('kalOeffnen');
+  var slot = document.getElementById('kalSlot');
+  var start = document.getElementById('kalStart');
+  if(!a || !slot) return;
+  a.addEventListener('click', function(ev){
+    ev.preventDefault();
+    if(slot.getAttribute('data-geladen') !== '1'){
+      slot.setAttribute('data-geladen','1');
+      slot.innerHTML = '<div class="tidycal-embed" data-path="stefanbruendl77/kandidatengespraech"></div>';
+      var sc = document.createElement('script');
+      sc.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
+      sc.async = true;
+      document.body.appendChild(sc);
+    }
+    slot.hidden = false;
+    if(start) start.hidden = true;
+    slot.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+})();
+</script>
 </body>
 </html>
