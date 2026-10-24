@@ -117,10 +117,28 @@
   .klein{font-size:var(--fs-2);color:var(--muted)}
   .formular{margin:0 0 10px}
   /* Kandidatengespraech: Kalender wird erst nach Klick geladen (Zwei-Klick-Loesung) */
-  .gespraech{margin:40px 0 0}
-  .gespraech .knopf{text-decoration:none}
-  .gespraech-daten{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0}
-  .gespraech-daten li{margin:0;border:1px solid var(--hair);border-radius:4px;padding:3px 10px;font-size:var(--fs-2);color:var(--muted);background:var(--card)}
+  .kurzweg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:-14px 0 38px;font-size:var(--fs-2);color:var(--muted)}
+  .kurzweg a{font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+  .gespraech{margin:48px 0 0;scroll-margin-top:20px}
+  .gespraech-karte{display:grid;grid-template-columns:220px 1fr;background:var(--navy);color:#fff;border-radius:8px;overflow:hidden}
+  .gespraech-bild{margin:0;position:relative;background:#0D1A2E}
+  .gespraech-bild img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+  .gespraech-text{padding:30px 32px 30px}
+  .gespraech-text .eyebrow{font-size:var(--fs-1);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#7FD0C6;margin:0 0 10px}
+  .gespraech-text h2{color:#fff;font-size:var(--fs-5);line-height:1.2;margin:0 0 14px}
+  .gespraech-text p{color:rgba(255,255,255,.82);margin:0 0 18px}
+  .gespraech-daten{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 26px;padding:0;list-style:none;font-size:var(--fs-2);color:#fff}
+  .gespraech-daten li{margin:0;display:flex;align-items:center;gap:8px}
+  .gespraech-daten li::before{content:"";width:6px;height:6px;border-radius:50%;background:#7FD0C6;flex:none}
+  .gespraech .knopf{text-decoration:none;background:var(--petrol);box-shadow:0 0 0 1px rgba(255,255,255,.18) inset}
+  .gespraech .knopf:hover{background:#12857D}
+  .gespraech-text .gespraech-name{font-size:var(--fs-2);color:rgba(255,255,255,.65);margin:16px 0 0}
+  .gespraech .hinweis{margin:12px 2px 0}
+  @media (max-width:640px){
+    .gespraech-karte{grid-template-columns:1fr}
+    .gespraech-bild{height:260px}
+    .gespraech-text{padding:24px 22px 26px}
+  }
   .kal-slot{margin-top:20px;background:#fff;border-radius:6px;overflow:hidden;min-height:620px}
   .kal-slot .tidycal-embed{min-height:620px}
 </style>
@@ -131,6 +149,7 @@
 
 <h1>Wir melden uns, wenn die Stelle wirklich passt.</h1>
 <p class="lead">Kein Verteiler, der Ihnen jede Woche drei Stellen schickt, die nichts mit Ihnen zu tun haben. Sie sagen uns, was Sie machen und was sich ändern müsste. Wir melden uns, wenn wir ein Mandat haben, bei dem das zusammenkommt. Das kann in zwei Wochen sein oder in einem Jahr.</p>
+<p class="kurzweg">Sie suchen gerade aktiv? <a href="#gespraech">Direkt einen Gesprächstermin wählen</a></p>
 
 <div class="nutzen">
   <div>
@@ -159,14 +178,26 @@
 </div>
 <p class="klein">Sie bekommen eine Bestätigungsmail. Erst wenn Sie darin auf den Link klicken, sind Sie eingetragen.</p>
 
-<section class="gespraech" id="gespraech">
-<h2>Lieber gleich sprechen?</h2>
-<p>Wenn Sie gerade aktiv suchen, buchen Sie 20 Minuten mit Stefan Bründl. Wir wollen verstehen, was Sie suchen und was auf keinen Fall. Danach wissen wir, wann wir an Sie denken müssen. Und wenn wir gerade nichts Passendes haben, sagen wir Ihnen das offen.</p>
-<ul class="gespraech-daten"><li>20 Minuten</li><li>Telefon oder Video</li><li>Kostenlos</li><li>Vertraulich</li></ul>
-<div id="kalStart">
-  <a class="knopf" id="kalOeffnen" href="https://tidycal.com/stefanbruendl77/kandidatengespraech" target="_blank" rel="noopener">Termin wählen</a>
-  <p class="klein" style="margin-top:12px">Beim Klick wird der Buchungskalender von TidyCal auf dieser Seite geladen, vorher nicht. Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
+<section class="gespraech" id="gespraech" aria-labelledby="gespraech-titel">
+<div class="gespraech-karte">
+  <figure class="gespraech-bild">
+    <picture>
+      <source type="image/webp" srcset="/img/stefan-bruendl-800.webp">
+      <img src="/img/stefan-bruendl-800.jpg" alt="Stefan Bründl, Vertriebsköpfe" width="800" height="1000" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+  <div class="gespraech-text">
+    <p class="eyebrow">Lieber gleich sprechen?</p>
+    <h2 id="gespraech-titel">Zwanzig Minuten, und Sie wissen, woran Sie sind.</h2>
+    <p>Wenn Sie gerade aktiv suchen, buchen Sie sich einen Termin, und ich rufe Sie an. Ich will verstehen, was Sie suchen und was auf keinen Fall. Danach weiß ich, bei welchem Mandat ich an Sie denke. Und wenn gerade nichts passt, sage ich Ihnen das offen.</p>
+    <ul class="gespraech-daten"><li>20 Minuten</li><li>Telefon oder Video</li><li>kostenlos</li><li>vertraulich</li></ul>
+    <div id="kalStart">
+      <a class="knopf" id="kalOeffnen" href="https://tidycal.com/stefanbruendl77/kandidatengespraech" target="_blank" rel="noopener">Termin wählen</a>
+      <p class="gespraech-name">Stefan Bründl · Vertriebsköpfe</p>
+    </div>
+  </div>
 </div>
+<p class="klein hinweis">Beim Klick auf „Termin wählen“ wird der Buchungskalender von TidyCal auf dieser Seite geladen, vorher nicht. Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
 <div class="kal-slot" id="kalSlot" hidden></div>
 </section>
 
@@ -214,7 +245,7 @@
 
 </main>
 <footer class="wrap">
-  <a href="/">Startseite</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a>
+  <a href="/">Startseite</a><a href="/presse/">Presse</a><a href="/downloads/">Downloads</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a>
 </footer>
 <script>
 // Zwei-Klick-Loesung fuer TidyCal: Erst nach dem Klick wird der Kalender geladen.
