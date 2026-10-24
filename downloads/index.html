@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Downloads: Vakanzrechnung und Besetzungscheck · Vertriebsköpfe</title>
-<meta name="description" content="Kostenlose Werkzeuge für offene Vertriebsstellen: Arbeitsblatt Vakanzrechnung als PDF und der Besetzungscheck mit acht Fragen. Ohne Anmeldung.">
+<title>Vakanzkosten berechnen: Rechner und Arbeitsblatt · Vertriebsköpfe</title>
+<meta name="description" content="Vakanzkosten berechnen: Was kostet Ihre offene Vertriebsstelle? Kostenloser Rechner mit Ihren eigenen Zahlen, Arbeitsblatt als PDF und Besetzungscheck. Ohne Anmeldung.">
 <link rel="canonical" href="https://vertriebskoepfe.de/downloads/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -12,8 +12,8 @@
 <meta name="theme-color" content="#0D1A2E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vertriebsköpfe">
-<meta property="og:title" content="Downloads: Vakanzrechnung und Besetzungscheck · Vertriebsköpfe">
-<meta property="og:description" content="Kostenlose Werkzeuge für offene Vertriebsstellen: Arbeitsblatt Vakanzrechnung als PDF und der Besetzungscheck mit acht Fragen. Ohne Anmeldung.">
+<meta property="og:title" content="Vakanzkosten berechnen: Rechner und Arbeitsblatt · Vertriebsköpfe">
+<meta property="og:description" content="Vakanzkosten berechnen: Was kostet Ihre offene Vertriebsstelle? Kostenloser Rechner mit Ihren eigenen Zahlen, Arbeitsblatt als PDF und Besetzungscheck. Ohne Anmeldung.">
 <meta property="og:image" content="https://vertriebskoepfe.de/og-image.png">
 <meta property="og:url" content="https://vertriebskoepfe.de/downloads/">
 <meta property="og:locale" content="de_DE">
@@ -55,6 +55,22 @@
   .dl-karte h3{margin:0}
   .dl-karte .meta{font-size:var(--fs-1);color:var(--muted);margin:0}
   .dl-karte .step{font-size:var(--fs-1);letter-spacing:.08em;text-transform:uppercase;color:var(--petrol);font-weight:600;margin:0}
+  #rechner{scroll-margin-top:80px}
+  .vr{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:28px}
+  .vr-felder{display:grid;gap:16px}
+  .vr-feld label{display:block;font-weight:600;margin:0 0 6px}
+  .vr-feld .hilfe{display:block;font-size:var(--fs-1);color:var(--muted);font-weight:400;margin-top:2px}
+  .vr-eingabe{display:flex;align-items:center;border:1px solid rgba(127,127,127,.4);border-radius:6px;background:var(--card,#fff);overflow:hidden}
+  .vr-eingabe:focus-within{border-color:var(--petrol);box-shadow:0 0 0 3px rgba(14,111,104,.15)}
+  .vr-eingabe input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:1.1rem;padding:12px 14px;color:inherit;text-align:right;outline:none}
+  .vr-eingabe span{padding:0 14px;color:var(--muted);white-space:nowrap}
+  .vr-ergebnis{background:var(--navy,#0D1A2E);color:#fff;border-radius:8px;padding:28px}
+  .vr-ergebnis .eyebrow{color:#7FD0C6;margin:0 0 8px}
+  .vr-zahl{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;margin:0 0 6px}
+  .vr-monat{color:rgba(255,255,255,.8);margin:0 0 18px}
+  .vr-ergebnis .cta-note{color:rgba(255,255,255,.65);margin-top:14px}
+  .vr-leer .vr-zahl{color:rgba(255,255,255,.45)}
+  @media (max-width:760px){.vr{grid-template-columns:1fr}}
   .dl-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
 </style>
 </head>
@@ -714,14 +730,81 @@
   <div class="wrap">
     <p class="krumen rev"><a href="/">Startseite</a> · Downloads</p>
     <h1 class="rev rev-d1">Werkzeuge zum Mitnehmen</h1>
-    <p class="lead rev rev-d2">Arbeitsblätter und Prüfwerkzeuge, mit denen Sie Ihre offene Vertriebsstelle selbst einschätzen können. Kostenlos und ohne Anmeldung.</p>
+    <p class="lead rev rev-d2">Rechner, Arbeitsblatt und Prüfwerkzeug, mit denen Sie Ihre offene Vertriebsstelle selbst einschätzen können. Kostenlos und ohne Anmeldung.</p>
+    <div class="cta-row rev rev-d2"><a class="btn" href="#rechner">Vakanzkosten jetzt berechnen</a></div>
   </div>
 </section>
+
+<section id="rechner">
+  <div class="wrap">
+    <p class="eyebrow rev">Vakanzrechner</p>
+    <h2 class="rev">Was kostet Ihre offene Vertriebsstelle?</h2>
+    <p class="lead rev">Vier Zahlen genügen. Rechnen Sie lieber vorsichtig: Wenn schon die vorsichtige Rechnung weh tut, lohnt sich ein genauer Blick auf die Ursache.</p>
+    <div class="vr rev">
+      <form class="vr-felder" id="vrForm" onsubmit="return false" autocomplete="off">
+        <div class="vr-feld"><label for="vrU">Gebietsumsatz pro Jahr<span class="hilfe">Umsatz der Kunden, die die Stelle betreut. Beispiel: 2.100.000</span></label>
+          <div class="vr-eingabe"><input id="vrU" inputmode="numeric" placeholder="2.100.000" data-art="geld"><span>€</span></div></div>
+        <div class="vr-feld"><label for="vrD">Deckungsbeitragsquote<span class="hilfe">Was von einem Euro Umsatz nach den direkten Kosten bleibt. Beispiel: 30</span></label>
+          <div class="vr-eingabe"><input id="vrD" inputmode="decimal" placeholder="30" data-art="prozent"><span>%</span></div></div>
+        <div class="vr-feld"><label for="vrE">Angenommene Erosion<span class="hilfe">Anteil des Umsatzes, der ohne Betreuung verloren geht. Ihre Schätzung. Beispiel: 20</span></label>
+          <div class="vr-eingabe"><input id="vrE" inputmode="decimal" placeholder="20" data-art="prozent"><span>%</span></div></div>
+        <div class="vr-feld"><label for="vrM">Monate ohne Betreuung<span class="hilfe">Von der Kündigung bis die neue Person voll arbeitet. Beispiel: 5</span></label>
+          <div class="vr-eingabe"><input id="vrM" inputmode="decimal" placeholder="5" data-art="monate"><span id="vrMEinheit">Monate</span></div></div>
+      </form>
+      <div class="vr-ergebnis vr-leer" id="vrErgebnis" aria-live="polite">
+        <p class="eyebrow">Kosten der Vakanz</p>
+        <p class="vr-zahl" id="vrZahl">– €</p>
+        <p class="vr-monat" id="vrMonat">Tragen Sie Ihre Zahlen links ein.</p>
+        <div class="cta-row">
+          <a class="btn" href="/erstgespraech/">Erstgespräch vereinbaren</a>
+        </div>
+        <p class="cta-note">Formel: Gebietsumsatz × Deckungsbeitrag × Erosion × Monate ÷ 12. Der Rechner läuft nur in Ihrem Browser. Es wird nichts gespeichert und nichts gesendet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var fmt=new Intl.NumberFormat('de-DE',{maximumFractionDigits:0});
+  function zahl(v){v=String(v).replace(/\./g,'').replace(',','.').replace(/[^0-9.]/g,'');var x=parseFloat(v);return isNaN(x)?null:x;}
+  function schoen(el){
+    var roh=el.value, art=el.getAttribute('data-art');
+    if(art==='geld'){
+      var ziffern=roh.replace(/[^0-9]/g,'');
+      el.value=ziffern?fmt.format(parseInt(ziffern,10)):'';
+    }else{
+      var t=roh.replace(/\./g,',').replace(/[^0-9,]/g,'');
+      var i=t.indexOf(','); if(i>-1){t=t.slice(0,i+1)+t.slice(i+1).replace(/,/g,'').slice(0,1);}
+      el.value=t;
+    }
+  }
+  function rechnen(){
+    var u=zahl(document.getElementById('vrU').value), d=zahl(document.getElementById('vrD').value),
+        e=zahl(document.getElementById('vrE').value), m=zahl(document.getElementById('vrM').value);
+    document.getElementById('vrMEinheit').textContent=(m===1)?'Monat':'Monate';
+    var box=document.getElementById('vrErgebnis');
+    if(u===null||d===null||e===null||m===null||m<=0){
+      box.classList.add('vr-leer');
+      document.getElementById('vrZahl').textContent='– €';
+      document.getElementById('vrMonat').textContent='Tragen Sie Ihre Zahlen links ein.';
+      return;
+    }
+    var r=u*(d/100)*(e/100)*m/12;
+    box.classList.remove('vr-leer');
+    document.getElementById('vrZahl').textContent='rund '+fmt.format(Math.round(r/100)*100)+' €';
+    document.getElementById('vrMonat').textContent='Das sind rund '+fmt.format(Math.round(r/m/100)*100)+' € für jeden Monat, in dem das Gebiet nicht betreut wird.';
+  }
+  var felder=document.querySelectorAll('#vrForm input');
+  for(var i=0;i<felder.length;i++){
+    felder[i].addEventListener('input',function(){schoen(this);rechnen();});
+  }
+})();
+</script>
 
 <section>
   <div class="wrap">
     <p class="eyebrow rev">Downloads</p>
-    <h2 class="rev">Rechnen Sie mit Ihren eigenen Zahlen.</h2>
+    <h2 class="rev">Zum Ausdrucken und zum Prüfen.</h2>
     <div class="dl-raster rev">
       <div class="dl-karte">
         <p class="step">Arbeitsblatt · PDF</p>
