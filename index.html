@@ -308,6 +308,13 @@
   }
   .zeitstrahl li{position:relative;padding:36px 20px 0 0;display:flex;flex-direction:column}
   .zeitstrahl li > p:not(.zs-liefer){flex:1}
+  /* Gleiche Zeilen in allen Spalten: Woche, Titel, Text, Lieferung stehen auf einer Linie */
+  @supports (grid-template-rows:subgrid){
+    .zeitstrahl{grid-template-rows:auto auto 1fr auto}
+    .zeitstrahl li{display:grid;grid-row:span 4;grid-template-rows:subgrid;align-content:start}
+    .zeitstrahl li > p:not(.zs-liefer){align-self:start}
+    .zs-liefer{align-self:start}
+  }
   .zeitstrahl li::before{
     content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;
     background:var(--paper);border:3px solid var(--petrol);box-sizing:border-box;
@@ -331,7 +338,8 @@
   @media (max-width:860px){
     .zeitstrahl{grid-template-columns:1fr}
     .zeitstrahl::before{left:9px;top:10px;bottom:24px;width:2px;height:auto}
-    .zeitstrahl li{padding:0 0 26px 34px}
+    .zeitstrahl{grid-template-rows:none}
+    .zeitstrahl li{padding:0 0 26px 34px;display:block;grid-row:auto}
     .zeitstrahl li::before{top:2px}
   }
 
@@ -896,10 +904,10 @@
           </a>
         </div>
       </div>
-      <p class="rev">Ich habe siebzehn Jahre in der Personaldienstleistung gearbeitet, zuletzt als Vertriebsdirektor und dabei beides von innen gesehen: wie Vertriebsorganisationen Leute verlieren und wie schwer sie danach welche finden. Seit 2024 berate ich Geschäftsführer im Mittelstand zu Fluktuation und Mitarbeiterbindung.</p>
+      <p class="rev">Ich führe seit über 20 Jahren Vertrieb, 17 Jahre davon in der Personaldienstleistung, zuletzt als Sales Director. Dabei habe ich beides von innen gesehen: wie Vertriebsorganisationen Leute verlieren und wie schwer sie danach welche finden. Seit 2024 berate ich Geschäftsführer im Mittelstand zu Fluktuation und Mitarbeiterbindung.</p>
       <p class="rev">Deshalb die Diagnose vor der Suche. Sie ist kein Zusatzprodukt, sondern das, womit ich seit Jahren mein Geld verdiene — nur diesmal, bevor die Stelle nachbesetzt wird statt danach.</p>
       <ul class="roles rev">
-        <li><span>17 Jahre</span><div>Personaldienstleistung, zuletzt Vertriebsdirektor bei einem der größten Personaldienstleister weltweit</div></li>
+        <li><span>20+ Jahre</span><div>Vertrieb und Führung, 17 davon in der Personaldienstleistung, zuletzt Sales Director bei einem der größten Personaldienstleister weltweit</div></li>
         <li><span>Eigene Führung</span><div>Vertriebsleitung mit Umsatzverantwortung — ich weiß, wen Sie suchen, weil ich diese Leute geführt habe</div></li>
         <li><span>Seit 2024</span><div>Beratung zu Fluktuation und Bindung im Mittelstand — <a href="https://leadsimply.de" target="_blank" rel="noopener">LeadSimply</a></div></li>
       </ul>
@@ -979,6 +987,7 @@
     </div>
     <div>
       <a href="/kandidaten/">Für Kandidaten</a>
+      <a href="/wissen/">Wissen</a>
       <a href="/presse/">Presse</a>
       <a href="/downloads/">Downloads</a>
       <a href="/impressum/">Impressum</a>
@@ -1197,7 +1206,7 @@
    "worksFor": {
     "@id": "https://vertriebskoepfe.de/#organisation"
    },
-   "description": "17 Jahre Personaldienstleistung, zuletzt Vertriebsdirektor bei einem der größten Personaldienstleister weltweit. Seit 2024 Beratung zu Fluktuation und Mitarbeiterbindung im Mittelstand.",
+   "description": "Über 20 Jahre Vertrieb und Führung, 17 davon in der Personaldienstleistung, zuletzt Sales Director bei einem der größten Personaldienstleister weltweit. Seit 2024 Beratung zu Fluktuation und Mitarbeiterbindung im Mittelstand.",
    "sameAs": [
     "https://www.linkedin.com/in/stefan-bruendl"
    ]

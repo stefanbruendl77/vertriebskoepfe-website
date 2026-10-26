@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Was kostet eine unbesetzte Vertriebsstelle? · Vertriebsköpfe</title>
+<meta name="description" content="Was kostet eine unbesetzte Vertriebsstelle? Die Rechnung mit vier eigenen Zahlen, ein Rechenbeispiel und was in keiner Rechnung auftaucht. Mit Vakanzrechner.">
+<link rel="canonical" href="https://vertriebskoepfe.de/wissen/was-kostet-eine-unbesetzte-vertriebsstelle/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0D1A2E">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Vertriebsköpfe">
+<meta property="og:title" content="Was kostet eine unbesetzte Vertriebsstelle? · Vertriebsköpfe">
+<meta property="og:description" content="Was kostet eine unbesetzte Vertriebsstelle? Die Rechnung mit vier eigenen Zahlen, ein Rechenbeispiel und was in keiner Rechnung auftaucht. Mit Vakanzrechner.">
+<meta property="og:image" content="https://vertriebskoepfe.de/og-image.png">
+<meta property="og:url" content="https://vertriebskoepfe.de/wissen/was-kostet-eine-unbesetzte-vertriebsstelle/">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<noscript><style>.rev{opacity:1;transform:none}</style></noscript>
+<style>
+  /* Schriften selbst gehostet: keine Verbindung zu Google, keine Besucher-IP in die USA.
+     Variable woff2, Lizenz SIL Open Font License 1.1 — siehe /fonts/OFL.txt */
+  @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400 700;font-display:swap;
+    src:url(/fonts/source-serif-4-latin.woff2) format("woff2");
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400 700;font-display:swap;
+    src:url(/fonts/source-serif-4-latin-ext.woff2) format("woff2");
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  @font-face{font-family:"Libre Franklin";font-style:normal;font-weight:400 600;font-display:swap;
+    src:url(/fonts/libre-franklin-latin.woff2) format("woff2");
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:"Libre Franklin";font-style:normal;font-weight:400 600;font-display:swap;
+    src:url(/fonts/libre-franklin-latin-ext.woff2) format("woff2");
+    unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+  /* Metrisch angeglichene Ersatzschriften. Sie ueberbruecken die Zeit bis die
+     echte Schrift da ist, ohne dass sich beim Wechsel etwas verschiebt.
+     Werte gegen die echten woff2 eingemessen, ueber die Texte dieser Seite. */
+  @font-face{font-family:"Libre Franklin Fallback";src:local("Helvetica Neue"),local("Arial");
+    size-adjust:103%;ascent-override:93.79%;descent-override:23.88%;line-gap-override:0%}
+  @font-face{font-family:"Source Serif Fallback";src:local("Times New Roman"),local("Georgia");
+    size-adjust:108.5%;ascent-override:95.48%;descent-override:30.88%;line-gap-override:0%}
+</style>
+<style>
+  .liste-auftritte{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  .liste-auftritte li{border-top:1px solid rgba(127,127,127,.25);padding-top:14px}
+  .liste-auftritte .art{font-size:var(--fs-1);color:var(--muted);display:block;margin-bottom:4px}
+  .liste-auftritte a{color:var(--petrol)}
+  .bildkarte{display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:28px;align-items:start}
+  .bildkarte img{border-radius:6px;display:block}
+  @media (max-width:640px){.bildkarte{grid-template-columns:1fr}}
+  .dl-karte{border:1px solid rgba(127,127,127,.3);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:10px}
+  .dl-karte h3{margin:0}
+  .dl-karte .meta{font-size:var(--fs-1);color:var(--muted);margin:0}
+  .dl-karte .step{font-size:var(--fs-1);letter-spacing:.08em;text-transform:uppercase;color:var(--petrol);font-weight:600;margin:0}
+  #rechner{scroll-margin-top:80px}
+  .vr{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:28px}
+  .vr-felder{display:grid;gap:16px}
+  .vr-feld label{display:block;font-weight:600;margin:0 0 6px}
+  .vr-feld .hilfe{display:block;font-size:var(--fs-1);color:var(--muted);font-weight:400;margin-top:2px}
+  .vr-eingabe{display:flex;align-items:center;border:1px solid rgba(127,127,127,.4);border-radius:6px;background:var(--card,#fff);overflow:hidden}
+  .vr-eingabe:focus-within{border-color:var(--petrol);box-shadow:0 0 0 3px rgba(14,111,104,.15)}
+  .vr-eingabe input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:1.1rem;padding:12px 14px;color:inherit;text-align:right;outline:none}
+  .vr-eingabe span{padding:0 14px;color:var(--muted);white-space:nowrap}
+  .vr-ergebnis{background:var(--navy,#0D1A2E);color:#fff;border-radius:8px;padding:28px}
+  .vr-ergebnis .eyebrow{color:#7FD0C6;margin:0 0 8px}
+  .vr-zahl{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;margin:0 0 6px}
+  .vr-monat{color:rgba(255,255,255,.8);margin:0 0 18px}
+  .vr-ergebnis .cta-note{color:rgba(255,255,255,.65);margin-top:14px}
+  .vr-leer .vr-zahl{color:rgba(255,255,255,.45)}
+  @media (max-width:760px){.vr{grid-template-columns:1fr}}
+  .dl-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "Was kostet eine unbesetzte Vertriebsstelle?",
+   "description": "Wie Sie die Kosten einer unbesetzten Vertriebsstelle mit vier eigenen Zahlen berechnen: Gebietsumsatz, Deckungsbeitrag, Erosion und Monate ohne Betreuung.",
+   "datePublished": "2026-10-26",
+   "dateModified": "2026-10-26",
+   "inLanguage": "de-DE",
+   "mainEntityOfPage": "https://vertriebskoepfe.de/wissen/was-kostet-eine-unbesetzte-vertriebsstelle/",
+   "image": "https://vertriebskoepfe.de/og-image.png",
+   "author": {
+    "@type": "Person",
+    "@id": "https://vertriebskoepfe.de/#stefan",
+    "name": "Stefan Bründl",
+    "url": "https://vertriebskoepfe.de/presse/",
+    "jobTitle": "Geschäftsführer",
+    "sameAs": [
+     "https://www.linkedin.com/in/stefan-bruendl"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Vertriebsköpfe",
+    "url": "https://vertriebskoepfe.de/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Gleicht das eingesparte Gehalt die Vakanz nicht aus?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nur zum Teil. Das Gehalt fällt weg, der Deckungsbeitrag aus dem Gebiet aber auch, und der wiegt meist schwerer. Stellen Sie beides pro Monat gegenüber: eingespartes Gehalt samt Nebenkosten gegen entgangenen Deckungsbeitrag."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Welche Erosion soll ich ansetzen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dafür gibt es keinen verlässlichen Durchschnittswert. Schätzen Sie mit Ihrem Vertriebsleiter, welcher Teil des Umsatzes ohne regelmäßigen Kontakt wegbricht. Rechnen Sie mit einem vorsichtigen und einem realistischen Wert."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wie lange dauert es, eine Vertriebsstelle zu besetzen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Über alle Berufe hinweg dauert es nach Zahlen der Bundesagentur für Arbeit im Schnitt 157 Tage, bis eine gemeldete Stelle besetzt ist. Danach kommen noch die Kündigungsfrist der neuen Person und die Einarbeitung. Planen Sie also mit mehreren Monaten ohne volle Betreuung."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ab wann lohnt sich ein Personalberater?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Wenn jeder Monat ohne Besetzung mehr kostet, als Sie mit einer eigenen Suche sparen. Die Vakanzrechnung liefert Ihnen die Zahl pro Monat. Damit können Sie selbst abwägen."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Startseite",
+     "item": "https://vertriebskoepfe.de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Wissen",
+     "item": "https://vertriebskoepfe.de/wissen/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Was kostet eine unbesetzte Vertriebsstelle?",
+     "item": "https://vertriebskoepfe.de/wissen/was-kostet-eine-unbesetzte-vertriebsstelle/"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+.artikel{padding:8px 0 var(--raum-gross)}
+.text{max-width:720px}
+.text h2{margin:48px 0 12px}
+.text p,.text li{font-size:1.075rem;line-height:1.65}
+.text ul{padding-left:1.2em}
+.text li{margin:0 0 8px}
+.meta-zeile{color:var(--muted);font-size:.95rem;margin:0}
+.kurzantwort{border-left:4px solid var(--petrol);background:rgba(127,127,127,.08);padding:20px 24px;border-radius:0 8px 8px 0;margin:8px 0 8px}
+.kurzantwort p:last-child{margin-bottom:0}
+.szene{border:1px dashed var(--petrol);border-radius:8px;padding:18px 22px;margin:28px 0}
+.tab{width:100%;border-collapse:collapse;margin:16px 0;font-size:1rem}
+.tab th,.tab td{text-align:left;padding:10px 12px;border-bottom:1px solid rgba(127,127,127,.3);vertical-align:top}
+.tab tfoot td{font-weight:600}
+.tab td:last-child,.tab th:last-child{white-space:nowrap}
+.autor{display:flex;gap:20px;align-items:flex-start;border-top:1px solid rgba(127,127,127,.3);margin-top:48px;padding-top:28px}
+.autor img{width:96px;height:120px;object-fit:cover;border-radius:6px;flex:none}
+.autor p{margin:0 0 8px}
+.quellen{color:var(--muted);font-size:.92rem;margin-top:28px}
+.wk-liste{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px}
+.wk-karte{border:1px solid rgba(127,127,127,.3);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit}
+.wk-karte:hover{border-color:var(--petrol)}
+.wk-karte h3{margin:0}
+@media (max-width:560px){.tab thead th:nth-child(2),.tab tbody td:nth-child(2){display:none}.autor{flex-direction:column}.tab{font-size:.92rem}.tab th,.tab td{padding:8px 6px}}
+</style>
+</head>
+<body>
+<style>
+  /* Unterseiten: Leistungen und Erstgespraech */
+  .subhero{padding:72px 0 64px}
+  .subhero h1{max-width:20ch}
+  .subhero .lead{font-size:var(--fs-4);max-width:36em;margin-bottom:28px}
+  .krumen{font-size:var(--fs-1);color:var(--muted);margin:0 0 22px}
+  .krumen a{color:var(--muted);text-decoration:none}
+  .krumen a:hover{color:var(--petrol)}
+  .fakten{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:40px 0 0;border-top:2px solid var(--petrol)}
+  .fakten div{padding:18px 22px 4px 0}
+  .fakten dt{font-size:var(--fs-1);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 6px}
+  .fakten dd{margin:0;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-5);font-weight:600;line-height:1.15;color:var(--ink)}
+  .fakten dd small{display:block;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-2);font-weight:400;color:var(--muted);margin-top:6px;line-height:1.45}
+  @media (max-width:760px){.fakten{grid-template-columns:1fr}.fakten div{padding:16px 0;border-bottom:1px solid var(--hair)}}
+  .zwei{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  @media (max-width:860px){.zwei{grid-template-columns:1fr;gap:28px}}
+  .liste{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
+  .liste li{padding:16px 0 16px 30px;border-bottom:1px solid var(--hair);position:relative}
+  .liste li::before{content:"";position:absolute;left:2px;top:26px;width:12px;height:2px;background:var(--petrol)}
+  .liste b{display:block;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);margin-bottom:2px}
+  .liste span{color:var(--muted);font-size:var(--fs-2)}
+  .tage{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid var(--hair)}
+  .tage li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--hair)}
+  .tage .tg{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;color:var(--petrol);font-size:var(--fs-3)}
+  .tage h3{font-size:var(--fs-3);margin:0 0 4px}
+  .tage p{margin:0;color:var(--muted);font-size:var(--fs-2)}
+  @media (max-width:620px){.tage li{grid-template-columns:1fr;gap:4px}}
+  .ergebnis{background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--petrol);border-radius:6px;padding:28px 30px;box-shadow:var(--shadow)}
+  .ergebnis h3{margin-top:0}
+  .ergebnis ol{margin:12px 0 0;padding-left:20px;color:var(--muted);font-size:var(--fs-2)}
+  .ergebnis li{margin-bottom:8px}
+  .ergebnis li b{color:var(--ink)}
+  .formen{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+  @media (max-width:860px){.formen{grid-template-columns:1fr}}
+  .form{border:1px solid var(--hair);border-radius:6px;padding:22px 22px 18px;background:var(--card)}
+  .form .step{font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;color:var(--petrol);margin:0 0 10px;font-weight:600}
+  .form h3{margin:0 0 8px}
+  .form p{margin:0;font-size:var(--fs-2);color:var(--muted)}
+  .raten{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:r}
+  @media (max-width:760px){.raten{grid-template-columns:1fr}}
+  .raten li{border-top:2px solid var(--petrol);padding-top:16px}
+  .raten .rn{font-size:var(--fs-1);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .raten h3{margin:6px 0 6px}
+  .raten p{margin:0;font-size:var(--fs-2);color:var(--muted)}
+  .beispiel{margin-top:30px;padding:20px 24px;background:var(--petrol-wash);border-radius:6px;font-size:var(--fs-2)}
+  .beispiel b{font-variant-numeric:tabular-nums}
+  .weiter{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:28px}
+  .weiter a{display:block;text-decoration:none;color:inherit;border:1px solid var(--hair);border-radius:6px;padding:22px;background:var(--card);transition:border-color .18s ease,transform .18s ease}
+  .weiter a:hover{border-color:var(--petrol);transform:translateY(-2px)}
+  .weiter .step{font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:600}
+  .weiter h3{margin:0 0 6px}
+  .weiter p{margin:0;font-size:var(--fs-2);color:var(--muted)}
+  .weiter .mehr{display:inline-block;margin-top:12px;color:var(--petrol);font-weight:600;font-size:var(--fs-2)}
+  .zitat{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-4);line-height:1.45;color:var(--ink);border-left:3px solid var(--petrol);padding:4px 0 4px 22px;margin:30px 0 0;max-width:36em}
+  /* Terminseite */
+  .termin{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:start}
+  @media (max-width:900px){.termin{grid-template-columns:1fr;gap:30px}}
+  /* Nach dem Oeffnen bekommt der Kalender die volle Breite */
+  .termin.offen{grid-template-columns:1fr}
+  .termin.offen .buchung{max-width:960px}
+  .buchung{background:var(--card);border:1px solid var(--hair);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+  .buchung-kopf{padding:26px 28px 22px;border-bottom:1px solid var(--hair)}
+  .buchung-kopf h2{font-size:var(--fs-5);margin:0 0 6px}
+  .buchung-kopf p{margin:0;color:var(--muted);font-size:var(--fs-2)}
+  .buchung-daten{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+  .buchung-daten li{font-size:var(--fs-1);border:1px solid var(--hair);border-radius:100px;padding:5px 12px;color:var(--ink);background:var(--paper)}
+  .buchung-start{padding:26px 28px 28px}
+  .buchung-start p{font-size:var(--fs-1);color:var(--muted);margin:14px 0 0}
+  .buchung .kal-slot{margin:0;border-radius:0;max-width:none;border-top:1px solid var(--hair)}
+  .person-mini{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start}
+  .person-mini img{display:block;width:120px;height:150px;object-fit:cover}
+  .person-mini h3{margin:0 0 4px}
+  .person-mini p{margin:0;font-size:var(--fs-2);color:var(--muted)}
+  .alternativ{margin-top:28px;padding-top:22px;border-top:1px solid var(--hair);font-size:var(--fs-2);color:var(--muted)}
+  .alternativ a{font-weight:600}
+</style>
+
+<style>
+  :root{
+    --navy:#0D1A2E;
+    --navy-2:#16263D;
+    --paper:#F6F8FB;
+    --card:#FFFFFF;
+    --ink:#14202F;
+    --muted:#4A596B;
+    --hair:#DDE4EC;
+    --petrol:#0E6F68;
+    --petrol-dark:#0B5A54;
+    --petrol-lite:#5FD3C4;
+    --petrol-wash:#E8F2F0;
+    --on-navy:#E7EDF3;
+    --on-navy-mute:#9FB2C4;
+    --shadow:0 1px 2px rgba(13,26,46,.06),0 8px 24px -12px rgba(13,26,46,.18);
+    /* Typo-Skala: sieben Stufen, mehr nicht */
+    --fs-1:0.8125rem;   /* Label, Eyebrow, Fussnote */
+    --fs-2:0.9375rem;   /* Nebentext */
+    --fs-3:1.0625rem;   /* Fliesstext */
+    --fs-4:1.25rem;   /* Hervorhebung, kleine Ueberschrift */
+    --fs-5:1.625rem;   /* H3 */
+    --fs-6:2.125rem;   /* H2 */
+    --fs-7:2.875rem;   /* H1 */
+    /* Abstandsrhythmus der Abschnitte */
+    --raum-gross:120px;   /* vor einem Themenwechsel */
+    --raum-normal:84px;   /* Standard */
+    --raum-eng:56px;      /* zwischen zusammengehoerenden Abschnitten */
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0B1420;
+      --card:#111E2C;
+      --ink:#E7EDF3;
+      --muted:#93A3B4;
+      --hair:#22344A;
+      --navy:#060E18;
+      --navy-2:#0F1E30;
+      --petrol:#5FD3C4;
+      --petrol-dark:#7FE0D3;
+      --petrol-wash:#12312F;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0B1420;
+    --card:#111E2C;
+    --ink:#E7EDF3;
+    --muted:#93A3B4;
+    --hair:#22344A;
+    --navy:#060E18;
+    --navy-2:#0F1E30;
+    --petrol:#5FD3C4;
+    --petrol-dark:#7FE0D3;
+    --petrol-wash:#12312F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-padding-top:120px}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;
+    font-size:var(--fs-3);line-height:1.65;-webkit-font-smoothing:antialiased;
+    scroll-behavior:smooth;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+  .narrow{max-width:660px}
+  h1,h2,h3{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;text-wrap:balance;letter-spacing:-.012em}
+  h1{font-size:clamp(var(--fs-6),5.2vw,3.5rem);line-height:1.06;margin:0 0 20px}
+  h2{font-size:clamp(var(--fs-5),3.6vw,2.5rem);line-height:1.12;margin:0 0 14px}
+  h3{font-size:var(--fs-4);line-height:1.3;margin:0 0 8px}
+  p{margin:0 0 18px}
+  a{color:var(--petrol)}
+  .eyebrow{
+    font-size:var(--fs-1);letter-spacing:.08em;text-transform:uppercase;font-weight:600;
+    color:var(--petrol);margin:0 0 16px;
+  }
+  .band-navy .eyebrow{color:var(--petrol-lite)}
+  /* Unter 620 px nur drei Begriffe, sonst laeuft die Zeile ueber vier Zeilen. */
+  .ab-620{display:none}
+  @media (min-width:620px){.ab-620{display:inline}}
+  section{padding:var(--raum-normal) 0;border-bottom:1px solid var(--hair)}
+  .raum-gross{padding-top:var(--raum-gross)}
+  .raum-eng{padding-top:var(--raum-eng)}
+  /* Auf dem Telefon zwei Drittel */
+  @media (max-width:620px){
+    :root{--raum-gross:80px;--raum-normal:56px;--raum-eng:37px}
+  }
+  .band-navy{background:var(--navy);color:var(--on-navy);border-bottom:0}
+  .band-navy h2{color:#fff}
+  .band-navy p{color:var(--on-navy-mute)}
+  /* Zeilenbreiten in em statt ch: die ch-Einheit haengt an der Schrift, damit
+     aendert sich beim Schriftwechsel die Spaltenbreite und der Absatz bricht um.
+     1ch = 0.688em bei Libre Franklin, 0.499em bei Source Serif 4. */
+  .lead{font-size:var(--fs-3);color:var(--muted);max-width:41.28em}
+  .band-navy .lead{color:var(--on-navy-mute)}
+
+  /* Navigation */
+  header.nav{
+    position:sticky;top:0;z-index:50;background:var(--paper);
+    /* Die Leiste bekommt mehr Breite als der Textkoerper: sechs Elemente
+       brauchen Luft, der Fliesstext nicht. */
+    background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);
+  }
+  header.nav .wrap{max-width:1300px}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:12px;padding-bottom:12px}
+  .logo{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;font-size:var(--fs-3);line-height:1.15;letter-spacing:-.01em}
+  .logo span{display:block;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-1);font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:20px}
+  /* Ohne nowrap bricht "Wer das macht" auf zwei Zeilen und die Leiste
+     steht schief. */
+  .nav-links a{color:var(--ink);text-decoration:none;font-size:var(--fs-2);font-weight:500;white-space:nowrap}
+  .nav-links a:hover{color:var(--petrol)}
+  .tel{font-variant-numeric:tabular-nums;white-space:nowrap}
+  /* Reicht der Platz nicht fuer eine Zeile, bricht die Leiste um statt zu quetschen.
+     Einzeilig passt sie ab 1040 px, wenn der Container seine Hoechstbreite hat. */
+  .brand{min-width:0}
+  @media (max-width:1119px){
+    .nav-in{flex-wrap:wrap;row-gap:10px;padding-top:10px;padding-bottom:10px}
+    .nav-links{margin-left:auto;min-width:0}
+  }
+  /* Mobil: oben nur Signet und Wortmarke in einer Zeile. Anrufen und
+     Erstgespräch stehen unten in der festen Leiste, jede Aktion genau einmal. */
+  @media (max-width:820px){
+    .nav-links{display:none}
+  }
+
+
+  /* Wortmarke Vertriebsköpfe */
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+  /* Echtes Signet aus dem Logopaket. :not(.invert) haelt die Fusszeile
+     aus dem Farbwechsel heraus, sie steht immer auf Navy. */
+  .mark{
+    width:34px;height:34px;flex:none;
+    background:url("/img/signet-navy.svg") center/contain no-repeat;
+  }
+  :root[data-theme="dark"] .mark:not(.invert),:root:not([data-theme="light"]) .mark:not(.invert){background-image:url("/img/signet-petrol.svg")}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .mark:not(.invert){background-image:url("/img/signet-navy.svg")}}
+  /* Fusszeile: weisse Fassung ohne Flaeche, deshalb etwas groesser.
+     Bleibt unter 48 px und damit die kleine Fassung. */
+  .mark.invert{width:40px;height:40px;background-image:url("/img/signet-weiss.svg")}
+  .wordmark{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:600;font-size:var(--fs-3);line-height:1.1;
+    letter-spacing:.075em;text-transform:uppercase;
+  }
+  .wordmark small{
+    display:block;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-1);font-weight:500;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px;
+    white-space:nowrap;
+  }
+  /* Die Unterzeile ist breiter als die Wortmarke daruber und draengt die
+     Navigation. Ab hier verschwindet sie — die Hero-Zeile sagt dasselbe. */
+  @media (max-width:1299px){.wordmark small{display:none}}
+
+  /* Buchungskalender: wird erst nach Klick geladen (Zwei-Klick-Loesung, kein Drittanbieter beim Seitenaufruf) */
+  .kal-slot{margin-top:24px;background:#fff;border-radius:6px;overflow:hidden;min-height:620px;max-width:960px}
+  .kal-slot .tidycal-embed{min-height:620px}
+  /* Buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--petrol);color:#fff;text-decoration:none;
+    font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-2);font-weight:600;
+    padding:13px 22px;border:0;border-radius:4px;cursor:pointer;
+    transition:background .18s ease,transform .18s ease;
+  }
+  .btn:hover{background:var(--petrol-dark)}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid var(--petrol);outline-offset:3px}
+  .btn-ghost{
+    background:transparent;color:var(--ink);border:1px solid var(--petrol);
+  }
+  .btn-ghost:hover{background:var(--card);border-color:var(--petrol);color:var(--petrol)}
+  .band-navy .btn-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+  .band-navy .btn-ghost:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.5)}
+  :root[data-theme="dark"] .btn:not(.btn-ghost),
+  :root:not([data-theme="light"]) .btn:not(.btn-ghost){color:#06201D}
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .btn:not(.btn-ghost){color:#fff}
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:6px}
+  .cta-note{font-size:var(--fs-1);color:var(--muted);margin:14px 0 0}
+  .kandidaten-hinweis{border-top:1px solid var(--hair);padding-top:26px}
+  .kandidaten-hinweis p{margin:0;color:var(--muted);font-size:var(--fs-3);max-width:62ch}
+  .kandidaten-hinweis a{color:var(--petrol);font-weight:600}
+  .band-navy .cta-note{color:var(--on-navy-mute)}
+
+  /* Hero */
+  .hero{padding:var(--raum-normal) 0 74px;border-bottom:1px solid var(--hair)}
+  .hero h1{max-width:19ch}
+  .hero .lead{font-size:var(--fs-4);max-width:38.52em;margin-bottom:26px}
+  .segment{
+    display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 0;padding:0;list-style:none;
+  }
+  .segment li{
+    font-size:var(--fs-1);color:var(--muted);border:1px solid var(--hair);
+    border-radius:100px;padding:5px 13px;background:var(--card);
+  }
+
+  /* Zahlen / Rechner */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin:0 0 44px}
+  .stat .num{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-7);font-weight:600;line-height:1;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;display:block;margin-bottom:8px;
+  }
+  .stat p{font-size:var(--fs-2);margin:0;max-width:20.64em}
+  .calc{
+    background:var(--navy-2);border:1px solid rgba(255,255,255,.1);border-radius:8px;
+    padding:26px 26px 22px;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:end;
+  }
+  .calc label{display:block;font-size:var(--fs-1);letter-spacing:.06em;text-transform:uppercase;color:var(--on-navy-mute);margin-bottom:8px}
+  .calc input{
+    width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
+    color:#fff;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-3);font-variant-numeric:tabular-nums;
+    padding:11px 13px;border-radius:4px;
+  }
+  .calc input:focus{outline:2px solid var(--petrol-lite);outline-offset:1px}
+  .calc-out{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;margin-top:2px}
+  .calc-out .big{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:clamp(2.5rem,6.5vw,4.25rem);font-weight:600;
+    color:var(--petrol-lite);font-variant-numeric:tabular-nums;line-height:1;margin-bottom:12px;
+    /* Platz fuer den groesstmoeglichen Betrag reservieren, sonst waechst
+       die Zahl beim Hochzaehlen und schiebt den Rest nach unten.
+       Bewusst block und nicht inline-block: als Inline-Box haengt die
+       Zeilenhoehe am Schrift-Strut des Elternabsatzes und aendert sich
+       beim Schriftwechsel — das waere eine neue Verschiebung. */
+    display:block;min-width:12ch;
+  }
+  .calc-out #db{display:inline-block;min-width:10ch;font-variant-numeric:tabular-nums}
+  .calc-out p{margin:0;font-size:var(--fs-2)}
+  @media (max-width:600px){.calc{grid-template-columns:1fr}}
+
+  /* Check-Anriss im Kopfbereich: erste Frage direkt unter der Ueberschrift */
+  .check-teaser{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:24px 26px;margin:0 0 26px;box-shadow:var(--shadow);
+  }
+  .ct-titel{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-4);font-weight:600;
+    line-height:1.3;letter-spacing:-.012em;margin:0 0 6px;
+  }
+  .ct-hinweis{font-size:var(--fs-1);color:var(--muted);margin:0 0 18px}
+  .ct-frage{font-size:var(--fs-2);font-weight:600;margin:0 0 10px;color:var(--ink)}
+  .ct-opts{display:flex;flex-wrap:wrap;gap:8px}
+  .ct-opt{text-decoration:none}
+  .ct-opt:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+  @media (max-width:620px){
+    .ct-opts{flex-direction:column;align-items:stretch}
+    .ct-opt{justify-content:center}
+  }
+
+  /* Zeitstrahl: Ablauf und Lieferungen in einer Grafik */
+  .zeitstrahl{
+    list-style:none;margin:40px 0 0;padding:0;position:relative;
+    display:grid;grid-template-columns:repeat(5,1fr);
+  }
+  .zeitstrahl::before{
+    content:"";position:absolute;left:9px;width:80%;top:9px;height:2px;
+    background:var(--petrol);opacity:.28;
+  }
+  .zeitstrahl li{position:relative;padding:36px 20px 0 0;display:flex;flex-direction:column}
+  .zeitstrahl li > p:not(.zs-liefer){flex:1}
+  .zeitstrahl li::before{
+    content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;
+    background:var(--paper);border:3px solid var(--petrol);box-sizing:border-box;
+  }
+  .zeitstrahl li:last-child::before{background:var(--petrol)}
+  .zs-wo{
+    display:block;font-size:var(--fs-1);font-weight:600;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--petrol);margin-bottom:6px;
+  }
+  .zeitstrahl h3{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;
+    font-size:var(--fs-3);font-weight:600;margin:0 0 6px;color:var(--ink);
+  }
+  .zeitstrahl p{margin:0;font-size:var(--fs-2);color:var(--muted);line-height:1.5}
+  .zs-liefer{
+    margin-top:12px !important;padding-top:10px;border-top:1px solid var(--hair);
+    color:var(--ink) !important;
+  }
+  .zs-liefer b{display:block;font-size:var(--fs-1);font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+  @media (max-width:860px){
+    .zeitstrahl{grid-template-columns:1fr}
+    .zeitstrahl::before{left:9px;top:10px;bottom:24px;width:2px;height:auto}
+    .zeitstrahl li{padding:0 0 26px 34px}
+    .zeitstrahl li::before{top:2px}
+  }
+
+  /* Besetzungscheck-Teaser */
+  .teaser{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
+  @media (max-width:760px){.teaser{grid-template-columns:1fr;gap:24px}}
+  .teaser-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--hair)}
+  .teaser-list li{
+    padding:11px 0;border-bottom:1px solid var(--hair);font-size:var(--fs-2);color:var(--muted);
+    display:flex;gap:12px;align-items:baseline;
+  }
+  .teaser-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--petrol);flex:none}
+  .teaser-list li.more{color:var(--ink);font-weight:600}
+  .teaser-list li.more::before{background:transparent}
+
+  /* Besetzungscheck */
+  .check{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:8px 26px 26px;box-shadow:var(--shadow);
+  }
+  .q{border:0;border-bottom:1px solid var(--hair);margin:0;padding:22px 0}
+  .q:last-of-type{border-bottom:0}
+  .q legend{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);font-weight:600;
+    padding:0;margin-bottom:12px;color:var(--ink);
+  }
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opt{position:relative;cursor:pointer}
+  .opt input{position:absolute;opacity:0;width:0;height:0}
+  .opt span,.ct-opt{
+    display:inline-flex;align-items:center;min-height:44px;
+    border:1px solid var(--hair);background:var(--paper);
+    border-radius:100px;padding:8px 16px;font-size:var(--fs-2);color:var(--muted);
+    transition:border-color .15s ease,color .15s ease,background .15s ease;
+  }
+  .opt:hover span,.ct-opt:hover{border-color:var(--petrol);color:var(--ink)}
+  .opt input:checked + span{
+    border-color:var(--petrol);background:var(--petrol-wash);color:var(--petrol);font-weight:600;
+  }
+  .opt input:focus-visible + span{outline:2px solid var(--petrol);outline-offset:2px}
+  .check-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;padding-top:24px;border-top:1px solid var(--hair)}
+
+  .result{
+    margin-top:20px;border:1px solid var(--petrol);border-radius:8px;
+    background:var(--card);overflow:hidden;box-shadow:var(--shadow);
+  }
+  .result-top{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 26px}
+  @media (max-width:620px){.result-top{grid-template-columns:1fr;gap:18px}}
+  .score-num{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-7);font-weight:600;line-height:1;
+    font-variant-numeric:tabular-nums;color:var(--petrol);
+  }
+  .score-of{color:var(--muted);font-size:var(--fs-1);margin-left:6px}
+  .bar{height:6px;background:var(--paper);border:1px solid var(--hair);border-radius:100px;margin-top:14px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--petrol);transition:width .6s cubic-bezier(.22,1,.36,1)}
+  .verdict-label{
+    font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0 0 8px;
+  }
+  .verdict p:last-child{margin:0;font-size:var(--fs-3)}
+  .v-gruen{color:#1B7F4B}
+  .v-gelb{color:#9A6B12}
+  .v-rot{color:#A8331F}
+  :root[data-theme="dark"] .v-gruen,:root:not([data-theme="light"]) .v-gruen{color:#63C48D}
+  :root[data-theme="dark"] .v-gelb,:root:not([data-theme="light"]) .v-gelb{color:#E0B15C}
+  :root[data-theme="dark"] .v-rot,:root:not([data-theme="light"]) .v-rot{color:#E8836C}
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .v-gruen{color:#1B7F4B}
+    :root:not([data-theme="dark"]) .v-gelb{color:#9A6B12}
+    :root:not([data-theme="dark"]) .v-rot{color:#A8331F}
+  }
+  .flags{border-top:1px solid var(--hair);padding:4px 26px 8px}
+  .flag{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--hair)}
+  .flag:last-child{border-bottom:0}
+  .flag .dot{width:11px;height:11px;border-radius:50%;margin-top:7px}
+  .flag h3{margin:0 0 4px;font-size:var(--fs-3)}
+  .flag p{margin:0;font-size:var(--fs-2);color:var(--muted)}
+  .result-cta{background:var(--petrol-wash);padding:24px 26px;border-top:1px solid var(--hair)}
+  .result-cta p{font-size:var(--fs-2);max-width:44.03em}
+
+  /* Gegenüberstellung */
+  .compare{border-top:1px solid var(--hair)}
+  .compare-row{
+    display:grid;grid-template-columns:1fr 1fr;gap:28px;
+    padding:24px 0;border-bottom:1px solid var(--hair);
+  }
+  .compare-row .side-label{
+    font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    margin:0 0 8px;font-weight:600;
+  }
+  .compare-row .mine .side-label{color:var(--petrol)}
+  .compare-row p{margin:0;font-size:var(--fs-3)}
+  .compare-row .usual p{color:var(--muted)}
+  .diagnose{list-style:none;counter-reset:f;margin:0;padding:0;border-top:1px solid var(--hair)}
+  .diagnose li{
+    counter-increment:f;position:relative;padding:18px 0 18px 46px;
+    border-bottom:1px solid var(--hair);font-size:var(--fs-3);
+  }
+  .diagnose li::before{
+    content:counter(f);position:absolute;left:0;top:18px;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;
+    font-weight:700;font-size:var(--fs-3);color:var(--petrol);
+  }
+  @media (max-width:620px){.compare-row{grid-template-columns:1fr;gap:16px}}
+
+  /* Leistungen */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px}
+  .card{
+    background:var(--card);border:1px solid var(--hair);border-radius:8px;
+    padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow);
+    transition:border-color .2s ease,transform .2s ease;
+  }
+  .card:hover{border-color:var(--petrol);transform:translateY(-2px)}
+  .card .step{font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:600}
+  .card .price{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-5);font-weight:600;
+    color:var(--ink);margin:4px 0 14px;font-variant-numeric:tabular-nums;
+  }
+  .card .price small{display:block;font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-size:var(--fs-1);font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0}
+  .card ul{margin:0 0 20px;padding-left:18px;font-size:var(--fs-2);color:var(--muted)}
+  .card li{margin-bottom:7px}
+  .card li::marker{color:var(--petrol)}
+  .card .btn{margin-top:auto;align-self:flex-start}
+
+  /* Ablauf */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border-top:1px solid var(--hair)}
+  .step-item{padding:24px 22px 24px 0;border-right:1px solid var(--hair)}
+  .step-item:last-child{border-right:0}
+  .step-item .wk{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-2);font-weight:700;color:var(--petrol);
+    margin:0 0 10px;letter-spacing:.02em;
+  }
+  .step-item h3{font-size:var(--fs-3);margin-bottom:6px}
+  .step-item p{font-size:var(--fs-2);color:var(--muted);margin:0}
+  @media (max-width:760px){.step-item{border-right:0;border-bottom:1px solid var(--hair);padding-right:0}.step-item:last-child{border-bottom:0}}
+
+  /* Zusage */
+  .promise{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+  @media (max-width:760px){.promise{grid-template-columns:1fr;gap:24px}}
+  .promise-list{list-style:none;margin:0;padding:0}
+  .promise-list li{
+    padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);
+    display:flex;gap:14px;align-items:baseline;font-size:var(--fs-2);color:var(--on-navy);
+  }
+  .promise-list li:last-child{border-bottom:0}
+  .promise-list b{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;color:var(--petrol-lite);font-size:var(--fs-4);
+    flex:none;min-width:88px;font-variant-numeric:tabular-nums;
+  }
+
+  /* Über mich */
+  .about{display:grid;grid-template-columns:380px 1fr;gap:40px;align-items:start}
+  /* Das Foto hat dunklen Grund und ist selbst die Flaeche: keine Rundung,
+     kein Rahmen, kein Schatten. */
+  .portrait{margin:0}
+  .portrait img{display:block;width:100%;height:auto;border-radius:0}
+  @media (max-width:760px){
+    .about{grid-template-columns:1fr;gap:24px}
+    .portrait{max-width:420px}
+  }
+  .namenszeile{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 14px}
+  .namenszeile h2{margin:0}
+  .kontakt-icons{display:flex;gap:8px}
+  .kontakt-icons a{
+    display:grid;place-items:center;width:38px;height:38px;border-radius:8px;
+    background:var(--petrol-wash);color:var(--petrol);
+    transition:background .18s ease,color .18s ease;
+  }
+  .kontakt-icons a:hover,.kontakt-icons a:focus-visible{background:var(--petrol);color:#fff}
+  .kontakt-icons svg{width:19px;height:19px;fill:currentColor;display:block}
+  .roles{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--hair)}
+  .roles li{padding:14px 0;border-bottom:1px solid var(--hair);display:grid;grid-template-columns:112px 1fr;gap:18px;font-size:var(--fs-2)}
+  .roles span{color:var(--petrol);font-weight:600;font-size:var(--fs-1);letter-spacing:.02em}
+  @media (max-width:520px){.roles li{grid-template-columns:1fr;gap:2px}}
+
+  /* FAQ */
+  .faq{border-top:1px solid var(--hair);max-width:760px}
+  details{border-bottom:1px solid var(--hair)}
+  summary{
+    cursor:pointer;padding:20px 40px 20px 0;position:relative;list-style:none;
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);font-weight:600;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{
+    content:"+";position:absolute;right:6px;top:18px;font-size:var(--fs-4);color:var(--petrol);
+    font-family:"Libre Franklin","Libre Franklin Fallback","Helvetica Neue",Arial,sans-serif;font-weight:400;transition:transform .2s ease;
+  }
+  details[open] summary::after{content:"–"}
+  summary:hover{color:var(--petrol)}
+  summary:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+  details p{padding:0 0 20px;margin:0;color:var(--muted);max-width:44.03em}
+
+  /* Abschluss + Fuß */
+  .close-cta{text-align:left}
+  footer.site{background:var(--navy);color:var(--on-navy-mute);padding:48px 0 96px;font-size:var(--fs-2)}
+  footer.site a{color:var(--on-navy-mute);text-decoration:none;margin-right:22px}
+  footer.site a:not(.brand){display:inline-block;padding:13px 0}
+  footer.site a:hover{color:#fff}
+  .foot-in{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  /* Signet mit Jahreszeile, wie auf dem LinkedIn-Banner:
+     Navy-Flaeche, duenner Petrol-Rahmen, Haarlinie, SEIT 2026.
+     Nur hier, weil die Zeile unter 60 px Breite nicht mehr lesbar ist. */
+  .signet-jahr{
+    flex:none;width:96px;padding:15px 10px 12px;
+    border:1px solid rgba(14,111,104,.85);
+    display:flex;flex-direction:column;align-items:center;gap:10px;
+  }
+  .signet-jahr .mark.invert{width:40px;height:40px;margin:0}
+  .sj-linie{width:36px;height:1px;background:rgba(255,255,255,.3)}
+  .sj-jahr{
+    font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;
+    font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(255,255,255,.7);line-height:1;white-space:nowrap;
+  }
+  header.nav .brand{align-items:center;gap:14px}
+  /* Kopfbereich: schlichtes Signet im duennen Petrol-Rahmen.
+     Die Jahreszeile steht nur in der Fusszeile; oben verbreiterte sie
+     das Logo und schob die Navigation aus der Zeile. */
+  .mark-rahmen{flex:none;display:flex;padding:5px;border:1px solid rgba(14,111,104,.8)}
+  .mark-rahmen .mark{width:34px;height:34px;margin:0}
+  footer.site .brand{align-items:flex-start;gap:18px}
+  footer.site .wordmark{padding-top:6px}
+
+  /* Mobile Aktionsleiste: links anrufen, rechts Erstgespräch */
+  .callbar{
+    display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;
+    grid-template-columns:1fr 1fr;
+    background:var(--paper);border-top:1px solid var(--hair);
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .callbar a{
+    display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 12px;
+    text-decoration:none;font-weight:600;font-size:var(--fs-3);letter-spacing:.01em;text-align:center;
+  }
+  .callbar .cb-tel{color:var(--ink)}
+  .callbar .cb-diag{background:var(--petrol);color:#fff}
+  /* Im Dunkelmodus ist Petrol hell: dunkle Schrift wie bei den Buttons */
+  :root[data-theme="dark"] .callbar .cb-diag,
+  :root:not([data-theme="light"]) .callbar .cb-diag{color:#06201D}
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]) .callbar .cb-diag{color:#fff}
+  }
+  @media (max-width:820px){
+    .callbar{display:grid}
+    body{padding-bottom:calc(53px + env(safe-area-inset-bottom))}
+  }
+
+  /* Platzhalter */
+  .ph{border-bottom:1px dotted var(--petrol);color:inherit}
+  .ph-box{
+    background:var(--petrol-wash);border:1px dashed var(--petrol);border-radius:8px;
+    padding:22px 24px;color:var(--ink);
+  }
+  .ph-box p:last-child{margin-bottom:0}
+  .ph-box .eyebrow{margin-bottom:10px}
+
+  /* Bewegung: 350 ms, 14 px, einmal */
+  .rev{opacity:0;transform:translateY(14px);transition:opacity .35s ease-out,transform .35s ease-out}
+  .rev.in{opacity:1;transform:none}
+  /* Der erste Bildschirm blendet nicht ein: er steht sofort. */
+  .hero .rev{opacity:1;transform:none;transition:none}
+  .rev-d1{transition-delay:.08s}
+  .rev-d2{transition-delay:.16s}
+  @media (prefers-reduced-motion: reduce){
+    .rev{opacity:1;transform:none;transition:none}
+    body{scroll-behavior:auto}
+    .btn,.card{transition:none}
+  }
+</style>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Vertriebsköpfe, zur Startseite">
+      <span class="mark-rahmen" aria-hidden="true"><span class="mark"></span></span>
+      <span class="wordmark">Vertriebsköpfe<small>Personalberatung für den Vertrieb</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#leistungen">Leistungen</a>
+      <a href="/#ablauf">Ablauf</a>
+      <a href="/#person">Wer das macht</a>
+      <a href="/kandidaten/">Für Kandidaten</a>
+      <a class="tel" href="tel:+494064532446">040 64532446</a>
+      <a class="btn" href="/erstgespraech/">Erstgespräch vereinbaren</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="subhero">
+  <div class="wrap">
+    <p class="krumen rev"><a href="/">Startseite</a> · <a href="/wissen/">Wissen</a> · Vakanzkosten</p>
+    <h1 class="rev rev-d1">Was kostet eine unbesetzte Vertriebsstelle?</h1>
+    <p class="lead rev rev-d2">Mehr, als das eingesparte Gehalt vermuten lässt. Wie Sie die Kosten mit vier eigenen Zahlen berechnen und was in keiner Rechnung auftaucht.</p>
+    <p class="meta-zeile rev rev-d2">Von Stefan Bründl · 26. Oktober 2026 · 6 Minuten Lesezeit</p>
+  </div>
+</section>
+
+<section class="artikel">
+  <div class="wrap">
+  <article class="text">
+
+  <div class="kurzantwort">
+    <p class="eyebrow">Kurz beantwortet</p>
+    <p>Eine unbesetzte Vertriebsstelle kostet vor allem Deckungsbeitrag aus dem Gebiet, das in dieser Zeit niemand betreut. Sie berechnen ihn so: <b>Gebietsumsatz × Deckungsbeitragsquote × angenommene Erosion × Monate ohne Betreuung ÷ 12.</b> Bei 2,1 Mio. € Gebietsumsatz, 30 % Deckungsbeitrag, 20 % Erosion und fünf Monaten sind das rund <b>52.500 €</b>. Suchkosten, Mehrarbeit im Team und Kunden, die nicht zurückkommen, sind darin noch nicht enthalten.</p>
+  </div>
+
+  <h2>Warum das eingesparte Gehalt täuscht</h2>
+  <p>Wenn ein Verkäufer geht, sieht die Buchhaltung zuerst eine Entlastung. Gehalt, Dienstwagen und Spesen fallen weg. Auf dem Papier spart die offene Stelle Geld.</p>
+  <p>Im Gebiet passiert etwas anderes. Kunden werden nicht mehr angerufen. Angebote bleiben liegen. Der Wettbewerber, der ohnehin regelmäßig vorbeischaut, bemerkt die Lücke als Erster. Und die Kollegen, die „nebenbei“ übernehmen, betreuen vor allem die Kunden, die sich von selbst melden.</p>
+  <p>Das eingesparte Gehalt sieht jeder. Den verlorenen Deckungsbeitrag sieht niemand. Deshalb wird er fast immer unterschätzt.</p>
+  <!-- SZENE: hier kommt Stefans Praxisbeispiel hinein (Kasten class="szene") -->
+
+  <h2>Die Rechnung in vier Zahlen</h2>
+  <p>Sie brauchen dafür keine Studie. Sie brauchen vier Zahlen aus Ihrem eigenen Unternehmen.</p>
+  <table class="tab">
+    <thead><tr><th>Zahl</th><th>Was sie bedeutet</th><th>Beispiel</th></tr></thead>
+    <tbody>
+      <tr><td>Gebietsumsatz pro Jahr</td><td>Umsatz der Kunden, die die Stelle betreut</td><td>2.100.000 €</td></tr>
+      <tr><td>Deckungsbeitragsquote</td><td>Was von einem Euro Umsatz nach den direkten Kosten bleibt</td><td>30 %</td></tr>
+      <tr><td>Angenommene Erosion</td><td>Anteil des Umsatzes, der ohne Betreuung verloren geht</td><td>20 %</td></tr>
+      <tr><td>Monate ohne Betreuung</td><td>Von der Kündigung, bis die neue Person voll arbeitet</td><td>5</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">2.100.000 € × 30 % × 20 % × 5 ÷ 12</td><td>52.500 €</td></tr></tfoot>
+  </table>
+  <p>Das sind rund 10.500 € entgangener Deckungsbeitrag in jedem Monat, in dem das Gebiet niemandem gehört.</p>
+  <p>Die unsicherste Zahl ist die Erosion. Dafür gibt es keinen verlässlichen Durchschnittswert, und wer Ihnen einen nennt, rät. Fragen Sie lieber Ihren Vertriebsleiter: Welche Kunden in diesem Gebiet bestellen auch ohne Besuch? Und welche nur, weil jemand nachfasst? Rechnen Sie dann mit zwei Werten, einem vorsichtigen und einem realistischen. Wenn schon die vorsichtige Rechnung weh tut, wissen Sie genug.</p>
+  <p><a class="btn" href="/downloads/#rechner">Mit Ihren Zahlen rechnen</a></p>
+
+  <h2>Wie lange eine Stelle wirklich offen ist</h2>
+  <p>Viele setzen bei den Monaten nur die Suche an. Das ist zu kurz. Die Zeit ohne Betreuung beginnt mit der Kündigung und endet erst, wenn die neue Person ihre Kunden kennt:</p>
+  <ul>
+    <li>die Kündigungsfrist des Vorgängers, der in dieser Zeit oft schon innerlich gegangen ist</li>
+    <li>die Suche bis zur Vertragsunterschrift</li>
+    <li>die Kündigungsfrist der neuen Person bei ihrem bisherigen Arbeitgeber</li>
+    <li>die Einarbeitung, bis sie im Gebiet voll arbeitet</li>
+  </ul>
+  <p>Wie lange allein die Suche dauert, zeigen die Zahlen der Bundesagentur für Arbeit: Im Durchschnitt über alle Berufe vergehen <b>157 Tage</b>, bis eine gemeldete Stelle besetzt ist. Das sind gut fünf Monate, bevor Kündigungsfristen und Einarbeitung überhaupt dazukommen.</p>
+
+  <h2>Was in keiner Rechnung auftaucht</h2>
+  <ul>
+    <li><b>Suchkosten:</b> Anzeigen, die Zeit der Geschäftsführung für Gespräche und gegebenenfalls ein Beraterhonorar.</li>
+    <li><b>Mehrarbeit im Team:</b> Wer fremde Kunden nebenbei betreut, verkauft in seinem eigenen Gebiet weniger.</li>
+    <li><b>Kunden, die nicht zurückkommen:</b> Wer einmal zum Wettbewerber gewechselt ist, bleibt oft dort. Dieser Verlust endet nicht mit der Besetzung.</li>
+    <li><b>Ansteckung:</b> Wenn ein guter Verkäufer geht, fragen sich die anderen, warum.</li>
+  </ul>
+  <p>Diese Posten lassen sich schwer beziffern. Deshalb stehen sie bewusst nicht in der Formel. In die Entscheidung gehören sie trotzdem.</p>
+
+  <h2>Die teuerste Vakanz ist die zweite</h2>
+  <p>Die Rechnung oben gilt für eine Besetzung. Geht die neue Person nach einem Jahr wieder, beginnt alles von vorn: dieselben Monate ohne Betreuung, dieselben Suchkosten. Deshalb lohnt sich vor der Suche eine Frage: Warum ist der Vorgänger gegangen? Wenn der Grund noch besteht, geht der Nächste aus demselben Grund.</p>
+  <p>Genau das klärt die <a href="/vakanzdiagnose/">Vakanzdiagnose</a>, bevor gesucht wird.</p>
+
+  <h2>Häufige Fragen</h2>
+  <div class="faq">
+<details><summary>Gleicht das eingesparte Gehalt die Vakanz nicht aus?</summary><p>Nur zum Teil. Das Gehalt fällt weg, der Deckungsbeitrag aus dem Gebiet aber auch, und der wiegt meist schwerer. Stellen Sie beides pro Monat gegenüber: eingespartes Gehalt samt Nebenkosten gegen entgangenen Deckungsbeitrag.</p></details>
+<details><summary>Welche Erosion soll ich ansetzen?</summary><p>Dafür gibt es keinen verlässlichen Durchschnittswert. Schätzen Sie mit Ihrem Vertriebsleiter, welcher Teil des Umsatzes ohne regelmäßigen Kontakt wegbricht. Rechnen Sie mit einem vorsichtigen und einem realistischen Wert.</p></details>
+<details><summary>Wie lange dauert es, eine Vertriebsstelle zu besetzen?</summary><p>Über alle Berufe hinweg dauert es nach Zahlen der Bundesagentur für Arbeit im Schnitt 157 Tage, bis eine gemeldete Stelle besetzt ist. Danach kommen noch die Kündigungsfrist der neuen Person und die Einarbeitung. Planen Sie also mit mehreren Monaten ohne volle Betreuung.</p></details>
+<details><summary>Ab wann lohnt sich ein Personalberater?</summary><p>Wenn jeder Monat ohne Besetzung mehr kostet, als Sie mit einer eigenen Suche sparen. Die Vakanzrechnung liefert Ihnen die Zahl pro Monat. Damit können Sie selbst abwägen.</p></details>
+  </div>
+
+  <div class="autor">
+    <img src="/img/stefan-bruendl-800.webp" alt="Stefan Bründl" width="96" height="120" loading="lazy">
+    <div>
+      <p><b>Stefan Bründl</b> führt seit über 20 Jahren Vertrieb, 17 Jahre davon in der Personaldienstleistung. Mit Vertriebsköpfe besetzt er Vertriebsstellen im Mittelstand und klärt vorher, warum sie offen sind.</p>
+      <p><a href="/presse/">Mehr über Stefan Bründl</a> · <a href="https://www.linkedin.com/in/stefan-bruendl" target="_blank" rel="noopener">LinkedIn</a></p>
+    </div>
+  </div>
+
+  <p class="quellen">Quelle: Bundesagentur für Arbeit, Statistik zur abgeschlossenen Vakanzzeit gemeldeter Arbeitsstellen (Durchschnitt aller Berufe). Das Rechenbeispiel ist ein Beispiel, keine Durchschnittszahl.</p>
+
+  </article>
+  </div>
+</section>
+
+<section class="band-navy">
+  <div class="wrap close-cta">
+    <p class="eyebrow rev">Der nächste Schritt</p>
+    <h2 class="rev">Rechnen Sie mit Ihren eigenen Zahlen.</h2>
+    <p class="lead rev" style="margin-bottom:28px">Der Vakanzrechner läuft in Ihrem Browser und speichert nichts. Das Arbeitsblatt gibt es zum Ausdrucken.</p>
+    <div class="cta-row rev rev-d1">
+      <a class="btn" href="/downloads/#rechner">Zum Vakanzrechner</a>
+      <a class="btn btn-ghost" href="/downloads/vakanzrechnung-arbeitsblatt.pdf" download>Arbeitsblatt als PDF</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="/" style="color:#fff">
+        <span class="signet-jahr" aria-hidden="true">
+          <span class="mark invert"></span>
+          <span class="sj-linie"></span>
+          <span class="sj-jahr">Seit 2026</span>
+        </span>
+        <span class="wordmark">Vertriebsköpfe<small style="color:var(--on-navy-mute)">Personalberatung für den Vertrieb</small></span>
+      </a>
+    </div>
+    <div>
+      <a href="/kandidaten/">Für Kandidaten</a>
+      <a href="/wissen/">Wissen</a>
+      <a href="/presse/">Presse</a>
+      <a href="/downloads/">Downloads</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="https://leadsimply.de" target="_blank" rel="noopener">LeadSimply</a>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar"><a class="cb-tel" href="tel:+494064532446" aria-label="Anrufen: 040 64532446">Anrufen</a><a class="cb-diag" href="/erstgespraech/">Erstgespräch</a></div>
+
+<script>
+(function(){
+  // Einblendungen: 350 ms, 14 px, einmal. Mit Ausfallsicherung: die Seite darf
+  // nie leer bleiben, nur weil ein Observer nicht anspringt.
+  var els = document.querySelectorAll('.rev');
+  function zeigen(el){ if(!el.classList.contains('in')) el.classList.add('in'); }
+  function alleZeigen(){ for(var i=0;i<els.length;i++) zeigen(els[i]); }
+  if(!('IntersectionObserver' in window)){ alleZeigen(); return; }
+
+  // Was beim Laden schon im Bild steht, wird sofort gezeigt.
+  requestAnimationFrame(function(){
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    for(var i=0;i<els.length;i++){
+      var r = els[i].getBoundingClientRect();
+      if(r.top < vh && r.bottom > 0) zeigen(els[i]);
+    }
+  });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ zeigen(e.target); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+
+  // Notbremse nach 1,2 s: alles, was dann noch unsichtbar ist, wird gezeigt.
+  setTimeout(alleZeigen, 1200);
+})();
+</script>
+
+</body>
+</html>
