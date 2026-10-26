@@ -190,6 +190,27 @@
 .wk-karte h3{margin:0}
 @media (max-width:560px){.tab thead th:nth-child(2),.tab tbody td:nth-child(2){display:none}.autor{flex-direction:column}.tab{font-size:.92rem}.tab th,.tab td{padding:8px 6px}}
 </style>
+<style id="nav-erweiterung">
+  /* Hauptmenü: sechs Punkte. Zwischen 1120 und 1279 px enger, damit die Leiste einzeilig bleibt. */
+  @media (min-width:1120px) and (max-width:1279px){.nav-links{gap:14px}}
+  /* Mobil: Menüknopf rechts oben, Liste klappt darunter auf. */
+  .mnav{display:none}
+  @media (max-width:820px){
+    .mnav{display:block;margin-left:auto;position:relative}
+    .mnav summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600;font-size:var(--fs-2);color:var(--ink);padding:8px 12px;border:1px solid var(--hair);border-radius:8px}
+    .mnav summary::-webkit-details-marker{display:none}
+    .mnav summary::after,.mnav[open] summary::after{content:none!important}
+    .mnav-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+    .mnav summary{padding:11px 10px!important}
+    .mnav-icon,.mnav-icon::before,.mnav-icon::after{display:block;width:16px;height:2px;background:currentColor;border-radius:1px;position:relative}
+    .mnav-icon::before,.mnav-icon::after{content:"";position:absolute;left:0}
+    .mnav-icon::before{top:-5px}.mnav-icon::after{top:5px}
+    .mnav-liste{position:absolute;right:0;top:calc(100% + 10px);min-width:240px;background:var(--paper);border:1px solid var(--hair);border-radius:10px;padding:6px 0;box-shadow:0 12px 32px rgba(13,26,46,.16);z-index:60}
+    .mnav-liste a{display:block;padding:12px 18px;color:var(--ink);text-decoration:none;font-weight:500}
+    .mnav-liste a:hover{color:var(--petrol)}
+    .mnav-liste .mnav-cta{margin:6px 12px 6px;border-radius:6px;background:var(--petrol);color:#fff;text-align:center}
+  }
+</style>
 </head>
 <body>
 <style>
@@ -532,6 +553,13 @@
   }
   .zeitstrahl li{position:relative;padding:36px 20px 0 0;display:flex;flex-direction:column}
   .zeitstrahl li > p:not(.zs-liefer){flex:1}
+  /* Gleiche Zeilen in allen Spalten: Woche, Titel, Text, Lieferung stehen auf einer Linie */
+  @supports (grid-template-rows:subgrid){
+    .zeitstrahl{grid-template-rows:auto auto 1fr auto}
+    .zeitstrahl li{display:grid;grid-row:span 4;grid-template-rows:subgrid;align-content:start}
+    .zeitstrahl li > p:not(.zs-liefer){align-self:start}
+    .zs-liefer{align-self:start}
+  }
   .zeitstrahl li::before{
     content:"";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;
     background:var(--paper);border:3px solid var(--petrol);box-sizing:border-box;
@@ -555,7 +583,8 @@
   @media (max-width:860px){
     .zeitstrahl{grid-template-columns:1fr}
     .zeitstrahl::before{left:9px;top:10px;bottom:24px;width:2px;height:auto}
-    .zeitstrahl li{padding:0 0 26px 34px}
+    .zeitstrahl{grid-template-rows:none}
+    .zeitstrahl li{padding:0 0 26px 34px;display:block;grid-row:auto}
     .zeitstrahl li::before{top:2px}
   }
 
@@ -833,12 +862,26 @@
     </a>
     <nav class="nav-links">
       <a href="/#leistungen">Leistungen</a>
-      <a href="/#ablauf">Ablauf</a>
-      <a href="/#person">Wer das macht</a>
+      <a href="/wissen/">Wissen</a>
+      <a href="/#person">Über mich</a>
+      <a href="/presse/">Presse</a>
       <a href="/kandidaten/">Für Kandidaten</a>
       <a class="tel" href="tel:+494064532446">040 64532446</a>
       <a class="btn" href="/erstgespraech/">Erstgespräch vereinbaren</a>
     </nav>
+    <details class="mnav">
+      <summary aria-label="Menü öffnen"><span class="mnav-icon" aria-hidden="true"></span><span class="mnav-text">Menü</span></summary>
+      <nav class="mnav-liste" aria-label="Hauptmenü">
+        <a href="/#leistungen">Leistungen</a>
+        <a href="/#ablauf">Ablauf</a>
+        <a href="/wissen/">Wissen</a>
+        <a href="/#person">Über mich</a>
+        <a href="/presse/">Presse</a>
+        <a href="/kandidaten/">Für Kandidaten</a>
+        <a href="/downloads/">Downloads und Rechner</a>
+        <a class="mnav-cta" href="/erstgespraech/">Erstgespräch vereinbaren</a>
+      </nav>
+    </details>
   </div>
 </header>
 
