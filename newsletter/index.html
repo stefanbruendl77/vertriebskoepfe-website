@@ -20,6 +20,17 @@
 <meta name="twitter:card" content="summary_large_image">
 <style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}  .nl-platzhalter{border:2px dashed var(--line,#c9d3dc);border-radius:12px;padding:40px 24px;text-align:center;color:var(--muted)}
   .nl-blocks{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .nlf{max-width:620px}
+  .nlf-label{display:block;font-weight:600;margin:0 0 8px}
+  .nlf-zeile{display:flex;gap:12px;flex-wrap:wrap}
+  .nlf-zeile input{flex:1 1 260px;min-width:0;font:inherit;font-size:17px;padding:13px 16px;border:1px solid var(--hair);border-radius:8px;background:var(--paper);color:var(--ink)}
+  .nlf-zeile input:focus{outline:2px solid var(--petrol);outline-offset:1px;border-color:var(--petrol)}
+  .nlf-zeile .btn{flex:0 0 auto}
+  .nlf-hinweis{font-size:var(--fs-2);color:var(--muted);margin:12px 0 0}
+  .nlf-fehler{color:#b42318;font-size:var(--fs-2);margin:8px 0 0}
+  .nlf-falle{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .nlf-danke{max-width:620px;padding:20px 24px;border-left:4px solid var(--petrol);background:var(--petrol-wash);border-radius:8px}
+  .nlf-danke-titel{font-weight:600;margin:0 0 6px}
 </style>
 <noscript><style>.rev{opacity:1;transform:none}</style></noscript>
 <style>
@@ -803,7 +814,33 @@
     <p class="eyebrow rev">Anmeldung</p>
     <h2 class="rev">Eintragen und als Dankeschön den Vakanzrechner nutzen.</h2>
     <div class="formular rev">
-      <iframe title="Anmeldung zum Newsletter Recruiting. Führung. Vertrieb." width="540" height="470" src="https://7b774ade.sibforms.com/v2/serve/MUIFABjiYfaLSQ7izwDk8chHfKy3TYMDoH889wjEqrH4_V1SWH1ZfhghQkO71tgejV24hL8JUjVnCcfTx6NkTFpyXB9AQO4U_wgF0ivAUaqWtvjPMFv5TsqpT2GbIvKVSgmSp9C5-cM1NYyD6TEOekLfFOxkv5IQ3kg_eeUkNl2zRTkJ8prM8yQbdWSnJNCWu00vIueYEyeT4fZrWA==" frameborder="0" scrolling="auto" allowfullscreen loading="lazy" style="display:block;margin-left:auto;margin-right:auto;max-width:100%;border:0"></iframe>
+      <form class="nlf" id="nlForm" action="https://7b774ade.sibforms.com/v2/serve/MUIFABjiYfaLSQ7izwDk8chHfKy3TYMDoH889wjEqrH4_V1SWH1ZfhghQkO71tgejV24hL8JUjVnCcfTx6NkTFpyXB9AQO4U_wgF0ivAUaqWtvjPMFv5TsqpT2GbIvKVSgmSp9C5-cM1NYyD6TEOekLfFOxkv5IQ3kg_eeUkNl2zRTkJ8prM8yQbdWSnJNCWu00vIueYEyeT4fZrWA==" method="post" target="nlZiel" novalidate>
+        <label for="nlMail" class="nlf-label">Ihre E-Mail-Adresse</label>
+        <div class="nlf-zeile">
+          <input id="nlMail" name="EMAIL" type="email" autocomplete="email" placeholder="name@firma.de" required>
+          <button class="btn" type="submit">Anmelden</button>
+        </div>
+        <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" class="nlf-falle">
+        <input type="hidden" name="locale" value="de">
+        <p class="nlf-hinweis">Mit Klick auf „Anmelden“ willigen Sie ein, den Newsletter per E-Mail zu erhalten.</p>
+        <p class="nlf-fehler" id="nlFehler" hidden>Bitte geben Sie eine gültige E-Mail-Adresse ein.</p>
+      </form>
+      <div class="nlf-danke" id="nlDanke" hidden role="status">
+        <p class="nlf-danke-titel">Fast geschafft.</p>
+        <p>Wir haben Ihnen eine Bestätigungsmail geschickt. Erst wenn Sie darin auf den Link klicken, sind Sie eingetragen. Schauen Sie notfalls im Spam-Ordner nach.</p>
+      </div>
+      <iframe name="nlZiel" title="Anmeldung" hidden></iframe>
+      <script>
+      (function(){
+        var f=document.getElementById('nlForm'),m=document.getElementById('nlMail'),e=document.getElementById('nlFehler'),d=document.getElementById('nlDanke');
+        f.addEventListener('submit',function(ev){
+          if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m.value.trim())){ev.preventDefault();e.hidden=false;m.focus();return;}
+          e.hidden=true;
+          setTimeout(function(){f.hidden=true;d.hidden=false;},300);
+          if(window.pirsch){try{pirsch('Newsletter-Anmeldung');}catch(x){}}
+        });
+      })();
+      </script>
     </div>
     <p class="klein" style="font-size:var(--fs-2);color:var(--muted)">Sie bekommen eine Bestätigungsmail. Erst wenn Sie darin auf den Link klicken, sind Sie eingetragen. Abmelden können Sie sich mit einem Klick in jeder Ausgabe. Hinweise in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
   </div>
