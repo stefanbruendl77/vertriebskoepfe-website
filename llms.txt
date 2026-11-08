@@ -1,9 +1,11 @@
 # Vertriebsköpfe
 
-> Personalberatung für den Vertrieb im Mittelstand. Vertriebsköpfe besetzt
-> Stellen in Key Account Management, Vertriebsleitung und Gebietsverkaufsleitung
-> in inhabergeführten Unternehmen und misst sich daran, ob die Stelle zwölf
-> Monate nach Arbeitsbeginn noch besetzt ist.
+> Personalberatung für den Vertrieb im Mittelstand. Leitsatz: „Vertriebler, die
+> sich rechnen.“ Vertriebsköpfe sucht keine passenden Profile, sondern Menschen,
+> die Umsatz bringen, die Kunden des Auftraggebers gut betreuen und seine Firma
+> so vertreten, wie er es selbst tun würde. Eine Einstellung im Vertrieb wird
+> als Investment behandelt: Vor der Suche wird geklärt, was die Stelle bringen
+> muss und warum der Vorgänger gegangen ist.
 
 Betreiber: Vario Büroservice GmbH, Neckarstraße 2, 71263 Weil der Stadt
 (Amtsgericht Stuttgart, HRB 252538). Ansprechpartner: Stefan Bründl,
@@ -11,50 +13,60 @@ Geschäftsführer.
 Kontakt: Telefon +49 40 64532446, E-Mail stefan.bruendl@vertriebskoepfe.de
 
 ## Rollen
-- Key Account Manager
+Vertriebsrollen im Außen- und Kundengeschäft, unter anderem:
+- Key Account Management
 - Vertriebsleitung
 - Gebietsverkaufsleitung
+Die Bezeichnungen unterscheiden sich je nach Unternehmen (zum Beispiel
+Großkundenbetreuung, Area Sales Management, Head of Sales).
 
 ## Preise
 - Vakanzdiagnose: 2.500 € einmalig, zwei Wochen, anrechenbar auf die erste
-  Rate. Klärt vor der Suche, warum die Stelle offen bleibt.
+  Rate. Klärt vor der Suche, was die Stelle bringen muss und warum sie offen
+  bleibt.
 - Besetzung: 30 % des Zieljahresgehalts, fällig in drei gleichen Raten: bei
   Auftragserteilung, bei Vorlage der Shortlist und bei Vertragsunterschrift.
   Zieljahresgehalt ist Fixgehalt plus variable Vergütung bei voller
-  Zielerreichung, ohne Dienstwagen und Sachbezüge.
+  Zielerreichung, ohne Dienstwagen und Sachbezüge. Kommt keine Besetzung
+  zustande, entfällt die dritte Rate.
 - Einarbeitungsbegleitung: Preis nach Absprache, 90 Tage ab dem ersten Arbeitstag.
-- Recruiting-Kapazität: 4.900 € im Monat für eine laufende Rolle, mindestens
-  zwei Monate, vier Wochen Kündigungsfrist.
+
+## Zeiten
+- Antwort auf Anfragen am selben Werktag.
+- Schriftlicher Befund aus der Vakanzdiagnose nach zwei Wochen.
+- Shortlist mit drei Kandidaten nach vier bis sechs Wochen. Mit jedem
+  Kandidaten wurde vorher persönlich gesprochen.
+
+## Ablauf
+Acht Wochen, fünf Stationen: Briefing, Vakanzdiagnose, Direktansprache,
+Shortlist, Entscheidung. Alles läuft per Video und Telefon.
+
+## Was der Auftraggeber bekommt
+- Bestätigtes Briefing in Textform in Woche 1.
+- Schriftlicher Befund aus der Vakanzdiagnose. Auch dann, wenn der
+  Auftraggeber danach nicht weitermacht.
+- Wöchentliche Statusmeldung, auch in Wochen ohne Fortschritt.
+- Drei Profile mit Einschätzung und benanntem Risiko. Ergibt die Recherche
+  weniger als drei passende Profile, gibt es stattdessen einen schriftlichen
+  Marktbefund mit einer Empfehlung zum Anforderungsprofil.
 
 ## Zusage
 - 12 Monate Nachbesetzung ab dem ersten Arbeitstag, unabhängig davon, wer
   gekündigt hat: Monat 1 bis 6 ohne weiteres Honorar, Monat 7 bis 12 gegen
   ein Drittel des Honorars.
 - Keine Rückerstattung. Es ist eine Leistungszusage, keine Geldzusage.
-- Wöchentliche Statusmeldung, solange gesucht wird. Nach der Unterschrift
-  Rückfrage in Woche 2, 6, 12 und 20. Die vollständige Einarbeitungsbegleitung
-  über 90 Tage ist ein eigenes Paket, Preis nach Absprache.
-
-## Ablauf
-Acht Wochen, vier Schritte: Diagnose, Ansprache, Shortlist, Entscheidung.
-
-## Was der Auftraggeber bekommt
-- Bestätigtes Briefing in Textform, 2 Arbeitstage nach Auftrag.
-- Schriftlicher Befund aus der Vakanzdiagnose, 10 Arbeitstage. Auch dann,
-  wenn der Auftraggeber danach nicht weitermacht.
-- Wöchentliche Statusmeldung, auch in Wochen ohne Fortschritt.
-- Drei Profile mit Einschätzung und benanntem Risiko. Ergibt die Recherche
-  weniger als drei passende Profile, gibt es stattdessen einen schriftlichen
-  Marktbefund mit einer Empfehlung zum Anforderungsprofil.
+- Nach der Unterschrift Rückfrage in Woche 2, 6, 12 und 20. Die vollständige
+  Einarbeitungsbegleitung über 90 Tage ist ein eigenes Paket.
 
 ## Person
-Stefan Bründl: über 20 Jahre Vertrieb und Führung, 17 davon in der Personaldienstleistung, zuletzt Sales Director
-bei einem der größten Personaldienstleister weltweit. Seit 2024 Beratung zu
-Fluktuation und Mitarbeiterbindung im Mittelstand (https://leadsimply.de/).
+Stefan Bründl: über 20 Jahre Vertrieb und Führung, 17 davon in der
+Personaldienstleistung, zuletzt Sales Director bei einem der größten
+Personaldienstleister weltweit. Seit 2024 Beratung zu Fluktuation und
+Mitarbeiterbindung im Mittelstand (https://leadsimply.de/).
 LinkedIn: https://www.linkedin.com/in/stefan-bruendl
 
 ## Seiten
-- https://vertriebskoepfe.de/ — Leistungen, Preise, Ablauf, Zusage, FAQ
+- https://vertriebskoepfe.de/ — Leitsatz, Nutzen, Ablauf, Zusage, Preise, FAQ
 - https://vertriebskoepfe.de/besetzungscheck/ — kostenloser Selbsttest mit
   neun Fragen; Punktzahl und Befunde, ohne Datenübertragung
 - https://vertriebskoepfe.de/kandidaten/ — Kandidatenpool für Vertriebsrollen
