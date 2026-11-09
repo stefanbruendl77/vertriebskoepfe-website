@@ -171,7 +171,9 @@
   .buchung-daten li{font-size:var(--fs-1);border:1px solid var(--hair);border-radius:100px;padding:5px 12px;color:var(--ink);background:var(--paper)}
   .buchung-start{padding:26px 28px 28px}
   .buchung-start p{font-size:var(--fs-1);color:var(--muted);margin:14px 0 0}
-  .buchung .kal-slot{margin:0;border-radius:0;max-width:none;border-top:1px solid var(--hair)}
+  .buchung .kal-slot{margin:0;border-radius:0;max-width:none;border-top:0}
+  .buchung .kal-hinweis{padding:14px 28px 20px;border-top:1px solid var(--hair)}
+  .buchung .kal-hinweis p{margin:0}
   .person-mini{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start}
   .person-mini img{display:block;width:120px;height:150px;object-fit:cover}
   .person-mini h3{margin:0 0 4px}
@@ -336,7 +338,7 @@
      Navigation. Ab hier verschwindet sie — die Hero-Zeile sagt dasselbe. */
   @media (max-width:1299px){.wordmark small{display:none}}
 
-  /* Buchungskalender: wird erst nach Klick geladen (Zwei-Klick-Loesung, kein Drittanbieter beim Seitenaufruf) */
+  /* Buchungskalender: wird direkt beim Seitenaufruf geladen */
   .kal-slot{margin-top:24px;background:#fff;border-radius:6px;overflow:hidden;min-height:620px;max-width:960px}
   .kal-slot .tidycal-embed{min-height:620px}
   /* Buttons */
@@ -802,11 +804,10 @@
         <p>Wählen Sie eine Zeit, die Ihnen passt. Sie bekommen sofort eine Bestätigung mit Kalendereintrag.</p>
         <ul class="buchung-daten"><li>20 Minuten</li><li>Telefon oder Google Meet</li><li>Kostenlos</li><li>Ohne Unterlagen</li></ul>
       </div>
-      <div class="buchung-start" id="kalStart">
-        <a class="btn" id="kalOeffnen" href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Kalender öffnen</a>
-        <p>Beim Öffnen wird der Buchungskalender von TidyCal auf dieser Seite geladen, vorher nicht. Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
+      <div class="kal-slot" id="kalSlot"><div class="tidycal-embed" data-path="stefanbruendl77/erstgespraech"></div></div>
+      <div class="buchung-start kal-hinweis">
+        <p>Der Kalender wird nicht angezeigt? <a href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Hier direkt bei TidyCal buchen</a>. Der Kalender kommt von TidyCal, mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
       </div>
-      <div class="kal-slot" id="kalSlot" hidden></div>
     </div>
   </div>
 </section>
@@ -916,28 +917,13 @@
 })();
 </script>
 <script>
-// Zwei-Klick-Loesung fuer TidyCal: Erst nach dem Klick wird der Kalender geladen.
-// Ohne JavaScript oeffnet der Link TidyCal in einem neuen Fenster.
+// TidyCal-Kalender wird direkt beim Seitenaufruf geladen (Entscheidung Stefan 09.11.2026).
+// Ohne JavaScript bleibt der Link unter dem Kalender als Weg zu TidyCal.
 (function(){
-  var a = document.getElementById('kalOeffnen');
-  var slot = document.getElementById('kalSlot');
-  var start = document.getElementById('kalStart');
-  if(!a || !slot) return;
-  a.addEventListener('click', function(ev){
-    ev.preventDefault();
-    if(slot.getAttribute('data-geladen') !== '1'){
-      slot.setAttribute('data-geladen','1');
-      slot.innerHTML = '<div class="tidycal-embed" data-path="stefanbruendl77/erstgespraech"></div>';
-      var sc = document.createElement('script');
-      sc.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
-      sc.async = true;
-      document.body.appendChild(sc);
-    }
-    slot.hidden = false;
-    if(start) start.hidden = true;
-    var t = document.querySelector('.termin'); if(t) t.classList.add('offen');
-    slot.scrollIntoView({behavior:'smooth', block:'start'});
-  });
+  var sc = document.createElement('script');
+  sc.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
+  sc.async = true;
+  document.body.appendChild(sc);
 })();
 </script>
 </body>
