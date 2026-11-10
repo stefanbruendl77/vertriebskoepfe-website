@@ -82,6 +82,45 @@
 
 
 <style>
+  /* Kopf mit Foto (10.11.2026) */
+  .kapazitaet{display:flex;align-items:center;gap:10px;margin:12px 0 0;font-size:var(--fs-2);color:var(--muted)}
+  .kapazitaet .punkt{flex:none;width:9px;height:9px;border-radius:50%;background:var(--petrol);box-shadow:0 0 0 0 rgba(14,111,104,.5);animation:vkPunkt 2.6s ease-out infinite}
+  @keyframes vkPunkt{0%{box-shadow:0 0 0 0 rgba(14,111,104,.45)}70%{box-shadow:0 0 0 9px rgba(14,111,104,0)}100%{box-shadow:0 0 0 0 rgba(14,111,104,0)}}
+  @media (prefers-reduced-motion: reduce){.kapazitaet .punkt{animation:none}}
+  .fuer-wen{margin:22px 0 0;padding-left:14px;border-left:3px solid var(--petrol);font-size:var(--fs-2);color:var(--ink);max-width:30em}
+  .hero-presse{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;margin:0;padding:18px 0 22px;border-top:1px solid var(--hair);font-size:var(--fs-1);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .hero-presse span{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);letter-spacing:0;text-transform:none;font-weight:600;color:var(--ink);opacity:.75}
+  .hero-presse a{margin-left:auto;letter-spacing:.04em;font-weight:600;color:var(--petrol);text-decoration:none}
+  body header.nav{border-bottom:3px solid var(--petrol)}
+  .hero.hero-person{padding:56px 0 0;border-bottom:1px solid var(--hair)}
+  .hero-person .hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center}
+  .hero-person h1{max-width:12ch}
+  .hero-person h1 em{font-style:normal;color:var(--petrol)}
+  .hero-bild{position:relative;margin:0 0 0 24px;max-width:420px;justify-self:end}
+  .hero-bild::before{content:"";position:absolute;inset:24px -24px -24px 24px;background:var(--petrol-wash);border-radius:14px;z-index:0}
+  .hero-bild img{position:relative;z-index:1;display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+  .hero-bild figcaption{position:relative;z-index:2;margin:-20px 0 0 -40px;max-width:330px;background:var(--card);border:1px solid var(--hair);border-left:3px solid var(--petrol);border-radius:8px;padding:14px 16px;box-shadow:var(--shadow)}
+  .hero-bild q{display:block;quotes:"„" "“";font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);font-weight:600;line-height:1.35;color:var(--ink);margin-bottom:8px}
+  .hero-bild figcaption span{display:block;font-size:var(--fs-1);color:var(--muted);line-height:1.4}
+  .hero-bild figcaption b{display:block;color:var(--ink)}
+  .hero-zahlen{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--hair)}
+  .hero-zahlen li{display:flex;gap:16px;align-items:flex-start;padding:24px 24px 30px 0;min-width:0}
+  .hero-zahlen li + li{padding-left:24px;border-left:1px solid var(--hair)}
+  .hero-zahlen b{flex:none;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:3.25rem;line-height:.9;font-weight:600;color:var(--petrol);font-variant-numeric:tabular-nums;min-width:1.1em}
+  .hero-zahlen span{font-size:var(--fs-2);color:var(--muted);line-height:1.45}
+  .hero-zahlen strong{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+  .hero-zahlen b{white-space:nowrap}
+  .hero-zahlen li{flex-direction:column;gap:10px}
+  .hero-zahlen a{display:inline-block;margin-top:6px;font-weight:600;color:var(--petrol)}
+  .hz-frage b{color:var(--ink)}
+  @media (max-width:860px){
+    .hero-person .hero-grid{grid-template-columns:1fr;gap:36px}
+    .hero-bild{justify-self:start;margin:0 24px 24px 0;max-width:320px}
+    .hero-bild figcaption{margin:-16px 0 0 16px;max-width:300px}
+    .hero-zahlen{grid-template-columns:1fr;margin-top:44px}
+    .hero-zahlen li + li{padding-left:0;border-left:0;border-top:1px solid var(--hair)}
+    .hero-zahlen li{padding:18px 0}
+  }
   /* Neue Bausteine der Startseite (Nov. 2026): Belege im Kopf, Nutzen-Liste, Presse-Zeile */
   .belege{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:880px}
   .belege li{background:var(--card);border:1px solid var(--hair);border-radius:6px;padding:16px 18px}
@@ -661,7 +700,7 @@
 </style>
 
 <div class="kand-leiste"><div class="kand-in"><span class="kand-frage">Sie suchen eine Vertriebsstelle?</span><a href="/kandidaten/">Für Kandidaten →</a></div></div>
-<style>.kand-leiste{background:var(--petrol-wash);border-bottom:1px solid var(--hair);font-size:14px}.kand-in{max-width:1280px;margin:0 auto;padding:7px 28px;display:flex;justify-content:flex-end;align-items:center;gap:16px}.kand-frage{color:var(--muted)}.kand-leiste a{font-weight:600;color:var(--petrol)}@media (max-width:420px){.kand-in{padding:7px 16px}.kand-frage{display:none}}</style>
+<style>.kand-leiste{background:var(--navy);border-bottom:0;font-size:14px}.kand-in{max-width:1280px;margin:0 auto;padding:7px 28px;display:flex;justify-content:flex-end;align-items:center;gap:16px}.kand-frage{color:var(--on-navy-mute)}.kand-leiste a{font-weight:600;color:var(--petrol-lite)}@media (max-width:420px){.kand-in{padding:7px 16px}.kand-frage{display:none}}</style>
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="/" aria-label="Vertriebsköpfe, zur Startseite">
@@ -694,22 +733,63 @@
 </header>
 
 <main>
-<section class="hero">
-  <div class="wrap">
-    
-    <p class="eyebrow rev">Personalberatung für den Vertrieb<span class="ab-620"> · Stefan Bründl, 20 Jahre Vertrieb, zuletzt Sales Director</span></p>
-    <h1 class="rev rev-d1">Vertriebler, die sich rechnen.</h1>
-    <p class="lead rev rev-d2">Ich suche keine passenden Profile, sondern Menschen, die Umsatz bringen, Ihre Kunden gut betreuen und Ihre Firma so vertreten, wie Sie es tun würden.</p>
-    <div class="cta-row rev rev-d2">
-      <a class="btn" href="/erstgespraech/">Erstgespräch vereinbaren</a>
-      <a class="btn btn-ghost" href="tel:+494064532446">Anrufen: 040 64532446</a>
+<style>
+  /* Bewegung im Kopf (10.11.2026): einmal beim Laden, dann Ruhe */
+  @keyframes vkAuf{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @keyframes vkBild{from{opacity:0;transform:translateX(24px) scale(.98)}to{opacity:1;transform:none}}
+  @keyframes vkKarte{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes vkStrich{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  .hero-person .hero-text > *{animation:vkAuf .6s cubic-bezier(.2,.7,.2,1) both}
+  .hero-person .hero-text > :nth-child(2){animation-delay:.08s}
+  .hero-person .hero-text > :nth-child(3){animation-delay:.16s}
+  .hero-person .hero-text > :nth-child(4){animation-delay:.24s}
+  .hero-person .hero-text > :nth-child(5){animation-delay:.3s}
+  .hero-person .hero-bild picture{display:block;animation:vkBild .8s cubic-bezier(.2,.7,.2,1) .12s both}
+  .hero-person .hero-bild figcaption{animation:vkKarte .6s cubic-bezier(.2,.7,.2,1) .6s both}
+  .hero-person h1 em{position:relative;display:inline-block}
+  .hero-person h1 em::after{content:"";position:absolute;left:0;right:.18em;bottom:.06em;height:.08em;background:var(--petrol);opacity:.35;border-radius:2px;transform-origin:left;animation:vkStrich .7s cubic-bezier(.2,.7,.2,1) .7s both}
+  .hero-zahlen b{transition:color .3s}
+  .btn{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px -10px rgba(13,26,46,.45)}
+  .hero-bild img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .hero-bild:hover img{transform:translateY(-4px)}
+  @media (prefers-reduced-motion: reduce){
+    .hero-person .hero-text > *,.hero-person .hero-bild picture,.hero-person .hero-bild figcaption,.hero-person h1 em::after{animation:none}
+    .btn:hover,.hero-bild:hover img{transform:none}
+  }
+</style>
+<section class="hero hero-person">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow rev">Personalberatung für den Vertrieb<span class="ab-620"> · Hamburg</span></p>
+      <h1 class="rev rev-d1">Vertriebler, die sich <em>rechnen.</em></h1>
+      <p class="lead rev rev-d2">Ich suche keine passenden Profile, sondern Menschen, die Umsatz bringen, Ihre Kunden gut betreuen und Ihre Firma so vertreten, wie Sie es tun würden.</p>
+      <div class="cta-row rev rev-d2">
+        <a class="btn" href="/erstgespraech/">Erstgespräch vereinbaren</a>
+        <a class="btn btn-ghost" href="tel:+494064532446">Anrufen: 040 64532446</a>
+      </div>
+      <p class="cta-note">Erstgespräch 20 Minuten, ohne Unterlagen.</p>
+      <p class="fuer-wen">Für Geschäftsführer im Mittelstand, die eine Stelle im Vertrieb besetzen müssen.</p>
+      <p class="kapazitaet"><span class="punkt" aria-hidden="true"></span>Ich arbeite an höchstens vier Mandaten gleichzeitig. Ihre Stelle ist keine unter zwölf.</p>
     </div>
-    <p class="cta-note">Erstgespräch 20 Minuten, ohne Unterlagen.</p>
-    <ul class="belege">
-      <li><b>Am selben Werktag</b><span>Antwort auf Ihre Anfrage</span></li>
-      <li><b>Nach 2 Wochen</b><span>Befund, was die Stelle bringen muss und warum sie offen ist</span></li>
-      <li><b>Nach 4–6 Wochen</b><span>drei Kandidaten, mit denen ich selbst gesprochen habe</span></li>
+    <figure class="hero-bild rev rev-d1">
+      <picture>
+        <source type="image/webp" srcset="/img/stefan-bruendl-800.webp 800w, /img/stefan-bruendl-1600.webp 1600w" sizes="(max-width:860px) 320px, 420px">
+        <img src="/img/stefan-bruendl-800.jpg" width="420" height="525" alt="Stefan Bründl, Personalberater für den Vertrieb" fetchpriority="high" decoding="async">
+      </picture>
+      <figcaption>
+        <q>Im Gespräch erkenne ich, ob jemand verkauft oder nur gut erzählt.</q>
+        <span><b>Stefan Bründl</b>20 Jahre Vertrieb, zuletzt Sales Director</span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <ul class="hero-zahlen">
+      <li><b>157</b><span><strong>Tage bleibt eine Stelle offen</strong>So lange dauert es in Deutschland im Schnitt, bis sie besetzt ist. Laut Bundesagentur für Arbeit.</span></li>
+      <li><b>52&#8239;%</b><span><strong>der Stellenanzeigen bringen niemanden</strong>Jede fünfte bekommt nicht eine einzige Bewerbung.</span></li>
+      <li><b>100.000&#8239;€</b><span><strong>Umsatz im Monat bearbeitet keiner</strong>Beispiel: ein Vertriebler mit 1,2 Mio. € Jahresumsatz, dessen Stelle offen ist. <a href="#rechnung">Mit Ihren Zahlen rechnen →</a></span></li>
     </ul>
+    <p class="hero-presse">Bekannt aus <span>Wirtschaftswoche</span> <span>Der Personalberater Coach</span> <span>skagil Realtalk</span> <a href="/presse/">Presse →</a></p>
   </div>
 </section>
 <section class="raum-eng">
@@ -721,13 +801,11 @@
       <li><h3>Keine Stapel Lebensläufe</h3><p>Sie sehen drei Profile. Mit jedem Kandidaten habe ich vorher selbst gesprochen, mit Einwänden statt Fragebogen.</p></li>
       <li><h3>Ihr Vertrieb bleibt beim Kunden</h3><p>Ansprache, Vorauswahl und Terminabstimmung laufen über mich. Ihre Leute verkaufen weiter.</p></li>
       <li><h3>Sie wissen vorher, ob es klappt</h3><p>Nach zwei Wochen sagt Ihnen die Diagnose, ob die Stelle zu Ihren Bedingungen besetzbar ist. Auch wenn die Antwort nein lautet.</p></li>
-      <li><h3>Sie wissen jede Woche, wo die Suche steht</h3><p>Eine Statusmeldung pro Woche, auch in Wochen ohne zählbaren Fortschritt.</p></li>
       <li><h3>Jemand, der Vertrieb versteht</h3><p>Ich habe selbst Vertrieb geführt. Im Gespräch erkenne ich, ob jemand verkauft oder nur gut erzählt.</p></li>
-      <li><h3>Sie zahlen für Arbeit, die Sie sehen</h3><p>Drei Raten, jede an eine Lieferung gebunden. Kommt keine Besetzung zustande, entfällt die dritte.</p></li>
     </ul>
   </div>
 </section>
-<section class="band-navy raum-gross">
+<section id="rechnung" class="band-navy raum-gross">
   <div class="wrap">
     <p class="eyebrow rev">Die Rechnung, die selten jemand aufmacht</p>
     <h2 class="rev">Eine unbesetzte Vertriebsstelle ist teurer als jede Personalberatung.</h2>
@@ -822,74 +900,6 @@
   </div>
 </section>
 
-<section class="band-navy raum-eng">
-  <div class="wrap promise">
-    <div>
-      
-      <p class="eyebrow rev">Die Zusage</p>
-      <h2 class="rev">Der Tag der Unterschrift ist nicht das Ende des Mandats.</h2>
-      <p class="rev">Die meisten Garantien in dieser Branche enden mit der Probezeit, also in dem Zeitraum, in dem am wenigsten passiert. Ich sichere zwölf Monate ab, gerechnet ab dem ersten Arbeitstag und unabhängig davon, wer gekündigt hat. Das kann ich zusagen, weil ich vorher prüfe, ob die Stelle zu diesen Bedingungen überhaupt besetzbar ist.</p>
-    </div>
-    <ul class="promise-list rev rev-d1">
-      <li><b>12 Monate</b><span>Nachbesetzung, gestaffelt: In den Monaten 1 bis 6 ohne weiteres Honorar, in den Monaten 7 bis 12 gegen ein Drittel. Gerechnet ab dem ersten Arbeitstag.</span></li>
-      <li><b>Jede Woche</b><span>Eine Statusmeldung, solange gesucht wird. Nach der Unterschrift melde ich mich in Woche 2, 6, 12 und 20 und frage, ob es läuft.</span></li>
-      <li><b>Schriftlich</b><span>Beides steht im Vertrag, mit Bedingungen, vor der ersten Rechnung. Nicht abgedeckt sind Gründe, die nicht an der Auswahl liegen: Restrukturierung, Standortschließung, ein nachträglich geänderter Aufgabenzuschnitt, ein unvollständiges Briefing.</span></li>
-    </ul>
-  </div>
-</section>
-<section id="leistungen" class="raum-gross">
-  <div class="wrap">
-    <p class="eyebrow rev">Drei Stufen, offene Preise</p>
-    <h2 class="rev">Sie müssen nicht mit dem großen Mandat anfangen.</h2>
-    <p class="lead rev" style="margin-bottom:40px">Die meisten Beratungen nennen ihr Honorar erst im Gespräch. Hier steht es, damit Sie vorher wissen, worüber wir reden.</p>
-
-    <div class="cards">
-      <div class="card rev">
-        <p class="step">Stufe 1</p>
-        <h3>Vakanzdiagnose</h3>
-        <p class="price">2.500 €<small>einmalig, zwei Wochen, anrechenbar auf die erste Rate</small></p>
-        <ul>
-          <li>Gehaltspaket im Marktvergleich</li>
-          <li>Rollenzuschnitt und Gebietslogik</li>
-          <li>Außendarstellung und Arbeitgeberbewertungen</li>
-          <li>Gespräche zu den Abgangsgründen</li>
-          <li>Schriftlicher Befund, den Sie behalten</li>
-        </ul>
-        <a class="btn btn-ghost" href="/vakanzdiagnose/">Mehr zur Diagnose</a>
-      </div>
-      <div class="card rev rev-d1">
-        <p class="step">Stufe 2</p>
-        <h3>Besetzung</h3>
-        <p class="price">30 %<small>des Zieljahresgehalts, in drei gleichen Raten</small></p>
-        <ul>
-          <li>Briefing per Video, sechzig Minuten</li>
-          <li>Vakanzdiagnose vor der ersten Ansprache</li>
-          <li>Rund 100 gezielte Direktansprachen</li>
-          <li>Drei Profile mit benannten Risiken</li>
-          <li>Wöchentliche Statusmeldung, auch ohne Fortschritt</li>
-          <li>Zwölf Monate Nachbesetzung</li>
-        </ul>
-        <a class="btn" href="/besetzung/">Mehr zur Besetzung</a>
-      </div>
-      <div class="card rev rev-d2">
-        <p class="step">Stufe 3</p>
-        <h3>Einarbeitung</h3>
-        <p class="price">Nach Absprache<small>90 Tage ab dem ersten Arbeitstag</small></p>
-        <ul>
-          <li>Gespräche mit Ihnen und mit dem Neuen, getrennt</li>
-          <li>In Woche 2, 6 und 12 nach Eintritt</li>
-          <li>Schriftliche Rückmeldung nach jedem Gespräch</li>
-          <li>Frühwarnung, wenn die Rolle nicht trägt</li>
-          <li>Buchbar auch nach der Unterschrift</li>
-        </ul>
-        <a class="btn btn-ghost" href="/einarbeitung/">Mehr zur Einarbeitung</a>
-      </div>
-    </div>
-
-    <p class="cta-note" style="margin-top:28px">Zieljahresgehalt ist Fixgehalt plus variable Vergütung bei voller Zielerreichung, ohne Dienstwagen und Sachbezüge. Alle Beträge zuzüglich Umsatzsteuer, Zahlungsziel 14 Tage. Kommt keine Besetzung zustande, entfällt die dritte Rate.</p>
-    </div>
-  </div>
-</section>
 <section id="person" class="raum-gross">
   <div class="wrap about">
     <div class="portrait rev">
@@ -927,7 +937,59 @@
         <li><span>Eigene Führung</span><div>Vertriebsleitung mit Umsatzverantwortung — ich weiß, wen Sie suchen, weil ich diese Leute geführt habe</div></li>
         <li><span>Seit 2024</span><div>Beratung zu Fluktuation und Bindung im Mittelstand — <a href="https://leadsimply.de" target="_blank" rel="noopener">LeadSimply</a></div></li>
       </ul>
-      <p class="presse-zeile rev"><b style="color:var(--ink)">Bekannt aus:</b> Wirtschaftswoche · Der Personalberater Coach (Podcast) · skagil Realtalk (Podcast) · <a href="/presse/">Zur Presseseite</a></p>
+    </div>
+  </div>
+</section>
+<section id="leistungen" class="raum-gross">
+  <div class="wrap">
+    <p class="eyebrow rev">Drei Stufen, offene Preise</p>
+    <h2 class="rev">Sie müssen nicht mit dem großen Mandat anfangen.</h2>
+    <p class="lead rev" style="margin-bottom:40px">Die meisten Beratungen nennen ihr Honorar erst im Gespräch. Hier steht es, damit Sie vorher wissen, worüber wir reden.</p>
+
+    <div class="cards">
+      <div class="card rev">
+        <p class="step">Stufe 1</p>
+        <h3>Vakanzdiagnose</h3>
+        <p class="price">2.500 €<small>einmalig, zwei Wochen, anrechenbar auf die erste Rate</small></p>
+        <ul>
+          <li>Gehaltspaket im Marktvergleich</li>
+          <li>Rollenzuschnitt und Gebietslogik</li>
+          <li>Außendarstellung und Arbeitgeberbewertungen</li>
+          <li>Gespräche zu den Abgangsgründen</li>
+          <li>Schriftlicher Befund, den Sie behalten</li>
+        </ul>
+        <a class="btn btn-ghost" href="/vakanzdiagnose/">Mehr zur Diagnose</a>
+      </div>
+      <div class="card rev rev-d1">
+        <p class="step">Stufe 2</p>
+        <h3>Besetzung</h3>
+        <p class="price">30 %<small>des Zieljahresgehalts, in drei gleichen Raten</small></p>
+        <ul>
+          <li>Briefing per Video, sechzig Minuten</li>
+          <li>Vakanzdiagnose vor der ersten Ansprache</li>
+          <li>Rund 100 gezielte Direktansprachen</li>
+          <li>Drei Profile mit benannten Risiken</li>
+          <li>Wöchentliche Statusmeldung, auch ohne Fortschritt</li>
+          <li>Rückfrage in Woche 2, 6, 12 und 20 nach dem Start</li>
+        </ul>
+        <a class="btn" href="/besetzung/">Mehr zur Besetzung</a>
+      </div>
+      <div class="card rev rev-d2">
+        <p class="step">Stufe 3</p>
+        <h3>Einarbeitung</h3>
+        <p class="price">Nach Absprache<small>90 Tage ab dem ersten Arbeitstag</small></p>
+        <ul>
+          <li>Gespräche mit Ihnen und mit dem Neuen, getrennt</li>
+          <li>In Woche 2, 6 und 12 nach Eintritt</li>
+          <li>Schriftliche Rückmeldung nach jedem Gespräch</li>
+          <li>Frühwarnung, wenn die Rolle nicht trägt</li>
+          <li>Buchbar auch nach der Unterschrift</li>
+        </ul>
+        <a class="btn btn-ghost" href="/einarbeitung/">Mehr zur Einarbeitung</a>
+      </div>
+    </div>
+
+    <p class="cta-note" style="margin-top:28px">Zieljahresgehalt ist Fixgehalt plus variable Vergütung bei voller Zielerreichung, ohne Dienstwagen und Sachbezüge. Alle Beträge zuzüglich Umsatzsteuer, Zahlungsziel 14 Tage. Kommt keine Besetzung zustande, entfällt die dritte Rate.</p>
     </div>
   </div>
 </section>
@@ -955,6 +1017,30 @@
         <li>Was haben Sie bereits versucht?</li>
         <li class="more">… und vier weitere</li>
       </ul>
+    </div>
+  </div>
+</section>
+<section class="raum-eng">
+  <div class="wrap">
+    <p class="eyebrow rev">Was Geschäftsführer vorher wissen wollen</p>
+    <h2 class="rev" style="margin-bottom:36px">Vier Fragen, die in fast jedem Erstgespräch kommen.</h2>
+    <div class="faq rev">
+      <details>
+        <summary>Warum zahle ich schon bei Auftragserteilung und nicht erst bei Erfolg?</summary>
+        <p>Weil reines Erfolgshonorar mich zwingt, viele Mandate gleichzeitig zu bearbeiten und das schnellste zuerst. Ihre Stelle wäre dann eine unter zwölf. Die erste Rate heißt Rechercheauftrag, weil sie eine Leistung bezahlt und keinen Erfolg: Diagnose, Marktrecherche, Zielfirmenliste und die ersten Ansprachen. Diese Wochen sind für Sie unsichtbar und in ihnen entscheidet sich, wer später auf der Shortlist steht. Sie ist ein Drittel des Gesamthonorars, die anderen zwei Drittel hängen weiter am Ergebnis.</p>
+      </details>
+      <details>
+        <summary>Wir suchen ohnehin selbst weiter. Stört das?</summary>
+        <p>Nein. Wenn Sie den Richtigen selbst finden, während das Mandat läuft, ist das der beste Ausgang für Sie. Die dritte Rate entfällt dann. Die erste bleibt, weil acht Wochen Arbeit an Ihrer Stelle stattgefunden haben.</p>
+      </details>
+      <details>
+        <summary>Kennen Sie unsere Branche?</summary>
+        <p>Ich kenne den Vertrieb, und der bricht in fast jeder Branche an denselben Stellen: Gebietszuschnitt, Provisionsmodell, Einarbeitung, Führung. Was an Ihrem Markt besonders ist, also Kunden, Zyklen und wer um dieselben Leute wirbt, erarbeite ich in der Diagnose, bevor die erste Ansprache rausgeht. Wie ich einzelne Märkte lese, zeigen die Seiten zu <a href="/branchen/maschinenbau/">Maschinenbau</a>, <a href="/branchen/logistik/">Logistik</a> und <a href="/branchen/elektrotechnik/">Elektrotechnik</a> sowie zu <a href="/regionen/hamburg/">Hamburg</a>, <a href="/regionen/bremen/">Bremen</a> und <a href="/regionen/hannover/">Hannover</a>.</p>
+      </details>
+      <details>
+        <summary>Wie schnell sehe ich die ersten Kandidaten?</summary>
+        <p>Den Befund bekommen Sie nach zwei Wochen, die Shortlist in Woche 4 bis 6. Schneller geht es, wenn die Diagnose zeigt, dass Paket und Rolle schon stimmen. Langsamer wird es nur, wenn ich Ihnen vorher sagen muss, was sich ändern sollte. Das sage ich Ihnen dann schriftlich und nicht erst nach drei Monaten Suche.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -986,34 +1072,6 @@
   </div>
 </section>
 <section class="raum-eng">
-  <div class="wrap">
-    <p class="eyebrow rev">Was Geschäftsführer vorher wissen wollen</p>
-    <h2 class="rev" style="margin-bottom:36px">Fünf Fragen, die in fast jedem Erstgespräch kommen.</h2>
-    <div class="faq rev">
-      <details>
-        <summary>Warum zahle ich schon bei Auftragserteilung und nicht erst bei Erfolg?</summary>
-        <p>Weil reines Erfolgshonorar mich zwingt, viele Mandate gleichzeitig zu bearbeiten und das schnellste zuerst. Ihre Stelle wäre dann eine unter zwölf. Die erste Rate heißt Rechercheauftrag, weil sie eine Leistung bezahlt und keinen Erfolg: Diagnose, Marktrecherche, Zielfirmenliste und die ersten Ansprachen. Diese Wochen sind für Sie unsichtbar und in ihnen entscheidet sich, wer später auf der Shortlist steht. Sie ist ein Drittel des Gesamthonorars, die anderen zwei Drittel hängen weiter am Ergebnis.</p>
-      </details>
-      <details>
-        <summary>Wir suchen ohnehin selbst weiter. Stört das?</summary>
-        <p>Nein. Wenn Sie den Richtigen selbst finden, während das Mandat läuft, ist das der beste Ausgang für Sie. Die dritte Rate entfällt dann. Die erste bleibt, weil acht Wochen Arbeit an Ihrer Stelle stattgefunden haben.</p>
-      </details>
-      <details>
-        <summary>Was passiert, wenn der Kandidat wieder geht?</summary>
-        <p>Ich sichere zwölf Monate ab dem ersten Arbeitstag ab, unabhängig davon, wer gekündigt hat. In den Monaten 1 bis 6 suche ich ohne weiteres Honorar erneut, in den Monaten 7 bis 12 gegen ein Drittel. Geld zurück gibt es nicht, Sie bekommen stattdessen die Suchleistung noch einmal. Damit es dazu nicht kommt, kläre ich vorher, warum der Vorgänger ging, und frage nach dem Start viermal nach, ob es läuft.</p>
-      </details>
-      <details>
-        <summary>Kennen Sie unsere Branche?</summary>
-        <p>Vermutlich nicht so gut wie Sie — und das ist auch nicht der Punkt. Warum eine Vertriebsstelle offen bleibt, hat in fast jeder Branche dieselben Ursachen: Gebietszuschnitt, Provisionsmodell, Einarbeitung, Führung. Was an Ihrem Markt besonders ist, erarbeite ich in der Diagnose, bevor die Suche beginnt — genau dafür ist sie da. Und wenn ich danach den Eindruck habe, dass ich Ihnen nicht helfen kann, sage ich Ihnen das.</p>
-      </details>
-      <details>
-        <summary>Wie schnell sehe ich die ersten Kandidaten?</summary>
-        <p>Den Befund bekommen Sie nach zwei Wochen, die Shortlist in Woche 4 bis 6. Schneller geht es, wenn die Diagnose zeigt, dass Paket und Rolle schon stimmen. Langsamer wird es nur, wenn ich Ihnen vorher sagen muss, was sich ändern sollte. Das sage ich Ihnen dann schriftlich und nicht erst nach drei Monaten Suche.</p>
-      </details>
-    </div>
-  </div>
-</section>
-<section class="raum-eng">
   <div class="wrap kandidaten-hinweis">
     <p>Sie suchen keine Leute, sondern eine Stelle? Dann sind Sie hier auf der falschen Seite — und einen Klick von der richtigen entfernt: <a href="/kandidaten/">Für Kandidaten</a>. Kein Verteiler, keine Massenmails. Ich melde mich, wenn ein Mandat zu Ihnen passt.</p>
   </div>
@@ -1022,7 +1080,7 @@
   <div class="wrap close-cta">
     <p class="eyebrow rev">Der nächste Schritt</p>
     <h2 class="rev">Sagen Sie mir, welche Stelle offen ist. Den Rest klären wir in zwanzig Minuten.</h2>
-    <p class="lead rev" style="margin-bottom:28px">Kein Formular mit zwölf Feldern, keine Unterlagen. Ein kurzes Gespräch am Telefon oder per Video, in dem Sie schildern, welche Rolle wie lange offen ist und wer zuletzt darauf saß.</p>
+    <p class="lead rev" style="margin-bottom:28px">Ich arbeite an höchstens vier Mandaten gleichzeitig. Ist gerade alles belegt, sage ich Ihnen im Erstgespräch, ab wann ich anfangen kann. Kein Formular mit zwölf Feldern, keine Unterlagen. Ein kurzes Gespräch am Telefon oder per Video, in dem Sie schildern, welche Rolle wie lange offen ist und wer zuletzt darauf saß.</p>
     <div class="cta-row rev rev-d1">
       <a class="btn" id="kalOeffnen" href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Kalender öffnen</a>
       <a class="btn btn-ghost" href="tel:+494064532446">Anrufen: 040 64532446</a>
@@ -1248,7 +1306,7 @@
       "@type": "Offer",
       "name": "Besetzung",
       "priceCurrency": "EUR",
-      "description": "Honorar 30 Prozent des Zieljahresgehalts, fällig in drei gleichen Raten: bei Auftragserteilung, bei Vorlage der Shortlist und bei Vertragsunterschrift. Zwölf Monate Nachbesetzung ab Arbeitsbeginn, gestaffelt: Monat 1 bis 6 ohne weiteres Honorar, Monat 7 bis 12 gegen ein Drittel. Keine Rückerstattung. Die 90-Tage-Begleitung der Einarbeitung ist ein eigenes Paket, Preis nach Absprache."
+      "description": "Honorar 30 Prozent des Zieljahresgehalts, fällig in drei gleichen Raten: bei Auftragserteilung, bei Vorlage der Shortlist und bei Vertragsunterschrift. Kommt keine Besetzung zustande, entfällt die dritte Rate. Die 90-Tage-Begleitung der Einarbeitung ist ein eigenes Paket, Preis nach Absprache."
      },
      {
       "@type": "Offer",
@@ -1303,18 +1361,10 @@
     },
     {
      "@type": "Question",
-     "name": "Was passiert, wenn der Kandidat wieder geht?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Zwölf Monate ab dem ersten Arbeitstag, unabhängig davon, wer gekündigt hat: In den Monaten 1 bis 6 wird ohne weiteres Honorar erneut gesucht, in den Monaten 7 bis 12 gegen ein Drittel. Geld zurück gibt es nicht, stattdessen die Suchleistung noch einmal. Damit es nicht dazu kommt, wird vorher geklärt, warum der Vorgänger ging, und nach dem Start viermal nachgefragt, ob es läuft."
-     }
-    },
-    {
-     "@type": "Question",
      "name": "Kennen Sie unsere Branche?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Warum eine Vertriebsstelle offen bleibt, hat in fast jeder Branche dieselben Ursachen: Gebietszuschnitt, Provisionsmodell, Einarbeitung, Führung. Was am jeweiligen Markt besonders ist, wird in der Vakanzdiagnose erarbeitet, bevor die Suche beginnt."
+      "text": "Ich kenne den Vertrieb, und der bricht in fast jeder Branche an denselben Stellen: Gebietszuschnitt, Provisionsmodell, Einarbeitung, Führung. Was an Ihrem Markt besonders ist, also Kunden, Zyklen und wer um dieselben Leute wirbt, erarbeite ich in der Diagnose, bevor die erste Ansprache rausgeht. Wie ich einzelne Märkte lese, zeigen die Seiten zu Maschinenbau, Logistik und Elektrotechnik sowie zu Hamburg, Bremen und Hannover."
      }
     },
     {
@@ -1354,5 +1404,28 @@
 })();
 </script>
 
+<script>
+/* Zahlen im Kopf zählen einmal hoch, sobald sie sichtbar werden.
+   Im HTML steht immer der Endwert: ohne JavaScript oder bei reduzierter Bewegung bleibt er einfach stehen. */
+(function(){
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!('IntersectionObserver' in window)) return;
+  var els=[].slice.call(document.querySelectorAll('.hero-zahlen b'));
+  els.forEach(function(el){
+    var txt=el.textContent, m=txt.match(/[\d.]+/); if(!m) return;
+    var ziel=parseInt(m[0].replace(/\./g,''),10), vor=txt.slice(0,m.index), nach=txt.slice(m.index+m[0].length);
+    el.dataset.ziel=ziel; el.dataset.vor=vor; el.dataset.nach=nach;
+  });
+  function fmt(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+  function zaehle(el){
+    var ziel=+el.dataset.ziel, t0=null, dauer=1100;
+    function schritt(t){ if(!t0) t0=t; var p=Math.min((t-t0)/dauer,1), e=1-Math.pow(1-p,3);
+      el.textContent=el.dataset.vor+fmt(Math.round(ziel*e))+el.dataset.nach; if(p<1) requestAnimationFrame(schritt); }
+    requestAnimationFrame(schritt);
+  }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ zaehle(e.target); io.unobserve(e.target);} }); },{threshold:.6});
+  els.forEach(function(el){ if(el.dataset.ziel) io.observe(el); });
+})();
+</script>
 </body>
 </html>
