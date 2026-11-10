@@ -174,6 +174,22 @@
   .buchung .kal-slot{margin:0;border-radius:0;max-width:none;border-top:0}
   .buchung .kal-hinweis{padding:14px 28px 20px;border-top:1px solid var(--hair)}
   .buchung .kal-hinweis p{margin:0}
+  /* Buchungskarte einladender (10.11.2026) */
+  .buchung{border-top:4px solid var(--petrol)}
+  .buchung-kopf{background:var(--navy);border-bottom:0;padding:28px 28px 24px}
+  .buchung-kopf h2{color:#fff}
+  .buchung-kopf p{color:var(--on-navy)}
+  .buchung-label{display:flex;align-items:center;gap:8px;font-size:var(--fs-1)!important;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--petrol-lite)!important;margin:0 0 12px!important}
+  .buchung-label .punkt{width:8px;height:8px;border-radius:50%;background:var(--petrol-lite);box-shadow:0 0 0 0 rgba(95,211,196,.6);animation:vkPuls 2.4s ease-out infinite}
+  @keyframes vkPuls{0%{box-shadow:0 0 0 0 rgba(95,211,196,.55)}70%{box-shadow:0 0 0 9px rgba(95,211,196,0)}100%{box-shadow:0 0 0 0 rgba(95,211,196,0)}}
+  @media (prefers-reduced-motion:reduce){.buchung-label .punkt{animation:none}}
+  .buchung-kopf .buchung-daten li{background:transparent;border-color:rgba(231,237,243,.28);color:#fff;padding-left:28px;position:relative}
+  .buchung-kopf .buchung-daten li::before{content:"";position:absolute;left:12px;top:50%;width:6px;height:10px;border:solid var(--petrol-lite);border-width:0 2px 2px 0;transform:translateY(-62%) rotate(45deg)}
+  .buchung-schritte{display:grid;grid-template-columns:repeat(3,1fr);margin:0;padding:14px 20px;list-style:none;background:var(--petrol-wash);border-bottom:1px solid var(--hair);gap:8px}
+  .buchung-schritte li{display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:var(--fs-1);font-weight:600;color:var(--petrol-dark)}
+  .buchung-schritte span{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--petrol);color:#fff;font-size:12px;flex:none}
+  @media (max-width:420px){.buchung-schritte{grid-template-columns:1fr}}
+  .buchung .kal-hinweis .buchung-sicher{color:var(--ink);font-weight:500;margin:0 0 8px}
   .person-mini{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start}
   .person-mini img{display:block;width:120px;height:150px;object-fit:cover}
   .person-mini h3{margin:0 0 4px}
@@ -800,12 +816,19 @@
     </div>
     <div class="buchung rev rev-d1" id="buchung">
       <div class="buchung-kopf">
-        <h2>Termin wählen</h2>
-        <p>Wählen Sie eine Zeit, die Ihnen passt. Sie bekommen sofort eine Bestätigung mit Kalendereintrag.</p>
-        <ul class="buchung-daten"><li>20 Minuten</li><li>Telefon oder Google Meet</li><li>Kostenlos</li><li>Ohne Unterlagen</li></ul>
+        <p class="buchung-label"><span class="punkt" aria-hidden="true"></span>Termine in den nächsten Tagen frei</p>
+        <h2>Ihr Termin mit Stefan Bründl</h2>
+        <p>Tag und Uhrzeit wählen, Name und E-Mail eintragen, fertig. Die Bestätigung mit Kalendereintrag kommt sofort.</p>
+        <ul class="buchung-daten"><li>20 Minuten</li><li>Kostenlos</li><li>Telefon oder Google Meet</li><li>Ohne Unterlagen</li></ul>
       </div>
+      <ol class="buchung-schritte" aria-label="So buchen Sie">
+        <li><span>1</span>Tag wählen</li>
+        <li><span>2</span>Uhrzeit wählen</li>
+        <li><span>3</span>Fertig</li>
+      </ol>
       <div class="kal-slot" id="kalSlot"><div class="tidycal-embed" data-path="stefanbruendl77/erstgespraech"></div></div>
       <div class="buchung-start kal-hinweis">
+        <p class="buchung-sicher">Sie können den Termin jederzeit über den Link in der Bestätigung verschieben oder absagen.</p>
         <p>Der Kalender wird nicht angezeigt? <a href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Hier direkt bei TidyCal buchen</a>. Der Kalender kommt von TidyCal, mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
       </div>
     </div>
