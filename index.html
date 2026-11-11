@@ -83,6 +83,14 @@
 
 
 <style>
+  .maerkte{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  @media (max-width:860px){.maerkte{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:540px){.maerkte{grid-template-columns:1fr}}
+  .maerkte a{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:16px 18px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s;min-width:0}
+  .maerkte a:hover,.maerkte a:focus-visible{border-color:var(--petrol);transform:translateY(-2px)}
+  .maerkte span{font-size:var(--fs-1);letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--petrol)}
+  .maerkte b{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-4);font-weight:600}
+  .maerkte small{font-size:var(--fs-1);color:var(--muted)}
   /* Kopf mit Foto (10.11.2026) */
   .kapazitaet{display:flex;align-items:center;gap:10px;margin:12px 0 0;font-size:var(--fs-2);color:var(--muted)}
   .kapazitaet .punkt{flex:none;width:9px;height:9px;border-radius:50%;background:var(--petrol);box-shadow:0 0 0 0 rgba(14,111,104,.5);animation:vkPunkt 2.6s ease-out infinite}
@@ -161,9 +169,9 @@
     --fs-6:2.125rem;   /* H2 */
     --fs-7:2.875rem;   /* H1 */
     /* Abstandsrhythmus der Abschnitte */
-    --raum-gross:120px;   /* vor einem Themenwechsel */
-    --raum-normal:84px;   /* Standard */
-    --raum-eng:56px;      /* zwischen zusammengehoerenden Abschnitten */
+    --raum-gross:72px;   /* vor einem Themenwechsel */
+    --raum-normal:52px;   /* Standard */
+    --raum-eng:28px;      /* zwischen zusammengehoerenden Abschnitten */
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -223,7 +231,7 @@
   .raum-eng{padding-top:var(--raum-eng)}
   /* Auf dem Telefon zwei Drittel */
   @media (max-width:620px){
-    :root{--raum-gross:80px;--raum-normal:56px;--raum-eng:37px}
+    :root{--raum-gross:48px;--raum-normal:36px;--raum-eng:20px}
   }
   .band-navy{background:var(--navy);color:var(--on-navy);border-bottom:0}
   .band-navy h2{color:#fff}
@@ -1021,6 +1029,22 @@
     </div>
   </div>
 </section>
+<section id="maerkte" class="raum-eng">
+  <div class="wrap">
+    <p class="eyebrow rev">Branchen und Regionen</p>
+    <h2 class="rev">Wie ich Ihren Markt lese.</h2>
+    <p class="lead rev" style="margin-bottom:26px">Jeder Markt hat eigene Zyklen, eigene Kunden und eigene Gründe, warum Vertriebler gehen. Hier steht, was ich über die wichtigsten weiß, mit aktuellen Zahlen aus der Jobbörse der Bundesagentur.</p>
+    <div class="maerkte rev">
+      <a href="/branchen/maschinenbau/"><span>Branche</span><b>Maschinenbau</b><small>1.913 offene Vertriebsstellen · 76 % über vier Wochen online</small></a>
+      <a href="/branchen/logistik/"><span>Branche</span><b>Logistik und Spedition</b><small>324 offene Vertriebsstellen · 75 % über vier Wochen online</small></a>
+      <a href="/branchen/elektrotechnik/"><span>Branche</span><b>Elektrotechnik und Automatisierung</b><small>897 offene Vertriebsstellen · 73 % über vier Wochen online</small></a>
+      <a href="/regionen/hamburg/"><span>Region</span><b>Hamburg und der Norden</b><small>1.093 offene Vertriebsstellen im Umkreis von 50 km</small></a>
+      <a href="/regionen/bremen/"><span>Region</span><b>Bremen</b><small>625 offene Vertriebsstellen im Umkreis von 50 km</small></a>
+      <a href="/regionen/hannover/"><span>Region</span><b>Hannover</b><small>755 offene Vertriebsstellen im Umkreis von 50 km</small></a>
+    </div>
+    <p class="cta-note" style="margin-top:14px">Stand 10. November 2026, ohne Zeitarbeit und private Vermittler.</p>
+  </div>
+</section>
 <section class="raum-eng">
   <div class="wrap">
     <p class="eyebrow rev">Was Geschäftsführer vorher wissen wollen</p>
@@ -1117,6 +1141,10 @@
       <a href="https://www.linkedin.com/company/vertriebskoepfe/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://leadsimply.de" target="_blank" rel="noopener">LeadSimply</a>
     </div>
+  </div>
+  <div class="wrap" style="padding-top:22px;margin-top:22px;border-top:1px solid rgba(231,237,243,.14);font-size:var(--fs-1);line-height:2">
+    <span style="color:var(--on-navy-mute);margin-right:14px">Branchen</span><a href="/branchen/maschinenbau/">Maschinenbau</a><a href="/branchen/logistik/">Logistik</a><a href="/branchen/elektrotechnik/">Elektrotechnik</a>
+    <span style="color:var(--on-navy-mute);margin:0 14px 0 8px">Regionen</span><a href="/regionen/hamburg/">Hamburg</a><a href="/regionen/bremen/">Bremen</a><a href="/regionen/hannover/">Hannover</a>
   </div>
 </footer>
 

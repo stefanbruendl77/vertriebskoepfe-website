@@ -268,9 +268,9 @@
     --fs-6:2.125rem;   /* H2 */
     --fs-7:2.875rem;   /* H1 */
     /* Abstandsrhythmus der Abschnitte */
-    --raum-gross:120px;   /* vor einem Themenwechsel */
-    --raum-normal:84px;   /* Standard */
-    --raum-eng:56px;      /* zwischen zusammengehoerenden Abschnitten */
+    --raum-gross:72px;   /* vor einem Themenwechsel */
+    --raum-normal:52px;   /* Standard */
+    --raum-eng:28px;      /* zwischen zusammengehoerenden Abschnitten */
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -330,7 +330,7 @@
   .raum-eng{padding-top:var(--raum-eng)}
   /* Auf dem Telefon zwei Drittel */
   @media (max-width:620px){
-    :root{--raum-gross:80px;--raum-normal:56px;--raum-eng:37px}
+    :root{--raum-gross:48px;--raum-normal:36px;--raum-eng:20px}
   }
   .band-navy{background:var(--navy);color:var(--on-navy);border-bottom:0}
   .band-navy h2{color:#fff}
@@ -915,6 +915,10 @@
       <a href="https://www.linkedin.com/company/vertriebskoepfe/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://leadsimply.de" target="_blank" rel="noopener">LeadSimply</a>
     </div>
+  </div>
+  <div class="wrap" style="padding-top:22px;margin-top:22px;border-top:1px solid rgba(231,237,243,.14);font-size:var(--fs-1);line-height:2">
+    <span style="color:var(--on-navy-mute);margin-right:14px">Branchen</span><a href="/branchen/maschinenbau/">Maschinenbau</a><a href="/branchen/logistik/">Logistik</a><a href="/branchen/elektrotechnik/">Elektrotechnik</a>
+    <span style="color:var(--on-navy-mute);margin:0 14px 0 8px">Regionen</span><a href="/regionen/hamburg/">Hamburg</a><a href="/regionen/bremen/">Bremen</a><a href="/regionen/hannover/">Hannover</a>
   </div>
 </footer>
 
