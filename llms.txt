@@ -76,7 +76,7 @@ LinkedIn: https://www.linkedin.com/in/stefan-bruendl
 - https://vertriebskoepfe.de/besetzungscheck/ — kostenloser Selbsttest mit
   neun Fragen; Punktzahl und Befunde, ohne Datenübertragung
 - https://vertriebskoepfe.de/kandidaten/ — Kandidatenpool für Vertriebsrollen
-- https://vertriebskoepfe.de/downloads/ — Vakanzrechner und Arbeitsblatt zur Vakanzrechnung (PDF)
+- https://vertriebskoepfe.de/downloads/ — Vakanzrechner, Arbeitsblatt zur Vakanzrechnung (PDF) und Scorecard für Vertriebspositionen (PDF)
 - https://vertriebskoepfe.de/presse/ — Kurzprofile, Themen, Auftritte, Bildmaterial
 - https://vertriebskoepfe.de/wissen/ — Fachbeiträge zur offenen Vertriebsstelle
 - https://vertriebskoepfe.de/wissen/was-kostet-eine-unbesetzte-vertriebsstelle/ — Kosten einer Vakanz im Vertrieb: Formel, Rechenbeispiel, Faktoren außerhalb der Rechnung
