@@ -137,6 +137,12 @@
   .belege span{font-size:var(--fs-2);color:var(--muted)}
   .nutzen{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
   .nutzen li{border-top:2px solid var(--petrol);padding-top:14px}
+  .sicher{margin-top:32px;padding:24px 28px;background:var(--petrol-wash);border-left:3px solid var(--petrol);border-radius:10px}
+  .sicher h3{margin:0 0 14px}
+  .sicher ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px}
+  .sicher li{position:relative;padding-left:26px}
+  .sicher li::before{content:"\2713";position:absolute;left:0;top:0;font-weight:700;color:var(--petrol)}
+  @media (max-width:720px){.sicher{padding:20px}.sicher ul{grid-template-columns:1fr}}
   .nutzen h3{margin:0 0 6px}
   .nutzen p{margin:0;color:var(--muted)}
   .presse-zeile{margin-top:22px;font-size:var(--fs-2);color:var(--muted)}
@@ -809,7 +815,7 @@
       <li><h3>Keine Stapel Lebensläufe</h3><p>Sie sehen drei Profile. Mit jedem Kandidaten habe ich vorher selbst gesprochen, mit Einwänden statt Fragebogen.</p></li>
       <li><h3>Ihr Vertrieb bleibt beim Kunden</h3><p>Ansprache, Vorauswahl und Terminabstimmung laufen über mich. Ihre Leute verkaufen weiter.</p></li>
       <li><h3>Sie wissen vorher, ob es klappt</h3><p>Nach zwei Wochen sagt Ihnen die Diagnose, ob die Stelle zu Ihren Bedingungen besetzbar ist. Auch wenn die Antwort nein lautet.</p></li>
-      <li><h3>Jemand, der Vertrieb versteht</h3><p>Ich habe selbst Vertrieb geführt. Im Gespräch erkenne ich, ob jemand verkauft oder nur gut erzählt.</p></li>
+      <li><h3>Jemand, der Vertrieb versteht</h3><p>Ich habe selbst Vertriebsteams geführt. Ich prüfe, wie jemand mit Einwänden umgeht, nicht wie gut sein Lebenslauf klingt.</p></li>
     </ul>
   </div>
 </section>
@@ -855,7 +861,7 @@
     </div>
     <h3 style="margin:44px 0 14px">Was die Diagnose prüft</h3>
     <ol class="diagnose rev">
-      <li>Fünfundvierzig Minuten mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle: wie oft sie in fünf Jahren besetzt war, wer jeweils gekündigt hat und was der genannte Grund war.</li>
+      <li>45 bis 60 Minuten mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle: wie oft sie in fünf Jahren besetzt war, wer jeweils gekündigt hat und was der genannte Grund war.</li>
       <li>Anrufe bei fünf passenden Vertrieblern aus Ihrem Umkreis: was sie von Ihrer Stelle halten und was stimmen müsste, damit sie wechseln. Diese Antwort bekommen Sie von niemandem sonst.</li>
       <li>Ihr Gehaltspaket gegen das, was Bewerber in dieser Rolle gerade verlangen. Aus echten Gesprächen, nicht aus einer Tabelle.</li>
       <li>Ihre Außenwirkung, gelesen wie ein Kandidat sie liest: Anzeige, Karriereseite, Bewertungen. Auch wenn der Eindruck unangenehm ist.</li>
@@ -873,7 +879,7 @@
       <li>
         <span class="zs-wo">Woche 1</span>
         <h3>Briefing</h3>
-        <p>Sechzig Minuten per Video mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle.</p>
+        <p>45 bis 60 Minuten per Video mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle.</p>
         <p class="zs-liefer"><b>Sie bekommen</b>Mindestanforderungen und Zieljahresgehalt in Textform, von beiden Seiten bestätigt.</p>
       </li>
       <li>
@@ -973,7 +979,7 @@
         <h3>Besetzung</h3>
         <p class="price">30 %<small>des Zieljahresgehalts, in drei gleichen Raten</small></p>
         <ul>
-          <li>Briefing per Video, sechzig Minuten</li>
+          <li>Briefing per Video, 45 bis 60 Minuten</li>
           <li>Vakanzdiagnose vor der ersten Ansprache</li>
           <li>Rund 100 gezielte Direktansprachen</li>
           <li>Drei Profile mit benannten Risiken</li>
@@ -997,7 +1003,17 @@
       </div>
     </div>
 
-    <p class="cta-note" style="margin-top:28px">Zieljahresgehalt ist Fixgehalt plus variable Vergütung bei voller Zielerreichung, ohne Dienstwagen und Sachbezüge. Alle Beträge zuzüglich Umsatzsteuer, Zahlungsziel 14 Tage. Kommt keine Besetzung zustande, entfällt die dritte Rate.</p>
+    <aside class="sicher" aria-labelledby="sicher-titel">
+      <h3 id="sicher-titel">Was Sie in jedem Fall bekommen</h3>
+      <ul>
+        <li>Die 2.500 € für die Diagnose werden voll auf die erste Rate angerechnet.</li>
+        <li>Jede Woche eine Statusmeldung, auch in ruhigen Wochen.</li>
+        <li>Einen schriftlichen Marktbefund mit Empfehlung, falls es weniger als drei passende Profile gibt.</li>
+        <li>Die dritte Rate zahlen Sie nur, wenn die Stelle besetzt wird.</li>
+      </ul>
+    </aside>
+
+    <p class="cta-note" style="margin-top:28px">Zieljahresgehalt ist Fixgehalt plus variable Vergütung bei voller Zielerreichung, ohne Dienstwagen und Sachbezüge. Alle Beträge zuzüglich Umsatzsteuer, Zahlungsziel 14 Tage.</p>
     </div>
   </div>
 </section>
@@ -1051,7 +1067,7 @@
     <div class="faq rev">
       <details>
         <summary>Warum zahle ich schon bei Auftragserteilung und nicht erst bei Erfolg?</summary>
-        <p>Weil reines Erfolgshonorar mich zwingt, viele Mandate gleichzeitig zu bearbeiten und das schnellste zuerst. Ihre Stelle wäre dann eine unter zwölf. Die erste Rate heißt Rechercheauftrag, weil sie eine Leistung bezahlt und keinen Erfolg: Diagnose, Marktrecherche, Zielfirmenliste und die ersten Ansprachen. Diese Wochen sind für Sie unsichtbar und in ihnen entscheidet sich, wer später auf der Shortlist steht. Sie ist ein Drittel des Gesamthonorars, die anderen zwei Drittel hängen weiter am Ergebnis.</p>
+        <p>Weil reines Erfolgshonorar mich zwingt, viele Mandate gleichzeitig zu bearbeiten und das schnellste zuerst. Ihre Stelle wäre dann eine von vielen. Die erste Rate heißt Rechercheauftrag, weil sie eine Leistung bezahlt und keinen Erfolg: Diagnose, Marktrecherche, Zielfirmenliste und die ersten Ansprachen. Diese Wochen sind für Sie unsichtbar und in ihnen entscheidet sich, wer später auf der Shortlist steht. Sie ist ein Drittel des Gesamthonorars, die anderen zwei Drittel hängen weiter am Ergebnis.</p>
       </details>
       <details>
         <summary>Wir suchen ohnehin selbst weiter. Stört das?</summary>
@@ -1092,7 +1108,7 @@
         <span class="wkh-link">Newsletter abonnieren →</span>
       </a>
     </div>
-    <p class="cta-note rev" style="margin-top:22px"><a href="/wissen/was-kostet-ein-personalberater-fuer-den-vertrieb/">Was kostet ein Personalberater für den Vertrieb?</a> · <a href="/wissen/key-account-manager-finden/">Key Account Manager finden</a> · <a href="/wissen/">Alle Beiträge im Wissensbereich</a> · <a href="/besetzungscheck/">Besetzungscheck: Wie besetzbar ist Ihre Stelle?</a></p>
+    <p class="cta-note rev" style="margin-top:22px">Headhunter für <a href="/vertriebsleiter/">Vertriebsleiter</a>, <a href="/key-account-manager/">Key Account Manager</a> und <a href="/gebietsverkaufsleiter/">Gebietsverkaufsleiter</a> · <a href="/wissen/was-kostet-ein-personalberater-fuer-den-vertrieb/">Was kostet ein Personalberater für den Vertrieb?</a> · <a href="/wissen/key-account-manager-finden/">Key Account Manager finden</a> · <a href="/wissen/">Alle Beiträge im Wissensbereich</a> · <a href="/besetzungscheck/">Besetzungscheck: Wie besetzbar ist Ihre Stelle?</a></p>
   </div>
 </section>
 <section class="raum-eng">
@@ -1142,7 +1158,8 @@
     </div>
   </div>
   <div class="wrap" style="padding-top:22px;margin-top:22px;border-top:1px solid rgba(231,237,243,.14);font-size:var(--fs-1);line-height:2">
-    <span style="color:var(--on-navy-mute);margin-right:14px">Branchen</span><a href="/branchen/maschinenbau/">Maschinenbau</a><a href="/branchen/logistik/">Logistik</a><a href="/branchen/elektrotechnik/">Elektrotechnik</a>
+    <span style="color:var(--on-navy-mute);margin-right:14px">Rollen</span><a href="/vertriebsleiter/">Vertriebsleiter</a><a href="/key-account-manager/">Key Account Manager</a><a href="/gebietsverkaufsleiter/">Gebietsverkaufsleiter</a>
+    <span style="color:var(--on-navy-mute);margin:0 14px 0 8px">Branchen</span><a href="/branchen/maschinenbau/">Maschinenbau</a><a href="/branchen/logistik/">Logistik</a><a href="/branchen/elektrotechnik/">Elektrotechnik</a>
     <span style="color:var(--on-navy-mute);margin:0 14px 0 8px">Regionen</span><a href="/regionen/hamburg/">Hamburg</a><a href="/regionen/bremen/">Bremen</a><a href="/regionen/hannover/">Hannover</a>
   </div>
 </footer>

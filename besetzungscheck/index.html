@@ -722,10 +722,10 @@
         <p id="ctaText">—</p>
         <div class="cta-row">
           <a class="btn" href="/erstgespraech/">Erstgespräch vereinbaren</a>
-          <a class="btn btn-ghost" id="ctaMail" href="mailto:stefan.bruendl@vertriebskoepfe.de">Ergebnis per Mail senden</a>
+          <a class="btn btn-ghost" id="ctaMail" href="mailto:stefan.bruendl@vertriebskoepfe.de">Kostenlose Einschätzung anfordern</a>
           <a class="btn btn-ghost" href="tel:+494064532446">Kurz durchsprechen: 040 64532446</a>
         </div>
-        <p class="cta-note" style="margin:16px 0 0">Die Mail öffnet sich in Ihrem Mailprogramm und enthält dieses Ergebnis und Ihre Antworten. Abgeschickt wird sie erst von Ihnen. · <button type="button" class="linkbtn" id="ctaPrint">Ergebnis drucken oder als PDF sichern</button></p>
+        <p class="cta-note" style="margin:16px 0 0"><b>So funktioniert die Einschätzung:</b> Sie schicken mir Ihr Ergebnis per Mail. Ich sehe es mir persönlich an und antworte innerhalb eines Werktags mit zwei, drei Hinweisen zu Ihrer Stelle. Kostenlos und ohne Verpflichtung zu einem Folgetermin. Die Mail öffnet sich in Ihrem Mailprogramm und ist schon ausgefüllt. Abgeschickt wird sie erst von Ihnen. · <button type="button" class="linkbtn" id="ctaPrint">Ergebnis drucken oder als PDF sichern</button></p>
       </div>
     </div>
   </div>
@@ -767,7 +767,8 @@
     </div>
   </div>
   <div class="wrap" style="padding-top:22px;margin-top:22px;border-top:1px solid rgba(231,237,243,.14);font-size:var(--fs-1);line-height:2">
-    <span style="color:var(--on-navy-mute);margin-right:14px">Branchen</span><a href="/branchen/maschinenbau/">Maschinenbau</a><a href="/branchen/logistik/">Logistik</a><a href="/branchen/elektrotechnik/">Elektrotechnik</a>
+    <span style="color:var(--on-navy-mute);margin-right:14px">Rollen</span><a href="/vertriebsleiter/">Vertriebsleiter</a><a href="/key-account-manager/">Key Account Manager</a><a href="/gebietsverkaufsleiter/">Gebietsverkaufsleiter</a>
+    <span style="color:var(--on-navy-mute);margin:0 14px 0 8px">Branchen</span><a href="/branchen/maschinenbau/">Maschinenbau</a><a href="/branchen/logistik/">Logistik</a><a href="/branchen/elektrotechnik/">Elektrotechnik</a>
     <span style="color:var(--on-navy-mute);margin:0 14px 0 8px">Regionen</span><a href="/regionen/hamburg/">Hamburg</a><a href="/regionen/bremen/">Bremen</a><a href="/regionen/hannover/">Hannover</a>
   </div>
 </footer>
@@ -938,7 +939,9 @@
   // Mailentwurf: nichts wird gesendet, nur vorbereitet
   function mailEntwurf(r, stufe, cta){
     var z = [];
-    z.push('Ergebnis meines Besetzungschecks auf vertriebskoepfe.de');
+    z.push('Guten Tag Herr Br\u00fcndl,');
+    z.push('');
+    z.push('ich bitte um Ihre kostenlose Einsch\u00e4tzung zu meinem Besetzungscheck auf vertriebskoepfe.de.');
     z.push('');
     z.push('Punktzahl: ' + r.score + ' von 100');
     z.push('Urteil: ' + stufe.l);
@@ -957,7 +960,7 @@
     z.push('');
     z.push('Anmerkung:');
     return 'mailto:stefan.bruendl@vertriebskoepfe.de'
-      + '?subject=' + encodeURIComponent(cta.betreff + ' \u2014 Besetzungscheck ' + r.score + '/100')
+      + '?subject=' + encodeURIComponent('Bitte um Einsch\u00e4tzung \u2014 Besetzungscheck ' + r.score + '/100')
       + '&body=' + encodeURIComponent(z.join('\r\n'));
   }
 
