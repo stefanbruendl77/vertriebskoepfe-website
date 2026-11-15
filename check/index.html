@@ -595,17 +595,12 @@
       <fieldset class="q">
         <legend>1 · Um welche Rolle geht es?</legend>
         <div class="opts">
-          <label class="opt"><input type="radio" name="rolle" value="innen"><span>Vertriebsinnendienst</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="aussen"><span>Außendienst / Area Sales</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="technik"><span>Technischer Vertrieb / Sales Engineer</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="gebiet"><span>Gebietsverkaufsleitung</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="leitung"><span>Vertriebsleitung / Head of Sales</span></label>
           <label class="opt"><input type="radio" name="rolle" value="kam" checked><span>Key Account Management</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="skam"><span>Senior / Strategic KAM</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="bizdev"><span>Business Development</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="export"><span>Export / International Sales</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="leitung"><span>Vertriebsleitung</span></label>
-          <label class="opt"><input type="radio" name="rolle" value="head"><span>Head of Sales / Vertriebsdirektor</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="gebiet"><span>Gebietsverkaufsleitung / Regionalverkaufsleitung</span></label>
+          <label class="opt"><input type="radio" name="rolle" value="andere"><span>Eine andere Vertriebsrolle</span></label>
         </div>
+        <p id="rolleHinweis" hidden style="margin:12px 0 0;color:var(--muted,#5C6B7E);max-width:62ch">Ich besetze Vertriebsleitung, Key Account Management und Gebietsverkaufsleitung. Den Check können Sie trotzdem machen, die Fragen gelten für jede Vertriebsstelle. Bei anderen Rollen sage ich Ihnen lieber gleich, dass ich vermutlich nicht der Richtige bin.</p>
       </fieldset>
 
       <fieldset class="q">
@@ -814,17 +809,18 @@
 
   // Gehaltsbaender: 0 <45 | 1 45-55 | 2 55-65 | 3 65-75 | 4 75-90 | 5 90-110 | 6 110-130 | 7 130-160 | 8 >160 (Tsd. EUR OTE)
   var ROLLE = {
-    innen:   {min:1, name:'den Vertriebsinnendienst', variabel:false},
-    aussen:  {min:3, name:'den Außendienst',          variabel:true},
-    technik: {min:3, name:'den technischen Vertrieb', variabel:true},
-    gebiet:  {min:4, name:'eine Gebietsverkaufsleitung', variabel:true},
-    kam:     {min:4, name:'das Key Account Management', variabel:true},
-    skam:    {min:5, name:'ein Senior Key Account Management', variabel:true},
-    bizdev:  {min:4, name:'Business Development',      variabel:true},
-    export:  {min:4, name:'den Export-/Auslandsvertrieb', variabel:true},
     leitung: {min:5, name:'eine Vertriebsleitung',     variabel:true},
-    head:    {min:6, name:'eine Vertriebsdirektion',   variabel:true}
+    kam:     {min:4, name:'das Key Account Management', variabel:true},
+    gebiet:  {min:4, name:'eine Gebietsverkaufsleitung', variabel:true},
+    andere:  {min:3, name:'diese Vertriebsrolle',      variabel:true}
   };
+  // Hinweis bei "Eine andere Vertriebsrolle"
+  (function(){
+    var h = document.getElementById('rolleHinweis');
+    if(!h) return;
+    function z(){ h.hidden = val('rolle') !== 'andere'; }
+    form.addEventListener('change', z); z();
+  })();
 
   function val(name){
     var el = form.querySelector('input[name="'+name+'"]:checked');
