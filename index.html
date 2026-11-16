@@ -707,6 +707,18 @@
   .rev.in{opacity:1;transform:none}
   /* Der erste Bildschirm blendet nicht ein: er steht sofort. */
   .hero .rev{opacity:1;transform:none;transition:none}
+  /* Gestaffelt: Kinder kommen nacheinander, 80 ms Abstand, einmal */
+  .rev.rev-kids{opacity:1;transform:none}
+  .rev-kids > *{opacity:0;transform:translateY(14px);transition:opacity .35s ease-out,transform .35s ease-out}
+  .rev-kids.in > *{opacity:1;transform:none}
+  .rev-kids.in > *:nth-child(2){transition-delay:.08s}
+  .rev-kids.in > *:nth-child(3){transition-delay:.16s}
+  .rev-kids.in > *:nth-child(4){transition-delay:.24s}
+  .rev-kids.in > *:nth-child(5){transition-delay:.32s}
+  .rev-kids.in > *:nth-child(n+6){transition-delay:.4s}
+  .hero-presse a.presse-wiwo{margin-left:0;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:var(--fs-3);letter-spacing:0;text-transform:none;font-weight:600;color:var(--ink);opacity:.75;text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:4px}
+  .hero-presse a.presse-wiwo:hover{opacity:1;text-decoration-color:var(--petrol)}
+  @media (prefers-reduced-motion: reduce){.rev-kids > *{opacity:1;transform:none;transition:none}}
   .rev-d1{transition-delay:.08s}
   .rev-d2{transition-delay:.16s}
   @media (prefers-reduced-motion: reduce){
@@ -806,7 +818,7 @@
       <li><b>69&#8239;%</b><span><strong>der Vertriebsstellen sind länger als vier Wochen online</strong>Von rund 22.000 offenen Vertriebsstellen in der Jobbörse der Bundesagentur für Arbeit, Stand November 2026.</span></li>
       <li><b>100.000&#8239;€</b><span><strong>Umsatz im Monat bearbeitet keiner</strong>Beispiel: ein Vertriebler mit 1,2 Mio. € Jahresumsatz, dessen Stelle offen ist. <a href="#rechnung">Mit Ihren Zahlen rechnen →</a></span></li>
     </ul>
-    <p class="hero-presse">Bekannt aus <span>Wirtschaftswoche</span> <span>Der Personalberater Coach</span> <span>skagil Realtalk</span> <a href="/presse/">Presse →</a></p>
+    <p class="hero-presse">Bekannt aus <a class="presse-wiwo" href="https://www.wiwo.de/erfolg/management/mittelmanagement-viel-druck-kaum-anerkennung-das-dilemma-der-mittelmanager/30203962.html" target="_blank" rel="noopener">WirtschaftsWoche</a> <span>Der Personalberater Coach</span> <span>skagil Realtalk</span> <a href="/presse/">Presse →</a></p>
   </div>
 </section>
 <section class="raum-eng">
@@ -814,7 +826,7 @@
     
     <p class="eyebrow rev">Was Sie davon haben</p>
     <h2 class="rev">Sie entscheiden zwischen drei Menschen. Den Rest mache ich.</h2>
-    <ul class="nutzen">
+    <ul class="nutzen rev rev-kids">
       <li><h3>Keine Stapel Lebensläufe</h3><p>Sie sehen drei Profile. Mit jedem Kandidaten habe ich vorher selbst gesprochen, mit Einwänden statt Fragebogen.</p></li>
       <li><h3>Kein Recruiting neben dem Tagesgeschäft</h3><p>Ansprache, Vorauswahl und Terminabstimmung laufen über mich. Sie und Ihr Team verkaufen weiter.</p></li>
       <li><h3>Sie wissen vorher, ob es klappt</h3><p>Nach zwei Wochen sagt Ihnen die Diagnose, ob die Stelle zu Ihren Bedingungen besetzbar ist. Auch wenn die Antwort nein lautet.</p></li>
@@ -840,7 +852,7 @@
       </div>
       <div class="calc-out">
         <span class="big" id="ergebnis">500.000 €</span>
-        <p>Umsatz, der in dieser Zeit nicht bearbeitet wird. Bei 20 % Deckungsbeitrag entspricht das <b id="db" style="color:#fff">100.000 €</b> — dem Sechsfachen eines vollständigen Suchmandats.</p>
+        <p>Umsatz, der in dieser Zeit nicht bearbeitet wird. Bei 20 % Deckungsbeitrag entspricht das <b id="db" style="color:#fff">100.000 €</b>. Zum Vergleich: Ein vollständiges Suchmandat kostet bei 60.000 € Zieljahresgehalt 18.000 €.</p>
       </div>
     </div>
     <p class="cta-note">Grobe Näherung, kein Gutachten. Die genaue Zahl für Ihr Gebiet rechne ich mit Ihnen im Erstgespräch.</p>
@@ -863,7 +875,7 @@
       </div>
     </div>
     <h3 style="margin:44px 0 14px">Was die Diagnose prüft</h3>
-    <ol class="diagnose rev">
+    <ol class="diagnose rev rev-kids">
       <li>45 bis 60 Minuten mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle: wie oft sie in fünf Jahren besetzt war, wer jeweils gekündigt hat und was der genannte Grund war.</li>
       <li>Anrufe bei fünf passenden Vertrieblern aus Ihrem Umkreis: was sie von Ihrer Stelle halten und was stimmen müsste, damit sie wechseln. Diese Antwort bekommen Sie von niemandem sonst.</li>
       <li>Ihr Gehaltspaket gegen das, was Bewerber in dieser Rolle gerade verlangen. Aus echten Gesprächen, nicht aus einer Tabelle.</li>
@@ -878,11 +890,11 @@
     <h2 class="rev">Acht Wochen, fünf Stationen, jede mit einer Lieferung.</h2>
     <p class="lead rev">Das Honorar bezahlt eine Suchleistung, nicht nur ein Ergebnis. Hier steht, was in welcher Woche passiert und was davon bei Ihnen ankommt.</p>
 
-    <ol class="zeitstrahl rev">
+    <ol class="zeitstrahl rev rev-kids">
       <li>
         <span class="zs-wo">Woche 1</span>
         <h3>Briefing</h3>
-        <p>45 bis 60 Minuten per Video mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle.</p>
+        <p>45 bis 60 Minuten per Video mit Ihnen und der Person, an die berichtet wird.</p>
         <p class="zs-liefer"><b>Sie bekommen</b>Mindestanforderungen und Zieljahresgehalt in Textform, von beiden Seiten bestätigt.</p>
       </li>
       <li>
@@ -912,8 +924,6 @@
     </ol>
 
     <p class="cta-note" style="margin-top:30px"><b style="color:var(--ink)">Alles läuft per Video und Telefon.</b> Kein Anfahrtstag, keine Reisekosten im Honorar und Termine lassen sich innerhalb von Tagen ansetzen statt innerhalb von Wochen. Wenn Sie mich trotzdem im Haus haben wollen, sagen Sie es, dann kommen wir zusammen.</p>
-
-    <p class="cta-note" style="margin-top:14px">Ergibt die Recherche weniger als drei passende Profile, bekommen Sie statt der Shortlist einen schriftlichen Marktbefund mit den gefundenen Profilen und einer Empfehlung, wie das Anforderungsprofil anzupassen wäre. Das ist kein Ausweichen. Es sagt Ihnen, dass die Stelle so nicht besetzbar ist, bevor Sie ein halbes Jahr darauf warten.</p>
   </div>
 </section>
 
@@ -1052,7 +1062,7 @@
     <p class="eyebrow rev">Branchen und Regionen</p>
     <h2 class="rev">Wie ich Ihren Markt lese.</h2>
     <p class="lead rev" style="margin-bottom:26px">Jeder Markt hat eigene Zyklen, eigene Kunden und eigene Gründe, warum Vertriebler gehen. Hier steht, was ich über die wichtigsten weiß, mit aktuellen Zahlen aus der Jobbörse der Bundesagentur.</p>
-    <div class="maerkte rev">
+    <div class="maerkte rev rev-kids">
       <a href="/branchen/maschinenbau/"><span>Branche</span><b>Maschinenbau</b><small>1.913 offene Vertriebsstellen · 76 % über vier Wochen online</small></a>
       <a href="/branchen/logistik/"><span>Branche</span><b>Logistik und Spedition</b><small>324 offene Vertriebsstellen · 75 % über vier Wochen online</small></a>
       <a href="/branchen/elektrotechnik/"><span>Branche</span><b>Elektrotechnik und Automatisierung</b><small>897 offene Vertriebsstellen · 73 % über vier Wochen online</small></a>
@@ -1187,7 +1197,9 @@
     }
   });
 
+  var feuerte = false;
   var io = new IntersectionObserver(function(entries){
+    feuerte = true;
     entries.forEach(function(e){
       if(e.isIntersecting){ zeigen(e.target); io.unobserve(e.target); }
     });
@@ -1195,7 +1207,7 @@
   els.forEach(function(el){ io.observe(el); });
 
   // Notbremse nach 1,2 s: alles, was dann noch unsichtbar ist, wird gezeigt.
-  setTimeout(alleZeigen, 1200);
+  setTimeout(function(){ if(!feuerte) alleZeigen(); }, 1200);
 })();
 
 (function(){
