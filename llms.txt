@@ -70,9 +70,13 @@ LinkedIn: https://www.linkedin.com/in/stefan-bruendl
 - https://vertriebskoepfe.de/branchen/maschinenbau/ — Vertrieb im Maschinenbau: Marktzahlen, Eigenheiten, Interviewfragen
 - https://vertriebskoepfe.de/branchen/logistik/ — Vertrieb in Logistik und Spedition
 - https://vertriebskoepfe.de/branchen/elektrotechnik/ — Vertrieb in Elektrotechnik und Automatisierung
+- https://vertriebskoepfe.de/branchen/sanitaer-heizung-klima/ — Vertrieb in Sanitär, Heizung, Klima: dreistufiger Vertriebsweg, Wärmepumpe, Interviewfragen
+- https://vertriebskoepfe.de/branchen/baustoffe/ — Vertrieb bei Baustoffherstellern und im Baustoff-Fachhandel
 - https://vertriebskoepfe.de/regionen/hamburg/ — Personalberatung Vertrieb Hamburg
 - https://vertriebskoepfe.de/regionen/bremen/ — Personalberatung Vertrieb Bremen
 - https://vertriebskoepfe.de/regionen/hannover/ — Personalberatung Vertrieb Hannover
+- https://vertriebskoepfe.de/regionen/osnabrueck/ — Personalberatung Vertrieb Osnabrück
+- https://vertriebskoepfe.de/regionen/oldenburg/ — Personalberatung Vertrieb Oldenburg
 - https://vertriebskoepfe.de/besetzungscheck/ — kostenloser Selbsttest mit
   neun Fragen; Punktzahl und Befunde, ohne Datenübertragung
 - https://vertriebskoepfe.de/kandidaten/ — Kandidatenpool für Vertriebsrollen
