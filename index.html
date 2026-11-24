@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vertriebsköpfe · Vertriebler, die sich rechnen</title>
-<meta name="description" content="Personalberatung für den Vertrieb im Mittelstand: Key Account Manager, Gebiets- und Vertriebsleiter, die Umsatz bringen. Offene Preise.">
+<meta name="description" content="Personalberatung für den Vertrieb aus Hamburg: Key Account Manager, Gebiets- und Vertriebsleiter, die Umsatz bringen. Offene Preise, Diagnose vor der Suche.">
 <link rel="preload" as="image" href="/img/stefan-bruendl-800.webp" type="image/webp" fetchpriority="high">
 <link rel="canonical" href="https://vertriebskoepfe.de/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -150,6 +150,186 @@
   .presse-zeile{margin-top:22px;font-size:var(--fs-2);color:var(--muted)}
   @media (max-width:760px){.belege,.nutzen{grid-template-columns:1fr}}
 </style>
+<style id="v6">
+  /* Startseite Version 6 (24.11.2026) */
+  header.nav .wrap{max-width:1440px}
+  header.nav .mark-rahmen{padding:6px}
+  header.nav .mark-rahmen .mark{width:44px;height:44px}
+  header.nav .wordmark{font-size:1.3rem}
+  header.nav .wordmark small{font-size:.78rem}
+  .nav-links{gap:26px}
+  .nav-links a{font-size:1.02rem}
+  .nav-links .btn{padding:14px 22px}
+  @media (min-width:1120px) and (max-width:1279px){.nav-links{gap:16px}.nav-links a{font-size:.95rem}}
+
+  .v6 section{border-bottom:0}
+  .v6-wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .v6-label{font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--petrol);margin:0}
+  .v6 h2{font-size:clamp(1.9rem,3.6vw,2.8rem);line-height:1.1;font-weight:700;margin:0}
+  .v6-lead{font-size:1.12rem;line-height:1.6;color:var(--muted);max-width:42em;margin:0}
+
+  /* Kopf */
+  .v6-hero{padding:80px 0 56px}
+  .v6-hero .v6-wrap{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:72px;align-items:center}
+  .v6-hero h1{font-size:clamp(2.7rem,5.6vw,4.6rem);line-height:1.04;font-weight:700;margin:0 0 26px;max-width:none}
+  .v6-hero h1 em{font-style:normal;color:var(--petrol)}
+  .v6-hero .v6-lead{font-size:1.3rem;color:var(--muted);margin-bottom:30px}
+  .v6-hero .btn{font-size:1.05rem;padding:17px 28px}
+  .v6-hero .btn-ghost{border-color:var(--ink)}
+  .v6-hero .cta-note{font-size:var(--fs-2)}
+  .v6-foto{position:relative;margin:0;padding:0 24px 150px 0;max-width:400px}
+  .v6-foto::before{content:"";position:absolute;top:24px;left:24px;right:0;bottom:120px;background:var(--petrol-wash);border-radius:6px}
+  .v6-foto img{position:relative;display:block;width:100%;height:440px;object-fit:cover;object-position:center 25%;border-radius:6px;box-shadow:var(--shadow)}
+  .v6-zitat{position:absolute;left:-44px;top:410px;width:320px;background:var(--card);border-left:3px solid var(--petrol);padding:18px 20px;border-radius:4px;box-shadow:0 6px 24px rgba(13,26,46,.14)}
+  .v6-zitat p{margin:0;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:1.12rem;line-height:1.4;font-weight:700;color:var(--ink)}
+  .v6-zitat b{display:block;margin-top:10px;font-size:var(--fs-2)}
+  .v6-zitat small{display:block;font-size:var(--fs-1);line-height:1.4;color:var(--muted)}
+
+  /* Ich besetze */
+  .v6-rollen{display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;padding:26px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .v6-chips{display:flex;flex-wrap:wrap;gap:10px}
+  .v6-chip{display:inline-block;padding:10px 18px;border:1.5px solid var(--petrol);border-radius:6px;background:color-mix(in srgb,var(--paper) 80%,var(--hair));color:var(--ink);text-decoration:none;font-size:1rem;font-weight:500;transition:background .18s,color .18s}
+  a.v6-chip:hover,a.v6-chip:focus-visible{background:var(--petrol);color:#fff}
+
+  /* Nutzen */
+  .v6-nutzen{padding:56px 0 104px}
+  .v6-nutzen ol{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 72px;counter-reset:n}
+  .v6-nutzen li{display:flex;gap:22px;counter-increment:n}
+  .v6-nutzen li::before{content:counter(n);font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:3.2rem;line-height:.9;font-weight:700;color:color-mix(in srgb,var(--petrol) 28%,var(--paper));flex:none;width:34px}
+  .v6-nutzen h3{font-size:1.4rem;margin:0 0 8px}
+  .v6-nutzen p{margin:0;font-size:1.08rem;line-height:1.6;color:var(--muted)}
+
+  /* Rechnung */
+  .v6-rechnung{padding:64px 0}
+  .v6-rechnung-kopf{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:32px 64px;align-items:center;margin-bottom:44px}
+  .v6-rechnung h2{font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.2;margin-top:12px;color:#fff}
+  .v6-rechnung .v6-label{color:var(--petrol-lite)}
+  .v6-rechnung .v6-zahl{color:var(--petrol-lite);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .v6-rechnung h2 .v6-zahl{font-weight:inherit}
+  .v6-gross{display:inline-block;min-width:9.5ch}
+  .v6-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .v6-stats > div{padding:4px 28px}
+  .v6-stats > div:first-child{padding-left:0}
+  .v6-stats > div + div{border-left:1px solid rgba(255,255,255,.14)}
+  .v6-stats b{display:block;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:2.8rem;line-height:1}
+  .v6-stats strong{display:block;margin-top:10px;font-size:1.05rem;line-height:1.4;color:#fff}
+  .v6-stats small{display:block;margin-top:6px;font-size:var(--fs-2);color:var(--on-navy-mute)}
+  .v6-rechnung .calc{grid-template-columns:1fr 1fr}
+  .v6-rechnung .calc input[type=range]{padding:0;border:0;background:none;accent-color:var(--petrol-lite);height:30px;margin-top:6px}
+
+  /* Bekannt aus */
+  .v6-presse{padding:56px 0 64px;text-align:center}
+  .v6-presse .v6-label{color:var(--muted);margin-bottom:22px}
+  .v6-presse-reihe{display:flex;flex-wrap:wrap;gap:20px 72px;align-items:center;justify-content:center}
+  .v6-presse img{height:72px;width:auto;filter:grayscale(1);opacity:.75;mix-blend-mode:multiply}
+  .v6-presse img.quadrat{height:80px;border-radius:8px;mix-blend-mode:normal;opacity:.85}
+  .v6-presse span{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;font-size:1.5rem;color:var(--muted)}
+  :root[data-theme="dark"] .v6-presse img:not(.quadrat),:root:not([data-theme="light"]) .v6-presse img:not(.quadrat){filter:grayscale(1) invert(1);mix-blend-mode:screen}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .v6-presse img:not(.quadrat){filter:grayscale(1);mix-blend-mode:multiply}}
+
+  /* Unterschied */
+  .v6-unterschied{background:var(--petrol-wash);padding:88px 0}
+  .v6-unterschied h2 em{font-style:normal;color:var(--petrol)}
+  .v6-unterschied .compare{margin-top:40px;border-top-color:color-mix(in srgb,var(--petrol) 25%,transparent)}
+  .v6-unterschied .compare-row{border-bottom-color:color-mix(in srgb,var(--petrol) 25%,transparent)}
+  .v6-diagnose{margin-top:40px;background:var(--card);border-radius:6px;padding:32px}
+  .v6-diagnose h3{font-size:1.5rem;margin:0 0 4px}
+  .v6-diagnose > p{color:var(--muted);font-size:var(--fs-2);margin:0 0 10px}
+  .v6-diagnose details summary{font-family:inherit;font-weight:500;font-size:1.05rem;padding-left:34px}
+  .v6-diagnose details summary b{position:absolute;left:0;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;color:var(--petrol)}
+  .v6-diagnose .bsp{margin:0 0 18px 34px;background:var(--petrol-wash);border-radius:4px;padding:12px 14px;font-size:var(--fs-2);color:var(--ink)}
+  .v6-diagnose .fazit{margin:14px 0 0;color:var(--muted);font-size:var(--fs-2)}
+
+  /* Ablauf */
+  .v6-ablauf{padding:104px 0}
+  .v6-stationen{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;counter-reset:s}
+  .v6-stationen li{border-top:3px solid var(--petrol);padding-top:16px;display:flex;flex-direction:column;gap:10px;counter-increment:s}
+  .v6-stationen li::before{content:"0" counter(s);font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-weight:700;color:var(--petrol)}
+  .v6-stationen h3{margin:0;font-size:1.2rem}
+  .v6-stationen p{margin:0;font-size:var(--fs-2);line-height:1.55;color:var(--muted)}
+  .v6-stationen p.liefer{color:var(--ink);background:var(--card);border:1px solid var(--hair);border-radius:4px;padding:10px 12px;margin-top:auto}
+  .v6-ablauf .cta-note{font-size:var(--fs-2);margin-top:28px}
+
+  /* Wer das macht */
+  .v6-person{background:var(--card)}
+  .v6-person-split{display:flex;flex-wrap:wrap;min-height:640px}
+  .v6-person-bild{flex:1 1 560px;min-height:520px;background:url(/img/stefan-gespraech-1400.jpg) 30% 20%/cover no-repeat}
+  .v6-person-text{flex:1 1 560px;max-width:720px;padding:88px 64px;display:flex;flex-direction:column;gap:24px;justify-content:center}
+  .v6-person-text blockquote{margin:0;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:clamp(1.7rem,2.6vw,2.5rem);line-height:1.2;font-weight:700;color:var(--ink)}
+  .v6-person-text blockquote em{font-style:normal;color:var(--petrol)}
+  .v6-person-text .namenszeile{margin:0}
+  .v6-person-text .namenszeile b{font-size:1.15rem}
+  .v6-person-text p{margin:0;font-size:1.12rem;line-height:1.65;color:var(--muted)}
+  .v6-sieger{display:flex;align-items:center;gap:22px;border-top:1px solid var(--hair);padding-top:24px}
+  .v6-sieger > b{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:5.5rem;line-height:.85;color:var(--petrol)}
+  .v6-sieger strong{display:block;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:1.35rem}
+  .v6-sieger span{display:block;color:var(--muted);line-height:1.5}
+  .v6-schulen{font-size:var(--fs-2);color:var(--muted)}
+  .v6-stimmen{padding:80px 0 96px}
+  .v6-stimmen-reihe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .v6-stimmen figure{margin:0;padding:0 36px}
+  .v6-stimmen figure:first-child{padding-left:0}
+  .v6-stimmen figure + figure{border-left:1px solid var(--hair)}
+  .v6-stimmen blockquote{margin:0;font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:1.45rem;line-height:1.4;font-weight:700}
+  .v6-stimmen figcaption{margin-top:16px;font-weight:600}
+  .v6-stimmen figcaption span{display:block;font-weight:400;font-size:var(--fs-2);color:var(--muted)}
+  .v6-stimmen .mehr{margin-top:28px;font-weight:600}
+
+  .card.v6-hervor{border:1.5px solid var(--petrol);border-top-width:4px}
+
+  /* Märkte und Wissen */
+  .v6-maerkte{padding:96px 0}
+  .v6-listen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:40px}
+  .v6-listen h3{font-family:inherit;font-size:var(--fs-1);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-bottom:6px;border-bottom:2px solid var(--ink);margin:0}
+  .v6-listen a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid var(--hair);color:var(--ink);text-decoration:none}
+  .v6-listen a b{font-weight:600}
+  .v6-listen a:hover b{color:var(--petrol)}
+  .v6-listen a span{font-size:var(--fs-2);color:var(--muted);white-space:nowrap}
+  .v6-quelle{font-size:var(--fs-1);color:var(--muted);margin:14px 0 0}
+
+  @media (max-width:900px){
+    .v6-hero{padding:40px 0 40px}
+    .v6-hero .v6-wrap{grid-template-columns:1fr;gap:24px}
+    .v6-hero .cta-row{flex-direction:column;align-items:stretch}
+    .v6-hero .btn{justify-content:center}
+    .v6-foto{max-width:420px;padding:0 0 0 0;margin-top:8px}
+    .v6-foto::before{top:14px;left:14px;right:0;bottom:auto;height:380px}
+    .v6-foto img{height:380px}
+    .v6-zitat{position:relative;left:auto;top:auto;width:auto;margin:-36px 0 0 18px}
+    .v6-nutzen{padding:32px 0 56px}
+    .v6-nutzen ol{grid-template-columns:1fr;gap:28px;margin-top:28px}
+    .v6-nutzen li::before{font-size:2.4rem;width:26px}
+    .v6-rechnung{padding:44px 0}
+    .v6-rechnung-kopf{grid-template-columns:1fr;margin-bottom:28px}
+    .v6-stats > div{padding:4px 12px}
+    .v6-stats b{font-size:2.2rem}
+    .v6-stats strong{font-size:.95rem}
+    .v6-rechnung .calc{grid-template-columns:1fr}
+    .v6-presse{padding:40px 0}
+    .v6-presse-reihe{flex-direction:column;gap:20px}
+    .v6-presse img{height:52px}.v6-presse img.quadrat{height:64px}
+    .v6-presse span{font-size:1.2rem}
+    .v6-unterschied{padding:48px 0}
+    .v6-diagnose{padding:20px}
+    .v6-ablauf{padding:56px 0}
+    .v6-stationen{grid-template-columns:1fr;gap:16px}
+    .v6-person-bild{flex-basis:100%;min-height:300px}
+    .v6-person-text{padding:32px 28px 44px}
+    .v6-sieger > b{font-size:4rem}
+    .v6-stimmen{padding:20px 0 56px}
+    .v6-stimmen-reihe{grid-template-columns:1fr;gap:24px}
+    .v6-stimmen figure,.v6-stimmen figure:first-child{padding:20px 0 0;border-left:0!important;border-top:1px solid var(--hair)}
+    .v6-stimmen blockquote{font-size:1.2rem}
+    .v6-maerkte{padding:56px 0}
+    .v6-listen{grid-template-columns:1fr;gap:28px}
+    .v6-listen > div{min-width:0}
+    .v6-listen a span{white-space:normal;text-align:right}
+  }
+  /* Bestehende Abschnitte an die neue Breite und ruhigere Überschriften anpassen */
+  main .wrap{max-width:1180px}
+  main section:not(#kontakt) .eyebrow{letter-spacing:0;text-transform:none;font-size:var(--fs-2)}
+</style>
+
 </head>
 <body>
 <style>
@@ -762,211 +942,175 @@
 </header>
 
 <main>
-<style>
-  /* Bewegung im Kopf (10.11.2026): einmal beim Laden, dann Ruhe */
-  @keyframes vkAuf{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-  @keyframes vkBild{from{transform:translateX(24px) scale(.98)}to{transform:none}}
-  @keyframes vkKarte{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  @keyframes vkStrich{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-  .hero-person .hero-text > *{animation:vkAuf .6s cubic-bezier(.2,.7,.2,1) both}
-  .hero-person .hero-text > :nth-child(2){animation-delay:.08s}
-  .hero-person .hero-text > :nth-child(3){animation-delay:.16s}
-  .hero-person .hero-text > :nth-child(4){animation-delay:.24s}
-  .hero-person .hero-text > :nth-child(5){animation-delay:.3s}
-  .hero-person .hero-bild picture{display:block;animation:vkBild .8s cubic-bezier(.2,.7,.2,1) .12s both}
-  .hero-person .hero-bild figcaption{animation:vkKarte .6s cubic-bezier(.2,.7,.2,1) .6s both}
-  .hero-person h1 em{position:relative;display:inline-block}
-  .hero-person h1 em::after{content:"";position:absolute;left:0;right:.18em;bottom:.06em;height:.08em;background:var(--petrol);opacity:.35;border-radius:2px;transform-origin:left;animation:vkStrich .7s cubic-bezier(.2,.7,.2,1) .7s both}
-  .hero-zahlen b{transition:color .3s}
-  .btn{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px -10px rgba(13,26,46,.45)}
-  .hero-bild img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-  .hero-bild:hover img{transform:translateY(-4px)}
-  @media (prefers-reduced-motion: reduce){
-    .hero-person .hero-text > *,.hero-person .hero-bild picture,.hero-person .hero-bild figcaption,.hero-person h1 em::after{animation:none}
-    .btn:hover,.hero-bild:hover img{transform:none}
-  }
-</style>
-<section class="hero hero-person">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="eyebrow rev">Personalberatung für den Vertrieb<span class="ab-620"> · Hamburg</span></p>
-      <h1 class="rev rev-d1">Vertriebler, die sich <em>rechnen.</em></h1>
-      <p class="lead rev rev-d2">Ich suche keine passenden Profile, sondern Menschen, die Umsatz bringen, Ihre Kunden gut betreuen und Ihre Firma so vertreten, wie Sie es tun würden.</p>
-      <div class="cta-row rev rev-d2">
+<div class="v6">
+
+<section class="v6-hero">
+  <div class="v6-wrap">
+    <div>
+      <h1>Vertriebler, die sich <em>rechnen.</em></h1>
+      <p class="v6-lead">Ich suche keine passenden Profile, sondern Menschen, die Umsatz bringen, Ihre Kunden gut betreuen und Ihre Firma so vertreten, wie Sie es tun würden.</p>
+      <div class="cta-row">
         <a class="btn" href="/erstgespraech/">Erstgespräch vereinbaren</a>
-        <a class="btn btn-ghost" href="tel:+494064532446">Anrufen: 040 64532446</a>
+        <a class="btn btn-ghost" href="tel:+494064532446">040 64532446</a>
       </div>
-      <p class="cta-note">Erstgespräch 20 Minuten, ohne Unterlagen.</p>
-      <p class="fuer-wen">Für Geschäftsführer im Mittelstand, die eine Stelle im Vertrieb besetzen müssen.</p>
-      <p class="fuer-wen rollen-zeile">Ich besetze: <a href="/vertriebsleiter/">Vertriebsleiter</a>, Leiter Vertrieb, Head of Sales, Verkaufsleiter, <a href="/key-account-manager/">Key Account Manager</a>, National Account Manager, <a href="/gebietsverkaufsleiter/">Gebietsverkaufsleiter</a> und Regionalverkaufsleiter.</p>
+      <p class="cta-note">Für Geschäftsführer im Mittelstand. 20 Minuten, ohne Unterlagen.</p>
     </div>
-    <figure class="hero-bild rev rev-d1">
+    <figure class="v6-foto">
       <picture>
-        <source type="image/webp" srcset="/img/stefan-bruendl-800.webp 800w, /img/stefan-bruendl-1600.webp 1600w" sizes="(max-width:860px) 320px, 400px">
-        <img src="/img/stefan-bruendl-800.jpg" width="420" height="525" alt="Stefan Bründl, Personalberater für den Vertrieb" fetchpriority="high" decoding="async">
+        <source type="image/webp" srcset="/img/stefan-bruendl-800.webp 800w, /img/stefan-bruendl-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 400px">
+        <img src="/img/stefan-bruendl-800.jpg" srcset="/img/stefan-bruendl-800.jpg 800w, /img/stefan-bruendl-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 400px" width="800" height="1000" fetchpriority="high" decoding="async" alt="Stefan Bründl, Personalberater für den Vertrieb">
       </picture>
-      <figcaption>
-        <q>Im Gespräch erkenne ich, ob jemand verkauft oder nur gut erzählt.</q>
-        <span><b>Stefan Bründl</b>20 Jahre Vertrieb, zuletzt Sales Director</span>
+      <figcaption class="v6-zitat">
+        <p>„Im Gespräch erkenne ich, ob jemand verkauft oder nur gut erzählt.“</p>
+        <b>Stefan Bründl</b>
+        <small>Über 20 Jahre Vertrieb, zuletzt Sales Director · INSEAD · London Business School</small>
       </figcaption>
     </figure>
   </div>
-  <div class="wrap">
-    <ul class="hero-zahlen">
-      <li><b>160</b><span><strong>Tage bleibt eine Stelle offen</strong>So lange dauert es in Deutschland im Schnitt, bis sie besetzt ist. Laut Bundesagentur für Arbeit (2025).</span></li>
-      <li><b>69&#8239;%</b><span><strong>der Vertriebsstellen sind länger als vier Wochen online</strong>Von rund 22.000 offenen Vertriebsstellen in der Jobbörse der Bundesagentur für Arbeit, Stand November 2026.</span></li>
-      <li><b>100.000&#8239;€</b><span><strong>Umsatz im Monat bearbeitet keiner</strong>Beispiel: ein Vertriebler mit 1,2 Mio. € Jahresumsatz, dessen Stelle offen ist. <a href="#rechnung">Mit Ihren Zahlen rechnen →</a></span></li>
-    </ul>
-    <p class="hero-presse">Bekannt aus <a class="presse-wiwo" href="https://www.wiwo.de/erfolg/management/mittelmanagement-viel-druck-kaum-anerkennung-das-dilemma-der-mittelmanager/30203962.html" target="_blank" rel="noopener">WirtschaftsWoche</a> <span>Der Personalberater Coach</span> <span>skagil Realtalk</span> <a href="/presse/">Presse →</a></p>
+</section>
+
+<section class="v6-wrap" aria-label="Positionen">
+  <div class="v6-rollen">
+    <p class="v6-label">Ich besetze</p>
+    <div class="v6-chips">
+      <a class="v6-chip" href="/vertriebsleiter/">Vertriebsleiter</a>
+      <span class="v6-chip">Head of Sales</span>
+      <a class="v6-chip" href="/key-account-manager/">Key Account Manager</a>
+      <a class="v6-chip" href="/gebietsverkaufsleiter/">Gebietsverkaufsleiter</a>
+      <span class="v6-chip">Regionalverkaufsleiter</span>
+    </div>
   </div>
 </section>
-<section class="raum-eng">
-  <div class="wrap">
-    
-    <p class="eyebrow rev">Was Sie davon haben</p>
-    <h2 class="rev">Sie entscheiden zwischen drei Menschen. Den Rest mache ich.</h2>
-    <ul class="nutzen rev rev-kids">
-      <li><h3>Keine Stapel Lebensläufe</h3><p>Sie sehen drei Profile. Mit jedem Kandidaten habe ich vorher selbst gesprochen, mit Einwänden statt Fragebogen.</p></li>
-      <li><h3>Kein Recruiting neben dem Tagesgeschäft</h3><p>Ansprache, Vorauswahl und Terminabstimmung laufen über mich. Sie und Ihr Team verkaufen weiter.</p></li>
-      <li><h3>Sie wissen vorher, ob es klappt</h3><p>Nach zwei Wochen sagt Ihnen die Diagnose, ob die Stelle zu Ihren Bedingungen besetzbar ist. Auch wenn die Antwort nein lautet.</p></li>
-      <li><h3>Jemand, der Vertrieb versteht</h3><p>Ich habe selbst Vertriebsteams geführt. Ich prüfe, wie jemand mit Einwänden umgeht, nicht wie gut sein Lebenslauf klingt.</p></li>
-    </ul>
+
+<section class="v6-nutzen">
+  <div class="v6-wrap">
+    <h2 class="rev">Sie bekommen ausgewählte Profile. Den Rest mache ich.</h2>
+    <ol class="rev rev-kids">
+      <li><div><h3>Keine Stapel Lebensläufe</h3><p>Sie sehen nur Profile, die passen. Mit jedem Kandidaten habe ich vorher selbst gesprochen, mit Einwänden statt Fragebogen.</p></div></li>
+      <li><div><h3>Kein Recruiting neben dem Tagesgeschäft</h3><p>Ansprache, Vorauswahl und Terminabstimmung laufen über mich. Sie und Ihr Team verkaufen weiter.</p></div></li>
+      <li><div><h3>Sie wissen vorher, ob es klappt</h3><p>Nach zwei Wochen sagt Ihnen die Diagnose, ob die Stelle zu Ihren Bedingungen besetzbar ist. Auch wenn die Antwort nein lautet.</p></div></li>
+      <li><div><h3>Jemand, der Vertrieb versteht</h3><p>Ich habe selbst Vertriebsteams geführt. Ich prüfe, wie jemand mit Einwänden umgeht, nicht wie gut sein Lebenslauf klingt.</p></div></li>
+    </ol>
   </div>
 </section>
-<section id="rechnung" class="band-navy raum-gross">
-  <div class="wrap">
-    <p class="eyebrow rev">Die Rechnung, die selten jemand aufmacht</p>
-    <h2 class="rev">Eine unbesetzte Vertriebsstelle ist teurer als jede Personalberatung.</h2>
-    <p class="lead rev" style="margin-bottom:26px">Nur fällt die Rechnung nicht auf, weil sie in keiner Kostenstelle steht. Sie steht im Umsatz, der nicht kommt — und den bucht niemand. Rechnen Sie es einmal mit Ihren eigenen Zahlen.</p>
 
-
-    <div class="calc rev" id="calc">
+<section id="rechnung" class="band-navy v6-rechnung">
+  <div class="v6-wrap">
+    <div class="v6-rechnung-kopf">
       <div>
-        <label for="umsatz">Umsatz je Vertriebler im Jahr</label>
-        <input id="umsatz" type="text" inputmode="numeric" autocomplete="off" value="1.200.000">
+        <p class="v6-label">Die Rechnung</p>
+        <h2>Ihr nächster Vertriebler kostet 18.000&nbsp;€. Oder <b class="v6-gross v6-zahl">500.000&nbsp;€</b>.</h2>
+      </div>
+      <div class="v6-stats">
+        <div><b class="v6-zahl">160</b><strong>Tage bleibt eine Vertriebsstelle offen</strong><small>Bundesagentur für Arbeit, 2025</small></div>
+        <div><b class="v6-zahl">69&nbsp;%</b><strong>der Vertriebsstellen sind länger als vier Wochen online</strong><small>BA-Jobbörse, November 2026</small></div>
+      </div>
+    </div>
+    <div class="calc" id="calc">
+      <div>
+        <label for="umsatz">Umsatz je Vertriebler im Jahr (€)</label>
+        <input id="umsatz" inputmode="numeric" value="1.200.000" autocomplete="off">
+        <input id="umsatzR" type="range" min="300000" max="3000000" step="50000" value="1200000" aria-label="Umsatz mit dem Regler einstellen">
       </div>
       <div>
         <label for="monate">Monate unbesetzt</label>
-        <input id="monate" type="number" inputmode="numeric" min="0" max="36" step="1" value="5">
+        <input id="monate" type="number" min="0" max="36" value="5">
+        <input id="monateR" type="range" min="1" max="12" step="1" value="5" aria-label="Monate mit dem Regler einstellen">
       </div>
       <div class="calc-out">
         <span class="big" id="ergebnis">500.000 €</span>
-        <p>Umsatz, der in dieser Zeit nicht bearbeitet wird. Bei 20 % Deckungsbeitrag entspricht das <b id="db" style="color:#fff">100.000 €</b>. Zum Vergleich: Ein vollständiges Suchmandat kostet bei 60.000 € Zieljahresgehalt 18.000 €.</p>
+        <p>Umsatz, der in dieser Zeit nicht bearbeitet wird. Bei 20&nbsp;% Deckungsbeitrag entspricht das <span id="db">100.000 €</span>. Zum Vergleich: Ein vollständiges Suchmandat kostet bei 60.000&nbsp;€ Zieljahresgehalt 18.000&nbsp;€.</p>
       </div>
     </div>
     <p class="cta-note">Grobe Näherung, kein Gutachten. Die genaue Zahl für Ihr Gebiet rechne ich mit Ihnen im Erstgespräch.</p>
   </div>
 </section>
-<section>
-  <div class="wrap">
-    
-    <p class="eyebrow rev">Der Unterschied</p>
-    <h2 class="rev">Kein Profilversand. Eine Investitionsentscheidung.</h2>
-    <p class="lead rev">Eine Einstellung im Vertrieb ist ein Investment. Deshalb kläre ich zuerst, was die Stelle bringen muss und warum der Letzte gegangen ist. Erst dann suche ich die Menschen, die das liefern.</p>
-    <div class="compare rev" style="margin-top:32px">
+
+<section class="v6-presse">
+  <div class="v6-wrap">
+    <p class="v6-label">Bekannt aus</p>
+    <div class="v6-presse-reihe">
+      <a href="https://www.wiwo.de/erfolg/management/mittelmanagement-viel-druck-kaum-anerkennung-das-dilemma-der-mittelmanager/30203962.html" target="_blank" rel="noopener"><img src="/img/presse/wiwo.png" alt="WirtschaftsWoche" width="800" height="340" loading="lazy"></a>
+      <span>Der Personalberater Coach Podcast</span>
+      <img class="quadrat" src="/img/presse/sales-branding-espresso.png" alt="Sales, Branding &amp; Espresso" width="230" height="229" loading="lazy">
+    </div>
+    <p class="cta-note"><a href="/presse/">Alle Presse- und Podcastauftritte →</a></p>
+  </div>
+</section>
+
+<section class="v6-unterschied">
+  <div class="v6-wrap">
+    <p class="v6-label">Der Unterschied</p>
+    <h2 class="rev" style="margin-top:14px;max-width:900px">Die besten Vertriebler suchen gerade keinen Job. <em>Ich rufe sie an.</em></h2>
+    <p class="v6-lead rev" style="margin-top:18px;color:var(--ink)">Wer im Gebiet erfolgreich verkauft, liest keine Stellenanzeigen. Deshalb kläre ich zuerst mit Ihnen, was die Stelle bringen muss. Dann spreche ich die an, die es heute schon liefern.</p>
+    <div class="compare rev">
       <div class="compare-row">
         <div class="usual"><p class="side-label">Üblich</p><p>Sie melden eine Vakanz und bekommen in den nächsten Tagen Profile, die auf dem Papier passen.</p></div>
-        <div class="mine"><p class="side-label">Bei mir</p><p>Zuerst die Diagnose: Gehaltspaket, Rollenzuschnitt, Außendarstellung, Bewertungen und die Abgangsgründe des Vorgängers. Erst danach wird gesucht.</p></div>
+        <div class="mine"><p class="side-label">Bei mir</p><p>Zuerst die Diagnose: Gehaltspaket, Rollenzuschnitt, Außendarstellung und die Abgangsgründe des Vorgängers. Erst danach wird gesucht.</p></div>
       </div>
       <div class="compare-row">
         <div class="usual"><p class="side-label">Üblich</p><p>Erfolg heißt: Die Stelle ist besetzt. Ob sich der Neue rechnet, zeigt sich erst ein Jahr später.</p></div>
         <div class="mine"><p class="side-label">Bei mir</p><p>Erfolg heißt: Der Neue bringt Umsatz. Deshalb prüfe ich jeden Kandidaten darauf, wie schnell er in Umsatz kommt, und sage es Ihnen vor der Entscheidung.</p></div>
       </div>
     </div>
-    <h3 style="margin:44px 0 14px">Was die Diagnose prüft</h3>
-    <ol class="diagnose rev rev-kids">
-      <li>45 bis 60 Minuten mit Ihnen und der Person, an die berichtet wird. Nicht die Stellenbeschreibung, sondern die Geschichte der Stelle: wie oft sie in fünf Jahren besetzt war, wer jeweils gekündigt hat und was der genannte Grund war.</li>
-      <li>Anrufe bei fünf passenden Vertrieblern aus Ihrem Umkreis: was sie von Ihrer Stelle halten und was stimmen müsste, damit sie wechseln. Diese Antwort bekommen Sie von niemandem sonst.</li>
-      <li>Ihr Gehaltspaket gegen das, was Bewerber in dieser Rolle gerade verlangen. Aus echten Gesprächen, nicht aus einer Tabelle.</li>
-      <li>Ihre Außenwirkung, gelesen wie ein Kandidat sie liest: Anzeige, Karriereseite, Bewertungen. Auch wenn der Eindruck unangenehm ist.</li>
-    </ol>
-    <p class="cta-note">Am Ende steht ein Papier: was der Besetzung im Weg steht, was sich vorher ändern muss und ob ich die Stelle so überhaupt besetzen würde.</p>
-  </div>
-</section>
-<section id="ablauf" class="raum-gross">
-  <div class="wrap">
-    <p class="eyebrow rev">Vom Auftrag bis zur Unterschrift</p>
-    <h2 class="rev">Acht Wochen, fünf Stationen, jede mit einer Lieferung.</h2>
-    <p class="lead rev">Das Honorar bezahlt eine Suchleistung, nicht nur ein Ergebnis. Hier steht, was in welcher Woche passiert und was davon bei Ihnen ankommt.</p>
-
-    <ol class="zeitstrahl rev rev-kids">
-      <li>
-        <span class="zs-wo">Woche 1</span>
-        <h3>Briefing</h3>
-        <p>45 bis 60 Minuten per Video mit Ihnen und der Person, an die berichtet wird.</p>
-        <p class="zs-liefer"><b>Sie bekommen</b>Mindestanforderungen und Zieljahresgehalt in Textform, von beiden Seiten bestätigt.</p>
-      </li>
-      <li>
-        <span class="zs-wo">Woche 1–2</span>
-        <h3>Vakanzdiagnose</h3>
-        <p>Rollenzuschnitt, Vergütungspaket, Außenwirkung, Abgangsgründe des Vorgängers. Danach steht fest, ob die Stelle so besetzbar ist.</p>
-        <p class="zs-liefer"><b>Sie bekommen</b>Einen schriftlichen Befund. Auch dann, wenn Sie danach nicht weitermachen.</p>
-      </li>
-      <li>
-        <span class="zs-wo">Woche 2–5</span>
-        <h3>Direktansprache</h3>
-        <p>Rund 100 gezielte Kontakte, überwiegend am Telefon. Gute Vertriebler suchen nicht aktiv, sie werden angesprochen.</p>
-        <p class="zs-liefer"><b>Sie bekommen</b>Jede Woche eine Statusmeldung. Auch in den Wochen, in denen nichts Zählbares passiert ist.</p>
-      </li>
-      <li>
-        <span class="zs-wo">Woche 4–6</span>
-        <h3>Shortlist</h3>
-        <p>Jeder Kandidat hat vorher ein echtes Gespräch geführt, mit Einwänden statt Fragebogen.</p>
-        <p class="zs-liefer"><b>Sie bekommen</b>Drei Profile mit Einschätzung und benanntem Risiko, nicht nur mit Werdegang.</p>
-      </li>
-      <li>
-        <span class="zs-wo">Woche 6–8</span>
-        <h3>Entscheidung</h3>
-        <p>Gespräche, Verhandlung, Unterschrift. Jeder Kandidat bekommt binnen 24 Stunden eine Rückmeldung.</p>
-        <p class="zs-liefer"><b>Sie bekommen</b>Begleitung bis zur Unterschrift, danach Rückfrage in Woche 2, 6, 12 und 20.</p>
-      </li>
-    </ol>
-
-    <p class="cta-note" style="margin-top:30px"><b style="color:var(--ink)">Alles läuft per Video und Telefon.</b> Kein Anfahrtstag, keine Reisekosten im Honorar und Termine lassen sich innerhalb von Tagen ansetzen statt innerhalb von Wochen. Wenn Sie mich trotzdem im Haus haben wollen, sagen Sie es, dann kommen wir zusammen.</p>
-  </div>
-</section>
-
-<section id="person" class="raum-gross">
-  <div class="wrap about">
-    <div class="portrait rev">
-      <picture>
-        <source type="image/webp"
-          srcset="/img/stefan-bruendl-800.webp 800w, /img/stefan-bruendl-1600.webp 1600w"
-          sizes="(max-width: 760px) 100vw, 380px">
-        <img src="/img/stefan-bruendl-800.jpg"
-          srcset="/img/stefan-bruendl-800.jpg 800w, /img/stefan-bruendl-1600.jpg 1600w"
-          sizes="(max-width: 760px) 100vw, 380px"
-          width="800" height="1000" loading="lazy" decoding="async"
-          alt="Stefan Bründl, Geschäftsführer von Vertriebsköpfe">
-      </picture>
+    <div class="v6-diagnose rev">
+      <h3>Was die Diagnose prüft</h3>
+      <p>Tippen Sie einen Punkt an, um ein Beispiel zu sehen.</p>
+      <details><summary><b>1</b>Die Geschichte der Stelle: wie oft sie in fünf Jahren besetzt war, wer jeweils gekündigt hat und was der genannte Grund war.</summary><p class="bsp"><strong>Aus dem Musterbefund:</strong> Zweimal besetzt in vier Jahren, beide gingen im zweiten Jahr. Das Gebiet war für eine Person zu groß.</p></details>
+      <details><summary><b>2</b>Anrufe bei fünf passenden Vertrieblern aus Ihrem Umkreis: was sie von Ihrer Stelle halten und was stimmen müsste, damit sie wechseln.</summary><p class="bsp"><strong>Aus dem Musterbefund:</strong> Vier von fünf würden so nicht wechseln. Der häufigste Grund: kein fester Innendienst.</p></details>
+      <details><summary><b>3</b>Ihr Gehaltspaket gegen das, was Bewerber in dieser Rolle gerade verlangen. Aus echten Gesprächen, nicht aus einer Tabelle.</summary><p class="bsp"><strong>Aus dem Musterbefund:</strong> Das Fixum lag rund 10.000&nbsp;€ unter dem, was passende Kandidaten verlangen.</p></details>
+      <details><summary><b>4</b>Ihre Außenwirkung, gelesen wie ein Kandidat sie liest: Anzeige, Karriereseite, Bewertungen. Auch wenn der Eindruck unangenehm ist.</summary><p class="bsp"><strong>Aus dem Musterbefund:</strong> Die Anzeige nannte zwölf Aufgaben, aber kein Produkt und keine Gebietsgrenzen.</p></details>
+      <p class="fazit">Am Ende steht ein Papier: was der Besetzung im Weg steht, was sich vorher ändern muss und ob ich die Stelle so überhaupt besetzen würde.</p>
     </div>
-    <div>
-      
-      <p class="eyebrow rev">Wer das macht</p>
-      <div class="namenszeile rev">
-        <h2>Stefan Bründl</h2>
+  </div>
+</section>
+
+<section id="ablauf" class="v6-ablauf">
+  <div class="v6-wrap">
+    <h2 class="rev">Fünf Stationen, jede mit einer Lieferung.</h2>
+    <p class="v6-lead rev" style="margin-top:14px">Das Honorar bezahlt eine Suchleistung, nicht nur ein Ergebnis. Hier steht, was passiert und was davon bei Ihnen ankommt.</p>
+    <ol class="v6-stationen rev rev-kids">
+      <li><h3>Briefing</h3><p>45 bis 60 Minuten per Video mit Ihnen und der Person, an die berichtet wird.</p><p class="liefer"><b>Sie bekommen:</b> Mindestanforderungen und Zieljahresgehalt in Textform.</p></li>
+      <li><h3>Vakanzdiagnose</h3><p>Rollenzuschnitt, Vergütungspaket, Außenwirkung, Abgangsgründe. Danach steht fest, ob die Stelle so besetzbar ist.</p><p class="liefer"><b>Sie bekommen:</b> einen schriftlichen Befund, auch wenn Sie danach nicht weitermachen.</p></li>
+      <li><h3>Direktansprache</h3><p>Rund 100 gezielte Kontakte, überwiegend am Telefon. Gute Vertriebler suchen nicht aktiv, sie werden angesprochen.</p><p class="liefer"><b>Sie bekommen:</b> jede Woche eine Statusmeldung, auch in ruhigen Wochen.</p></li>
+      <li><h3>Shortlist</h3><p>Jeder Kandidat hat vorher ein echtes Gespräch geführt, mit Einwänden statt Fragebogen.</p><p class="liefer"><b>Sie bekommen:</b> ausgewählte Profile mit Einschätzung und benanntem Risiko.</p></li>
+      <li><h3>Entscheidung</h3><p>Gespräche, Verhandlung, Unterschrift. Jeder Kandidat bekommt binnen 24 Stunden eine Rückmeldung.</p><p class="liefer"><b>Sie bekommen:</b> Begleitung bis zur Unterschrift, danach Rückfrage in Woche 2, 6, 12 und 20.</p></li>
+    </ol>
+    <p class="cta-note"><b style="color:var(--ink)">Alles läuft per Video und Telefon.</b> Kein Anfahrtstag, keine Reisekosten im Honorar und Termine lassen sich innerhalb von Tagen ansetzen. Wenn Sie mich trotzdem im Haus haben wollen, kommen wir zusammen.</p>
+  </div>
+</section>
+
+<section id="person" class="v6-person">
+  <div class="v6-person-split">
+    <div class="v6-person-bild" role="img" aria-label="Stefan Bründl im Gespräch"></div>
+    <div class="v6-person-text">
+      <blockquote>„Ich weiß, wen Sie suchen, weil ich diese Leute <em>selbst geführt</em> habe.“</blockquote>
+      <div class="namenszeile">
+        <b>Stefan Bründl</b>
         <div class="kontakt-icons">
-          <a href="https://www.linkedin.com/in/stefan-bruendl" target="_blank" rel="noopener"
-             aria-label="Stefan Bründl auf LinkedIn (öffnet in neuem Tab)" title="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C21.4 8.75 22 11.1 22 14.16V21h-4v-6.06c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21h-4V9z"/></svg>
-          </a>
-          <a href="mailto:stefan.bruendl@vertriebskoepfe.de"
-             aria-label="E-Mail an Stefan Bründl" title="E-Mail schreiben">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 8.1L4.4 7H19.6L12 13.1zM4 9.02V17h16V9.02l-7.38 5.9a1 1 0 0 1-1.24 0L4 9.02z"/></svg>
-          </a>
+          <a href="https://www.linkedin.com/in/stefan-bruendl" target="_blank" rel="noopener" aria-label="Stefan Bründl auf LinkedIn (öffnet in neuem Tab)" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C21.4 8.75 22 11.1 22 14.16V21h-4v-6.06c0-1.45-.03-3.3-2.02-3.3-2.02 0-2.33 1.57-2.33 3.2V21h-4V9z"/></svg></a>
+          <a href="mailto:stefan.bruendl@vertriebskoepfe.de" aria-label="E-Mail an Stefan Bründl" title="E-Mail schreiben"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 8.1L4.4 7H19.6L12 13.1zM4 9.02V17h16V9.02l-7.38 5.9a1 1 0 0 1-1.24 0L4 9.02z"/></svg></a>
         </div>
       </div>
-      <p class="rev">Ich führe seit über 20 Jahren Vertrieb, 17 Jahre davon in der Personaldienstleistung, zuletzt als Sales Director. Dabei habe ich beides von innen gesehen: wie Vertriebsorganisationen Leute verlieren und wie schwer sie danach welche finden. Seit 2024 berate ich Geschäftsführer im Mittelstand zu Fluktuation und Mitarbeiterbindung.</p>
-      <p class="rev">Deshalb die Diagnose vor der Suche. Sie ist kein Zusatzprodukt, sondern das, womit ich seit Jahren mein Geld verdiene — nur diesmal, bevor die Stelle nachbesetzt wird statt danach.</p>
-      <ul class="roles rev">
-        <li><span>20+ Jahre</span><div>Vertrieb und Führung, 17 davon in der Personaldienstleistung, zuletzt Sales Director bei einem der größten Personaldienstleister weltweit</div></li>
-        <li><span>Eigene Führung</span><div>Vertriebsleitung mit Umsatzverantwortung — ich weiß, wen Sie suchen, weil ich diese Leute geführt habe</div></li>
-        <li><span>Seit 2024</span><div>Beratung zu Fluktuation und Bindung im Mittelstand — <a href="https://leadsimply.de" target="_blank" rel="noopener">LeadSimply</a></div></li>
-      </ul>
+      <p>Über 20 Jahre Vertrieb und Führung, 17 davon in der Personaldienstleistung, zuletzt als Sales Director mit 1.300 Mitarbeitenden in der Verantwortung. Ich habe beides von innen gesehen: wie Vertriebsorganisationen Leute verlieren und wie schwer sie danach welche finden. Deshalb die Diagnose vor der Suche.</p>
+      <div class="v6-sieger"><b>6×</b><div><strong>Wachstumssieger</strong><span>Geschäftsstelle Hamburg, unter meiner Leitung. 2016 bis 2019 viermal in Folge, dazu 2011 und 2013.</span></div></div>
+      <p class="v6-schulen">INSEAD · London Business School</p>
+    </div>
+  </div>
+  <div class="v6-stimmen">
+    <div class="v6-wrap">
+      <div class="v6-stimmen-reihe rev rev-kids">
+        <figure><blockquote>„Ein kompetenter und vertrauenswürdiger Personalberater.“</blockquote><figcaption>Peter Constantin<span>Operations Executive · Kunde</span></figcaption></figure>
+        <figure><blockquote>„Unter seiner Führung entwickelten sich sehr erfolgreiche Vertriebsmitarbeiter.“</blockquote><figcaption>Bernd Austermann<span>Ehem. Geschäftsführer GULP Schweiz AG</span></figcaption></figure>
+        <figure><blockquote>„Seine Fachkompetenz im Vertrieb ist unübertroffen.“</blockquote><figcaption>Adrian Stan<span>13 Jahre Zusammenarbeit in der GULP-Gruppe</span></figcaption></figure>
+      </div>
+      <p class="mehr"><a href="https://www.linkedin.com/in/stefan-bruendl/details/recommendations/" target="_blank" rel="noopener">Alle Empfehlungen auf LinkedIn →</a></p>
     </div>
   </div>
 </section>
+
+</div>
+
 <section id="leistungen" class="raum-gross">
   <div class="wrap">
     <p class="eyebrow rev">Drei Stufen, offene Preise</p>
@@ -987,7 +1131,7 @@
         </ul>
         <a class="btn btn-ghost" href="/vakanzdiagnose/">Mehr zur Diagnose</a>
       </div>
-      <div class="card rev rev-d1">
+      <div class="card v6-hervor rev rev-d1">
         <p class="step">Stufe 2</p>
         <h3>Besetzung</h3>
         <p class="price">30 %<small>des Zieljahresgehalts, in drei gleichen Raten</small></p>
@@ -995,7 +1139,7 @@
           <li>Briefing per Video, 45 bis 60 Minuten</li>
           <li>Vakanzdiagnose vor der ersten Ansprache</li>
           <li>Rund 100 gezielte Direktansprachen</li>
-          <li>Drei Profile mit benannten Risiken</li>
+          <li>Ausgewählte Profile mit benannten Risiken</li>
           <li>Wöchentliche Statusmeldung, auch ohne Fortschritt</li>
           <li>Rückfrage in Woche 2, 6, 12 und 20 nach dem Start</li>
         </ul>
@@ -1030,6 +1174,7 @@
     </div>
   </div>
 </section>
+
 <section id="check">
   <div class="wrap">
     <div class="teaser rev">
@@ -1057,26 +1202,7 @@
     </div>
   </div>
 </section>
-<section id="maerkte" class="raum-eng">
-  <div class="wrap">
-    <p class="eyebrow rev">Branchen und Regionen</p>
-    <h2 class="rev">Wie ich Ihren Markt lese.</h2>
-    <p class="lead rev" style="margin-bottom:26px">Jeder Markt hat eigene Zyklen, eigene Kunden und eigene Gründe, warum Vertriebler gehen. Hier steht, was ich über die wichtigsten weiß, mit aktuellen Zahlen aus der Jobbörse der Bundesagentur.</p>
-    <div class="maerkte rev rev-kids">
-      <a href="/branchen/maschinenbau/"><span>Branche</span><b>Maschinenbau</b><small>1.914 offene Vertriebsstellen · 77 % über vier Wochen online</small></a>
-      <a href="/branchen/logistik/"><span>Branche</span><b>Logistik und Spedition</b><small>326 offene Vertriebsstellen · 74 % über vier Wochen online</small></a>
-      <a href="/branchen/elektrotechnik/"><span>Branche</span><b>Elektrotechnik und Automatisierung</b><small>914 offene Vertriebsstellen · 73 % über vier Wochen online</small></a>
-      <a href="/branchen/sanitaer-heizung-klima/"><span>Branche</span><b>Sanitär, Heizung, Klima</b><small>219 offene Vertriebsstellen · 76 % über vier Wochen online</small></a>
-      <a href="/branchen/baustoffe/"><span>Branche</span><b>Baustoffe</b><small>347 offene Vertriebsstellen · 79 % über vier Wochen online</small></a>
-      <a href="/regionen/hamburg/"><span>Region</span><b>Hamburg und der Norden</b><small>1.135 offene Vertriebsstellen im Umkreis von 50 km</small></a>
-      <a href="/regionen/bremen/"><span>Region</span><b>Bremen</b><small>617 offene Vertriebsstellen im Umkreis von 50 km</small></a>
-      <a href="/regionen/hannover/"><span>Region</span><b>Hannover</b><small>742 offene Vertriebsstellen im Umkreis von 50 km</small></a>
-      <a href="/regionen/osnabrueck/"><span>Region</span><b>Osnabrück</b><small>909 offene Vertriebsstellen im Umkreis von 50 km</small></a>
-      <a href="/regionen/oldenburg/"><span>Region</span><b>Oldenburg</b><small>597 offene Vertriebsstellen im Umkreis von 50 km</small></a>
-    </div>
-    <p class="cta-note" style="margin-top:14px">Stand 23. November 2026, ohne Zeitarbeit und private Vermittler.</p>
-  </div>
-</section>
+
 <section class="raum-eng">
   <div class="wrap">
     <p class="eyebrow rev">Was Geschäftsführer vorher wissen wollen</p>
@@ -1101,38 +1227,61 @@
     </div>
   </div>
 </section>
-<section id="wissen">
-  <div class="wrap">
-    <p class="eyebrow rev">Wissen und Werkzeuge</p>
-    <h2 class="rev">Rechnen, prüfen, nachlesen. Bevor Sie anrufen.</h2>
-    <div class="wkh-raster rev">
-      <a class="wkh-karte" href="/wissen/was-kostet-eine-unbesetzte-vertriebsstelle/">
-        <span class="wkh-art">Wissen · 6 Minuten</span>
-        <h3>Was kostet eine unbesetzte Vertriebsstelle?</h3>
-        <p>Mehr, als das eingesparte Gehalt vermuten lässt. Die Rechnung mit vier eigenen Zahlen und was in keiner Rechnung auftaucht.</p>
-        <span class="wkh-link">Zum Beitrag →</span>
-      </a>
-      <a class="wkh-karte" href="/downloads/#rechner">
-        <span class="wkh-art">Werkzeug · 2 Minuten</span>
-        <h3>Vakanzrechner</h3>
-        <p>Vier Zahlen, ein Ergebnis: was Ihre offene Stelle im Monat kostet. Dazu das Arbeitsblatt als PDF zum Ausdrucken.</p>
-        <span class="wkh-link">Jetzt rechnen →</span>
-      </a>
-      <a class="wkh-karte" href="/newsletter/ausgabe-1/">
-        <span class="wkh-art">Newsletter · neueste Ausgabe</span>
-        <h3>Sein Kalender sagte: Kundentermin</h3>
-        <p>Eine Einstellung gegen das eigene Bauchgefühl und fünf Ideen, wie Sie die Auswahl besser vorbereiten. Alle zwei Wochen neu.</p>
-        <span class="wkh-link">Ausgabe lesen →</span>
-      </a>
+
+<div class="v6">
+<section id="maerkte" class="v6-maerkte">
+  <div class="v6-wrap">
+    <h2 class="rev">Wie ich Ihren Markt lese.</h2>
+    <p class="v6-lead rev" style="margin-top:14px">Jeder Markt hat eigene Zyklen, eigene Kunden und eigene Gründe, warum Vertriebler gehen. Hier steht, was ich über die wichtigsten weiß, mit aktuellen Zahlen aus der Jobbörse der Bundesagentur.</p>
+    <div class="v6-listen rev">
+      <div>
+        <h3>Branchen</h3>
+        <a href="/branchen/maschinenbau/"><b>Maschinenbau</b><span>1.914 offen · 77&nbsp;% über 4 Wochen</span></a>
+        <a href="/branchen/elektrotechnik/"><b>Elektrotechnik und Automatisierung</b><span>914 offen · 73&nbsp;%</span></a>
+        <a href="/branchen/baustoffe/"><b>Baustoffe</b><span>347 offen · 79&nbsp;%</span></a>
+        <a href="/branchen/logistik/"><b>Logistik und Spedition</b><span>326 offen · 74&nbsp;%</span></a>
+        <a href="/branchen/sanitaer-heizung-klima/"><b>Sanitär, Heizung, Klima</b><span>219 offen · 76&nbsp;%</span></a>
+      </div>
+      <div>
+        <h3>Regionen</h3>
+        <a href="/regionen/hamburg/"><b>Hamburg und der Norden</b><span>1.135 offen im Umkreis 50 km</span></a>
+        <a href="/regionen/osnabrueck/"><b>Osnabrück</b><span>909 offen</span></a>
+        <a href="/regionen/hannover/"><b>Hannover</b><span>742 offen</span></a>
+        <a href="/regionen/bremen/"><b>Bremen</b><span>617 offen</span></a>
+        <a href="/regionen/oldenburg/"><b>Oldenburg</b><span>597 offen</span></a>
+      </div>
     </div>
-    <p class="cta-note rev" style="margin-top:22px">Headhunter für <a href="/vertriebsleiter/">Vertriebsleiter</a>, <a href="/key-account-manager/">Key Account Manager</a> und <a href="/gebietsverkaufsleiter/">Gebietsverkaufsleiter</a> · <a href="/wissen/was-kostet-ein-personalberater-fuer-den-vertrieb/">Was kostet ein Personalberater für den Vertrieb?</a> · <a href="/wissen/key-account-manager-finden/">Key Account Manager finden</a> · <a href="/wissen/">Alle Beiträge im Wissensbereich</a> · <a href="/besetzungscheck/">Besetzungscheck: Wie besetzbar ist Ihre Stelle?</a></p>
+    <p class="v6-quelle">Offene Vertriebsstellen in der Jobbörse der Bundesagentur für Arbeit, Stand 23. November 2026, ohne Zeitarbeit und private Vermittler.</p>
+    <div class="wkh-raster rev" style="margin-top:44px">
+      <a class="wkh-karte" href="/wissen/was-kostet-eine-unbesetzte-vertriebsstelle/"><span class="wkh-art">Wissen · 6 Minuten</span><h3>Was kostet eine unbesetzte Vertriebsstelle?</h3><p>Mehr, als das eingesparte Gehalt vermuten lässt. Die Rechnung mit vier eigenen Zahlen und was in keiner Rechnung auftaucht.</p><span class="wkh-link">Zum Beitrag →</span></a>
+      <a class="wkh-karte" href="/downloads/#rechner"><span class="wkh-art">Werkzeug · 2 Minuten</span><h3>Vakanzrechner</h3><p>Vier Zahlen, ein Ergebnis: was Ihre offene Stelle im Monat kostet. Dazu das Arbeitsblatt als PDF zum Ausdrucken.</p><span class="wkh-link">Jetzt rechnen →</span></a>
+      <a class="wkh-karte" href="/newsletter/ausgabe-1/"><span class="wkh-art">Newsletter · neueste Ausgabe</span><h3>Sein Kalender sagte: Kundentermin</h3><p>Eine Einstellung gegen das eigene Bauchgefühl und fünf Ideen, wie Sie die Auswahl besser vorbereiten. Alle zwei Wochen neu.</p><span class="wkh-link">Ausgabe lesen →</span></a>
+    </div>
+    <p class="cta-note" style="margin-top:22px">Headhunter für <a href="/vertriebsleiter/">Vertriebsleiter</a>, <a href="/key-account-manager/">Key Account Manager</a> und <a href="/gebietsverkaufsleiter/">Gebietsverkaufsleiter</a> · <a href="/wissen/was-kostet-ein-personalberater-fuer-den-vertrieb/">Was kostet ein Personalberater für den Vertrieb?</a> · <a href="/wissen/key-account-manager-finden/">Key Account Manager finden</a> · <a href="/wissen/">Alle Beiträge im Wissensbereich</a> · <a href="/besetzungscheck/">Besetzungscheck: Wie besetzbar ist Ihre Stelle?</a></p>
   </div>
 </section>
+</div>
+<script>
+(function(){
+  // Regler und Eingabefelder im Rechner gleichlaufen lassen
+  var u=document.getElementById('umsatz'), ur=document.getElementById('umsatzR');
+  var m=document.getElementById('monate'), mr=document.getElementById('monateR');
+  if(!u||!ur||!m||!mr) return;
+  var f=new Intl.NumberFormat('de-DE',{maximumFractionDigits:0});
+  ur.addEventListener('input',function(){ u.value=f.format(+ur.value); u.dispatchEvent(new Event('input')); });
+  mr.addEventListener('input',function(){ m.value=mr.value; m.dispatchEvent(new Event('input')); });
+  u.addEventListener('input',function(){ var v=parseInt(u.value.replace(/\D/g,''),10)||0; ur.value=Math.min(3000000,Math.max(300000,v)); });
+  m.addEventListener('input',function(){ mr.value=Math.min(12,Math.max(1,+m.value||1)); });
+})();
+</script>
+
+
 <section class="raum-eng">
   <div class="wrap kandidaten-hinweis">
     <p>Sie suchen keine Leute, sondern eine Stelle? Dann sind Sie hier auf der falschen Seite — und einen Klick von der richtigen entfernt: <a href="/kandidaten/">Für Kandidaten</a>. Kein Verteiler, keine Massenmails. Ich melde mich, wenn ein Mandat zu Ihnen passt.</p>
   </div>
 </section>
+
 <section id="kontakt" class="band-navy">
   <div class="wrap close-cta">
     <p class="eyebrow rev">Der nächste Schritt</p>
@@ -1146,8 +1295,6 @@
     <p class="cta-note">Erstgespräch 20 Minuten, am Telefon oder per Videocall. Den Termin wählen Sie selbst. Beim Öffnen wird der Buchungskalender von TidyCal auf dieser Seite geladen, vorher nicht (<a href="/datenschutz/" style="color:var(--petrol-lite)">Datenschutz</a>). Oder schreiben Sie an <a href="mailto:stefan.bruendl@vertriebskoepfe.de" style="color:var(--petrol-lite)">stefan.bruendl@vertriebskoepfe.de</a> — Antwort am selben Werktag.</p>
   </div>
 </section>
-
-
 </main>
 
 <footer class="site">
@@ -1498,6 +1645,28 @@
     },400);
   }
   if(document.readyState==='complete') starten(); else window.addEventListener('load',starten);
+})();
+</script>
+<script>
+(function(){
+  // Zahlen im dunklen Rechnungsband zählen einmal hoch, sobald sie ins Bild kommen.
+  // Im HTML steht immer der Endwert: ohne JavaScript oder bei reduzierter Bewegung bleibt er stehen.
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!('IntersectionObserver' in window)) return;
+  var els=[].slice.call(document.querySelectorAll('.v6-zahl'));
+  function fmt(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+  els.forEach(function(el){
+    var t=el.textContent, m=t.match(/[\d.]+/); if(!m) return;
+    el.dataset.ziel=parseInt(m[0].replace(/\./g,''),10); el.dataset.vor=t.slice(0,m.index); el.dataset.nach=t.slice(m.index+m[0].length);
+  });
+  function zaehle(el){
+    var ziel=+el.dataset.ziel, t0=null;
+    function schritt(t){ if(!t0) t0=t; var p=Math.min((t-t0)/1600,1), e=1-Math.pow(1-p,3);
+      el.textContent=el.dataset.vor+fmt(Math.round(ziel*e))+el.dataset.nach; if(p<1) requestAnimationFrame(schritt); }
+    requestAnimationFrame(schritt);
+  }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ zaehle(e.target); io.unobserve(e.target);} }); },{threshold:.5});
+  els.forEach(function(el){ if(el.dataset.ziel) io.observe(el); });
 })();
 </script>
 </body>

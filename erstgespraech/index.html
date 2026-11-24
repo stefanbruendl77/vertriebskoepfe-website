@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Erstgespräch vereinbaren · Vertriebsköpfe</title>
-<meta name="description" content="20 Minuten zu Ihrer offenen Vertriebsstelle, per Telefon oder Google Meet: welche Stelle, seit wann, warum der Vorgänger ging. Kostenlos, Termin online.">
+<meta name="description" content="20 Minuten zu Ihrer offenen Vertriebsstelle, per Telefon oder Google Meet: Sie erzählen, ich frage nach. Danach wissen Sie, ob die Stelle so besetzbar ist. Kostenlos, Termin online.">
 <link rel="canonical" href="https://vertriebskoepfe.de/erstgespraech/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="627">
 <meta name="twitter:image" content="https://vertriebskoepfe.de/img/og-start-1200x627.png">
 <meta property="og:title" content="Erstgespräch vereinbaren · Vertriebsköpfe">
-<meta property="og:description" content="20 Minuten zu Ihrer offenen Vertriebsstelle, per Telefon oder Google Meet: welche Stelle, seit wann, warum der Vorgänger ging. Kostenlos, Termin online.">
+<meta property="og:description" content="20 Minuten zu Ihrer offenen Vertriebsstelle, per Telefon oder Google Meet: Sie erzählen, ich frage nach. Danach wissen Sie, ob die Stelle so besetzbar ist. Kostenlos, Termin online.">
 <meta property="og:url" content="https://vertriebskoepfe.de/erstgespraech/">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
@@ -101,6 +101,102 @@
   }
  ]
 }</script>
+<style id="v6-eg">
+  /* Erstgespräch im Stil Version 6 (24.11.2026) */
+  header.nav .wrap{max-width:1440px}
+  header.nav .mark-rahmen{padding:6px}
+  header.nav .mark-rahmen .mark{width:44px;height:44px}
+  header.nav .wordmark{font-size:1.3rem}
+  header.nav .wordmark small{font-size:.78rem}
+  .nav-links{gap:26px}
+  .nav-links a{font-size:1.02rem}
+  .nav-links .btn{padding:14px 22px}
+  @media (min-width:1120px) and (max-width:1279px){.nav-links{gap:16px}.nav-links a{font-size:.95rem}}
+
+  .eg section{border-bottom:0}
+  .eg-wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .eg h2{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;font-weight:700;margin:0 0 14px}
+  .eg-lead{font-size:1.15rem;line-height:1.6;color:var(--muted);max-width:40em;margin:0}
+
+  .eg-hero{padding:56px 0 72px}
+  .eg-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:start}
+  .eg-links{position:sticky;top:110px}
+  .eg-hero h1{font-size:clamp(2.4rem,4.8vw,3.9rem);line-height:1.05;font-weight:700;margin:14px 0 22px}
+  .eg-hero h1 em{font-style:normal;color:var(--petrol)}
+  .eg-hero .eg-lead{font-size:1.22rem;margin-bottom:24px}
+  .eg-chips{list-style:none;padding:0;margin:0 0 36px;display:flex;flex-wrap:wrap;gap:8px}
+  .eg-chips li{border:1.5px solid var(--petrol);color:var(--ink);border-radius:999px;padding:7px 14px;font-size:var(--fs-2);font-weight:600}
+  .eg .eg-nur-handy{display:none!important}
+  .eg-person{display:flex;gap:20px;align-items:flex-start;margin:0;padding:22px 0 0;border-top:1px solid var(--hair)}
+  .eg-person picture{flex:0 0 96px}
+  .eg-person img{width:96px!important;max-width:none;height:120px;object-fit:cover;border-radius:4px;display:block}
+  .eg-zitat{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:1.18rem;line-height:1.4;font-weight:700;margin:0 0 10px}
+  .eg-name{margin:0;color:var(--muted);font-size:var(--fs-2)}
+  .eg-name b{color:var(--ink)}
+
+  .eg-buchung{background:var(--card);border:1px solid var(--hair);border-top:4px solid var(--petrol);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+  .eg-buchung-kopf{padding:26px 28px 8px}
+  .eg-buchung-kopf h2{font-size:1.6rem;margin:6px 0 6px}
+  .eg-buchung-kopf p{margin:0;color:var(--muted)}
+  .eg-frei{display:flex;align-items:center;gap:8px;font-size:var(--fs-2);font-weight:600;color:var(--petrol)!important}
+  .eg-frei .punkt{width:9px;height:9px;border-radius:50%;background:var(--petrol);box-shadow:0 0 0 4px var(--petrol-wash)}
+  .eg-buchung .kal-slot{padding:0 8px}
+  .eg-buchung .kal-slot .tidycal-embed{min-height:620px}
+  .eg-buchung-fuss{padding:14px 28px 22px;border-top:1px solid var(--hair);font-size:var(--fs-2);color:var(--muted)}
+  .eg-buchung-fuss p{margin:0 0 6px}
+
+  .eg-band{background:var(--petrol-wash);padding:88px 0}
+  .eg-fragen{list-style:none;padding:0;margin:40px 0 28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .eg-fragen li{display:flex;gap:16px;align-items:flex-start;background:var(--card);border-radius:8px;padding:26px 24px}
+  .eg-fragen li > span{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:2.4rem;line-height:1;font-weight:700;color:var(--petrol)}
+  .eg-fragen h3{font-size:1.2rem;margin:4px 0 8px}
+  .eg-fragen p{margin:0;color:var(--muted)}
+  .eg-hinweis{margin:0;font-weight:600}
+
+  .eg-danach{padding:88px 0}
+  .eg-zwei{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin:28px 0 48px}
+  .eg-zwei > div{border-top:3px solid var(--petrol);padding-top:18px}
+  .eg-zwei p{margin:0;font-size:1.08rem;line-height:1.6}
+  .eg-marke{font-weight:700;color:var(--petrol);margin-bottom:8px!important}
+  .eg-stimme{margin:0 0 32px;padding:0}
+  .eg-stimme p{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:1.5rem;font-weight:700;margin:0 0 6px}
+  .eg-stimme footer{color:var(--muted);font-size:var(--fs-2)}
+
+  .eg-klein{padding:88px 0;background:var(--card)}
+  .eg-wege{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px;margin:32px 0 24px}
+  .eg-weg{display:flex;flex-direction:column;gap:6px;border:1px solid var(--hair);border-radius:8px;padding:24px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+  .eg-weg:hover{border-color:var(--petrol);transform:translateY(-2px)}
+  .eg-weg h3{margin:0;font-size:1.25rem}
+  .eg-weg p{margin:0 0 8px;color:var(--muted)}
+  .eg-weg .mehr{margin-top:auto;font-weight:600;color:var(--petrol)}
+  .eg-dauer{font-size:var(--fs-2);color:var(--muted)}
+  .eg-weg-haupt{background:var(--petrol-wash);border-color:var(--petrol)}
+  .eg-lesen{margin:0;color:var(--muted)}
+
+  .eg-direkt{background:var(--navy);color:var(--on-navy);padding:72px 0 36px}
+  .eg-direkt h2{color:var(--on-navy)}
+  .eg-direkt p{color:var(--on-navy-mute);margin:0}
+  .eg-direkt-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+  .eg-kontakt{display:flex;flex-direction:column;gap:10px}
+  .eg-kontakt a{color:var(--on-navy);font-weight:600}
+  .eg-kontakt .eg-tel{font-family:"Source Serif 4","Source Serif Fallback",Georgia,serif;font-size:2.4rem;color:var(--petrol-lite);text-decoration:none}
+  .eg-kand{margin-top:40px!important;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:var(--fs-2)}
+  .eg-kand a{color:var(--petrol-lite)}
+
+  @media (max-width:900px){
+    .eg-hero{padding:32px 0 48px}
+    .eg-hero-grid{grid-template-columns:1fr;gap:36px}
+    .eg-links{position:static}
+    .eg-chips{margin-bottom:22px}
+    .eg .eg-nur-handy{display:inline-flex!important;margin-bottom:30px}
+    .eg-buchung-kopf,.eg-buchung-fuss{padding-left:18px;padding-right:18px}
+    .eg-buchung .kal-slot{padding:0}
+    .eg-band,.eg-danach,.eg-klein{padding:60px 0}
+    .eg-fragen,.eg-zwei,.eg-wege,.eg-direkt-grid{grid-template-columns:1fr;gap:18px}
+    .eg-zwei{gap:28px}
+    .eg-kontakt .eg-tel{font-size:2rem}
+  }
+</style>
 </head>
 <body>
 <style>
@@ -795,105 +891,102 @@
   </div>
 </header>
 
-<main>
-<section class="subhero">
-  <div class="wrap termin">
-    <div>
+<main class="eg">
+<section class="eg-hero">
+  <div class="eg-wrap eg-hero-grid">
+    <div class="eg-links">
       <p class="krumen rev"><a href="/">Startseite</a> · Erstgespräch</p>
-      <p class="eyebrow rev">Erstgespräch · 20 Minuten · Telefon oder Video</p>
-      <h1 class="rev rev-d1">Zwanzig Minuten. Danach wissen Sie, ob wir zusammenpassen.</h1>
-      <p class="lead rev rev-d2">Dieser Termin ist für Unternehmen, die eine Stelle im Vertrieb besetzen wollen: Key Account, Gebietsverkaufsleitung oder Vertriebsleitung. Sie erzählen, ich frage nach. Wenn ich nicht der Richtige bin, sage ich Ihnen das.</p>
-      <div class="person-mini rev">
-      <picture>
-        <source type="image/webp" srcset="/img/stefan-bruendl-800.webp 800w" sizes="120px">
-        <img src="/img/stefan-bruendl-800.jpg" width="120" height="150" loading="lazy" decoding="async" alt="Stefan Bründl">
-      </picture>
-        <div>
-          <h3>Mit wem Sie sprechen</h3>
-          <p>Stefan Bründl, über 20 Jahre Vertrieb und Führung, zuletzt Sales Director in der Personaldienstleistung. Bei der Buchung wählen Sie: Ich rufe Sie an oder wir sprechen per Google Meet.</p>
-        </div>
-      </div>
+      <h1 class="rev rev-d1">Erzählen Sie mir von Ihrer <em>offenen Stelle.</em></h1>
+      <p class="eg-lead rev rev-d2">Zwanzig Minuten am Telefon oder per Video. Sie erzählen, ich frage nach. Danach wissen Sie, ob die Stelle so besetzbar ist und ob ich der Richtige dafür bin. Wenn nicht, sage ich Ihnen das offen.</p>
+      <ul class="eg-chips rev rev-d2"><li>20 Minuten</li><li>Kostenlos</li><li>Telefon oder Google Meet</li><li>Ohne Unterlagen</li></ul>
+      <a class="btn eg-nur-handy" href="#buchung">Termin auswählen</a>
+      <figure class="eg-person rev">
+        <picture>
+          <source type="image/webp" srcset="/img/stefan-bruendl-800.webp 800w" sizes="96px">
+          <img src="/img/stefan-bruendl-800.jpg" width="96" height="120" decoding="async" alt="Stefan Bründl">
+        </picture>
+        <figcaption>
+          <p class="eg-zitat">„Bevor ich jemanden anspreche, analysiere ich die Stelle. Daraus entsteht eine Scorecard, an der jeder Kandidat gemessen wird.“</p>
+          <p class="eg-name"><b>Stefan Bründl</b> · über 20 Jahre Vertrieb, zuletzt Sales Director</p>
+        </figcaption>
+      </figure>
     </div>
-    <div class="buchung rev rev-d1" id="buchung">
-      <div class="buchung-kopf">
-        <p class="buchung-label"><span class="punkt" aria-hidden="true"></span>Termine in den nächsten Tagen frei</p>
-        <h2>Ihr Termin mit Stefan Bründl</h2>
-        <p>Tag und Uhrzeit wählen, Name und E-Mail eintragen, fertig. Die Bestätigung mit Kalendereintrag kommt sofort.</p>
-        <ul class="buchung-daten"><li>20 Minuten</li><li>Kostenlos</li><li>Telefon oder Google Meet</li><li>Ohne Unterlagen</li></ul>
+
+    <div class="eg-buchung rev rev-d1" id="buchung">
+      <div class="eg-buchung-kopf">
+        <p class="eg-frei"><span class="punkt" aria-hidden="true"></span>Termine in den nächsten Tagen frei</p>
+        <h2>Tag und Uhrzeit wählen</h2>
+        <p>Name und E-Mail eintragen, fertig. Die Bestätigung mit Kalendereintrag kommt sofort.</p>
       </div>
-      <ol class="buchung-schritte" aria-label="So buchen Sie">
-        <li><span>1</span>Tag wählen</li>
-        <li><span>2</span>Uhrzeit wählen</li>
-        <li><span>3</span>Fertig</li>
-      </ol>
       <div class="kal-slot" id="kalSlot"><div class="tidycal-embed" data-path="stefanbruendl77/erstgespraech"></div></div>
-      <div class="buchung-start kal-hinweis">
-        <p class="buchung-sicher">Sie können den Termin jederzeit über den Link in der Bestätigung verschieben oder absagen.</p>
-        <p>Der Kalender wird nicht angezeigt? <a href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Hier direkt bei TidyCal buchen</a>. Der Kalender kommt von TidyCal, mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
+      <div class="eg-buchung-fuss">
+        <p>Verschieben oder absagen geht jederzeit über den Link in der Bestätigung.</p>
+        <p>Kein Kalender zu sehen? <a href="https://tidycal.com/stefanbruendl77/erstgespraech" target="_blank" rel="noopener">Direkt bei TidyCal buchen</a>. Mehr dazu in der <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <p class="eyebrow rev">Worum es geht</p>
-    <h2 class="rev">Drei Fragen, mehr nicht.</h2>
-    <p class="lead rev" style="margin-bottom:36px">Im Erstgespräch stelle ich weder mein Unternehmen vor noch ein Angebot. Es geht um Ihre Stelle.</p>
-    <ol class="diagnose rev">
-      <li><b>Welche Stelle ist offen und seit wann?</b> Rolle, Gebiet, Zeitraum und was bisher unternommen wurde, um sie zu besetzen.</li>
-      <li><b>Warum ist der Vorgänger gegangen und woher wissen Sie das?</b> Bei einer neu geschaffenen Stelle: Warum gibt es sie jetzt?</li>
-      <li><b>Woran ist die Besetzung bisher gescheitert?</b> Zu wenige Bewerbungen, die falschen oder Absagen nach dem Gespräch.</li>
+<section class="eg-band">
+  <div class="eg-wrap">
+    <h2 class="rev">Worüber wir sprechen.</h2>
+    <p class="eg-lead rev">Ich stelle Ihnen weder meine Firma vor noch ein Angebot. Es geht nur um Ihre Stelle.</p>
+    <ol class="eg-fragen rev-kids">
+      <li><span>1</span><div><h3>Um welche Stelle geht es?</h3><p>Rolle, Gebiet und wie lange sie schon offen ist.</p></div></li>
+      <li><span>2</span><div><h3>Was ist bisher passiert?</h3><p>Anzeigen, Bewerbungen, Absagen. Was eben so war, ohne Schönfärberei.</p></div></li>
+      <li><span>3</span><div><h3>Was soll der Neue bewirken?</h3><p>Woran Sie in zwölf Monaten merken, dass die Besetzung richtig war.</p></div></li>
     </ol>
+    <p class="eg-hinweis rev">Vorbereiten müssen Sie nichts. Wenn es eine aktuelle Anzeige gibt, schicken Sie mir gern vorher den Link.</p>
   </div>
 </section>
 
-<section>
-  <div class="wrap zwei">
+<section class="eg-danach">
+  <div class="eg-wrap">
+    <h2 class="rev">Und danach?</h2>
+    <div class="eg-zwei rev-kids">
+      <div>
+        <p class="eg-marke">Wenn es passt</p>
+        <p>Schlage ich Ihnen als nächsten Schritt die Vakanzdiagnose vor: zwei Wochen, 2.500 €, voll anrechenbar auf ein späteres Mandat. Sie entscheiden in Ruhe, nicht am Telefon.</p>
+      </div>
+      <div>
+        <p class="eg-marke">Wenn es nicht passt</p>
+        <p>Sage ich Ihnen das direkt im Gespräch. Dann haben Sie trotzdem einen klareren Blick auf Ihre Stelle.</p>
+      </div>
+    </div>
+    <blockquote class="eg-stimme rev">
+      <p>„Ein kompetenter und vertrauenswürdiger Personalberater.“</p>
+      <footer>Peter Constantin, Operations Executive</footer>
+    </blockquote>
+    <a class="btn eg-zurueck" href="#buchung">Termin auswählen</a>
+  </div>
+</section>
+
+<section class="eg-klein">
+  <div class="eg-wrap">
+    <h2 class="rev">Noch nicht so weit?</h2>
+    <p class="eg-lead rev">Dann fangen Sie kleiner an. Alles ohne Anmeldung.</p>
+    <div class="eg-wege rev-kids">
+      <a class="eg-weg eg-weg-haupt" href="/besetzungscheck/"><span class="eg-dauer">Zwei Minuten</span><h3>Besetzungscheck</h3><p>Neun Fragen zu Ihrer Stelle. Sie sehen sofort, woran die Besetzung am wahrscheinlichsten hängt.</p><span class="mehr">Check starten →</span></a>
+      <a class="eg-weg" href="/downloads/"><span class="eg-dauer">Ein Klick</span><h3>Vakanzrechner</h3><p>Was Sie die offene Stelle bisher gekostet hat, in Euro.</p><span class="mehr">Zum Rechner →</span></a>
+      <a class="eg-weg" href="/newsletter/"><span class="eg-dauer">Alle zwei Wochen</span><h3>Newsletter</h3><p>Eine Szene aus dem Vertrieb, eine Zahl, ein Werkzeug.</p><span class="mehr">Anmelden →</span></a>
+    </div>
+    <p class="eg-lesen rev">Vorher nachlesen: <a href="/wissen/was-kostet-ein-personalberater-fuer-den-vertrieb/">Was kostet ein Personalberater?</a> · <a href="/wissen/besetzungsdauer-vertrieb/">Wie lange dauert eine Besetzung?</a> · <a href="/#leistungen">Leistungen und Preise</a></p>
+  </div>
+</section>
+
+<section class="eg-direkt">
+  <div class="eg-wrap eg-direkt-grid">
     <div>
-      <p class="eyebrow rev">Vorbereitung</p>
-      <h2 class="rev">Eine Zahl reicht.</h2>
-      <p class="rev">Schauen Sie vor dem Gespräch kurz nach, wie lange Ihr Vorgänger in dieser Rolle tatsächlich da war. Mit dieser Zahl fangen wir an. Sie sagt mehr über die Stelle als jede Stellenbeschreibung.</p>
-      <p class="rev">Unterlagen brauchen Sie nicht. Wenn es eine aktuelle Anzeige gibt, schicken Sie mir gern den Link.</p>
+      <h2 class="rev">Lieber gleich anrufen?</h2>
+      <p class="rev">Ich gehe ans Telefon, wenn ich nicht gerade im Gespräch bin. Sonst rufe ich zurück, auf E-Mails antworte ich am selben Werktag.</p>
     </div>
-    <div>
-      <p class="eyebrow rev">Was danach passiert</p>
-      <h2 class="rev">Zwei mögliche Ausgänge.</h2>
-      <ul class="liste rev rev-d1">
-        <li><b>Es passt</b><span>Dann vereinbaren wir ein Diagnosegespräch, 45 bis 60 Minuten per Video oder Telefon. Dort sage ich Ihnen, ob die Stelle so besetzbar ist und was ein Mandat kosten würde.</span></li>
-        <li><b>Es passt nicht</b><span>Dann sage ich Ihnen das am Ende der zwanzig Minuten und wenn möglich, wer Ihnen besser helfen kann.</span></li>
-      </ul>
+    <div class="eg-kontakt rev rev-d1">
+      <a class="eg-tel" href="tel:+494064532446">040 64532446</a>
+      <a href="mailto:stefan.bruendl@vertriebskoepfe.de">stefan.bruendl@vertriebskoepfe.de</a>
     </div>
   </div>
+  <div class="eg-wrap"><p class="eg-kand">Sie suchen selbst eine Stelle? <a href="/kandidaten/">Hier geht es zur Kandidatenseite.</a></p></div>
 </section>
-
-<!-- Zweiter Weg: fuer Besucher, die noch keinen Termin wollen -->
-<section class="raum-eng">
-  <div class="wrap">
-    <p class="eyebrow rev">Noch kein Termin?</p>
-    <h2 class="rev">Noch nicht bereit für ein Gespräch? Dann fangen Sie kleiner an.</h2>
-    <div class="weiter rev">
-      <a href="/besetzungscheck/"><p class="step">Zwei Minuten</p><h3>Besetzungscheck</h3><p>Neun Fragen zu Ihrer offenen Stelle. Sie erfahren, woran die Besetzung am wahrscheinlichsten hängt. Ohne Anmeldung, ohne E-Mail-Adresse.</p><span class="mehr">Zum Besetzungscheck</span></a>
-      <a href="/downloads/"><p class="step">Ein Klick</p><h3>Vakanzrechner</h3><p>Zieljahresgehalt und Vakanzdauer eintragen und sehen, was die offene Stelle bisher gekostet hat. Dazu ein Arbeitsblatt zum Ausdrucken.</p><span class="mehr">Zum Vakanzrechner</span></a>
-      <a href="/newsletter/"><p class="step">Alle zwei Wochen</p><h3>Recruiting. Führung. Vertrieb.</h3><p>Eine Szene aus dem Vertrieb, eine Zahl aus echten Stellenanzeigen und ein Werkzeug, das Sie sofort nutzen können. Abmelden mit einem Klick.</p><span class="mehr">Zum Newsletter</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="raum-eng">
-  <div class="wrap">
-    <p class="eyebrow rev">Die Leistungen im Überblick</p>
-    <h2 class="rev">Worüber wir danach sprechen können.</h2>
-    <div class="weiter rev">
-      <a href="/vakanzdiagnose/"><p class="step">Stufe 1</p><h3>Vakanzdiagnose</h3><p>Warum die Stelle offen ist, bevor gesucht wird. 2.500 €, zwei Wochen.</p><span class="mehr">Mehr erfahren</span></a>
-      <a href="/besetzung/"><p class="step">Stufe 2</p><h3>Besetzung</h3><p>Direktansprache, Shortlist, Begleitung bis zur Unterschrift. 30 % des Zieljahresgehalts.</p><span class="mehr">Mehr erfahren</span></a>
-      <a href="/einarbeitung/"><p class="step">Stufe 3</p><h3>Einarbeitung</h3><p>Die ersten 90 Tage nach dem Start, strukturiert begleitet. Preis nach Absprache.</p><span class="mehr">Mehr erfahren</span></a>
-    </div>
-    <p class="alternativ rev">Vorher nachlesen: <a href="/wissen/was-kostet-ein-personalberater-fuer-den-vertrieb/">Was kostet ein Personalberater für den Vertrieb?</a> · <a href="/wissen/besetzungsdauer-vertrieb/">Wie lange dauert eine Besetzung?</a></p>
-    <p class="alternativ rev">Lieber direkt sprechen? Rufen Sie an: <a href="tel:+494064532446">040 64532446</a>. Oder schreiben Sie an <a href="mailto:stefan.bruendl@vertriebskoepfe.de">stefan.bruendl@vertriebskoepfe.de</a>, Antwort am selben Werktag. Sie suchen selbst eine Stelle? Dann geht es hier entlang: <a href="/kandidaten/">Für Kandidaten</a>.</p>
-  </div>
-</section>
-
 </main>
 
 <footer class="site">
